@@ -1,3 +1,79 @@
 @use "../helper" as *;
 
 /* UI elements "Navs & Tabs" */
+.primary-menu {
+  &__button {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    @include for-min-size("md") {
+      display: none;
+    }
+    span {
+      height: 3px;
+      border-radius: 1000px;
+      background-color: $clr-gray-700;
+      &:nth-child(1) {
+        width: 24px;
+      }
+      &:nth-child(2) {
+        width: 32px;
+      }
+      &:nth-child(3) {
+        width: 18px;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    > * + * {
+      margin: 0 0 0 22px;
+    }
+  }
+  &__list-item {
+    padding: 4px 0 4px 0;
+  }
+  &__list-link {
+    color: $clr-gray-900;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+}
+
+.secondary-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__item {
+    flex: 0 0 auto;
+  }
+  &__item-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__list {
+    list-style-type: none;
+  }
+  &__list-item {
+    margin: 10px 0 0 0;
+  }
+  &__list-link {
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+}
+

@@ -1,3 +1,58 @@
 @use "../helper" as *;
 
 /* Block "Footer" */
+.footer {
+  padding: 60px 0 50px 0;
+  &__inner {
+    padding: 40px 0 0 0;
+    border-top: 1px solid rgba($color: $clr-gray-700, $alpha: 0.3);
+  }
+  &__logo {
+    width: 196px;
+    height: 58px;
+    margin: 0 auto 0 auto;
+  }
+  &__menu {
+    margin: 60px 0 0 0;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0 0 0;
+  }
+  &__copyrigth {
+    display: flex;
+    align-items: center;
+  }
+  &__copyrigth-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__copyrigth-links {
+    padding: 0 30px 0 30px;
+
+    > * + * {
+      margin: 0 0 0 22px;
+    }
+  }
+  &__copyrigth-link {
+    color: inherit;
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+  }
+  &__contact-and-social {
+    display: flex;
+    align-items: center;
+  }
+  &__contact {
+    > * + * {
+      margin: 0 0 0 22px;
+    }
+  }
+  &__social {
+    margin: 0 0 0 40px;
+  }
+}

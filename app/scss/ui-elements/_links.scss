@@ -1,3 +1,63 @@
 @use "../helper" as *;
 
 /* UI elements "Links" */
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+
+.color-palette {
+  display: flex;
+  align-items: center;
+  color: $clr-primary;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__label {
+    margin: 0 0 0 12px;
+    color: inherit;
+  }
+}
+
+.contact-email,
+.contact-phone {
+  color: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.account-link,
+.shopping-cart-link {
+  text-decoration: none;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+
+  > * + * {
+    margin: 0 0 0 16px;
+  }
+
+  &__link {
+    width: 24px;
+    height: 24px;
+  }
+}
+

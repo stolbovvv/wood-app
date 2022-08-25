@@ -1,0 +1,28 @@
+@use "../helper" as *;
+
+/* Block "decription" */
+.decription {
+  min-height: 296px;
+  padding: 60px 0 60px 0;
+  background-image: url("../images/bg/bg-decor-waves.svg");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 296px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > * + * {
+      margin: 30px 0 0 0;
+    }
+  }
+  &__text {
+    max-width: 1400px;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+  }
+  &__button {
+    width: 313px;
+  }
+}

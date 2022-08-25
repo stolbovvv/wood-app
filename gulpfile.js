@@ -63,7 +63,7 @@ function collectBuild() {
       { base: `./${_sourceName}/` },
     )
     .pipe(gulp.dest(`./${_buildName}/`))
-    .pipe(gulp.src(`./${_tempName}/{js}/**/*.*`, { base: `./${_tempName}/` }))
+    .pipe(gulp.src(`./${_tempName}/{js,css}/**/*.*`, { base: `./${_tempName}/` }))
     .pipe(gulp.dest(`./${_buildName}/`));
 }
 

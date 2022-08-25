@@ -1,0 +1,32 @@
+@use "../helper" as *;
+
+/* Block "hero" */
+.hero {
+  display: flex;
+  align-items: center;
+  height: 800px;
+  margin: 0 0 60px 0;
+  background-image: url("../images/bg/bg-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__inner {
+    max-width: 814px;
+    & > * + * {
+      margin: 32px 0 0 0;
+    }
+  }
+  &__title {
+    color: $clr-white;
+    font-size: 100px;
+    line-height: 98px;
+  }
+  &__descr {
+    color: $clr-white;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  &__button {
+    width: 391px;
+  }
+}

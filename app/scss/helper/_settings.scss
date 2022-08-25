@@ -1,28 +1,34 @@
 // Breakpoints Settings
 $breakpoint-list: (
-  "xl": 1280px,
-  "lg": 992px,
-  "md": 768px,
-  "sm": 480px,
-  "xs": 320px,
+  "xl": 1601px,
+  "lg": 1281px,
+  "md": 769px,
+  "sm": 481px,
+  "xs": 321px,
 );
 
-// Grid Settings
-$container-max-width: 1280px;
-$container-padding-inline: 20px;
-
 // Colors Setting
-$clr-priamry: hsl(49, 94%, 61%);
 
-$clr-black: hsl(0, 0%, 0%);
-$clr-white: hsl(0, 0%, 100%);
+$clr-black: #000000;
+$clr-white: #ffffff;
 
-$clr-light-100: hsl(207, 18%, 31%);
-$clr-light-400: hsl(209, 8%, 49%);
-$clr-light-700: hsl(210, 8%, 76%);
+$clr-gray-900: #171717;
+$clr-gray-700: #383838;
+$clr-gray-400: #626262;
+$clr-gray-200: #cacaca;
+$clr-gray-100: #ebebeb;
+
+$clr-primary: #787d46;
+$clr-primary-accent: #7a7f48;
+
+$clr-secondary: #9e6f47;
+$clr-secondary-accent: #a07c5c;
+
+$clr-third: #f2c49d;
+$clr-third-light: #ffd0a9;
 
 // Fonts Settings
-$ff-primray: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+$ff-primray: "Montserrat", "Segoe UI", Arial, sans-serif;
 
 $fs-300: 14px;
 $fs-400: 16px;

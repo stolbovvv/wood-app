@@ -1,0 +1,18 @@
+// Global Style Modules
+@forward "./global/fonts";
+@forward "./global/reset";
+@forward "./global/base";
+
+// UI Web Components
+@forward "./ui-elements/navs";
+@forward "./ui-elements/cover";
+@forward "./ui-elements/cards";
+@forward "./ui-elements/links";
+@forward "./ui-elements/forms";
+@forward "./ui-elements/buttons";
+@forward "./ui-elements/dropdown";
+@forward "./ui-elements/carousels";
+
+// Blocks, Layout-related sections
+@forward "./blocks/header";
+@forward "./blocks/footer";

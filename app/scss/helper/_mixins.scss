@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "./settings" as *;
+
+// Media query mixin
+@mixin for-min-size($size) {
+  @if map.has-key($breakpoint-list, $size) {
+    @media only screen and (min-width: #{map.get($breakpoint-list, $size)}) {
+      @content;
+    }
+  } @else {
+    @error "Unfortunately, no value could be retrieved from `#{$size}`. "
+         + "Available breakpoints are: #{map.keys($breakpoint-list)}.";
+  }
+}
+
+// Font face mixin
+@mixin add-font-fase($font-name, $file-name, $weight, $style: normal) {
+  @font-face {
+    font-family: #{$font-name};
+    src: url("../fonts/#{$file-name}.woff2") format("woff2"), url("../fonts/#{$file-name}.woff") format("woff");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}

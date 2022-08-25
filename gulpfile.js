@@ -4,6 +4,7 @@ const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 const gulpZIP = require('gulp-zip');
 const babelJS = require('gulp-babel');
+const beautify = require('gulp-beautify');
 const terserJS = require('gulp-terser');
 const cleanCSS = require('gulp-clean-css');
 const deleteAsync = require('del');
@@ -23,6 +24,7 @@ function collectSCSS() {
   return gulp
     .src([`./${_sourceName}/scss/**/*.scss`], { sourcemaps: _modeIsDev })
     .pipe(sass().on('error', sass.logError))
+    .pipe(beautify.css({ indent_size: 4 }))
     .pipe(autoprefixer({ grid: 'autoplace', cascade: true }))
     .pipe(gulp.dest(`./${_sourceName}/css/`))
     .pipe(cleanCSS({ compatibility: 'ie8' }))
@@ -36,6 +38,7 @@ function collectJS() {
   return gulp
     .src([`./${_sourceName}/js/**/*.js`, `!./${_sourceName}/js/**/*.min.js`], { sourcemaps: _modeIsDev })
     .pipe(babelJS({ presets: ['@babel/env'] }))
+    .pipe(beautify.js({ indent_size: 2 }))
     .pipe(gulp.dest(`./${_tempName}/js/`))
     .pipe(terserJS())
     .pipe(rename({ suffix: '.min' }))
@@ -50,7 +53,7 @@ function collectBuild() {
       [
         `./${_sourceName}/**/*.html`,
         `./${_sourceName}/js/**/*.min.js`,
-        `./${_sourceName}/css/**/*.min.css`,
+        `./${_sourceName}/css/**/*.css`,
         `./${_sourceName}/fonts/**/*.*`,
         `./${_sourceName}/images/**/*.*`,
         `./${_sourceName}/site.webmanifest`,
@@ -60,7 +63,7 @@ function collectBuild() {
       { base: `./${_sourceName}/` },
     )
     .pipe(gulp.dest(`./${_buildName}/`))
-    .pipe(gulp.src(`./${_tempName}/{js,css}/**/*.*`, { base: `./${_tempName}/` }))
+    .pipe(gulp.src(`./${_tempName}/{js}/**/*.*`, { base: `./${_tempName}/` }))
     .pipe(gulp.dest(`./${_buildName}/`));
 }
 

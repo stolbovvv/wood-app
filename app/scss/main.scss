@@ -2,6 +2,7 @@
 @forward "./global/fonts";
 @forward "./global/reset";
 @forward "./global/base";
+@forward "./global/typography";
 
 // UI Web Components
 @forward "./ui-elements/navs";
@@ -17,4 +18,5 @@
 @forward "./blocks/header";
 @forward "./blocks/hero";
 @forward "./blocks/decription";
+@forward "./blocks/panels";
 @forward "./blocks/footer";

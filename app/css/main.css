@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Сonnecting fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
 /* Box sizing rules */
 *,
@@ -119,6 +119,32 @@ body {
         padding-left: 130px;
         padding-right: 130px;
     }
+}
+
+/* Typography styles" */
+.title {
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.title_clr-white {
+    color: #ffffff;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@media only screen and (min-width: 768px) {
+    .text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.text_clr-white {
+    color: #ffffff;
 }
 
 /* UI elements "Navs & Tabs" */
@@ -375,6 +401,7 @@ body {
 /* UI elements "Forms" */
 /* UI elements "Buttons" */
 .button {
+    display: block;
     border: none;
     border-radius: 999px;
     padding: 1.25em 2em 1.25em 2em;
@@ -513,7 +540,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     height: 406px;
-    margin: 0 0 60px 0;
+    margin: 0 0 35px 0;
     background-image: url("../images/bg/bg-hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -523,6 +550,7 @@ body {
 @media only screen and (min-width: 768px) {
     .hero {
         height: 800px;
+        margin: 0 0 60px 0;
     }
 }
 
@@ -554,23 +582,17 @@ body {
 
 .hero__descr {
     margin: 24px 0 0 0;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 22px;
     text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
     .hero__descr {
         margin: 32px 0 0 0;
-        font-size: 18px;
-        line-height: 24px;
         text-align: left;
     }
 }
 
 .hero__button {
-    display: block;
     width: 100%;
     max-width: 391px;
     margin: 24px auto 0 auto;
@@ -585,11 +607,17 @@ body {
 /* Block "decription" */
 .decription {
     min-height: 296px;
-    padding: 60px 0 60px 0;
+    padding: 35px 0 35px 0;
     background-image: url("../images/bg/bg-decor-waves.svg");
     background-repeat: repeat-x;
-    background-position: center;
-    background-size: auto 296px;
+    background-position: center top;
+    background-size: auto 297px;
+}
+
+@media only screen and (min-width: 768px) {
+    .decription {
+        padding: 60px 0 60px 0;
+    }
 }
 
 .decription__inner {
@@ -605,19 +633,157 @@ body {
             flex-direction: column;
 }
 
-.decription__inner>*+* {
-    margin: 30px 0 0 0;
-}
-
 .decription__text {
     max-width: 1400px;
-    font-size: 32px;
-    line-height: 46px;
+    font-size: 18px;
+    line-height: 22px;
     text-align: center;
 }
 
+@media only screen and (min-width: 768px) {
+    .decription__text {
+        font-size: 32px;
+        line-height: 46px;
+    }
+}
+
 .decription__button {
-    width: 313px;
+    width: 100%;
+    max-width: 313px;
+    margin: 30px auto 0 auto;
+}
+
+/* Block "hero" */
+.panels {
+    background-image: -o-linear-gradient(351.66deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+    background-image: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+}
+
+.panels__image {
+    width: 100%;
+    height: 420px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+
+.panels__inner {
+    padding: 70px 0 70px 0;
+}
+
+.panels__title {
+    text-align: center;
+}
+
+.panels__descr {
+    padding: 28px 0 0 0;
+    text-align: center;
+}
+
+.panels__button {
+    width: 100%;
+    max-width: 234px;
+    margin: 28px auto 0 auto;
+}
+
+.panels__type {
+    margin: 0 auto 0 auto;
+    padding: 50px 0 0 0;
+}
+
+.panels__type-color-and-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.panels__type-color {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.panels__type-number {
+    margin: 0 0 0 12px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.panels__type-name {
+    padding: 6px 0 0 0;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.panels__slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto 0 auto;
+    padding: 24px 0 0 0;
+}
+
+.panels__slider-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.panels__slider-button>svg {
+    width: 25px;
+    height: 25px;
+}
+
+.panels__slider-button_prev {
+    border-left: 1px solid #383838;
+}
+
+.panels__slider-button_next {
+    border-right: 1px solid #383838;
+}
+
+.panels__slider-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.panels__slider-items {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin: 0 8px 0 8px;
+    background-color: #ffffff;
 }
 
 /* Block "Footer" */

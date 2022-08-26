@@ -1,0 +1,24 @@
+@use "../helper" as *;
+
+/* Typography styles" */
+.title {
+  font-size: 32px;
+  line-height: 39px;
+
+  &_clr-white {
+    color: $clr-white;
+  }
+}
+.text {
+  font-size: 14px;
+  line-height: 22px;
+
+  @include for-min-size("md") {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &_clr-white {
+    color: $clr-white;
+  }
+}

@@ -4,29 +4,55 @@
 .hero {
   display: flex;
   align-items: center;
-  height: 800px;
+  height: 406px;
   margin: 0 0 60px 0;
   background-image: url("../images/bg/bg-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include for-min-size("md") {
+    height: 800px;
+  }
   &__inner {
     max-width: 814px;
-    & > * + * {
-      margin: 32px 0 0 0;
-    }
   }
   &__title {
     color: $clr-white;
-    font-size: 100px;
-    line-height: 98px;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 68px;
+      line-height: 83px;
+      text-align: left;
+    }
+    @include for-min-size("lg") {
+      font-size: 100px;
+      line-height: 98px;
+    }
   }
   &__descr {
+    margin: 24px 0 0 0;
     color: $clr-white;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      margin: 32px 0 0 0;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: left;
+    }
   }
   &__button {
-    width: 391px;
+    display: block;
+    width: 100%;
+    max-width: 391px;
+    margin: 24px auto 0 auto;
+    @include for-min-size("md") {
+      margin: 32px 0 0 0;
+    }
   }
 }

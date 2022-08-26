@@ -11,8 +11,13 @@
   /* typography*/
   color: $clr-white;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 17px;
+
+  @include for-min-size("md") {
+    font-size: 16px;
+    line-height: 20px;
+  }
 
   &_fw-700 {
     font-weight: 700;

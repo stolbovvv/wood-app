@@ -9,23 +9,57 @@
     border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.3);
   }
   &__logo {
-    width: 196px;
-    height: 58px;
+    flex-shrink: 0;
+    width: 130px;
+    height: 39px;
+    margin: 0 auto 0 0;
+    @include for-min-size("md") {
+      width: 196px;
+      height: 58px;
+      margin: 0 0 0 0;
+    }
   }
   &__menu {
-    flex: 1 1 auto;
-    padding: 0 32px 0 32px;
+    order: 1;
+    flex: 0 1 auto;
+    padding: 0 0 0 18px;
+    @include for-min-size("md") {
+      order: 0;
+      flex: 1 1 auto;
+      padding: 0 30px 0 26px;
+    }
+    @include for-min-size("lg") {
+    }
+    @include for-min-size("xl") {
+      padding: 0 32px 0 32px;
+    }
   }
   &__color-palette {
+    flex-shrink: 0;
+    display: none;
+    @include for-min-size("md") {
+      display: block;
+    }
   }
   &__contact {
-    margin: 0 0 0 32px;
+    display: none;
+    margin: 0 0 0 24px;
+    @include for-min-size("md") {
+      display: block;
+    }
+    @include for-min-size("xl") {
+      margin: 0 0 0 32px;
+    }
   }
   &__account-and-shopping-cart {
+    flex-shrink: 0;
     display: flex;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 18px;
     > * + * {
       margin: 0 0 0 18px;
+    }
+    @include for-min-size("xl") {
+      margin: 0 0 0 50px;
     }
   }
 }

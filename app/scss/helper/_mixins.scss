@@ -12,6 +12,13 @@
          + "Available breakpoints are: #{map.keys($breakpoint-list)}.";
   }
 }
+// hover and focus-whith
+@mixin for-hover-and-focus {
+  &:hover,
+  &:focus-within {
+    @content;
+  }
+}
 
 // Font face mixin
 @mixin add-font-fase($font-name, $file-name, $weight, $style: normal) {

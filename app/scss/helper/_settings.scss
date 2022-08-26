@@ -1,10 +1,10 @@
 // Breakpoints Settings
 $breakpoint-list: (
-  "xl": 1601px,
-  "lg": 1281px,
-  "md": 769px,
-  "sm": 481px,
-  "xs": 321px,
+  "xl": 1600px,
+  "lg": 1280px,
+  "md": 768px,
+  "sm": 480px,
+  "xs": 320px,
 );
 
 // Colors Setting
@@ -39,3 +39,5 @@ $fw-400: 400;
 $fw-700: 700;
 
 // Decoration Settings
+// Transition Settings
+$transition-025-ease: 0.25s ease 0s;

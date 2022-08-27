@@ -1,0 +1,17 @@
+@use "../helper" as *;
+
+/* Block "hero" */
+.benefits {
+  // .benefits__inner
+  &__inner {
+  }
+  // .benefits__title
+  &__title {
+  }
+  // .benefits__body
+  &__body {
+  }
+  // .benefits__spoiler
+  &__spoiler {
+  }
+}

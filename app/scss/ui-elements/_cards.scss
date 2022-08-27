@@ -2,20 +2,56 @@
 
 /* UI elements "Cards" */
 .produc-tab-card {
+  display: flex;
+  align-items: center;
+  padding: 16px 14px 16px 14px;
+  border-radius: 4px;
+  background: $clr-white;
   // .produc-tab-card__img
   &__img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
   }
   // .produc-tab-card__data
   &__data {
+    margin: 0 auto 0 12px;
   }
   // .produc-tab-card__name
   &__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $clr-primary;
   }
   // .produc-tab-card__price
   &__price {
+    margin: 8px 0 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: $clr-gray-700;
+    opacity: 0.5;
   }
   // .produc-tab-card__add-to-cart
   &__add-to-cart {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    margin: 0 0 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $clr-primary;
+    > svg {
+      width: 12px;
+      height: 12px;
+      path {
+        fill: $clr-white;
+      }
+    }
   }
 }
 

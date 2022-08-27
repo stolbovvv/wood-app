@@ -2,25 +2,79 @@
 
 /* Block "difference" */
 .difference {
+  padding: 35px 0 35px 0;
   // .difference__title
   &__title {
+    text-align: center;
   }
   // .difference__body
   &__body {
+    margin: 36px 0 0 0;
   }
   // .difference__button
-  &__button {
+  &__button-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 0 auto;
+    border-radius: 50%;
+    border: 1px solid $clr-primary;
+    background-color: transparent;
+
+    > svg {
+      width: 36px;
+      height: 36px;
+      transform: translateX(5px);
+    }
   }
   // .difference__waves
   &__waves {
+    width: 100%;
+    height: 104px;
   }
   // .difference__switch
   &__switch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 28px 0 0 0;
   }
   // .difference__switch-label
   &__switch-label {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+
+    &.--active {
+      color: $clr-primary;
+    }
   }
   // .difference__toggler
   &__toggler {
+    position: relative;
+    width: 62px;
+    height: 34px;
+    margin: 12px 0 12px 0;
+    border-radius: 999px;
+    background-color: $clr-gray-700;
+
+    > input {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(0% + 6px);
+      left: calc(0% + 6px);
+      background-color: $clr-white;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+    }
   }
 }

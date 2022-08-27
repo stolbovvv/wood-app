@@ -2,29 +2,62 @@
 
 /* Block "application" */
 .application {
+  padding: 35px 0 35px 0;
+  overflow: hidden;
+
   // .application__inner
   &__inner {
   }
   // .application__title
   &__title {
+    position: relative;
+    text-align: center;
   }
   // .application__slider
   &__slider {
+    padding: 36px 0 0 0;
   }
   // .application__slider-wrapper
   &__slider-wrapper {
   }
   // .application__slider-item
   &__slider-item {
+    position: relative;
+    width: 100%;
+    height: 284px;
+    border-radius: 4px;
+    overflow: hidden;
   }
   // .application__slider-item-img
   &__slider-item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   // .application__slider-buttons-group
   &__slider-buttons-group {
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
   }
   // .application__slider-button
   &__slider-button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background-color: transparent;
+    > svg {
+      width: 24px;
+      height: 24px;
+    }
     // .application__slider-button_prev
     &_prev {
     }
@@ -32,7 +65,14 @@
     &_next {
     }
   }
+  &__slider-footer {
+    display: flex;
+    align-items: center;
+    margin: 24px 0 0 0;
+  }
   // .application__button
   &__button {
+    flex: 1 0 auto;
+    margin: 0 0 0 30px;
   }
 }

@@ -1,0 +1,56 @@
+@use "../helper" as *;
+
+/* Block "benefits" */
+.product {
+  // .product__inner
+  &__inner {
+  }
+  // .product__content
+  &__content {
+  }
+  // .product__tab
+  &__tab {
+  }
+  // .product__tab-img
+  &__tab-img {
+  }
+  // .product__slider
+  &__slider {
+  }
+  // .product__slider-button
+  &__slider-button {
+    // .product__slider-button_prev
+    &_prev {
+    }
+    // .product__slider-button_next
+    &_next {
+    }
+  }
+  // .product__slider-wrapper
+  &__slider-wrapper {
+  }
+  // .product__slider-item
+  &__slider-item {
+  }
+  // .product__slider-item-img
+  &__slider-item-img {
+  }
+}
+
+.produc-tab-card {
+  // .produc-tab-card__img
+  &__img {
+  }
+  // .produc-tab-card__data
+  &__data {
+  }
+  // .produc-tab-card__name
+  &__name {
+  }
+  // .produc-tab-card__price
+  &__price {
+  }
+  // .produc-tab-card__add-to-cart
+  &__add-to-cart {
+  }
+}

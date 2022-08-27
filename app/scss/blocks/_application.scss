@@ -1,0 +1,38 @@
+@use "../helper" as *;
+
+/* Block "application" */
+.application {
+  // .application__inner
+  &__inner {
+  }
+  // .application__title
+  &__title {
+  }
+  // .application__slider
+  &__slider {
+  }
+  // .application__slider-wrapper
+  &__slider-wrapper {
+  }
+  // .application__slider-item
+  &__slider-item {
+  }
+  // .application__slider-item-img
+  &__slider-item-img {
+  }
+  // .application__slider-buttons-group
+  &__slider-buttons-group {
+  }
+  // .application__slider-button
+  &__slider-button {
+    // .application__slider-button_prev
+    &_prev {
+    }
+    // .application__slider-button_next
+    &_next {
+    }
+  }
+  // .application__button
+  &__button {
+  }
+}

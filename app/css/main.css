@@ -406,6 +406,7 @@ body {
     border-radius: 999px;
     padding: 1.25em 2em 1.25em 2em;
     background-color: #787d46;
+    text-align: center;
     cursor: pointer;
     /* typography*/
     color: #ffffff;
@@ -786,7 +787,10 @@ body {
     background-color: #ffffff;
 }
 
-/* Block "hero" */
+/* Block "benefits" */
+/* Block "benefits" */
+/* Block "application" */
+/* Block "difference" */
 /* Block "Footer" */
 .footer {
     padding: 60px 0 50px 0;

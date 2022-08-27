@@ -203,9 +203,9 @@
         <section class="benefits">
           <div class="container">
             <div class="benefits__inner">
-              <h2 class="benefits__title title"></h2>
+              <h2 class="benefits__title title">Преимущества продукции</h2>
               <div class="benefits__body">
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="open">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">Качественная акустика в доме</h3>
                     <button class="spoiler__button">
@@ -234,7 +234,7 @@
                   </p>
                 </div>
 
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="close">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
                     <button class="spoiler__button">
@@ -263,7 +263,7 @@
                   </p>
                 </div>
 
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="close">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
                     <button class="spoiler__button">
@@ -292,7 +292,7 @@
                   </p>
                 </div>
 
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="close">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
                     <button class="spoiler__button">
@@ -321,7 +321,7 @@
                   </p>
                 </div>
 
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="close">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
                     <button class="spoiler__button">
@@ -350,7 +350,7 @@
                   </p>
                 </div>
 
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="close">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
                     <button class="spoiler__button">
@@ -379,7 +379,7 @@
                   </p>
                 </div>
 
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="close">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
                     <button class="spoiler__button">
@@ -408,7 +408,7 @@
                   </p>
                 </div>
 
-                <div class="benefits__spoiler spoiler">
+                <div class="benefits__spoiler spoiler" data-spoiler="close">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
                     <button class="spoiler__button">
@@ -730,11 +730,14 @@
 
         <!-- bunner -->
         <section class="bunner">
-          <img class="bunner__img" src="" alt="" />
+          <picture>
+            <source srcset="./images/bunner/bunner-1-lg.jpg" media="(min-width: 768px)" />
+            <img class="bunner__img" src="./images/bunner/bunner-1-md.jpg" alt="" />
+          </picture>
           <div class="bunner__body">
             <div class="container">
-              <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
-              <p class="bunner__descr text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
+              <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
+              <p class="bunner__descr text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
               <button class="bunner__button button">Попробуйте наш визуализатор</button>
             </div>
           </div>
@@ -809,10 +812,124 @@
                         <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
                       </div>
                       <div class="examples-card__body">
-                        <p class="examples-card__name"></p>
-                        <p class="examples-card__descr text"></p>
+                        <p class="examples-card__name">Анна</p>
+                        <p class="examples-card__descr text">
+                          For most people, installing the panels would be an entertaining DIY project. It is very simple
+                          - you can cut the panels
+                        </p>
                         <a class="examples-card__more" href="#">
-                          <span class="examples-card__more-label"></span>
+                          <span class="examples-card__more-label">Подробнее</span>
+                          <svg
+                            class="examples-card__more-icon"
+                            viewBox="0 0 26 26"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M5.64941 13H20.3494"
+                              stroke="#383838"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
+                              stroke="#383838"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="examples-card">
+                      <div class="examples-card__img-wrapper">
+                        <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
+                      </div>
+                      <div class="examples-card__body">
+                        <p class="examples-card__name">Анна</p>
+                        <p class="examples-card__descr text">
+                          For most people, installing the panels would be an entertaining DIY project. It is very simple
+                          - you can cut the panels
+                        </p>
+                        <a class="examples-card__more" href="#">
+                          <span class="examples-card__more-label">Подробнее</span>
+                          <svg
+                            class="examples-card__more-icon"
+                            viewBox="0 0 26 26"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M5.64941 13H20.3494"
+                              stroke="#383838"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
+                              stroke="#383838"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="examples-card">
+                      <div class="examples-card__img-wrapper">
+                        <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
+                      </div>
+                      <div class="examples-card__body">
+                        <p class="examples-card__name">Анна</p>
+                        <p class="examples-card__descr text">
+                          For most people, installing the panels would be an entertaining DIY project. It is very simple
+                          - you can cut the panels
+                        </p>
+                        <a class="examples-card__more" href="#">
+                          <span class="examples-card__more-label">Подробнее</span>
+                          <svg
+                            class="examples-card__more-icon"
+                            viewBox="0 0 26 26"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M5.64941 13H20.3494"
+                              stroke="#383838"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
+                              stroke="#383838"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="examples-card">
+                      <div class="examples-card__img-wrapper">
+                        <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
+                      </div>
+                      <div class="examples-card__body">
+                        <p class="examples-card__name">Анна</p>
+                        <p class="examples-card__descr text">
+                          For most people, installing the panels would be an entertaining DIY project. It is very simple
+                          - you can cut the panels
+                        </p>
+                        <a class="examples-card__more" href="#">
+                          <span class="examples-card__more-label">Подробнее</span>
                           <svg
                             class="examples-card__more-icon"
                             viewBox="0 0 26 26"

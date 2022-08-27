@@ -2,6 +2,7 @@
 
 /* Block "examples" */
 .examples {
+  padding: 35px 0 35px 0;
   // .examples__inner
   &__inner {
   }
@@ -10,12 +11,31 @@
   }
   // .examples__title
   &__title {
+    text-align: center;
   }
   // .examples__slider-button-group
   &__slider-button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0 0 0;
+    border-radius: 999px;
   }
   // .examples__slider-button
   &__slider-button {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+
+    > svg {
+      width: 24px;
+      height: 24px;
+    }
     // .examples__slider-button_prev
     &_prev {
     }
@@ -25,6 +45,7 @@
   }
   // .examples__slider
   &__slider {
+    margin: 24px 0 0 0;
   }
   // .examples__slider-wrapper
   &__slider-wrapper {

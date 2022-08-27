@@ -2,7 +2,10 @@
 
 /* Block "Footer" */
 .footer {
-  padding: 60px 0 50px 0;
+  padding: 40px 0 50px 0;
+  @include for-min-size("md") {
+    padding: 65px 0 50px 0;
+  }
   &__inner {
     padding: 40px 0 0 0;
     border-top: 1px solid rgba($color: $clr-gray-700, $alpha: 0.3);

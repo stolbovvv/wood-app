@@ -2,19 +2,30 @@
 
 /* Block "bunner" */
 .bunner {
+  padding: 35px 0 35px 0;
   // .bunner__img
   &__img {
+    height: 689px;
+    object-fit: cover;
+    object-position: center;
   }
   // .bunner__body
   &__body {
+    padding: 70px 0 70px 0;
+    background-image: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
   }
   // .bunner__title
   &__title {
+    text-align: center;
   }
   // .bunner__descr
   &__descr {
+    margin: 32px 0 0 0;
+    text-align: center;
   }
   // .bunner__button
   &__button {
+    margin: 32px 0 0 0;
+    width: 100%;
   }
 }

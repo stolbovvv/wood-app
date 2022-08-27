@@ -2,16 +2,39 @@
 
 /* Block "benefits" */
 .benefits {
+  padding: 35px 0 35px 0;
   // .benefits__inner
   &__inner {
   }
   // .benefits__title
   &__title {
+    position: relative;
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 356px;
+      height: 150px;
+      transform: translate(-50%, -50%);
+      background-image: url("../../images/bg/bg-benefits.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: -1;
+    }
   }
   // .benefits__body
   &__body {
+    margin: 40px 0 0 0;
   }
   // .benefits__spoiler
   &__spoiler {
+    margin: 32px 0 0 0;
+
+    &:nth-child(1) {
+      margin: 0 0 0 0;
+    }
   }
 }

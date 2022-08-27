@@ -653,7 +653,7 @@ body {
     margin: 30px auto 0 auto;
 }
 
-/* Block "hero" */
+/* Block "panels" */
 .panels {
     background-image: -o-linear-gradient(351.66deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
     background-image: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
@@ -786,6 +786,7 @@ body {
     background-color: #ffffff;
 }
 
+/* Block "hero" */
 /* Block "Footer" */
 .footer {
     padding: 60px 0 50px 0;

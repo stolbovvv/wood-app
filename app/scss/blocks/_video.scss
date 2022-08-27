@@ -3,6 +3,9 @@
 /* Block "video" */
 .video {
   padding: 5px 0 35px 0;
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
   // .video__inner
   &__inner {
   }

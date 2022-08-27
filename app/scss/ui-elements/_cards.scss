@@ -14,10 +14,17 @@
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
+    @include for-min-size("md") {
+      width: 64px;
+      height: 64px;
+    }
   }
   // .produc-tab-card__data
   &__data {
     margin: 0 auto 0 12px;
+    @include for-min-size("md") {
+      margin: 0 auto 0 24px;
+    }
   }
   // .produc-tab-card__name
   &__name {
@@ -25,6 +32,10 @@
     font-size: 14px;
     line-height: 17px;
     color: $clr-primary;
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
   // .produc-tab-card__price
   &__price {
@@ -36,6 +47,7 @@
   }
   // .produc-tab-card__add-to-cart
   &__add-to-cart {
+    flex: 0 0 auto;
     width: 32px;
     height: 32px;
     border: none;
@@ -45,9 +57,17 @@
     align-items: center;
     justify-content: center;
     background-color: $clr-primary;
+    @include for-min-size("md") {
+      width: 64px;
+      height: 64px;
+    }
     > svg {
       width: 12px;
       height: 12px;
+      @include for-min-size("md") {
+        width: 24px;
+        height: 24px;
+      }
       path {
         fill: $clr-white;
       }
@@ -86,6 +106,11 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
   // .examples-card__descr
   &__descr {
@@ -103,6 +128,11 @@
     font-size: 14px;
     line-height: 17px;
     color: $clr-primary;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
   // .examples-card__more-icon
   &__more-icon {

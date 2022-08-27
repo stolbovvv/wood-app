@@ -4,6 +4,9 @@
 .benefits {
   padding: 35px 0 35px 0;
   overflow: hidden;
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
   // .benefits__inner
   &__inner {
   }
@@ -24,18 +27,25 @@
       background-position: center;
       background-size: contain;
       z-index: -1;
+
+      @include for-min-size("md") {
+        height: 420px;
+        width: 925px;
+        transform: translate(-50%, 20%);
+      }
     }
   }
   // .benefits__body
   &__body {
     margin: 40px 0 0 0;
+    display: grid;
+    row-gap: 32px;
+    @include for-min-size("md") {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+    }
   }
   // .benefits__spoiler
   &__spoiler {
-    margin: 32px 0 0 0;
-
-    &:nth-child(1) {
-      margin: 0 0 0 0;
-    }
   }
 }

@@ -5,6 +5,11 @@
   font-size: 32px;
   line-height: 39px;
 
+  @include for-min-size("md") {
+    font-size: 52px;
+    line-height: 63px;
+  }
+
   &_clr-white {
     color: $clr-white;
   }

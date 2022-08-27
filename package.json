@@ -2,7 +2,7 @@
   "name": "simple-starter-template",
   "version": "1.0.0",
   "description": "Starter template for website development",
-  "homepage": "https://stolbovvv.github.io/simple-starter-template/",
+  "homepage": "https://stolbovvv.github.io/wood-app/",
   "main": "gulpfile.js",
   "browserslist": [
     ">0.5%",

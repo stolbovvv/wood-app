@@ -1,3 +1,48 @@
 @use "../helper" as *;
 
 /* UI elements "Cards" */
+.produc-tab-card {
+  // .produc-tab-card__img
+  &__img {
+  }
+  // .produc-tab-card__data
+  &__data {
+  }
+  // .produc-tab-card__name
+  &__name {
+  }
+  // .produc-tab-card__price
+  &__price {
+  }
+  // .produc-tab-card__add-to-cart
+  &__add-to-cart {
+  }
+}
+
+.examples-card {
+  // .examples-card__img-wrapper
+  &__img-wrapper {
+  }
+  // .examples-card__img
+  &__img {
+  }
+  // .examples-card__body
+  &__body {
+  }
+  // .examples-card__name
+  &__name {
+  }
+  // .examples-card__descr
+  &__descr {
+  }
+  // .examples-card__more
+  &__more {
+  }
+  // .examples-card__more-label
+  &__more-label {
+  }
+  // .examples-card__more-icon
+  &__more-icon {
+  }
+}
+

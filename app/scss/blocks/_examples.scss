@@ -1,0 +1,35 @@
+@use "../helper" as *;
+
+/* Block "examples" */
+.examples {
+  // .examples__inner
+  &__inner {
+  }
+  // .examples__head
+  &__head {
+  }
+  // .examples__title
+  &__title {
+  }
+  // .examples__slider-button-group
+  &__slider-button-group {
+  }
+  // .examples__slider-button
+  &__slider-button {
+    // .examples__slider-button_prev
+    &_prev {
+    }
+    // .examples__slider-button_next
+    &_next {
+    }
+  }
+  // .examples__slider
+  &__slider {
+  }
+  // .examples__slider-wrapper
+  &__slider-wrapper {
+  }
+  // .examples__slider-item
+  &__slider-item {
+  }
+}

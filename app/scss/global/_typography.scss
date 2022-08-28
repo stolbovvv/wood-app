@@ -10,6 +10,11 @@
     line-height: 63px;
   }
 
+  @include for-min-size("lg") {
+    font-size: 62px;
+    line-height: 76px;
+  }
+
   &_clr-white {
     color: $clr-white;
   }

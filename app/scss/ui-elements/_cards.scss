@@ -57,9 +57,14 @@
     align-items: center;
     justify-content: center;
     background-color: $clr-primary;
+    transition: background-color $transition-025-ease;
+    cursor: pointer;
     @include for-min-size("md") {
       width: 64px;
       height: 64px;
+    }
+    &:hover {
+      background-color: #676d23;
     }
     > svg {
       width: 12px;
@@ -145,4 +150,3 @@
     }
   }
 }
-

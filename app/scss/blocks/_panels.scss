@@ -2,7 +2,6 @@
 
 /* Block "panels" */
 .panels {
-  background-image: $linaer-primary;
   margin: 35px 0 35px 0;
   @include for-min-size("md") {
     margin: 60px 0 60px 0;
@@ -18,14 +17,25 @@
   }
   &__inner {
     padding: 70px 0 70px 0;
+    background-image: $linaer-primary;
     @include for-min-size("md") {
       padding: 50px 0 50px 0;
+    }
+    @include for-min-size("lg") {
+      padding: 286px 0 62px 0;
+      min-height: 910px;
+      .container {
+        padding-right: 67px;
+      }
     }
   }
   &__title {
     text-align: center;
     @include for-min-size("md") {
       text-align: left;
+    }
+    @include for-min-size("lg") {
+      max-width: 750px;
     }
   }
   &__descr {
@@ -97,17 +107,22 @@
     height: 42px;
     border: none;
     border-radius: 50%;
+    border: 1px solid transparent;
     background-color: transparent;
-
+    transform: rotate(45deg);
+    cursor: pointer;
     > svg {
       width: 25px;
       height: 25px;
+      transform: rotate(-45deg);
     }
   }
   &__slider-button_prev {
     border-left: 1px solid $clr-gray-700;
+    border-bottom: 1px solid $clr-gray-700;
   }
   &__slider-button_next {
+    border-top: 1px solid $clr-gray-700;
     border-right: 1px solid $clr-gray-700;
   }
   &__slider-wrapper {

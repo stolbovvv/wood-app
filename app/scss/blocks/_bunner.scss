@@ -37,6 +37,7 @@
     text-align: center;
     @include for-min-size("md") {
       text-align: left;
+      max-width: 600px;
     }
   }
   // .bunner__descr

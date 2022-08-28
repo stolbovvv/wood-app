@@ -3,6 +3,8 @@
 /* Block "Header" */
 .header {
   &__inner {
+    max-width: 1600px;
+    margin: 0 auto 0 auto;
     padding: 20px 0 20px 0;
     display: flex;
     align-items: center;

@@ -9,6 +9,10 @@
     margin: 60px 0 60px 0;
     padding: 0 0 32px 0;
   }
+  @include for-min-size("lg") {
+    margin: 60px 0 60px 0;
+    padding: 0 0 50px 0;
+  }
   // .product__inner
   &__inner {
     display: flex;
@@ -28,6 +32,9 @@
     @include for-min-size("md") {
       flex: 1 1 50%;
       margin: 0 15px 0 0;
+    }
+    @include for-min-size("lg") {
+      flex: 0 0 448px;
     }
   }
   // .product__tab
@@ -62,6 +69,10 @@
       margin: 0 0 0 15px;
       padding: 16px 16px 17px 16px;
     }
+    @include for-min-size("lg") {
+      flex: 0 1 auto;
+      padding: 18px 16px 18px 16px;
+    }
   }
   // .product__slider-button
   &__slider-button {
@@ -73,6 +84,7 @@
     background-color: $clr-gray-100;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
     @include for-min-size("md") {
       width: 64px;
       height: 64px;

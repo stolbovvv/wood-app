@@ -2,6 +2,7 @@
 
 /* UI elements "Buttons" */
 .button {
+  position: relative;
   display: block;
   border: none;
   border-radius: 999px;
@@ -9,12 +10,40 @@
   background-color: $clr-primary;
   text-align: center;
   cursor: pointer;
-
-  /* typography*/
+  transition: all 0.5s ease 0s;
   color: $clr-white;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
+  text-decoration: none;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg/bg-button.svg");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: auto 90%;
+    transition: inherit;
+  }
+
+  span {
+    position: relative;
+  }
+
+  &:hover {
+    background-color: #676d23;
+
+    &::before {
+      right: 0;
+    }
+  }
 
   @include for-min-size("md") {
     font-size: 16px;
@@ -26,3 +55,45 @@
   }
 }
 
+.button-group {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  overflow: hidden;
+
+  // .button-group__prev
+  &__prev,
+  &__next {
+    width: 44px;
+    height: 44px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+
+    > svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    @include for-min-size("md") {
+      width: 64px;
+      height: 46px;
+
+      > svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+
+  // .button-group__prev
+  &__prev {
+  }
+
+  // .button-group__next
+  &__next {
+  }
+}

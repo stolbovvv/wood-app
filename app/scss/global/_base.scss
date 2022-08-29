@@ -20,11 +20,11 @@ body {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: min(100%, 1920px);
 
   @include for-min-size("lg") {
     padding-left: 80px;
@@ -33,5 +33,8 @@ body {
   @include for-min-size("xl") {
     padding-left: 130px;
     padding-right: 130px;
+  }
+  @include for-min-size("xxl") {
+    width: min(100%, 1860px);
   }
 }

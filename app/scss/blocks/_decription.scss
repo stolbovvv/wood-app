@@ -1,34 +1,3 @@
 @use "../helper" as *;
 
 /* Block "decription" */
-.decription {
-  min-height: 296px;
-  padding: 35px 0 35px 0;
-  background-image: url("../images/bg/bg-decor-waves.svg");
-  background-repeat: repeat-x;
-  background-position: center top;
-  background-size: auto 297px;
-  @include for-min-size("md") {
-    padding: 60px 0 60px 0;
-  }
-  &__inner {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  &__text {
-    max-width: 1400px;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    @include for-min-size("md") {
-      font-size: 32px;
-      line-height: 46px;
-    }
-  }
-  &__button {
-    width: 100%;
-    max-width: 313px;
-    margin: 30px auto 0 auto;
-  }
-}

@@ -1,115 +1,166 @@
 @use "../helper" as *;
 
-/* Block "Footer" */
+/* Block "footer" */
 .footer {
-  padding: 40px 0 50px 0;
+  padding: 35px 0 50px 0;
+
   @include for-min-size("md") {
-    padding: 65px 0 50px 0;
+    padding: 60px 0 50px 0;
   }
+
+  // .footer__inner
   &__inner {
-    max-width: 1600px;
-    margin: 0 auto 0 auto;
-    padding: 40px 0 0 0;
-    border-top: 1px solid rgba($color: $clr-gray-700, $alpha: 0.3);
+    padding: 20px 0 0 0;
+    border-top: 1px solid rgba(56, 56, 56, 0.3);
+
+    @include for-min-size("md") {
+      padding: 42px 0 0 0;
+    }
   }
+
+  // .footer__logo
   &__logo {
-    width: 130px;
     height: 38px;
+    width: 130px;
     margin: 0 auto 0 auto;
 
     @include for-min-size("md") {
-      width: 196px;
       height: 58px;
+      width: 196px;
     }
   }
+
+  // .footer__menu
   &__menu {
-    margin: 50px 0 0 0;
+  }
+
+  // .footer__bottom
+  &__bottom {
+    @include for-min-size("md") {
+      margin: 48px 0 0 0;
+    }
     @include for-min-size("lg") {
       margin: 60px 0 0 0;
     }
-  }
-  &__bottom {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 24px 0 0 0;
-
-    @include for-min-size("md") {
-      margin: 40px 0 0 0;
-    }
     @include for-min-size("xl") {
-      flex-direction: row;
+      display: flex;
+      align-items: center;
       justify-content: space-between;
     }
   }
-  &__copyrigth {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    @include for-min-size("md") {
-      flex-direction: row;
-    }
-  }
-  &__copyrigth-text {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  &__copyrigth-links {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 18px 0 0 0;
+
+  // .footer__copy
+  &__copy {
+    margin: 24px 0 0 0;
+
     > * + * {
       margin: 18px 0 0 0;
     }
+
     @include for-min-size("md") {
-      flex-direction: row;
-      padding: 0 0 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 0;
+
       > * + * {
-        margin: 0 0 0 22px;
+        margin: 0 0 0 30px;
       }
     }
-    @include for-min-size("xl") {
-      padding: 0 30px 0 30px;
+  }
+
+  // .footer__copy-text
+  &__copy-text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
-  &__copyrigth-link {
+
+  // .footer__copy-link-group
+  &__copy-link-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    > * + * {
+      margin: 18px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      flex-direction: row;
+
+      > * + * {
+        margin: 0 0 0 18px;
+      }
+    }
+  }
+
+  // .footer__copy-link
+  &__copy-link {
     color: inherit;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: underline;
     opacity: 0.5;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration-line: underline;
-  }
-  &__contact-and-social {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 32px 0 0 0;
+
+    @include for-hover-and-focus() {
+      opacity: 0.75;
+    }
+
     @include for-min-size("md") {
-      flex-direction: row;
-    }
-    @include for-min-size("xl") {
-      padding: 0 0 0 0;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
-  &__contact {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
+  // .footer__contacts
+  &__contacts {
+    margin: 32px 0 0 0;
+
     > * + * {
       margin: 18px 0 0 0;
     }
+
+    @include for-min-size("md") {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > * + * {
+        margin: 0 0 0 50px;
+      }
+    }
+
+    @include for-min-size("xl") {
+      margin: 0 0 0 0;
+    }
+  }
+
+  // .footer__contacts-link-group
+  &__contacts-link-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    > * + * {
+      margin: 18px 0 0 0;
+    }
+
     @include for-min-size("md") {
       flex-direction: row;
+
       > * + * {
-        margin: 0 0 0 22px;
+        margin: 0 0 0 24px;
       }
     }
   }
-  &__social {
-    padding: 18px 0 0 0;
-    @include for-min-size("md") {
-      padding: 0 0 0 40px;
-    }
+
+  // .footer__contacts-social
+  &__contacts-social {
   }
 }

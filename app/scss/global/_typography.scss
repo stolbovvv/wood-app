@@ -1,7 +1,7 @@
 @use "../helper" as *;
 
 /* Typography styles" */
-.title {
+.title-big {
   font-size: 32px;
   line-height: 39px;
 
@@ -19,6 +19,18 @@
     color: $clr-white;
   }
 }
+
+.title-small {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+
+  @include for-min-size("md") {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
 .text {
   font-size: 14px;
   line-height: 22px;

@@ -1,110 +1,79 @@
 @use "../helper" as *;
 
 /* UI elements "Navs & Tabs" */
-.primary-menu {
-  &__button {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 22px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    @include for-min-size("lg") {
-      display: none;
-    }
-    span {
-      height: 3px;
-      border-radius: 1000px;
-      background-color: $clr-gray-700;
-      &:nth-child(1) {
-        width: 24px;
-      }
-      &:nth-child(2) {
-        width: 32px;
-      }
-      &:nth-child(3) {
-        width: 18px;
-      }
-    }
-  }
-  &__list {
-    display: none;
-    @include for-min-size("lg") {
-      display: flex;
-      align-items: center;
-      list-style-type: none;
-      > * + * {
-        margin: 0 0 0 22px;
-      }
-    }
-  }
-  &__list-item {
-    padding: 4px 0 4px 0;
-  }
-  &__list-link {
-    color: $clr-gray-900;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
-  }
-}
-
-.secondary-menu {
+.footer-menu {
   display: none;
 
   @include for-min-size("md") {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: center;
-    margin: -50px 0 0 0;
-  }
-  @include for-min-size("lg") {
-    justify-content: space-between;
-    margin: 0 0 0 0;
-  }
-  @include for-min-size("xl") {
   }
 
+  @include for-min-size("lg") {
+    justify-content: space-between;
+  }
+
+  // .footer-menu__item
   &__item {
-    flex: 0 0 33%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 0 0 0;
-    > * + * {
-      padding: 0 0 0 32px;
+    @include for-min-size("md") {
+      flex: 0 0 33%;
+      display: flex;
+      justify-content: center;
     }
     @include for-min-size("lg") {
       flex: 0 0 auto;
-      padding: 0 0 0 0;
     }
   }
-  &__item-inner {
+
+  // .footer-menu__item-body
+  &__item-body {
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+    }
+    @include for-min-size("lg") {
+      margin: 60px 0 0 0;
+    }
   }
+
+  // .footer-menu__item-title
   &__item-title {
-    font-size: 18px;
-    line-height: 22px;
+    @include for-min-size("md") {
+      color: inherit;
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration: none;
+    }
   }
+
+  // .footer-menu__list
   &__list {
-    list-style-type: none;
+    @include for-min-size("md") {
+      margin: 10px 0 0 0;
+      list-style-type: none;
+
+      > * + * {
+        margin: 10px 0 0 0;
+      }
+    }
   }
+
+  // .footer-menu__list-item
   &__list-item {
-    margin: 10px 0 0 0;
   }
+
+  // .footer-menu__list-link
   &__list-link {
-    opacity: 0.5;
+    color: inherit;
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
-    transition: opacity $transition-025-ease;
+    opacity: 0.5;
 
     @include for-hover-and-focus() {
-      opacity: 1;
+      text-decoration: underline;
+      opacity: 0.75;
     }
   }
 }

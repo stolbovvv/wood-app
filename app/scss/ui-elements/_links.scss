@@ -1,67 +1,60 @@
 @use "../helper" as *;
 
-/* UI elements "Links" */
+/* UI elements "links" */
 .logo {
-  display: flex;
-  align-items: center;
-
+  // .logo__link
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
   }
+
+  // .logo__img
   &__img {
     width: 100%;
   }
 }
 
-.color-palette {
-  display: flex;
-  align-items: center;
-  color: $clr-primary;
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  &__icon {
-    width: 24px;
-    height: 24px;
-  }
-  &__label {
-    display: none;
-    @include for-min-size("xl") {
-      display: block;
-      margin: 0 0 0 12px;
-      color: inherit;
-    }
-  }
-}
-
-.contact-email,
-.contact-phone {
+.link-phone,
+.link-email {
   color: inherit;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
-}
 
-.account-link,
-.shopping-cart-link {
-  text-decoration: none;
-  svg {
-    width: 24px;
-    height: 24px;
+  @include for-hover-and-focus() {
+    text-decoration: underline;
   }
 }
 
-.social-list {
+.social-group {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   > * + * {
     margin: 0 0 0 16px;
   }
 
+  // .social-group__link
   &__link {
-    width: 24px;
-    height: 24px;
+    text-decoration: none;
+
+    > svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        transition: $transition-025-ease;
+      }
+    }
+
+    @include for-hover-and-focus() {
+      > svg path {
+        fill: $clr-primary;
+      }
+    }
   }
 }
 

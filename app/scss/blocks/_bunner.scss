@@ -2,11 +2,19 @@
 
 /* Block "bunner" */
 .bunner {
-  padding: 35px 0 35px 0;
+  margin: 35px 0 35px 0;
+
   @include for-min-size("md") {
     position: relative;
     height: 690px;
+    margin: 60px 0 60px 0;
   }
+
+  // .bunner__img-srcset
+  &__img-srcset {
+    width: 100%;
+  }
+
   // .bunner__img
   &__img {
     width: 100%;
@@ -19,43 +27,58 @@
       top: 0;
       left: 0;
       height: 100%;
-      z-index: 0;
+      z-index: -1;
+    }
+
+    @include for-min-size("lg") {
+      object-position: center;
     }
   }
-  // .bunner__body
-  &__body {
+
+  // .bunner__inner
+  &__inner {
     padding: 70px 0 70px 0;
     background-image: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
 
     @include for-min-size("md") {
-      position: relative;
+      padding: 140px 0 70px 0;
       background-image: none;
     }
   }
+
+  // .bunner__body
+  &__body {
+    > * + * {
+      margin: 32px 0 0 0;
+    }
+  }
+
   // .bunner__title
   &__title {
     text-align: center;
+
     @include for-min-size("md") {
       text-align: left;
-      max-width: 600px;
+      max-width: 670px;
     }
   }
+
   // .bunner__descr
   &__descr {
-    margin: 32px 0 0 0;
     text-align: center;
+
     @include for-min-size("md") {
-      max-width: 390px;
+      max-width: 400px;
       text-align: left;
     }
   }
+
   // .bunner__button
   &__button {
-    margin: 32px 0 0 0;
-    width: 100%;
+    margin: 32px auto 0 auto;
+
     @include for-min-size("md") {
-      max-width: 310px;
-      padding: 20px 20px 20px 20px;
+      margin: 32px 0 0 0;
     }
   }
 }

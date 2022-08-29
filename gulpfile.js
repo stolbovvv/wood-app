@@ -56,6 +56,7 @@ function collectBuild() {
         `./${_sourceName}/css/**/*.css`,
         `./${_sourceName}/fonts/**/*.*`,
         `./${_sourceName}/images/**/*.*`,
+        `./${_sourceName}/audio/**/*.*`,
         `./${_sourceName}/site.webmanifest`,
         `./${_sourceName}/favicon.ico`,
         `./${_sourceName}/{favicon*,android*,apple*}.png`,

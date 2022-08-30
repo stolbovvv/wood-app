@@ -28,237 +28,355 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header"></header>
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <!-- logo -->
+            <div class="heade__logo logo">
+              <a class="logo__link" href="./">
+                <img class="logo__limk-img" src="./images/logo_wood_app.jpg" alt="Wood App" />
+              </a>
+            </div>
+            <!-- header-menu -->
+            <div class="header__menu header-menu">
+              <button class="header-menu__button">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
 
-      <main class="main">
-        <!-- difference -->
-        <section class="difference">
-          <div class="container">
-            <h2 class="difference__title title-big">Услышьте разницу</h2>
+              <nav class="header-menu">
+                <!-- item -->
+                <div class="header-menu__item">
+                  <a class="header-menu__item-title" href="#">STORE</a>
+                  <!-- submenu -->
+                  <div class="header-menu__submenu">
+                    <ul class="header-menu__submenu-list">
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Комлектующие</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Образцы</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">STORE-панели</a>
+                      </li>
+                    </ul>
 
-            <div class="difference__body">
-              <div class="difference__player">
-                <button class="difference__button-play" id="playPauseButton" data-state="pause">
-                  <svg viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27 16L-1.4682e-06 31.5885L-1.05412e-07 0.411542L27 16Z" fill="#787D46" />
-                  </svg>
-                  <svg viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H6V30H0V0Z" fill="#787D46" />
-                    <path d="M16 0H22V30H16V0Z" fill="#787D46" />
-                  </svg>
-                </button>
-                <div class="difference__waves">
-                  <div id="acoustics_great" data-sound="./audio/Great-acoustics.wav"></div>
-                  <div id="acoustics_bad" data-sound="./audio/Bad-acoustics.wav"></div>
+                    <!-- articles -->
+                    <div class="header-menu__submenu-articles">
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Service</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Вопросы и ответы</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="difference__switch">
-                <span class="difference__switch-label" id="label_bad" data-state="active">С реверберацией</span>
-                <span class="difference__switch-toggler" data-state="not-active"><span></span></span>
-                <span class="difference__switch-label" id="label_great" data-state="not-active">Без реверберации</span>
-              </div>
-            </div>
-          </div>
-        </section>
+                <!-- item -->
+                <div class="header-menu__item">
+                  <a class="header-menu__item-title" href="#">Service</a>
+                  <!-- submenu -->
+                  <div class="header-menu__submenu">
+                    <ul class="header-menu__submenu-list">
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Установка</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Доставка</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Вопросы - ответы</a>
+                      </li>
+                    </ul>
 
-        <!-- bunner -->
-        <section class="bunner">
-          <picture class="bunner__img-srcset">
-            <source srcset="./images/bunner/bunner-1-lg.jpg" media="(min-width: 768px)" />
-            <img class="bunner__img" src="./images/bunner/bunner-1-md.jpg" alt="" />
-          </picture>
-          <div class="bunner__inner">
-            <div class="container bunner__body">
-              <h2 class="bunner__title title-big">Смотрите нашу продукцию в своём интерьере</h2>
-              <p class="bunner__descr text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
-              <button class="bunner__button button"><span>Попробуйте наш визуализатор</span></button>
-            </div>
-          </div>
-        </section>
+                    <!-- articles -->
+                    <div class="header-menu__submenu-articles">
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Service</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
 
-        <!-- video -->
-        <section class="video">
-          <div class="container">
-            <div class="video__inner">
-              <video
-                class="video__content"
-                id="video03"
-                src="https://woodupp.com/wp-content/uploads/2022/03/COM-branding-video-HD-text-website.mp4"
-                poster="https://woodupp.com/wp-content/uploads/2022/03/DK-branding-video-HD.00_00_07_09.Still001-1024x576.jpg.webp"
-                controls=""
-                preload="none"
-              ></video>
-            </div>
-          </div>
-        </section>
-
-        <!-- examples -->
-        <section class="examples">
-          <div class="container">
-            <div class="examples__inner">
-              <div class="examples__head">
-                <h2 class="examples__title title-big">Примеры наших работ</h2>
-                <div class="examples__button-group button-group">
-                  <button class="button-group__button button-group__button_prev">
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20.3506 13H5.65058"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M13.001 5.64844L5.65098 12.9984L13.001 20.3484"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <button class="button-group__button button-group__button_next">
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.64941 13H20.3494"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <div class="button-group__border"></div>
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Вопросы и ответы</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="examples__slider swiper">
-                <div class="examples__slider-wrapper swiper-wrapper">
-                  <article class="examples-card swiper-slide">
-                    <img class="examples-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
-                    <h3 class="examples-card__title title-small">Анна</h3>
-                    <p class="examples-card__text text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels
-                    </p>
-                    <a class="examples-card__link" href="#">
-                      <span>Подробнее</span>
-                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </a>
-                  </article>
+                <!-- item -->
+                <div class="header-menu__item">
+                  <a class="header-menu__item-title" href="#">Команда</a>
+                  <!-- submenu -->
+                  <div class="header-menu__submenu">
+                    <ul class="header-menu__submenu-list">
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Блог</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Команда</a>
+                      </li>
+                    </ul>
 
-                  <article class="examples-card swiper-slide">
-                    <img class="examples-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
-                    <h3 class="examples-card__title title-small">Анна</h3>
-                    <p class="examples-card__text text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels
-                    </p>
-                    <a class="examples-card__link" href="#">
-                      <span>Подробнее</span>
-                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </a>
-                  </article>
+                    <!-- articles -->
+                    <div class="header-menu__submenu-articles">
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Service</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
 
-                  <article class="examples-card swiper-slide">
-                    <img class="examples-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
-                    <h3 class="examples-card__title title-small">Анна</h3>
-                    <p class="examples-card__text text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels
-                    </p>
-                    <a class="examples-card__link" href="#">
-                      <span>Подробнее</span>
-                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </a>
-                  </article>
-
-                  <article class="examples-card swiper-slide">
-                    <img class="examples-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
-                    <h3 class="examples-card__title title-small">Анна</h3>
-                    <p class="examples-card__text text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels
-                    </p>
-                    <a class="examples-card__link" href="#">
-                      <span>Подробнее</span>
-                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </a>
-                  </article>
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Вопросы и ответы</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+                <!-- item -->
+                <div class="header-menu__item">
+                  <a class="header-menu__item-title" href="#">Сотрудничество</a>
+                  <!-- submenu -->
+                  <div class="header-menu__submenu">
+                    <ul class="header-menu__submenu-list">
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Сотрудничество</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Применение</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">STORE</a>
+                      </li>
+                    </ul>
+
+                    <!-- articles -->
+                    <div class="header-menu__submenu-articles">
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Service</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Вопросы и ответы</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- item -->
+                <div class="header-menu__item">
+                  <a class="header-menu__item-title" href="#">Сотрудничество</a>
+                  <!-- submenu -->
+                  <div class="header-menu__submenu">
+                    <ul class="header-menu__submenu-list">
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Сотрудничество</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Применение</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">STORE</a>
+                      </li>
+                    </ul>
+
+                    <!-- articles -->
+                    <div class="header-menu__submenu-articles">
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Service</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Вопросы и ответы</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- item -->
+                <div class="header-menu__item">
+                  <a class="header-menu__item-title" href="#">Вдохновение</a>
+                  <!-- submenu -->
+                  <div class="header-menu__submenu">
+                    <ul class="header-menu__submenu-list">
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Контакты</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Вопросы-ответы</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">STORE</a>
+                      </li>
+                    </ul>
+
+                    <!-- articles -->
+                    <div class="header-menu__submenu-articles">
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Service</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Вопросы и ответы</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- item -->
+                <div class="header-menu__item">
+                  <a class="header-menu__item-title" href="#">Контакты</a>
+                  <!-- submenu -->
+                  <div class="header-menu__submenu">
+                    <ul class="header-menu__submenu-list">
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Контакты</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">Вопросы-ответы</a>
+                      </li>
+                      <li class="header-menu__submenu-item">
+                        <a class="header-menu__submenu-link" href="#">STORE</a>
+                      </li>
+                    </ul>
+
+                    <!-- articles -->
+                    <div class="header-menu__submenu-articles">
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Service</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+
+                      <article class="article-preview">
+                        <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                        <a class="article-preview__link" href="#">
+                          <span class="article-preview__link-text">Вопросы и ответы</span>
+                          <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                          <p class="article-preview__descr">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </a>
+                      </article>
+                    </div>
+                    <!-- end articles -->
+                  </div>
+                  <!-- end submenu -->
+                </div>
+                <!-- end menu-item -->
+              </nav>
             </div>
+            <!-- end header-menu -->
           </div>
-        </section>
-      </main>
+          <!-- end header inner -->
+        </div>
+        <!-- end container -->
+      </header>
+
+      <main class="main"></main>
 
       <footer class="footer">
         <div class="container">
@@ -412,3 +530,9 @@
     <script src="js/main.min.js"></script>
   </body>
 </html>
+
+<!-- 
+
+
+
+ -->

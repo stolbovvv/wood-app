@@ -1,66 +1,35 @@
 @use "../helper" as *;
 
 /* UI elements "Cards" */
-.examples-card {
-  > * + * {
-    margin: 16px 0 0 0;
-  }
-  // .examples-card__thumbnail
-  &__thumbnail {
+.article-preview {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  // .article-preview__img
+  &__img {
     width: 100%;
-    height: 239px;
+    height: 150px;
     border-radius: 4px;
-    object-fit: cover;
-    object-position: center;
-
-    @include for-min-size("md") {
-      height: 291px;
-    }
-
-    @include for-min-size("lg") {
-      height: 447px;
-    }
-
-    @include for-min-size("xl") {
-      height: 539px;
-    }
-
-    @include for-min-size("xxl") {
-      height: 543px;
-    }
   }
 
-  // .examples-card__title
-  &__title {
-  }
+  // .article-preview__link
 
-  // .examples-card__text
-  &__text {
-    max-width: 660px;
-  }
-
-  // .examples-card__link
   &__link {
-    display: flex;
-    align-items: center;
-    color: $clr-primary;
-    text-decoration: none;
+  }
 
-    > * + * {
-      margin: 0 0 0 10px;
-    }
+  // .article-preview__link-text
 
-    svg {
-      width: 24px;
-      height: 24px;
+  &__link-text {
+  }
 
-      path {
-        stroke: $clr-primary;
-      }
-    }
+  // .article-preview__link-icon
 
-    @include for-hover-and-focus() {
-      text-decoration: underline;
-    }
+  &__link-icon {
+  }
+
+  // .article-preview__descr
+
+  &__descr {
   }
 }

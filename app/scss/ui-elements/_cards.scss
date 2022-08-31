@@ -1,3 +1,41 @@
 @use "../helper" as *;
 
 /* UI elements "Cards" */
+.article-preview-card {
+  // .article-preview-card__thumbnail
+  &__thumbnail {
+    width: 100%;
+    height: 144px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+  }
+  // .article-preview-card__link
+  &__link {
+    display: flex;
+    align-items: center;
+    margin: 12px 0 0 0;
+    color: inherit;
+    text-decoration: none;
+
+    > * + * {
+      margin: 0 0 0 10px;
+    }
+  }
+  // .article-preview-card__link-label
+  &__link-label {
+    font-size: 14px;
+    line-height: 17px;
+    color: inherit;
+  }
+  // .article-preview-card__link-icon
+  &__link-icon {
+    font-size: 24px;
+    color: inherit;
+  }
+  // .article-preview-card__text
+  &__text {
+    margin: 12px 0 0 0;
+    opacity: 0.5;
+  }
+}

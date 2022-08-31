@@ -1,0 +1,141 @@
+@use "../helper" as *;
+
+/* UI elements "Navigations" */
+
+.header-menu {
+  // .header-menu__button
+  &__button {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include for-min-size("md") {
+      width: 32px;
+      height: 22px;
+    }
+
+    @include for-min-size("lg") {
+      display: none;
+    }
+
+    > span {
+      height: 2px;
+      border-radius: 2px;
+      background-color: $clr-gray-700;
+
+      @include for-min-size("md") {
+        height: 3px;
+      }
+
+      &:nth-child(1) {
+        width: 75%;
+      }
+      &:nth-child(2) {
+        width: 100%;
+      }
+      &:nth-child(3) {
+        width: 50%;
+      }
+    }
+  }
+
+  // .header-menu__body
+  &__body {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 88px);
+    padding: 24px 15px 24px 15px;
+    background-color: $clr-white;
+    z-index: -1;
+    overflow: scroll;
+  }
+
+  // .header-menu__list
+  &__list {
+    list-style-type: none;
+
+    > * + * {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  // .header-menu__list-item
+  &__list-item {
+  }
+
+  // .header-menu__list-link
+  &__list-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // .header-menu__list-link-text
+  &__list-link-text {
+    font-size: 16px;
+    line-height: 20px;
+    color: inherit;
+  }
+
+  // .header-menu__list-link-icon
+  &__list-link-icon {
+    color: inherit;
+    font-size: 24px;
+    transition: transform 0.5s ease 0s;
+
+    &.--active {
+      transform: rotate(90deg);
+    }
+  }
+
+  // .header-menu__submenu
+  &__submenu {
+    display: none;
+
+    &.--active {
+      display: block;
+    }
+  }
+}
+
+.header-submenu {
+  margin: 18px 0 0 0;
+
+  // .header-submenu__list
+  &__list {
+    list-style-type: none;
+
+    > * + * {
+      margin: 16px 0 0 0;
+    }
+  }
+  // .header-submenu__lsit-item
+  &__lsit-item {
+  }
+  // .header-submenu__list-link
+  &__list-link {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #383838;
+    opacity: 0.5;
+  }
+  // .header-submenu__articles
+  &__articles {
+    margin: 16px 0 0 0;
+
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+  }
+}

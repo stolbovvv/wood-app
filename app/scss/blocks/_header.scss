@@ -1,3 +1,104 @@
 @use "../helper" as *;
 
 /* Block "header" */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+
+  // .header__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 24px 0 24px 0;
+    border-bottom: 1px solid rgba(56, 56, 56, 0.5);
+  }
+
+  // .header__logo
+  &__logo {
+    height: 39px;
+    width: 130px;
+    display: flex;
+    align-items: stretch;
+
+    @include for-min-size("md") {
+      width: 160px;
+      height: 48px;
+    }
+  }
+
+  // .header__menu
+  &__menu {
+    order: 1;
+    flex: 0 0 auto;
+    margin: 0 0 0 18px;
+
+    @include for-min-size("md") {
+      order: 0;
+      margin: 0 0 0 30px;
+    }
+  }
+
+  // .header__color-palette
+  &__color-palette {
+    display: none;
+
+    @include for-min-size("md") {
+      display: block;
+      flex: 0 0 auto;
+      margin: 0 0 0 auto;
+    }
+  }
+
+  // .header__contacts
+  &__contacts {
+    display: none;
+
+    @include for-min-size("md") {
+      display: block;
+      flex: 0 0 auto;
+      margin: 0 0 0 32px;
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 0 0 24px;
+    }
+
+    @include for-min-size("xl") {
+      margin: 0 0 0 32px;
+    }
+  }
+
+  // .header__contacts-link-group
+  &__contacts-link-group {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+      margin: 0 0 0 16px;
+    }
+  }
+
+  // .header__account-and-cart
+  &__account-and-cart {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+
+    > * + * {
+      margin: 0 0 0 18px;
+    }
+
+    @include for-min-size("md") {
+      margin: 0 0 0 32px;
+    }
+
+    @include for-min-size("xl") {
+      margin: 0 0 0 50px;
+    }
+  }
+}

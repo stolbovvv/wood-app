@@ -1,35 +1,3 @@
 @use "../helper" as *;
 
 /* UI elements "Cards" */
-.article-preview {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
-  // .article-preview__img
-  &__img {
-    width: 100%;
-    height: 150px;
-    border-radius: 4px;
-  }
-
-  // .article-preview__link
-
-  &__link {
-  }
-
-  // .article-preview__link-text
-
-  &__link-text {
-  }
-
-  // .article-preview__link-icon
-
-  &__link-icon {
-  }
-
-  // .article-preview__descr
-
-  &__descr {
-  }
-}

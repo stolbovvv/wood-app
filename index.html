@@ -20,6 +20,9 @@
     <meta name="description" content="" />
     <title>Wood App</title>
 
+    <!-- Connetcing Libs Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
+
     <!-- Connecting Page Styles -->
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
@@ -28,953 +31,799 @@
       <header class="header">
         <div class="container">
           <div class="header__inner">
-            <!-- logo -->
-            <div class="header__logo logo">
-              <a class="logo__link" href="./">
-                <img class="logo__img" src="./images/logo_wood_app.jpg" alt="Wood App" />
+            <!-- site-logo -->
+            <div class="header__logo">
+              <a class="site-logo" href="./">
+                <img class="site-logo__img" src="./images/logo_wood_app.jpg" alt="Wood App" />
               </a>
             </div>
-            <!-- primary-menu -->
-            <nav class="header__menu primary-menu">
-              <button class="primary-menu__button">
+            <!-- header-menu -->
+            <nav class="header__menu header-menu">
+              <button class="header-menu__button">
                 <span></span>
                 <span></span>
                 <span></span>
               </button>
-              <ul class="primary-menu__list">
-                <li class="primary-menu__list-item"><a class="primary-menu__list-link" href="#">STORE</a></li>
-                <li class="primary-menu__list-item"><a class="primary-menu__list-link" href="#">Service</a></li>
-                <li class="primary-menu__list-item"><a class="primary-menu__list-link" href="#">Команда</a></li>
-                <li class="primary-menu__list-item"><a class="primary-menu__list-link" href="#">Сотрудничество</a></li>
-                <li class="primary-menu__list-item"><a class="primary-menu__list-link" href="#">Вдохновение</a></li>
-                <li class="primary-menu__list-item"><a class="primary-menu__list-link" href="#">Контакты</a></li>
-              </ul>
+
+              <!-- header-menu-body -->
+              <div class="header-menu__body">
+                <ul class="header-menu__list">
+                  <!-- header-menu-item -->
+                  <li class="header-menu__list-item">
+                    <a class="header-menu__list-link" href="#">
+                      <span class="header-menu__lsit-link-text">STORE</span>
+                      <i class="header-menu__list-link-icon icon-ui-arrow-right --active"></i>
+                    </a>
+                    <div class="header-menu__submenu header-submenu --active">
+                      <!-- header-submenu-list -->
+                      <ul class="header-submenu__list">
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Комлектующие</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Образцы</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">STORE-панели</a>
+                        </li>
+                      </ul>
+                      <!-- header-submenu-articles -->
+                      <div class="header-submenu__articles">
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-1.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Service</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-2.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Вопросы и ответы</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- header-menu-item -->
+                  <li class="header-menu__list-item">
+                    <a class="header-menu__list-link" href="#">
+                      <span class="header-menu__lsit-link-text">Service</span>
+                      <i class="header-menu__list-link-icon icon-ui-arrow-right"></i>
+                    </a>
+                    <div class="header-menu__submenu header-submenu">
+                      <!-- header-submenu-list -->
+                      <ul class="header-submenu__list">
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Установка</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Доставка</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Вопросы-ответы</a>
+                        </li>
+                      </ul>
+                      <!-- header-submenu-articles -->
+                      <div class="header-submenu__articles">
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-1.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Service</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-2.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Вопросы и ответы</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- header-menu-item -->
+                  <li class="header-menu__list-item">
+                    <a class="header-menu__list-link" href="#">
+                      <span class="header-menu__lsit-link-text">Команда</span>
+                      <i class="header-menu__list-link-icon icon-ui-arrow-right"></i>
+                    </a>
+                    <div class="header-menu__submenu header-submenu">
+                      <!-- header-submenu-list -->
+                      <ul class="header-submenu__list">
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Блог</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Команда</a>
+                        </li>
+                      </ul>
+                      <!-- header-submenu-articles -->
+                      <div class="header-submenu__articles">
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-1.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Service</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-2.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Вопросы и ответы</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- header-menu-item -->
+                  <li class="header-menu__list-item">
+                    <a class="header-menu__list-link" href="#">
+                      <span class="header-menu__lsit-link-text">Сотрудничество</span>
+                      <i class="header-menu__list-link-icon icon-ui-arrow-right"></i>
+                    </a>
+                    <div class="header-menu__submenu header-submenu">
+                      <!-- header-submenu-list -->
+                      <ul class="header-submenu__list">
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Сотрудничество</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Применение</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">STORE</a>
+                        </li>
+                      </ul>
+                      <!-- header-submenu-articles -->
+                      <div class="header-submenu__articles">
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-1.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Service</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-2.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Вопросы и ответы</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- header-menu-item -->
+                  <li class="header-menu__list-item">
+                    <a class="header-menu__list-link" href="#">
+                      <span class="header-menu__lsit-link-text">Вдохновение</span>
+                      <i class="header-menu__list-link-icon icon-ui-arrow-right"></i>
+                    </a>
+                    <div class="header-menu__submenu header-submenu">
+                      <!-- header-submenu-list -->
+                      <ul class="header-submenu__list">
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Контакты</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Вопросы-ответы</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">STORE</a>
+                        </li>
+                      </ul>
+                      <!-- header-submenu-articles -->
+                      <div class="header-submenu__articles">
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-1.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Service</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-2.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Вопросы и ответы</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- header-menu-item -->
+                  <li class="header-menu__list-item">
+                    <a class="header-menu__list-link" href="#">
+                      <span class="header-menu__lsit-link-text">Контакты</span>
+                      <i class="header-menu__list-link-icon icon-ui-arrow-right"></i>
+                    </a>
+                    <div class="header-menu__submenu header-submenu">
+                      <!-- header-submenu-list -->
+                      <ul class="header-submenu__list">
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Контакты</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">Вопросы-ответы</a>
+                        </li>
+                        <li class="header-submenu__lsit-item">
+                          <a href="#" class="header-submenu__list-link">STORE</a>
+                        </li>
+                      </ul>
+                      <!-- header-submenu-articles -->
+                      <div class="header-submenu__articles">
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-1.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Service</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+
+                        <article class="article-preview-card">
+                          <img class="article-preview-card__thumbnail" src="./images/articles/article-2.jpg" alt="" />
+                          <a class="article-preview-card__link" href="#">
+                            <span class="article-preview-card__link-label">Вопросы и ответы</span>
+                            <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                          </a>
+                          <p class="article-preview-card__text text">
+                            For most people, installing the panels would be an entertaining DIY project. It is very
+                            simple.
+                          </p>
+                        </article>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </nav>
             <!-- color-palette -->
             <div class="header__color-palette">
-              <a class="color-palette" href="#">
-                <svg class="color-palette__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_601_1258)">
-                    <path
-                      d="M5.07422 18.083C4.16958 18.083 3.43359 18.819 3.43359 19.7236C3.43359 20.6283 4.16958 21.3643 5.07422 21.3643C5.97886 21.3643 6.71484 20.6283 6.71484 19.7236C6.71484 18.819 5.97886 18.083 5.07422 18.083ZM5.07422 20.4268C4.68652 20.4268 4.37109 20.1113 4.37109 19.7236C4.37109 19.3359 4.68652 19.0205 5.07422 19.0205C5.46192 19.0205 5.77734 19.3359 5.77734 19.7236C5.77734 20.1113 5.46192 20.4268 5.07422 20.4268Z"
-                      fill="#787D46"
-                    />
-                    <path
-                      d="M23.0094 10.9018L22.1221 9.65827C21.9717 9.44752 21.6789 9.39853 21.4683 9.54895C21.2575 9.69933 21.2086 9.99206 21.359 10.2028L22.2463 11.4463C22.2791 11.4923 22.2683 11.5566 22.2224 11.5894L19.3549 13.6354L15.6745 8.47762L16.0156 7.81519L18.3439 6.15375C18.3899 6.12089 18.4542 6.13177 18.4869 6.17756L19.1809 7.15017C19.3313 7.36092 19.624 7.40986 19.8347 7.25948C20.0455 7.10916 20.0944 6.81638 19.944 6.60567L19.2499 5.63273C18.9165 5.16642 18.2658 5.05781 17.7994 5.39062L16.9532 5.99447L17.4287 5.07098C17.5562 4.82428 17.5799 4.54266 17.4953 4.27805C17.4107 4.01316 17.228 3.79716 16.9807 3.66984L11.2263 0.706875C10.9795 0.57975 10.6978 0.556313 10.4333 0.640922C10.1687 0.725578 9.95291 0.908156 9.82574 1.15509L9.34996 2.07914V1.03983C9.34996 0.466453 8.88346 0 8.31009 0H1.83768C1.2643 0 0.797852 0.466453 0.797852 1.03983V19.724C0.797852 22.0818 2.71607 24 5.07393 24C6.00112 24 6.86024 23.7032 7.56154 23.1999C7.57223 23.1935 7.58273 23.1866 7.59304 23.1792L12.0898 19.9706L15.8033 17.321C15.8034 17.3209 15.8035 17.3209 15.8037 17.3208C15.8038 17.3207 15.8039 17.3206 15.8039 17.3205L22.7672 12.3523C23.2336 12.019 23.3422 11.3683 23.0094 10.9018ZM18.5916 14.1799L15.6407 16.2854L13.3252 13.0401L15.1917 9.41517L18.5916 14.1799ZM11.9268 18.9352L10.976 17.6026L12.8425 13.9776L14.8776 16.8299L11.9268 18.9352ZM10.8055 15.8856L9.34991 15.136V11.059L12.4649 12.663L12.3586 12.8693C12.3576 12.8714 12.3564 12.8734 12.3554 12.8755L10.8055 15.8856ZM12.8941 11.8295L9.34996 10.0046V5.92673L14.5537 8.60639L12.8941 11.8295ZM8.41246 9.12502H1.73535V5.50003H8.41246V9.12502ZM1.73535 10.0625H8.41246V13.6875H1.73535V10.0625ZM9.34996 16.1905L10.3764 16.7191L9.34996 18.7125V16.1905ZM10.4932 18.5401L11.1636 19.4797L9.3389 20.7818L10.4932 18.5401ZM10.6592 1.58433C10.6752 1.55325 10.7005 1.53975 10.7189 1.53384C10.7374 1.52794 10.7659 1.52428 10.7971 1.54036L16.5515 4.50328C16.5827 4.51936 16.5963 4.54477 16.6022 4.56323C16.608 4.58152 16.6116 4.60983 16.5954 4.64119L14.9829 7.77291L9.34996 4.87223V4.12711L10.6592 1.58433ZM1.83768 0.9375H8.31009C8.36652 0.9375 8.41246 0.983391 8.41246 1.03983V4.56248H1.73535V1.03983C1.73535 0.983391 1.78124 0.9375 1.83768 0.9375ZM5.07388 23.0625C3.23301 23.0625 1.73535 21.5648 1.73535 19.724V14.625H8.41246V19.724C8.41246 21.5648 6.91476 23.0625 5.07388 23.0625Z"
-                      fill="#787D46"
-                    />
-                    <path
-                      d="M20.6519 8.87305C20.9107 8.87305 21.1206 8.66318 21.1206 8.4043C21.1206 8.14541 20.9107 7.93555 20.6519 7.93555C20.393 7.93555 20.1831 8.14541 20.1831 8.4043C20.1831 8.66318 20.393 8.87305 20.6519 8.87305Z"
-                      fill="#787D46"
-                    />
-                  </g>
-                </svg>
-                <span class="color-palette__label">Заказать образцы</span>
-              </a>
+              <div class="color-palette">
+                <a class="color-palette__link" href="#">
+                  <i class="color-palette__icon icon-ui-color-palette"></i>
+                  <span class="color-palette__label">Заказать образцы</span>
+                </a>
+              </div>
             </div>
             <!-- contacts -->
-            <div class="header__contact">
-              <a class="contact-phone" href="tel:+79801922024">+7 (980) 192-20-24</a>
+            <div class="header__contacts">
+              <div class="header__contacts-link-group">
+                <a class="phone-link" href="tel:+79801922024">+7 (980) 192-20-24</a>
+              </div>
             </div>
-            <!-- account-and-shopping-cart -->
-            <div class="header__account-and-shopping-cart">
-              <a class="account-link" href="#">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_601_1239)">
-                    <path
-                      d="M20.4853 15.5147C19.1783 14.2077 17.6226 13.2402 15.9253 12.6545C17.7432 11.4024 18.9375 9.30694 18.9375 6.9375C18.9375 3.11217 15.8253 0 12 0C8.17467 0 5.0625 3.11217 5.0625 6.9375C5.0625 9.30694 6.25683 11.4024 8.07478 12.6545C6.37744 13.2402 4.82175 14.2077 3.51473 15.5147C1.24823 17.7812 0 20.7947 0 24H1.875C1.875 18.417 6.41705 13.875 12 13.875C17.583 13.875 22.125 18.417 22.125 24H24C24 20.7947 22.7518 17.7812 20.4853 15.5147ZM12 12C9.20855 12 6.9375 9.729 6.9375 6.9375C6.9375 4.146 9.20855 1.875 12 1.875C14.7915 1.875 17.0625 4.146 17.0625 6.9375C17.0625 9.729 14.7915 12 12 12Z"
-                      fill="#383838"
-                    />
-                  </g>
-                </svg>
-              </a>
-              <a class="shopping-cart-link" href="#">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_601_1243)">
-                    <path
-                      d="M24.0467 8.06249V11.8125C24.0467 12.3303 23.6271 12.75 23.1092 12.75H22.4927L22.0978 16.2651C22.0439 16.7441 21.6382 17.0978 21.1672 17.098C21.1322 17.098 21.0971 17.096 21.0614 17.092C20.5469 17.0343 20.1766 16.5701 20.2345 16.0558L20.723 11.7079C20.7763 11.2337 21.1773 10.875 21.6546 10.875H22.1719V8.99999H1.92188V10.875H17.9063C18.4241 10.875 18.8438 11.2949 18.8438 11.8125C18.8438 12.3303 18.4241 12.75 17.9063 12.75H3.50501L4.43079 20.4732C4.54359 21.4149 5.34394 22.125 6.29243 22.125H17.8764C18.8319 22.125 19.633 21.4089 19.7397 20.4593C19.7974 19.9448 20.2614 19.5747 20.7759 19.6324C21.2904 19.6903 21.6607 20.1542 21.603 20.6688C21.3895 22.5678 19.7875 24 17.8764 24H6.29243C4.39545 24 2.79474 22.5797 2.56897 20.6962L1.61664 12.75H0.984377C0.466553 12.75 0.046875 12.3303 0.046875 11.8125V8.06249C0.046875 7.54467 0.466553 7.12499 0.984377 7.12499H4.30958L9.2635 0.382484C9.57002 -0.0346312 10.1567 -0.124536 10.574 0.182166C10.9913 0.488685 11.081 1.07536 10.7745 1.49265L6.6363 7.12499H17.4921L13.3537 1.49265C13.0472 1.07536 13.1369 0.488685 13.5542 0.182166C13.9715 -0.124536 14.5582 -0.0348143 14.8649 0.382484L19.8186 7.12499H23.1092C23.6271 7.12499 24.0467 7.54485 24.0467 8.06249ZM11.1094 15.5625V19.3125C11.1094 19.8303 11.5291 20.25 12.0469 20.25C12.5645 20.25 12.9844 19.8303 12.9844 19.3125V15.5625C12.9844 15.0447 12.5645 14.625 12.0469 14.625C11.5291 14.625 11.1094 15.0447 11.1094 15.5625ZM14.8594 15.5625V19.3125C14.8594 19.8303 15.2791 20.25 15.7969 20.25C16.3145 20.25 16.7344 19.8303 16.7344 19.3125V15.5625C16.7344 15.0447 16.3145 14.625 15.7969 14.625C15.2791 14.625 14.8594 15.0447 14.8594 15.5625ZM7.35939 15.5625V19.3125C7.35939 19.8303 7.77907 20.25 8.29689 20.25C8.81453 20.25 9.23439 19.8303 9.23439 19.3125V15.5625C9.23439 15.0447 8.81453 14.625 8.29689 14.625C7.77907 14.625 7.35939 15.0447 7.35939 15.5625Z"
-                      fill="#787D46"
-                    />
-                  </g>
-                </svg>
-              </a>
+            <!-- account-and-cart -->
+            <div class="header__account-and-cart">
+              <div class="account">
+                <a class="account__link" href="#"><i class="account__icon icon-ui-user"></i></a>
+              </div>
+              <div class="shopping-cart">
+                <a class="shopping-cart__link" href="#"><i class="shopping-cart__icon icon-ui-shopping-cart"></i></a>
+              </div>
             </div>
+            <!-- account-and-cart end -->
           </div>
         </div>
       </header>
 
       <main class="main">
-        <!-- hero -->
-        <section class="hero">
+        <!-- section: home-hero -->
+        <section class="home-hero">
           <div class="container">
-            <div class="hero__inner">
-              <h1 class="hero__title">Акустические пэт панели</h1>
-              <p class="hero__descr text text_clr-white">
+            <div class="home-hero__inner">
+              <h1 class="home-hero__title">Акустические пэт панели</h1>
+              <p class="home-hero__text">
                 For most people, installing the panels would be an entertaining DIY project. It is very simple - you can
                 cut the panels with almost any saw and fix it
               </p>
-              <button class="hero__button button button_fw-700"><span>Читать описание продукции</span></button>
+              <a class="home-hero__button button-primary" href="#">Читать описание продукции</a>
             </div>
           </div>
         </section>
 
-        <!-- decription -->
-        <section class="decription">
+        <!-- section: description -->
+        <section class="description">
           <div class="container">
-            <div class="decription__inner">
-              <p class="decription__text">
+            <div class="description__inner">
+              <p class="description__text">
                 Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
                 пластика и дерева. Собственное производство позволяет контролировать высокое качество.
               </p>
-              <button class="decription__button button"><span>Заказать образцы</span></button>
+              <a class="description__button button-primary" href="#">Заказать образцы</a>
             </div>
           </div>
         </section>
 
-        <!-- panels -->
-        <section class="panels">
-          <img class="panels__image" src="./images/panels/pahel_1.jpg" alt="" />
-          <div class="panels__inner">
-            <div class="container">
-              <h2 class="panels__title title">Акустические панели</h2>
-              <p class="panels__descr text">
+        <!-- section: base-panel -->
+        <section class="base-panel">
+          <div class="base-panel__inner">
+            <!-- panel-img-wrapper -->
+            <div class="base-panel__img-wrapper">
+              <img class="base-panel__img" src="./images/panels/base-panel_1.jpg" alt="" />
+              <img class="base-panel__img" src="./images/panels/base-panel_2.jpg" alt="" />
+              <img class="base-panel__img" src="./images/panels/base-panel_3.jpg" alt="" />
+              <img class="base-panel__img" src="./images/panels/base-panel_4.jpg" alt="" />
+            </div>
+            <!-- panel-content -->
+            <div class="base-panel__content">
+              <h2 class="base-panel__content-title title">Акустические панели</h2>
+              <p class="base-panel__content-text text">
                 Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
-                пластика и дерева. СобственноеАкустические пэт панели wood app - экологически чистое изделие,
-                изготовленное из переработанного пластика и дерева. СобственноеАкустические пэт панели wood app -
-                экологически чистое изделие, изготовленное из переработанного пластика и дерева. Собственное
+                пластика и дерева. Собственное
               </p>
-              <button class="panels__button button"><span>Купить</span></button>
-              <div class="panels__footer">
-                <div class="panels__type">
-                  <div class="panels__type-color-and-number">
-                    <div class="panels__type-color"></div>
-                    <h3 class="panels__type-number">№44789</h3>
-                  </div>
-                  <h4 class="panels__type-name">Название панелей</h4>
-                </div>
-                <div class="panels__slider">
-                  <button class="panels__slider-button panels__slider-button_prev">
-                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20.3506 13H5.65058"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M13.001 5.64844L5.65098 12.9984L13.001 20.3484"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <div class="panels__slider-wrapper">
-                    <div class="panels__slider-items" data-panel-color="#FFD0A9"></div>
-                    <div class="panels__slider-items" data-panel-color="#EFC19A"></div>
-                    <div class="panels__slider-items" data-panel-color="#A07C5C"></div>
-                    <div class="panels__slider-items" data-panel-color="#626262"></div>
-                  </div>
-                  <button class="panels__slider-button panels__slider-button_next">
-                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.64941 13H20.3494"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+              <a class="base-panel__contetn-button button-primary" href="#">Купить</a>
             </div>
+            <!-- panel-footer -->
+            <div class="base-panel__footer">
+              <div class="base-panel-data">
+                <div class="base-panel-data__color-and-code">
+                  <span class="base-panel-data__color"></span>
+                  <span class="base-panel-data__code">№44789</span>
+                </div>
+                <p class="base-panel-data__name">Название панелей</p>
+              </div>
+              <!-- color-slider -->
+              <div class="color-slider">
+                <button class="color-slider__button-prev"><i class="icon-ui-arrow-left"></i></button>
+                <div class="color-slider__wrapper">
+                  <div class="color-slider__slide-color"></div>
+                  <div class="color-slider__slide-color"></div>
+                  <div class="color-slider__slide-color"></div>
+                  <div class="color-slider__slide-color"></div>
+                </div>
+                <button class="color-slider__button-next"><i class="icon-ui-arrow-right"></i></button>
+              </div>
+              <!-- color-slider end -->
+            </div>
+            <!-- panel-footer__end -->
           </div>
+          <!-- panel-inner end -->
         </section>
 
-        <!-- Benefits -->
+        <!-- section: benefits -->
         <section class="benefits">
           <div class="container">
             <div class="benefits__inner">
               <h2 class="benefits__title title">Преимущества продукции</h2>
-              <div class="benefits__body">
-                <div class="benefits__spoiler spoiler" data-spoiler="open">
+              <div class="benefits__spoilers">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
-                    <h3 class="spoiler__title">Качественная акустика в доме</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <h3 class="spoiler__title">Качественная акустика в доме</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
-
-                <div class="benefits__spoiler spoiler" data-spoiler="close">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
                     <h3 class="spoiler__title">С заботой об окружающей среде</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
-
-                <div class="benefits__spoiler spoiler" data-spoiler="close">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
-                    <h3 class="spoiler__title">С заботой об окружающей среде</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <h3 class="spoiler__title">Простая интеграция в существующий интерьер</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
-
-                <div class="benefits__spoiler spoiler" data-spoiler="close">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
-                    <h3 class="spoiler__title">С заботой об окружающей среде</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <h3 class="spoiler__title">Легкий монтаж</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
-
-                <div class="benefits__spoiler spoiler" data-spoiler="close">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
-                    <h3 class="spoiler__title">С заботой об окружающей среде</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <h3 class="spoiler__title">Звукоизоляция от шума соседей</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
-
-                <div class="benefits__spoiler spoiler" data-spoiler="close">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
-                    <h3 class="spoiler__title">С заботой об окружающей среде</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <h3 class="spoiler__title">Стильное дизайнерское решение</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
-
-                <div class="benefits__spoiler spoiler" data-spoiler="close">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
-                    <h3 class="spoiler__title">С заботой об окружающей среде</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <h3 class="spoiler__title">Большой выбор цветовых решений</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
-
-                <div class="benefits__spoiler spoiler" data-spoiler="close">
+                <!-- spoiler -->
+                <div class="spoiler">
                   <div class="spoiler__head">
-                    <h3 class="spoiler__title">С заботой об окружающей среде</h3>
-                    <button class="spoiler__button">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <h3 class="spoiler__title">Легкий уход за панелями</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
                   </div>
-                  <hr class="spoiler__divider" />
-                  <p class="spoiler__body text">
-                    For most people, installing the panels would be an entertaining DIY project. It is very simple - you
-                    can cut the panels with almost
-                  </p>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
+                </div>
+                <!-- spoiler -->
+                <div class="spoiler">
+                  <div class="spoiler__head">
+                    <h3 class="spoiler__title">Панели могу принять криволинейные формы</h3>
+                    <i class="spoiler__icon icon-ui-arrow-right"></i>
+                  </div>
+                  <div class="spoiler__body">
+                    <p class="spoiler__text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
+                      you can cut the panels with almost
+                    </p>
+                  </div>
                 </div>
               </div>
+              <!-- benefits-spoilers end -->
             </div>
+            <!-- benefits-inner end -->
           </div>
+          <!-- container end -->
         </section>
 
-        <!-- product -->
-        <section class="product">
+        <!-- section: visualization -->
+        <section class="visualization">
           <div class="container">
-            <div class="product__inner">
-              <div class="product__content">
-                <div class="product__tab">
-                  <img class="product__tab-img" src="./images/product/tabs/product-1.jpg" alt="" />
-                  <div class="produc-tab-card">
-                    <img class="produc-tab-card__img" src="./images/product/slider/product-1.png" alt="" />
-                    <div class="produc-tab-card__data">
-                      <div class="produc-tab-card__name">ВудАпп™ Акупанель</div>
-                      <div class="produc-tab-card__price">9999 ₽ / за шт.</div>
+            <div class="visualization__inner">
+              <!-- visualization-example -->
+              <div class="visualization__example">
+                <!-- example-item -->
+                <div class="visualization__example-item">
+                  <img class="visualization__img-item" src="./images/visualization/tabs/visualization-1.jpg" alt="" />
+                  <div class="product-card">
+                    <img class="product-card__thumbnail" src="./images/visualization/product/product-1.jpg" alt="" />
+                    <div class="product-card__data">
+                      <p class="product-card__data-name">ВудАпп™Акупанель</p>
+                      <p class="product-card__data-price">9999 ₽ / за шт.</p>
                     </div>
-                    <button class="produc-tab-card__add-to-cart">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_601_1243)">
-                          <path
-                            d="M24.0467 8.06249V11.8125C24.0467 12.3303 23.6271 12.75 23.1092 12.75H22.4927L22.0978 16.2651C22.0439 16.7441 21.6382 17.0978 21.1672 17.098C21.1322 17.098 21.0971 17.096 21.0614 17.092C20.5469 17.0343 20.1766 16.5701 20.2345 16.0558L20.723 11.7079C20.7763 11.2337 21.1773 10.875 21.6546 10.875H22.1719V8.99999H1.92188V10.875H17.9063C18.4241 10.875 18.8438 11.2949 18.8438 11.8125C18.8438 12.3303 18.4241 12.75 17.9063 12.75H3.50501L4.43079 20.4732C4.54359 21.4149 5.34394 22.125 6.29243 22.125H17.8764C18.8319 22.125 19.633 21.4089 19.7397 20.4593C19.7974 19.9448 20.2614 19.5747 20.7759 19.6324C21.2904 19.6903 21.6607 20.1542 21.603 20.6688C21.3895 22.5678 19.7875 24 17.8764 24H6.29243C4.39545 24 2.79474 22.5797 2.56897 20.6962L1.61664 12.75H0.984377C0.466553 12.75 0.046875 12.3303 0.046875 11.8125V8.06249C0.046875 7.54467 0.466553 7.12499 0.984377 7.12499H4.30958L9.2635 0.382484C9.57002 -0.0346312 10.1567 -0.124536 10.574 0.182166C10.9913 0.488685 11.081 1.07536 10.7745 1.49265L6.6363 7.12499H17.4921L13.3537 1.49265C13.0472 1.07536 13.1369 0.488685 13.5542 0.182166C13.9715 -0.124536 14.5582 -0.0348143 14.8649 0.382484L19.8186 7.12499H23.1092C23.6271 7.12499 24.0467 7.54485 24.0467 8.06249ZM11.1094 15.5625V19.3125C11.1094 19.8303 11.5291 20.25 12.0469 20.25C12.5645 20.25 12.9844 19.8303 12.9844 19.3125V15.5625C12.9844 15.0447 12.5645 14.625 12.0469 14.625C11.5291 14.625 11.1094 15.0447 11.1094 15.5625ZM14.8594 15.5625V19.3125C14.8594 19.8303 15.2791 20.25 15.7969 20.25C16.3145 20.25 16.7344 19.8303 16.7344 19.3125V15.5625C16.7344 15.0447 16.3145 14.625 15.7969 14.625C15.2791 14.625 14.8594 15.0447 14.8594 15.5625ZM7.35939 15.5625V19.3125C7.35939 19.8303 7.77907 20.25 8.29689 20.25C8.81453 20.25 9.23439 19.8303 9.23439 19.3125V15.5625C9.23439 15.0447 8.81453 14.625 8.29689 14.625C7.77907 14.625 7.35939 15.0447 7.35939 15.5625Z"
-                            fill="#787D46"
-                          />
-                        </g>
-                      </svg>
+                    <button class="product-card__button">
+                      <i class="product-card__button-icon icon-ui-shopping-cart"></i>
                     </button>
                   </div>
                 </div>
-
-                <!-- <div class="product__tab">
-                  <img class="product__tab-img" src="./images/product/tabs/product-1.jpg" alt="" />
-                  <div class="produc-tab-card">
-                    <img class="produc-tab-card__img" src="./images/product/slider/product-1.png" alt="" />
-                    <div class="produc-tab-card__data">
-                      <div class="produc-tab-card__name">ВудАпп™ Акупанель</div>
-                      <div class="produc-tab-card__price">9999 ₽ / за шт.</div>
+                <!-- example-item -->
+                <div class="visualization__example-item">
+                  <img class="visualization__img-item" src="./images/visualization/tabs/visualization-2.jpg" alt="" />
+                  <div class="product-card">
+                    <img class="product-card__thumbnail" src="./images/visualization/product/product-2.jpg" alt="" />
+                    <div class="product-card__data">
+                      <p class="product-card__data-name">ВудАпп™Акупанель</p>
+                      <p class="product-card__data-price">9999 ₽ / за шт.</p>
                     </div>
-                    <button class="produc-tab-card__add-to-cart">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_601_1243)">
-                          <path
-                            d="M24.0467 8.06249V11.8125C24.0467 12.3303 23.6271 12.75 23.1092 12.75H22.4927L22.0978 16.2651C22.0439 16.7441 21.6382 17.0978 21.1672 17.098C21.1322 17.098 21.0971 17.096 21.0614 17.092C20.5469 17.0343 20.1766 16.5701 20.2345 16.0558L20.723 11.7079C20.7763 11.2337 21.1773 10.875 21.6546 10.875H22.1719V8.99999H1.92188V10.875H17.9063C18.4241 10.875 18.8438 11.2949 18.8438 11.8125C18.8438 12.3303 18.4241 12.75 17.9063 12.75H3.50501L4.43079 20.4732C4.54359 21.4149 5.34394 22.125 6.29243 22.125H17.8764C18.8319 22.125 19.633 21.4089 19.7397 20.4593C19.7974 19.9448 20.2614 19.5747 20.7759 19.6324C21.2904 19.6903 21.6607 20.1542 21.603 20.6688C21.3895 22.5678 19.7875 24 17.8764 24H6.29243C4.39545 24 2.79474 22.5797 2.56897 20.6962L1.61664 12.75H0.984377C0.466553 12.75 0.046875 12.3303 0.046875 11.8125V8.06249C0.046875 7.54467 0.466553 7.12499 0.984377 7.12499H4.30958L9.2635 0.382484C9.57002 -0.0346312 10.1567 -0.124536 10.574 0.182166C10.9913 0.488685 11.081 1.07536 10.7745 1.49265L6.6363 7.12499H17.4921L13.3537 1.49265C13.0472 1.07536 13.1369 0.488685 13.5542 0.182166C13.9715 -0.124536 14.5582 -0.0348143 14.8649 0.382484L19.8186 7.12499H23.1092C23.6271 7.12499 24.0467 7.54485 24.0467 8.06249ZM11.1094 15.5625V19.3125C11.1094 19.8303 11.5291 20.25 12.0469 20.25C12.5645 20.25 12.9844 19.8303 12.9844 19.3125V15.5625C12.9844 15.0447 12.5645 14.625 12.0469 14.625C11.5291 14.625 11.1094 15.0447 11.1094 15.5625ZM14.8594 15.5625V19.3125C14.8594 19.8303 15.2791 20.25 15.7969 20.25C16.3145 20.25 16.7344 19.8303 16.7344 19.3125V15.5625C16.7344 15.0447 16.3145 14.625 15.7969 14.625C15.2791 14.625 14.8594 15.0447 14.8594 15.5625ZM7.35939 15.5625V19.3125C7.35939 19.8303 7.77907 20.25 8.29689 20.25C8.81453 20.25 9.23439 19.8303 9.23439 19.3125V15.5625C9.23439 15.0447 8.81453 14.625 8.29689 14.625C7.77907 14.625 7.35939 15.0447 7.35939 15.5625Z"
-                            fill="#787D46"
-                          />
-                        </g>
-                      </svg>
+                    <button class="product-card__button">
+                      <i class="product-card__button-icon icon-ui-shopping-cart"></i>
                     </button>
                   </div>
-                </div> -->
-
-                <!-- <div class="product__tab">
-                  <img class="product__tab-img" src="./images/product/tabs/product-1.jpg" alt="" />
-                  <div class="produc-tab-card">
-                    <img class="produc-tab-card__img" src="./images/product/slider/product-1.png" alt="" />
-                    <div class="produc-tab-card__data">
-                      <div class="produc-tab-card__name">ВудАпп™ Акупанель</div>
-                      <div class="produc-tab-card__price">9999 ₽ / за шт.</div>
-                    </div>
-                    <button class="produc-tab-card__add-to-cart">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_601_1243)">
-                          <path
-                            d="M24.0467 8.06249V11.8125C24.0467 12.3303 23.6271 12.75 23.1092 12.75H22.4927L22.0978 16.2651C22.0439 16.7441 21.6382 17.0978 21.1672 17.098C21.1322 17.098 21.0971 17.096 21.0614 17.092C20.5469 17.0343 20.1766 16.5701 20.2345 16.0558L20.723 11.7079C20.7763 11.2337 21.1773 10.875 21.6546 10.875H22.1719V8.99999H1.92188V10.875H17.9063C18.4241 10.875 18.8438 11.2949 18.8438 11.8125C18.8438 12.3303 18.4241 12.75 17.9063 12.75H3.50501L4.43079 20.4732C4.54359 21.4149 5.34394 22.125 6.29243 22.125H17.8764C18.8319 22.125 19.633 21.4089 19.7397 20.4593C19.7974 19.9448 20.2614 19.5747 20.7759 19.6324C21.2904 19.6903 21.6607 20.1542 21.603 20.6688C21.3895 22.5678 19.7875 24 17.8764 24H6.29243C4.39545 24 2.79474 22.5797 2.56897 20.6962L1.61664 12.75H0.984377C0.466553 12.75 0.046875 12.3303 0.046875 11.8125V8.06249C0.046875 7.54467 0.466553 7.12499 0.984377 7.12499H4.30958L9.2635 0.382484C9.57002 -0.0346312 10.1567 -0.124536 10.574 0.182166C10.9913 0.488685 11.081 1.07536 10.7745 1.49265L6.6363 7.12499H17.4921L13.3537 1.49265C13.0472 1.07536 13.1369 0.488685 13.5542 0.182166C13.9715 -0.124536 14.5582 -0.0348143 14.8649 0.382484L19.8186 7.12499H23.1092C23.6271 7.12499 24.0467 7.54485 24.0467 8.06249ZM11.1094 15.5625V19.3125C11.1094 19.8303 11.5291 20.25 12.0469 20.25C12.5645 20.25 12.9844 19.8303 12.9844 19.3125V15.5625C12.9844 15.0447 12.5645 14.625 12.0469 14.625C11.5291 14.625 11.1094 15.0447 11.1094 15.5625ZM14.8594 15.5625V19.3125C14.8594 19.8303 15.2791 20.25 15.7969 20.25C16.3145 20.25 16.7344 19.8303 16.7344 19.3125V15.5625C16.7344 15.0447 16.3145 14.625 15.7969 14.625C15.2791 14.625 14.8594 15.0447 14.8594 15.5625ZM7.35939 15.5625V19.3125C7.35939 19.8303 7.77907 20.25 8.29689 20.25C8.81453 20.25 9.23439 19.8303 9.23439 19.3125V15.5625C9.23439 15.0447 8.81453 14.625 8.29689 14.625C7.77907 14.625 7.35939 15.0447 7.35939 15.5625Z"
-                            fill="#787D46"
-                          />
-                        </g>
-                      </svg>
-                    </button>
-                  </div>
-                </div> -->
-
-                <!-- <div class="product__tab">
-                  <img class="product__tab-img" src="./images/product/tabs/product-1.jpg" alt="" />
-                  <div class="produc-tab-card">
-                    <img class="produc-tab-card__img" src="./images/product/slider/product-1.png" alt="" />
-                    <div class="produc-tab-card__data">
-                      <div class="produc-tab-card__name">ВудАпп™ Акупанель</div>
-                      <div class="produc-tab-card__price">9999 ₽ / за шт.</div>
-                    </div>
-                    <button class="produc-tab-card__add-to-cart">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_601_1243)">
-                          <path
-                            d="M24.0467 8.06249V11.8125C24.0467 12.3303 23.6271 12.75 23.1092 12.75H22.4927L22.0978 16.2651C22.0439 16.7441 21.6382 17.0978 21.1672 17.098C21.1322 17.098 21.0971 17.096 21.0614 17.092C20.5469 17.0343 20.1766 16.5701 20.2345 16.0558L20.723 11.7079C20.7763 11.2337 21.1773 10.875 21.6546 10.875H22.1719V8.99999H1.92188V10.875H17.9063C18.4241 10.875 18.8438 11.2949 18.8438 11.8125C18.8438 12.3303 18.4241 12.75 17.9063 12.75H3.50501L4.43079 20.4732C4.54359 21.4149 5.34394 22.125 6.29243 22.125H17.8764C18.8319 22.125 19.633 21.4089 19.7397 20.4593C19.7974 19.9448 20.2614 19.5747 20.7759 19.6324C21.2904 19.6903 21.6607 20.1542 21.603 20.6688C21.3895 22.5678 19.7875 24 17.8764 24H6.29243C4.39545 24 2.79474 22.5797 2.56897 20.6962L1.61664 12.75H0.984377C0.466553 12.75 0.046875 12.3303 0.046875 11.8125V8.06249C0.046875 7.54467 0.466553 7.12499 0.984377 7.12499H4.30958L9.2635 0.382484C9.57002 -0.0346312 10.1567 -0.124536 10.574 0.182166C10.9913 0.488685 11.081 1.07536 10.7745 1.49265L6.6363 7.12499H17.4921L13.3537 1.49265C13.0472 1.07536 13.1369 0.488685 13.5542 0.182166C13.9715 -0.124536 14.5582 -0.0348143 14.8649 0.382484L19.8186 7.12499H23.1092C23.6271 7.12499 24.0467 7.54485 24.0467 8.06249ZM11.1094 15.5625V19.3125C11.1094 19.8303 11.5291 20.25 12.0469 20.25C12.5645 20.25 12.9844 19.8303 12.9844 19.3125V15.5625C12.9844 15.0447 12.5645 14.625 12.0469 14.625C11.5291 14.625 11.1094 15.0447 11.1094 15.5625ZM14.8594 15.5625V19.3125C14.8594 19.8303 15.2791 20.25 15.7969 20.25C16.3145 20.25 16.7344 19.8303 16.7344 19.3125V15.5625C16.7344 15.0447 16.3145 14.625 15.7969 14.625C15.2791 14.625 14.8594 15.0447 14.8594 15.5625ZM7.35939 15.5625V19.3125C7.35939 19.8303 7.77907 20.25 8.29689 20.25C8.81453 20.25 9.23439 19.8303 9.23439 19.3125V15.5625C9.23439 15.0447 8.81453 14.625 8.29689 14.625C7.77907 14.625 7.35939 15.0447 7.35939 15.5625Z"
-                            fill="#787D46"
-                          />
-                        </g>
-                      </svg>
-                    </button>
-                  </div>
-                </div> -->
-
-                <!-- <div class="product__tab">
-                  <img class="product__tab-img" src="./images/product/tabs/product-1.jpg" alt="" />
-                  <div class="produc-tab-card">
-                    <img class="produc-tab-card__img" src="./images/product/slider/product-1.png" alt="" />
-                    <div class="produc-tab-card__data">
-                      <div class="produc-tab-card__name">ВудАпп™ Акупанель</div>
-                      <div class="produc-tab-card__price">9999 ₽ / за шт.</div>
-                    </div>
-                    <button class="produc-tab-card__add-to-cart">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_601_1243)">
-                          <path
-                            d="M24.0467 8.06249V11.8125C24.0467 12.3303 23.6271 12.75 23.1092 12.75H22.4927L22.0978 16.2651C22.0439 16.7441 21.6382 17.0978 21.1672 17.098C21.1322 17.098 21.0971 17.096 21.0614 17.092C20.5469 17.0343 20.1766 16.5701 20.2345 16.0558L20.723 11.7079C20.7763 11.2337 21.1773 10.875 21.6546 10.875H22.1719V8.99999H1.92188V10.875H17.9063C18.4241 10.875 18.8438 11.2949 18.8438 11.8125C18.8438 12.3303 18.4241 12.75 17.9063 12.75H3.50501L4.43079 20.4732C4.54359 21.4149 5.34394 22.125 6.29243 22.125H17.8764C18.8319 22.125 19.633 21.4089 19.7397 20.4593C19.7974 19.9448 20.2614 19.5747 20.7759 19.6324C21.2904 19.6903 21.6607 20.1542 21.603 20.6688C21.3895 22.5678 19.7875 24 17.8764 24H6.29243C4.39545 24 2.79474 22.5797 2.56897 20.6962L1.61664 12.75H0.984377C0.466553 12.75 0.046875 12.3303 0.046875 11.8125V8.06249C0.046875 7.54467 0.466553 7.12499 0.984377 7.12499H4.30958L9.2635 0.382484C9.57002 -0.0346312 10.1567 -0.124536 10.574 0.182166C10.9913 0.488685 11.081 1.07536 10.7745 1.49265L6.6363 7.12499H17.4921L13.3537 1.49265C13.0472 1.07536 13.1369 0.488685 13.5542 0.182166C13.9715 -0.124536 14.5582 -0.0348143 14.8649 0.382484L19.8186 7.12499H23.1092C23.6271 7.12499 24.0467 7.54485 24.0467 8.06249ZM11.1094 15.5625V19.3125C11.1094 19.8303 11.5291 20.25 12.0469 20.25C12.5645 20.25 12.9844 19.8303 12.9844 19.3125V15.5625C12.9844 15.0447 12.5645 14.625 12.0469 14.625C11.5291 14.625 11.1094 15.0447 11.1094 15.5625ZM14.8594 15.5625V19.3125C14.8594 19.8303 15.2791 20.25 15.7969 20.25C16.3145 20.25 16.7344 19.8303 16.7344 19.3125V15.5625C16.7344 15.0447 16.3145 14.625 15.7969 14.625C15.2791 14.625 14.8594 15.0447 14.8594 15.5625ZM7.35939 15.5625V19.3125C7.35939 19.8303 7.77907 20.25 8.29689 20.25C8.81453 20.25 9.23439 19.8303 9.23439 19.3125V15.5625C9.23439 15.0447 8.81453 14.625 8.29689 14.625C7.77907 14.625 7.35939 15.0447 7.35939 15.5625Z"
-                            fill="#787D46"
-                          />
-                        </g>
-                      </svg>
-                    </button>
-                  </div>
-                </div> -->
-
-                <!-- <div class="product__tab">
-                  <img class="product__tab-img" src="./images/product/tabs/product-1.jpg" alt="" />
-                  <div class="produc-tab-card">
-                    <img class="produc-tab-card__img" src="./images/product/slider/product-1.png" alt="" />
-                    <div class="produc-tab-card__data">
-                      <div class="produc-tab-card__name">ВудАпп™ Акупанель</div>
-                      <div class="produc-tab-card__price">9999 ₽ / за шт.</div>
-                    </div>
-                    <button class="produc-tab-card__add-to-cart">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_601_1243)">
-                          <path
-                            d="M24.0467 8.06249V11.8125C24.0467 12.3303 23.6271 12.75 23.1092 12.75H22.4927L22.0978 16.2651C22.0439 16.7441 21.6382 17.0978 21.1672 17.098C21.1322 17.098 21.0971 17.096 21.0614 17.092C20.5469 17.0343 20.1766 16.5701 20.2345 16.0558L20.723 11.7079C20.7763 11.2337 21.1773 10.875 21.6546 10.875H22.1719V8.99999H1.92188V10.875H17.9063C18.4241 10.875 18.8438 11.2949 18.8438 11.8125C18.8438 12.3303 18.4241 12.75 17.9063 12.75H3.50501L4.43079 20.4732C4.54359 21.4149 5.34394 22.125 6.29243 22.125H17.8764C18.8319 22.125 19.633 21.4089 19.7397 20.4593C19.7974 19.9448 20.2614 19.5747 20.7759 19.6324C21.2904 19.6903 21.6607 20.1542 21.603 20.6688C21.3895 22.5678 19.7875 24 17.8764 24H6.29243C4.39545 24 2.79474 22.5797 2.56897 20.6962L1.61664 12.75H0.984377C0.466553 12.75 0.046875 12.3303 0.046875 11.8125V8.06249C0.046875 7.54467 0.466553 7.12499 0.984377 7.12499H4.30958L9.2635 0.382484C9.57002 -0.0346312 10.1567 -0.124536 10.574 0.182166C10.9913 0.488685 11.081 1.07536 10.7745 1.49265L6.6363 7.12499H17.4921L13.3537 1.49265C13.0472 1.07536 13.1369 0.488685 13.5542 0.182166C13.9715 -0.124536 14.5582 -0.0348143 14.8649 0.382484L19.8186 7.12499H23.1092C23.6271 7.12499 24.0467 7.54485 24.0467 8.06249ZM11.1094 15.5625V19.3125C11.1094 19.8303 11.5291 20.25 12.0469 20.25C12.5645 20.25 12.9844 19.8303 12.9844 19.3125V15.5625C12.9844 15.0447 12.5645 14.625 12.0469 14.625C11.5291 14.625 11.1094 15.0447 11.1094 15.5625ZM14.8594 15.5625V19.3125C14.8594 19.8303 15.2791 20.25 15.7969 20.25C16.3145 20.25 16.7344 19.8303 16.7344 19.3125V15.5625C16.7344 15.0447 16.3145 14.625 15.7969 14.625C15.2791 14.625 14.8594 15.0447 14.8594 15.5625ZM7.35939 15.5625V19.3125C7.35939 19.8303 7.77907 20.25 8.29689 20.25C8.81453 20.25 9.23439 19.8303 9.23439 19.3125V15.5625C9.23439 15.0447 8.81453 14.625 8.29689 14.625C7.77907 14.625 7.35939 15.0447 7.35939 15.5625Z"
-                            fill="#787D46"
-                          />
-                        </g>
-                      </svg>
-                    </button>
-                  </div>
-                </div> -->
-              </div>
-
-              <div class="product__slider">
-                <button class="product__slider-button product__slider-button_prev">
-                  <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9.5 6L2.5 6"
-                      stroke="#383838"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6 2.5L2.5 6L6 9.5"
-                      stroke="#383838"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div class="product__slider-wrapper">
-                  <div class="product__slider-item">
-                    <img class="product__slider-item-img" src="./images/product/slider/product-1.png" alt="" />
-                  </div>
-
-                  <!-- <div class="product__slider-item">
-                    <img class="product__slider-item-img" src="./images/product/slider/product-1.png" alt="" />
-                  </div> -->
-
-                  <!-- <div class="product__slider-item">
-                    <img class="product__slider-item-img" src="./images/product/slider/product-1.png" alt="" />
-                  </div> -->
-
-                  <!-- <div class="product__slider-item">
-                    <img class="product__slider-item-img" src="./images/product/slider/product-1.png" alt="" />
-                  </div> -->
-
-                  <!-- <div class="product__slider-item">
-                    <img class="product__slider-item-img" src="./images/product/slider/product-1.png" alt="" />
-                  </div> -->
-
-                  <!-- <div class="product__slider-item">
-                    <img class="product__slider-item-img" src="./images/product/slider/product-1.png" alt="" />
-                  </div> -->
                 </div>
-                <button class="product__slider-button product__slider-button_next">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M2.5 6L9.5 6"
-                      stroke="#383838"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6 2.5L9.5 6L6 9.5"
-                      stroke="#383838"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+                <!-- example-item -->
+                <div class="visualization__example-item">
+                  <img class="visualization__img-item" src="./images/visualization/tabs/visualization-3.jpg" alt="" />
+                  <div class="product-card">
+                    <img class="product-card__thumbnail" src="./images/visualization/product/product-3.jpg" alt="" />
+                    <div class="product-card__data">
+                      <p class="product-card__data-name">ВудАпп™Акупанель</p>
+                      <p class="product-card__data-price">9999 ₽ / за шт.</p>
+                    </div>
+                    <button class="product-card__button">
+                      <i class="product-card__button-icon icon-ui-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- example-item -->
+                <div class="visualization__example-item">
+                  <img class="visualization__img-item" src="./images/visualization/tabs/visualization-4.jpg" alt="" />
+                  <div class="product-card">
+                    <img class="product-card__thumbnail" src="./images/visualization/product/product-4.jpg" alt="" />
+                    <div class="product-card__data">
+                      <p class="product-card__data-name">ВудАпп™Акупанель</p>
+                      <p class="product-card__data-price">9999 ₽ / за шт.</p>
+                    </div>
+                    <button class="product-card__button">
+                      <i class="product-card__button-icon icon-ui-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- example-item -->
+                <div class="visualization__example-item">
+                  <img class="visualization__img-item" src="./images/visualization/tabs/visualization-5.jpg" alt="" />
+                  <div class="product-card">
+                    <img class="product-card__thumbnail" src="./images/visualization/product/product-5.jpg" alt="" />
+                    <div class="product-card__data">
+                      <p class="product-card__data-name">ВудАпп™Акупанель</p>
+                      <p class="product-card__data-price">9999 ₽ / за шт.</p>
+                    </div>
+                    <button class="product-card__button">
+                      <i class="product-card__button-icon icon-ui-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- example-item -->
+                <div class="visualization__example-item">
+                  <img class="visualization__img-item" src="./images/visualization/tabs/visualization-6.jpg" alt="" />
+                  <div class="product-card">
+                    <img class="product-card__thumbnail" src="./images/visualization/product/product-7.jpg" alt="" />
+                    <div class="product-card__data">
+                      <p class="product-card__data-name">ВудАпп™Акупанель</p>
+                      <p class="product-card__data-price">9999 ₽ / за шт.</p>
+                    </div>
+                    <button class="product-card__button">
+                      <i class="product-card__button-icon icon-ui-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- visualization-product-slider -->
+              <div class="visualization__product-slider product-slider">
+                <button class="product-slider__button-prev">
+                  <i class="product-slider__button-icon icon-ui-arrow-left"></i>
+                </button>
+                <div class="product-slider__wrapper">
+                  <!-- slide -->
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/visualization/product/product-1.jpg" alt="" />
+                  </div>
+                  <!-- slide -->
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/visualization/product/product-2.jpg" alt="" />
+                  </div>
+                  <!-- slide -->
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/visualization/product/product-3.jpg" alt="" />
+                  </div>
+                  <!-- slide -->
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/visualization/product/product-4.jpg" alt="" />
+                  </div>
+                  <!-- slide -->
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/visualization/product/product-5.jpg" alt="" />
+                  </div>
+                  <!-- slide -->
+                  <div class="product-slider__slide">
+                    <img class="product-slider__slide-img" src="./images/visualization/product/product-6.jpg" alt="" />
+                  </div>
+                </div>
+                <button class="product-slider__button-next">
+                  <i class="product-slider__button-icon icon-ui-arrow-right"></i>
                 </button>
               </div>
+              <!-- visualization-product-slider end -->
             </div>
+            <!-- visualization-product-slider end -->
           </div>
+          <!-- container end -->
         </section>
 
-        <!-- application -->
+        <!-- section: application -->
         <section class="application">
           <div class="container">
-            <div class="application__inner">
-              <h2 class="application__title title">Применение продукции</h2>
-
-              <div class="application__slider">
-                <div class="application__slider-wrapper">
-                  <div class="application__slider-item">
-                    <img class="application__slider-item-img" src="./images/application/application-1.jpg" alt="" />
-                  </div>
-
-                  <!-- <div class="application__slider-item">
-                    <img class="application__slider-item-img" src="./images/application/application-2.jpg" alt="" />
-                  </div> -->
-
-                  <!-- <div class="application__slider-item">
-                    <img class="application__slider-item-img" src="./images/application/application-1.jpg" alt="" />
-                  </div> -->
-
-                  <!-- <div class="application__slider-item">
-                    <img class="application__slider-item-img" src="./images/application/application-2.jpg" alt="" />
-                  </div> -->
-                </div>
-                <div class="application__slider-footer">
-                  <div class="application__slider-buttons-group">
-                    <button class="application__slider-button application__slider-button_prev">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M20.3506 13H5.65058"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M13.001 5.64844L5.65098 12.9984L13.001 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                    <button class="application__slider-button application__slider-button_next">
-                      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M5.64941 13H20.3494"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                        <path
-                          d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                          stroke="#383838"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <a class="application__button button" href="#"><span>Подробнее</span></a>
-                </div>
-              </div>
-            </div>
+            <h2 class="application__title title">Применение продукции</h2>
           </div>
         </section>
 
-        <!-- difference -->
+        <!-- section: difference -->
         <section class="difference">
           <div class="container">
-            <h2 class="difference__title title">Услышьте разницу</h2>
-            <div class="difference__body">
-              <div class="difference__player">
-                <button class="difference__button-play">
-                  <svg viewBox="0 0 27 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27 16L-1.4682e-06 31.5885L-1.05412e-07 0.411542L27 16Z" fill="#787D46" />
-                  </svg>
-                </button>
-                <div class="difference__waves">
-                  <img src="./images/temp_waves.svg" alt="" />
-                </div>
+            <div class="difference__player">
+              <button class="difference__player-button" data-state="pause">
+                <i class="icon-ui-play"></i>
+                <i class="icon-ui-pause"></i>
+              </button>
+              <div class="difference__player-waves">
+                <div class="difference__player-wave" id="wave_audio_bad" data-sound="./audio/bad-sound.wav"></div>
+                <div class="difference__player-wave" id="wave_audio_graet" data-sound="./audio/great-sound.wav"></div>
               </div>
-              <div class="difference__switch">
-                <span class="difference__switch-label --active">С реверберацией</span>
-                <label class="difference__toggler">
-                  <input type="checkbox" name="" id="" />
-                </label>
-                <span class="difference__switch-label">Без реверберации</span>
-              </div>
+            </div>
+            <div class="difference__toggler">
+              <span class="difference__toggler-label --active">С реверберацией</span>
+              <span class="difference__toggler-switch" data-state="audio-bad"><span></span></span>
+              <span class="difference__toggler-label">Без реверберации</span>
             </div>
           </div>
         </section>
 
-        <!-- bunner -->
-        <section class="bunner">
-          <picture>
-            <source srcset="./images/bunner/bunner-1-lg.jpg" media="(min-width: 768px)" />
-            <img class="bunner__img" src="./images/bunner/bunner-1-md.jpg" alt="" />
-          </picture>
-          <div class="bunner__body">
-            <div class="container">
-              <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
-              <p class="bunner__descr text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
-              <button class="bunner__button button"><span>Попробуйте наш визуализатор</span></button>
+        <!-- section: bunner -->
+        <section class="bunner bunner_watch-img">
+          <div class="container">
+            <div class="bunner__inner">
+              <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
+              <p class="bunner__text text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
+              <a class="bunner__button button-primary" href="#">Попробуйте наш визуализатор</a>
             </div>
           </div>
         </section>
 
-        <!-- video -->
+        <!-- section: video -->
         <section class="video">
           <div class="container">
             <div class="video__inner">
-              <video
-                class="video__content"
-                id="video03"
-                src="https://woodupp.com/wp-content/uploads/2022/03/COM-branding-video-HD-text-website.mp4"
-                poster="https://woodupp.com/wp-content/uploads/2022/03/DK-branding-video-HD.00_00_07_09.Still001-1024x576.jpg.webp"
-                controls=""
-                preload="none"
-              ></video>
+              <div class="video__wrapper">
+                <video class="video__video-content"></video>
+                <video id="video03" src="./video/new-project.mp4" poster="" controls="" preload="none"></video>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- examples -->
-        <section class="examples">
+        <!-- section: articles-slider -->
+        <section class="articles-slider">
           <div class="container">
-            <div class="examples__inner">
-              <div class="examples__head">
-                <h2 class="examples__title title">Примеры наших работ</h2>
-                <div class="examples__slider-button-group">
-                  <button class="examples__slider-button examples__slider-button_prev">
-                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M20.3506 13H5.65058"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M13.001 5.64844L5.65098 12.9984L13.001 20.3484"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                  <button class="examples__slider-button examples__slider-button_next">
-                    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.64941 13H20.3494"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                        stroke="#383838"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="examples__slider">
-                <div class="examples__slider-wrapper">
-                  <div class="examples__slider-item">
-                    <div class="examples-card">
-                      <div class="examples-card__img-wrapper">
-                        <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
-                      </div>
-                      <div class="examples-card__body">
-                        <p class="examples-card__name">Анна</p>
-                        <p class="examples-card__descr text">
-                          For most people, installing the panels would be an entertaining DIY project. It is very simple
-                          - you can cut the panels
-                        </p>
-                        <a class="examples-card__more" href="#">
-                          <span class="examples-card__more-label">Подробнее</span>
-                          <svg
-                            class="examples-card__more-icon"
-                            viewBox="0 0 26 26"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M5.64941 13H20.3494"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
+            <div class="articles-slider__inner">
+              <div class="articles-slider__slider">
+                <!-- slider-head -->
+                <div class="articles-slider__slider-head">
+                  <h2 class="articles-slider__slider-title title"></h2>
+                  <div class="articles-slider__slider-button-group slider-button-group">
+                    <button class="slider-button-group__button-prev">
+                      <i class="slider-button-group__button-icon icon-ui-arrow-left"></i>
+                    </button>
+                    <button class="slider-button-group__button-next">
+                      <i class="slider-button-group__button-icon icon-ui-arrow-right"></i>
+                    </button>
                   </div>
-
-                  <!-- <div class="examples__slider-item">
-                    <div class="examples-card">
-                      <div class="examples-card__img-wrapper">
-                        <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
-                      </div>
-                      <div class="examples-card__body">
-                        <p class="examples-card__name">Анна</p>
-                        <p class="examples-card__descr text">
-                          For most people, installing the panels would be an entertaining DIY project. It is very simple
-                          - you can cut the panels
-                        </p>
-                        <a class="examples-card__more" href="#">
-                          <span class="examples-card__more-label">Подробнее</span>
-                          <svg
-                            class="examples-card__more-icon"
-                            viewBox="0 0 26 26"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M5.64941 13H20.3494"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div> -->
-
-                  <!-- <div class="examples__slider-item">
-                    <div class="examples-card">
-                      <div class="examples-card__img-wrapper">
-                        <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
-                      </div>
-                      <div class="examples-card__body">
-                        <p class="examples-card__name">Анна</p>
-                        <p class="examples-card__descr text">
-                          For most people, installing the panels would be an entertaining DIY project. It is very simple
-                          - you can cut the panels
-                        </p>
-                        <a class="examples-card__more" href="#">
-                          <span class="examples-card__more-label">Подробнее</span>
-                          <svg
-                            class="examples-card__more-icon"
-                            viewBox="0 0 26 26"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M5.64941 13H20.3494"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div> -->
-
-                  <!-- <div class="examples__slider-item">
-                    <div class="examples-card">
-                      <div class="examples-card__img-wrapper">
-                        <img class="examples-card__img" src="./images/examples/examples-1.jpg" alt="" />
-                      </div>
-                      <div class="examples-card__body">
-                        <p class="examples-card__name">Анна</p>
-                        <p class="examples-card__descr text">
-                          For most people, installing the panels would be an entertaining DIY project. It is very simple
-                          - you can cut the panels
-                        </p>
-                        <a class="examples-card__more" href="#">
-                          <span class="examples-card__more-label">Подробнее</span>
-                          <svg
-                            class="examples-card__more-icon"
-                            viewBox="0 0 26 26"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M5.64941 13H20.3494"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M12.999 5.64844L20.349 12.9984L12.999 20.3484"
-                              stroke="#383838"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div> -->
                 </div>
+                <!-- slider-wrapper -->
+                <div class="articles-slider__slider-wrapper">
+                  <!-- article -->
+                  <article class="article-preview-card">
+                    <img class="article-preview-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
+                    <p class="article-preview-card__text text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple.
+                    </p>
+                    <a class="article-preview-card__link" href="#">
+                      <span class="article-preview-card__link-label">Подробнее</span>
+                      <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                    </a>
+                  </article>
+                  <!-- article -->
+                  <article class="article-preview-card">
+                    <img class="article-preview-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
+                    <p class="article-preview-card__text text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple.
+                    </p>
+                    <a class="article-preview-card__link" href="#">
+                      <span class="article-preview-card__link-label">Подробнее</span>
+                      <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                    </a>
+                  </article>
+                  <!-- article -->
+                  <article class="article-preview-card">
+                    <img class="article-preview-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
+                    <p class="article-preview-card__text text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple.
+                    </p>
+                    <a class="article-preview-card__link" href="#">
+                      <span class="article-preview-card__link-label">Подробнее</span>
+                      <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                    </a>
+                  </article>
+                  <!-- article -->
+                  <article class="article-preview-card">
+                    <img class="article-preview-card__thumbnail" src="./images/examples/examples-1.jpg" alt="" />
+                    <p class="article-preview-card__text text">
+                      For most people, installing the panels would be an entertaining DIY project. It is very simple.
+                    </p>
+                    <a class="article-preview-card__link" href="#">
+                      <span class="article-preview-card__link-label">Подробнее</span>
+                      <i class="article-preview-card__link-icon icon-ui-arrow-right"></i>
+                    </a>
+                  </article>
+                </div>
+                <!-- slider-wrapper end -->
               </div>
+              <!-- articles-slider__slider end -->
             </div>
+            <!-- articles-slider__inner end -->
           </div>
+          <!-- container end -->
         </section>
       </main>
 
@@ -982,192 +831,137 @@
         <div class="container">
           <div class="footer__inner">
             <!-- logo -->
-            <div class="footer__logo logo">
-              <a class="logo__link" href="./">
-                <img class="logo__img" src="./images/logo_wood_app.jpg" alt="Wood App" />
+            <div class="footer__logo">
+              <a class="site-logo" href="./">
+                <img class="site-logo__img" src="./images/logo_wood_app.jpg" alt="Wood App" />
               </a>
             </div>
-            <!-- secondary-menu -->
-            <div class="footer__menu">
-              <div class="secondary-menu">
-                <div class="secondary-menu__item">
-                  <div class="secondary-menu__item-inner">
-                    <p class="secondary-menu__item-title">STORE</p>
-                    <ul class="secondary-menu__list">
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Комлектующие</a>
+            <!-- footer-menu -->
+            <nav class="footer__menu footer-menu">
+              <ul class="footer-menu__list">
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">STORE</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Комлектующие</a>
                       </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Образцы</a>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Образцы</a>
                       </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">STORE-панели</a>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">STORE-панели</a>
                       </li>
                     </ul>
                   </div>
-                </div>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Service</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Установка</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Доставка</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Вопросы - ответы</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Команда</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Блог</a>
+                      </li>
 
-                <div class="secondary-menu__item">
-                  <div class="secondary-menu__item-inner">
-                    <p class="secondary-menu__item-title">Service</p>
-                    <ul class="secondary-menu__list">
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Установка</a>
-                      </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Доставка</a>
-                      </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Вопросы - ответы</a>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Команда</a>
                       </li>
                     </ul>
                   </div>
-                </div>
-
-                <div class="secondary-menu__item">
-                  <div class="secondary-menu__item-inner">
-                    <p class="secondary-menu__item-title">Команда</p>
-                    <ul class="secondary-menu__list">
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Блог</a>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Сотрудничество</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Сотрудничество</a>
                       </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Команда</a>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Применение</a>
                       </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="secondary-menu__item">
-                  <div class="secondary-menu__item-inner">
-                    <p class="secondary-menu__item-title">Сотрудничество</p>
-                    <ul class="secondary-menu__list">
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Сотрудничество</a>
-                      </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Применение</a>
-                      </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">STORE</a>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">STORE</a>
                       </li>
                     </ul>
                   </div>
-                </div>
-
-                <div class="secondary-menu__item">
-                  <div class="secondary-menu__item-inner">
-                    <p class="secondary-menu__item-title">Контакты</p>
-                    <ul class="secondary-menu__list">
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Контакты</a>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Контакты</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Контакты</a>
                       </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">Вопросы-ответы</a>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Вопросы-ответы</a>
                       </li>
-                      <li class="secondary-menu__list-item">
-                        <a class="secondary-menu__list-link" href="#">STORE</a>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">STORE</a>
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!-- footet-bottom -->
+                </li>
+                <!-- menu-item end -->
+              </ul>
+              <!-- menu-list end -->
+            </nav>
+            <!-- footer-bottom -->
             <div class="footer__bottom">
-              <!-- copyrigth -->
+              <!-- footer-copyrigth -->
               <div class="footer__copyrigth">
-                <span class="footer__copyrigth-text">© Все права защищены 2022</span>
-                <div class="footer__copyrigth-links">
+                <p class="footer__copyrigth-text">© Все права защищены 2022</p>
+                <div class="footer__copyrigth-link-group">
                   <a class="footer__copyrigth-link" href="#">Политика конфиденциальности</a>
                   <a class="footer__copyrigth-link" href="#">Договор оферты</a>
                 </div>
               </div>
-              <!-- contact and social -->
-              <div class="footer__contact-and-social">
-                <div class="footer__contact">
-                  <a class="contact-phone" href="tel:+79801922024">+7 (980) 192-20-24</a>
-                  <a class="contact-email" href="mailto:apppanels@info.ru">apppanels@info.ru</a>
+              <!-- footer-contacts -->
+              <div class="footer__contacts">
+                <div class="footer__contacts-link-group">
+                  <a class="phone-link" href="tel:+79801922024">+7 (980) 192-20-24</a>
+                  <a class="email-link" href="mailto:apppanels@info.ru">apppanels@info.ru</a>
                 </div>
-                <div class="footer__social social-list">
-                  <a class="social-list__link" href="#">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_601_8209)">
-                        <path
-                          d="M10.0993 9.99847C10.0993 9.08008 9.47432 9.08008 9.47432 9.08008H9.14322H6.90331H6.90234V11.0512H9.31481C9.73196 11.0512 10.0993 10.9183 10.0993 9.99847Z"
-                          fill="#383838"
-                        />
-                        <path
-                          d="M16.0579 11.0508C14.6944 11.0508 14.5039 12.411 14.5039 12.411H17.4051C17.4051 12.4119 17.4229 11.0508 16.0579 11.0508Z"
-                          fill="#383838"
-                        />
-                        <path
-                          d="M9.47483 12.4141H6.9043V14.7758H9.18143C9.22009 14.7758 9.27713 14.7777 9.34529 14.7758C9.71119 14.7666 10.4068 14.6622 10.4068 13.6283C10.4068 12.4025 9.47483 12.4141 9.47483 12.4141Z"
-                          fill="#383838"
-                        />
-                        <path
-                          d="M12 0C5.38323 0 0 5.38323 0 12C0 18.6163 5.38323 24 12 24C18.6163 24 24 18.6163 24 12C24 5.38323 18.6173 0 12 0ZM14.1234 8.0311H17.7675V9.11915H14.1234V8.0311ZM12.2808 13.7367C12.2808 16.4324 9.47442 16.3445 9.47442 16.3445H6.90389H6.82849H4.87859V7.511H6.82849H6.90389H9.47442C10.8718 7.511 11.9744 8.28293 11.9744 9.86353C11.9744 11.4436 10.6268 11.5442 10.6268 11.5442C12.4031 11.5437 12.2808 13.7367 12.2808 13.7367ZM19.0987 13.5917H14.5207C14.5207 15.2332 16.0757 15.1298 16.0757 15.1298C17.5432 15.1298 17.492 14.1795 17.492 14.1795H19.0479C19.0479 16.7017 16.025 16.5282 16.025 16.5282C12.3983 16.5282 12.6313 13.1519 12.6313 13.1519C12.6313 13.1519 12.6279 9.75767 16.025 9.75767C19.5999 9.75767 19.0977 13.5917 19.0987 13.5917Z"
-                          fill="#383838"
-                        />
-                      </g>
-                    </svg>
-                  </a>
-                  <a class="social-list__link" href="#">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_601_8217)">
-                        <path d="M10.5049 14.2483L14.4083 12.0001L10.5049 9.75195V14.2483Z" fill="#383838" />
-                        <path
-                          d="M12 0C5.3736 0 0 5.3736 0 12C0 18.6264 5.3736 24 12 24C18.6264 24 24 18.6264 24 12C24 5.3736 18.6264 0 12 0ZM19.4982 12.0123C19.4982 12.0123 19.4982 14.4459 19.1895 15.6194C19.0164 16.2618 18.5099 16.7682 17.8676 16.9411C16.6941 17.25 12 17.25 12 17.25C12 17.25 7.31818 17.25 6.13239 16.9288C5.49005 16.756 4.98358 16.2493 4.81055 15.607C4.50165 14.4459 4.50165 12 4.50165 12C4.50165 12 4.50165 9.56653 4.81055 8.39301C4.9834 7.75067 5.50232 7.23175 6.13239 7.0589C7.30591 6.75 12 6.75 12 6.75C12 6.75 16.6941 6.75 17.8676 7.07117C18.5099 7.24402 19.0164 7.75067 19.1895 8.39301C19.5106 9.56653 19.4982 12.0123 19.4982 12.0123Z"
-                          fill="#383838"
-                        />
-                      </g>
-                    </svg>
-                  </a>
-                  <a class="social-list__link" href="#">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 24C18.6274 24 24 18.627 24 12C24 5.37305 18.6274 0 12 0C5.37256 0 0 5.37305 0 12C0 18.627 5.37256 24 12 24ZM18.2944 9.16406C18.2944 9.02344 18.2944 8.88281 18.2842 8.74023C18.9224 8.27148 19.4771 7.69922 19.9243 7.04688C19.3252 7.30859 18.6899 7.48047 18.0405 7.55469C18.7236 7.14844 19.2349 6.50586 19.479 5.75C18.8379 6.13281 18.1353 6.39844 17.4023 6.54102C16.8047 5.90234 15.9536 5.50781 15.0112 5.50781C14.5815 5.50781 14.1558 5.5918 13.7588 5.75586C13.3613 5.91992 13.0005 6.16211 12.6968 6.46484C12.3926 6.76953 12.1519 7.13086 11.9873 7.52734C11.8599 7.83398 11.7803 8.1582 11.7515 8.48828C11.7432 8.58594 11.7388 8.68359 11.7388 8.78125C11.7388 9.0332 11.7695 9.28711 11.8198 9.5293C10.5176 9.46289 9.24414 9.125 8.08154 8.53516C7.43994 8.20898 6.83984 7.81055 6.29248 7.34961C5.84863 6.97461 5.43945 6.55859 5.07129 6.10547C4.7876 6.5918 4.62598 7.14844 4.62598 7.75586C4.62549 8.29688 4.7583 8.82617 5.01318 9.30273C5.26758 9.77734 5.63574 10.1836 6.08496 10.4824C5.54883 10.4609 5.04297 10.3086 4.60645 10.0664V10.1074C4.60596 10.5605 4.69922 11.0059 4.87744 11.416C4.99658 11.6895 5.15332 11.9473 5.34473 12.1816C5.82324 12.7676 6.48975 13.1699 7.23096 13.3184C6.95703 13.3887 6.66211 13.4297 6.36865 13.4297C6.15576 13.4297 5.95264 13.4102 5.75049 13.3789C5.96045 14.0293 6.36865 14.5977 6.91748 15.0039C7.46631 15.4121 8.12793 15.6367 8.81104 15.6484C7.65234 16.5586 6.2207 17.0508 4.74805 17.0469C4.47412 17.0469 4.2207 17.0371 3.95703 17.0078C5.40674 17.9395 7.12939 18.4766 8.9834 18.4766C15.0015 18.4766 18.2944 13.4902 18.2944 9.16406Z"
-                        fill="#383838"
-                      />
-                    </svg>
-                  </a>
-                  <a class="social-list__link" href="#">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M12 24C18.6274 24 24 18.627 24 12C24 5.37305 18.6274 0 12 0C5.37256 0 0 5.37305 0 12C0 18.627 5.37256 24 12 24ZM19.1045 8C19.6333 8 19.7451 8.25781 19.6333 8.60938C19.4111 9.57617 17.2783 12.4219 17.2778 12.4199C17.0933 12.7012 17.0181 12.8418 17.2778 13.1582C17.3696 13.2793 17.5649 13.4609 17.7881 13.668C18.0171 13.8809 18.2764 14.1211 18.4834 14.3535C19.2354 15.1543 19.8022 15.8301 19.96 16.2949C20.1035 16.7617 19.8535 17 19.3535 17H17.6035C17.1357 17 16.8994 16.75 16.3906 16.2148C16.1738 15.9863 15.9077 15.707 15.5537 15.3711C14.5151 14.4238 14.0693 14.2988 13.8105 14.2988C13.4585 14.2988 13.3525 14.3945 13.3525 14.8691V16.3555C13.3525 16.7637 13.2148 17 12.103 17C10.2471 17 8.21045 15.9336 6.76367 13.9668C4.59326 11.0859 4 8.9082 4 8.46875C4 8.22461 4.09961 8 4.60059 8H6.35059C6.79785 8 6.96631 8.18555 7.1333 8.64453C7.98975 11.0078 9.43359 13.0703 10.0269 13.0703C10.2505 13.0703 10.3516 12.9727 10.3516 12.4395V9.99805C10.2871 8.87305 9.65625 8.78125 9.65625 8.38086C9.65625 8.24414 9.74707 8.10156 9.90625 8.03711C9.96338 8.01367 10.0288 8 10.1021 8H12.8535C13.2246 8 13.353 8.1875 13.353 8.60938V11.8926C13.353 12.2461 13.5146 12.3672 13.6255 12.3672C13.7007 12.3672 13.772 12.3535 13.8486 12.3203C13.999 12.2539 14.1714 12.1152 14.4409 11.8574C15.7021 10.5234 16.5928 8.46875 16.5928 8.46875C16.7046 8.22266 16.9082 8 17.3535 8H19.1045Z"
-                        fill="#383838"
-                      />
-                    </svg>
-                  </a>
-                  <a class="social-list__link" href="#">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_601_8229)">
-                        <path
-                          d="M14.2969 12C14.2969 13.2686 13.2686 14.2969 12 14.2969C10.7314 14.2969 9.70312 13.2686 9.70312 12C9.70312 10.7314 10.7314 9.70312 12 9.70312C13.2686 9.70312 14.2969 10.7314 14.2969 12Z"
-                          fill="#383838"
-                        />
-                        <path
-                          d="M17.3713 7.93671C17.2609 7.63751 17.0848 7.3667 16.8559 7.14441C16.6336 6.91553 16.363 6.73938 16.0636 6.62897C15.8208 6.53467 15.4561 6.42242 14.7842 6.39185C14.0575 6.3587 13.8396 6.35156 11.9998 6.35156C10.1597 6.35156 9.94183 6.35852 9.21527 6.39166C8.54346 6.42242 8.17853 6.53467 7.93591 6.62897C7.63654 6.73938 7.36572 6.91553 7.14362 7.14441C6.91473 7.3667 6.73859 7.63733 6.62799 7.93671C6.53369 8.1795 6.42145 8.54443 6.39087 9.21625C6.35773 9.94281 6.35059 10.1607 6.35059 12.0007C6.35059 13.8406 6.35773 14.0585 6.39087 14.7852C6.42145 15.457 6.53369 15.8218 6.62799 16.0646C6.73859 16.364 6.91455 16.6346 7.14343 16.8569C7.36572 17.0858 7.63635 17.2619 7.93573 17.3723C8.17853 17.4668 8.54346 17.579 9.21527 17.6096C9.94183 17.6428 10.1595 17.6497 11.9996 17.6497C13.8398 17.6497 14.0577 17.6428 14.7841 17.6096C15.4559 17.579 15.8208 17.4668 16.0636 17.3723C16.6646 17.1405 17.1395 16.6655 17.3713 16.0646C17.4656 15.8218 17.5779 15.457 17.6086 14.7852C17.6418 14.0585 17.6487 13.8406 17.6487 12.0007C17.6487 10.1607 17.6418 9.94281 17.6086 9.21625C17.5781 8.54443 17.4658 8.1795 17.3713 7.93671ZM11.9998 15.5389C10.0455 15.5389 8.46124 13.9548 8.46124 12.0005C8.46124 10.0463 10.0455 8.46222 11.9998 8.46222C13.9539 8.46222 15.5381 10.0463 15.5381 12.0005C15.5381 13.9548 13.9539 15.5389 11.9998 15.5389ZM15.678 9.14923C15.2213 9.14923 14.8511 8.77899 14.8511 8.32233C14.8511 7.86566 15.2213 7.49542 15.678 7.49542C16.1346 7.49542 16.5049 7.86566 16.5049 8.32233C16.5047 8.77899 16.1346 9.14923 15.678 9.14923Z"
-                          fill="#383838"
-                        />
-                        <path
-                          d="M12 0C5.3736 0 0 5.3736 0 12C0 18.6264 5.3736 24 12 24C18.6264 24 24 18.6264 24 12C24 5.3736 18.6264 0 12 0ZM18.8491 14.8409C18.8157 15.5744 18.6991 16.0752 18.5288 16.5135C18.1708 17.4391 17.4391 18.1708 16.5135 18.5288C16.0754 18.6991 15.5744 18.8156 14.8411 18.8491C14.1063 18.8826 13.8715 18.8906 12.0002 18.8906C10.1287 18.8906 9.8941 18.8826 9.15912 18.8491C8.42578 18.8156 7.9248 18.6991 7.48663 18.5288C7.02667 18.3558 6.61029 18.0846 6.26605 17.7339C5.91559 17.3899 5.64441 16.9733 5.47137 16.5135C5.30109 16.0754 5.18445 15.5744 5.15112 14.8411C5.11725 14.1061 5.10938 13.8713 5.10938 12C5.10938 10.1287 5.11725 9.89392 5.15094 9.15912C5.18427 8.4256 5.30072 7.9248 5.47101 7.48645C5.64404 7.02667 5.91541 6.61011 6.26605 6.26605C6.61011 5.91541 7.02667 5.64423 7.48645 5.47119C7.9248 5.3009 8.4256 5.18445 9.15912 5.15094C9.89392 5.11743 10.1287 5.10938 12 5.10938C13.8713 5.10938 14.1061 5.11743 14.8409 5.15112C15.5744 5.18445 16.0752 5.3009 16.5135 5.47101C16.9733 5.64404 17.3899 5.91541 17.7341 6.26605C18.0846 6.61029 18.356 7.02667 18.5288 7.48645C18.6993 7.9248 18.8157 8.4256 18.8492 9.15912C18.8828 9.89392 18.8906 10.1287 18.8906 12C18.8906 13.8713 18.8828 14.1061 18.8491 14.8409Z"
-                          fill="#383838"
-                        />
-                      </g>
-                    </svg>
-                  </a>
+                <!-- social -->
+                <div class="footer__social social-link-group">
+                  <a class="social-link-group__item" href="#"><i class="icon-social-behance"></i></a>
+                  <a class="social-link-group__item" href="#"><i class="icon-social-youtube"></i></a>
+                  <a class="social-link-group__item" href="#"><i class="icon-social-twitter"></i></a>
+                  <a class="social-link-group__item" href="#"><i class="icon-social-vk"></i></a>
                 </div>
               </div>
             </div>
+            <!-- footer-bottom end -->
           </div>
+          <!-- footer-inner end -->
         </div>
+        <!-- container end -->
       </footer>
     </div>
+
+    <!-- Connection Libs Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.2.0/wavesurfer.min.js"></script>
 
     <!-- Connecting Page Scripts -->
     <script src="js/main.min.js"></script>

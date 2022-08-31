@@ -1,4 +1,5 @@
 "use strict";
 
-window.addEventListener('DOMContentLoaded', function() { // user scripts
+/* global */
+window.addEventListener('DOMContentLoaded', function() { // Audio wawes
 });

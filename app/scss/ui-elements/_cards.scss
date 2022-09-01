@@ -2,14 +2,23 @@
 
 /* UI elements "Cards" */
 .article-preview-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
   // .article-preview-card__thumbnail
   &__thumbnail {
     width: 100%;
-    height: 144px;
     object-fit: cover;
     object-position: center;
     border-radius: 4px;
+
+    // .article-preview-card__thumbnail_small
+    &_small {
+      height: 144px;
+    }
   }
+
   // .article-preview-card__link
   &__link {
     display: flex;
@@ -22,17 +31,20 @@
       margin: 0 0 0 10px;
     }
   }
-  // .article-preview-card__link-label
-  &__link-label {
+
+  // .article-preview-card__link-text
+  &__link-text {
     font-size: 14px;
     line-height: 17px;
     color: inherit;
   }
+
   // .article-preview-card__link-icon
   &__link-icon {
     font-size: 24px;
     color: inherit;
   }
+
   // .article-preview-card__text
   &__text {
     margin: 12px 0 0 0;

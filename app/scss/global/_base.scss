@@ -7,6 +7,10 @@ body {
   font-family: $ff-primray;
   background: $clr-white;
   color: $clr-gray-700;
+
+  &.--lock {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
@@ -17,6 +21,15 @@ body {
 
 .main {
   flex: 1 1 auto;
+  padding: 88px 0 0 0;
+
+  @include for-min-size("md") {
+    padding: 97px 0 0 0;
+  }
+
+  @include for-min-size("lg") {
+    padding: 117px 0 0 0;
+  }
 }
 
 .container {

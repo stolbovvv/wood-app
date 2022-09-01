@@ -1,14 +1,34 @@
 @use "../helper" as *;
 
 /* Block "header" */
-
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: white;
+  width: 100vw;
   z-index: 100;
+  background-color: $clr-white;
+
+  > .container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(100%, 1860px);
+    transform: translateX(-50%);
+    background-color: inherit;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 50%;
+      width: 100vw;
+      height: 100%;
+      transform: translateX(-50%);
+      background-color: inherit;
+      z-index: -1;
+    }
+  }
 
   // .header__inner
   &__inner {
@@ -16,6 +36,7 @@
     align-items: center;
     padding: 24px 0 24px 0;
     border-bottom: 1px solid rgba(56, 56, 56, 0.5);
+    background-color: inherit;
   }
 
   // .header__logo
@@ -84,6 +105,7 @@
   }
 
   // .header__account-and-cart
+
   &__account-and-cart {
     display: flex;
     align-items: center;

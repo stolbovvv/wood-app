@@ -1143,7 +1143,7 @@ body.--lock {
 /* Block "home-hero" */
 .home-hero {
     margin: 0 0 35px 0;
-    background-image: url("../../images/bg/bg-hero.jpg");
+    background-image: url("../images/bg/bg-hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

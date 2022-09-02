@@ -40,7 +40,7 @@
       text-align: left;
     }
 
-    @include for-min-size("md") {
+    @include for-min-size("lg") {
       font-size: 100px;
       line-height: 98px;
     }

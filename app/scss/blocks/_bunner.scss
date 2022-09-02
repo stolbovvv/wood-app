@@ -1,3 +1,40 @@
 @use "../helper" as *;
 
 /* Block "bunner" */
+.bunner {
+  background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+
+  @include for-min-size("md") {
+  }
+
+  // .bunner__background
+  &__background {
+    width: 100%;
+    height: 690px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // .bunner__inner
+  &__inner {
+    padding: 70px 0 70px 0;
+
+    > * + * {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .bunner__title
+  &__title {
+    text-align: center;
+  }
+
+  // .bunner__text
+  &__text {
+    text-align: center;
+  }
+
+  // .bunner__button
+  &__button {
+  }
+}

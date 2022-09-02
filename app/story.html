@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App</title>
+    <title>Wood App | Истории наших работ</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
@@ -480,42 +480,47 @@
         </div>
       </header>
 
-      <!-- section: home-hero -->
       <main class="main">
-        <div class="home-hero">
+        <!-- page-head -->
+        <div class="page-head">
           <div class="container">
-            <div class="home-hero__inner">
-              <h1 class="home-hero__title">Акустические пэт панели</h1>
-              <p class="home-hero__descr text">
-                For most people, installing the panels would be an entertaining DIY project. It is very simple - you can
-                cut the panels with almost any saw and fix it
-              </p>
-              <a class="home-hero__button button-primary" href="#"><span>Читать описание продукции</span></a>
+            <div class="page-head__bread-crumbs">
+              <ul class="bread-crumbul">
+                <li class="bread-crumbs__item">
+                  <a class="bread-crumbs__link" href="#">Главная</a>
+                  <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                </li>
+                <li class="bread-crumbs__item bread-crumbs__item_currnet">
+                  <span class="bread-crumbs__link">Отзывы</span>
+                </li>
+              </ul>
             </div>
+            <h1 class="page-head__title title">Истории наших работ</h1>
           </div>
         </div>
 
-        <!-- section: description -->
-        <section class="description">
+        <!-- section: story-feedback -->
+        <section class="story-feedback">
           <div class="container">
-            <div class="description__inner">
-              <p class="description__text">
-                Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
-                пластика и дерева. Собственное производство позволяет контролировать высокое качество.
-              </p>
-              <a class="description__button button-primary" href="#">Заказать образцы</a>
+            <div class="story-feedback__inner">
+              <div class="story-feedback__img-wrapper">
+                <img class="story-feedback__img" src="./images/story-feedback/story-feedback-1.jpg" alt="" />
+              </div>
+              <div class="story-feedback__content">
+                <h2 class="story-feedback__title title">Имя клиента</h2>
+                <p class="story-feedback__text text">
+                  Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
+                  пластика и дерева. СобственноеАкустические пэт панели wood app - экологически чистое изделие,
+                  изготовленное из переработанного пластика и дерева.
+                </p>
+                <a class="story-feedback__button button-primary" href="#">Подробнее</a>
+              </div>
             </div>
           </div>
         </section>
 
-        <!--  -->
-
         <!-- section: bunner -->
-        <section class="bunner">
-          <picture>
-            <source srcset="./images/bunner/bunner-1-lg.jpg" media="(min-width: 768px)" />
-            <img class="bunner__background" src="./images/bunner/bunner-1-md.jpg" alt="" />
-          </picture>
+        <section class="bunner bunner_watch-img">
           <div class="container">
             <div class="bunner__inner">
               <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
@@ -525,109 +530,64 @@
           </div>
         </section>
 
-        <!-- section: video -->
-        <section class="video">
+        <!-- section: story-feedback -->
+        <section class="story-feedback">
           <div class="container">
-            <div class="video__inner">
-              <div class="video__video-wrapper">
-                <video id="video-new-poject" src="./video/new-project.mp4" poster="" preload="metadata"></video>
-                <div class="video__button-wrapper">
-                  <button class="video__button" id="video-button-play">
-                    <i class="video__button-icon icon-ui-play"></i>
-                  </button>
-                </div>
+            <div class="story-feedback__inner story-feedback__inner_reverse">
+              <div class="story-feedback__img-wrapper">
+                <img class="story-feedback__img" src="./images/story-feedback/story-feedback-1.jpg" alt="" />
+              </div>
+              <div class="story-feedback__content">
+                <h2 class="story-feedback__title title">Имя клиента</h2>
+                <p class="story-feedback__text text">
+                  Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
+                  пластика и дерева. СобственноеАкустические пэт панели wood app - экологически чистое изделие,
+                  изготовленное из переработанного пластика и дерева.
+                </p>
+                <a class="story-feedback__button button-primary" href="#">Подробнее</a>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- section: articles-slider -->
-        <section class="articles-slider">
+        <!-- section: story-feedback -->
+        <section class="story-feedback">
           <div class="container">
-            <div class="articles-slider__inner">
-              <div class="articles-slider__slider swiper">
-                <!-- slider-head -->
-                <div class="articles-slider__slider-head">
-                  <h2 class="articles-slider__slider-title title">Примеры наших работ</h2>
-                  <div class="articles-slider__slider-button-group slider-button-group">
-                    <button class="slider-button-group__button-prev">
-                      <i class="slider-button-group__button-icon icon-ui-arrow-left"></i>
-                    </button>
-                    <button class="slider-button-group__button-next">
-                      <i class="slider-button-group__button-icon icon-ui-arrow-right"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- slider-wrapper -->
-                <div class="articles-slider__slider-wrapper swiper-wrapper">
-                  <!-- article -->
-                  <article class="article-preview swiper-slide">
-                    <div class="article-preview__img-wrapper article-preview__img-wrapper_big">
-                      <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
-                    </div>
-                    <div class="article-preview__body">
-                      <p class="article-preview__text text">
-                        For most people, installing the panels would be an entertaining DIY project. It is very simple.
-                      </p>
-                      <a class="article-preview__link article-preview__link_color-primary" href="#">
-                        <span class="article-preview__link-label">Подробнее</span>
-                        <i class="article-preview__link-icon icon-ui-arrow-right"></i>
-                      </a>
-                    </div>
-                  </article>
-                  <!-- article -->
-                  <article class="article-preview swiper-slide">
-                    <div class="article-preview__img-wrapper article-preview__img-wrapper_big">
-                      <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
-                    </div>
-                    <div class="article-preview__body">
-                      <p class="article-preview__text text">
-                        For most people, installing the panels would be an entertaining DIY project. It is very simple.
-                      </p>
-                      <a class="article-preview__link article-preview__link_color-primary" href="#">
-                        <span class="article-preview__link-label">Подробнее</span>
-                        <i class="article-preview__link-icon icon-ui-arrow-right"></i>
-                      </a>
-                    </div>
-                  </article>
-                  <!-- article -->
-                  <article class="article-preview swiper-slide">
-                    <div class="article-preview__img-wrapper article-preview__img-wrapper_big">
-                      <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
-                    </div>
-                    <div class="article-preview__body">
-                      <p class="article-preview__text text">
-                        For most people, installing the panels would be an entertaining DIY project. It is very simple.
-                      </p>
-                      <a class="article-preview__link article-preview__link_color-primary" href="#">
-                        <span class="article-preview__link-label">Подробнее</span>
-                        <i class="article-preview__link-icon icon-ui-arrow-right"></i>
-                      </a>
-                    </div>
-                  </article>
-                  <!-- article -->
-                  <article class="article-preview swiper-slide">
-                    <div class="article-preview__img-wrapper article-preview__img-wrapper_big">
-                      <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
-                    </div>
-                    <div class="article-preview__body">
-                      <p class="article-preview__text text">
-                        For most people, installing the panels would be an entertaining DIY project. It is very simple.
-                      </p>
-                      <a class="article-preview__link article-preview__link_color-primary" href="#">
-                        <span class="article-preview__link-label">Подробнее</span>
-                        <i class="article-preview__link-icon icon-ui-arrow-right"></i>
-                      </a>
-                    </div>
-                  </article>
-                </div>
-                <!-- slider-wrapper end -->
+            <div class="story-feedback__inner">
+              <div class="story-feedback__img-wrapper">
+                <img class="story-feedback__img" src="./images/story-feedback/story-feedback-1.jpg" alt="" />
               </div>
-              <!-- articles-slider__slider end -->
+              <div class="story-feedback__content">
+                <h2 class="story-feedback__title title">Имя клиента</h2>
+                <p class="story-feedback__text text">
+                  Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
+                  пластика и дерева. СобственноеАкустические пэт панели wood app - экологически чистое изделие,
+                  изготовленное из переработанного пластика и дерева.
+                </p>
+                <a class="story-feedback__button button-primary" href="#">Подробнее</a>
+              </div>
             </div>
-            <!-- articles-slider__inner end -->
           </div>
-          <!-- container end -->
+        </section>
+
+        <!-- section: story-feedback -->
+        <section class="story-feedback">
+          <div class="container">
+            <div class="story-feedback__inner story-feedback__inner_reverse">
+              <div class="story-feedback__img-wrapper">
+                <img class="story-feedback__img" src="./images/story-feedback/story-feedback-1.jpg" alt="" />
+              </div>
+              <div class="story-feedback__content">
+                <h2 class="story-feedback__title title">Имя клиента</h2>
+                <p class="story-feedback__text text">
+                  Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
+                  пластика и дерева. СобственноеАкустические пэт панели wood app - экологически чистое изделие,
+                  изготовленное из переработанного пластика и дерева.
+                </p>
+                <a class="story-feedback__button button-primary" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 

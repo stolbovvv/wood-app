@@ -1,4 +1,4 @@
-/* global gsap */
+/* global gsap, Swiper */
 window.addEventListener('DOMContentLoaded', () => {
   // Header-menu
   const headerMenuButton = document.querySelector('.header-menu__button');
@@ -51,5 +51,42 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     }
+  });
+
+  // sliders
+  const articlesSlider = document.querySelector('.articles-slider__slider');
+
+  new Swiper(articlesSlider, {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 92,
+    loop: true,
+    navigation: {
+      prevEl: '.slider-button-group__button-prev',
+      nextEl: '.slider-button-group__button-next',
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      1280: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      1920: {
+        slidesPerView: 2,
+        spaceBetween: 92,
+      },
+    },
+  });
+
+  // video
+  const videoContent = document.querySelector('#video-new-poject');
+  const videoButton = document.querySelector('#video-button-play');
+
+  videoButton.addEventListener('click', () => {
+    videoContent.play();
   });
 });

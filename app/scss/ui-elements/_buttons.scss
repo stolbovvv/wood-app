@@ -49,3 +49,38 @@
     }
   }
 }
+
+.slider-button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid $clr-primary;
+  overflow: hidden;
+
+  // .slider-button-group__button-prev
+  // .slider-button-group__button-next
+  &__button-prev,
+  &__button-next {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: $clr-primary;
+    transition: all 0.25s ease 0s;
+    cursor: pointer;
+
+    @include for-hover-and-focus() {
+      background-color: $clr-gray-100;
+      color: $clr-primary-accent;
+    }
+  }
+
+  // .slider-button-group__button-icon
+  &__button-icon {
+    font-size: 24px;
+  }
+}

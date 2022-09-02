@@ -189,8 +189,20 @@
       background-color: $clr-white;
       opacity: 0;
       transition: all 0.75s ease 0s;
-      overflow: auto;
+      overflow: visible;
       z-index: -3;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100vw;
+        height: calc(100% + 1px);
+        background-color: inherit;
+        z-index: -1;
+        transform: translateX(-50%);
+      }
     }
   }
 

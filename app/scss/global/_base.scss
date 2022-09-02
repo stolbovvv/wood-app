@@ -22,6 +22,10 @@ body {
 .main {
   flex: 1 1 auto;
   padding: 70px 0 0 0;
+
+  @include for-min-size("md") {
+    padding: 79px 0 0 0;
+  }
 }
 
 .container {

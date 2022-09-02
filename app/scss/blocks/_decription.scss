@@ -1,3 +1,40 @@
 @use "../helper" as *;
 
 /* Block "decription" */
+
+/* Block "decription" */
+.description {
+  padding: 35px 0 35px 0;
+  background-image: url("../../images/bg/bg-decor-waves.svg");
+  background-repeat: repeat-x;
+  background-size: auto 75%;
+  background-position: center 10%;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .description__inner
+  &__inner {
+  }
+
+  // .description__text
+  &__text {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 32px;
+      line-height: 46px;
+      max-width: 1410px;
+      margin: 0 auto;
+    }
+  }
+
+  // .description__button
+  &__button {
+    width: 290px;
+    margin: 30px auto 0 auto;
+  }
+}

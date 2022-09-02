@@ -1,17 +1,1 @@
 @use "../helper" as *;
-
-/* Typography styles" */
-.text {
-  font-size: 14px;
-  line-height: 20px;
-
-  @include for-min-size("md") {
-    font-size: 18px;
-    line-height: 24px;
-  }
-}
-
-.title {
-  font-size: 32px;
-  line-height: 39px;
-}

@@ -1,34 +1,55 @@
-/* global */
+/* global gsap */
 window.addEventListener('DOMContentLoaded', () => {
   // Header-menu
-  const headerMenu = document.querySelector('.header-menu');
+  const headerMenuButton = document.querySelector('.header-menu__button');
+  const headerMenuBody = document.querySelector('.header-menu__body');
+  const headerMenuList = document.querySelector('.header-menu__list');
 
-  if (headerMenu) {
-    const headerMenuButton = headerMenu.querySelector('.header-menu__button');
-    const headerMenuNav = headerMenu.querySelector('.header-menu__nav');
+  headerMenuButton.addEventListener('click', () => {
+    if (headerMenuButton.classList.contains('--active')) {
+      headerMenuButton.classList.remove('--active');
+      document.body.classList.remove('--lock');
 
-    headerMenuButton.addEventListener('click', () => {
-      if (headerMenuNav.classList.contains('--active')) {
-        headerMenuNav.classList.remove('--active');
-      } else {
-        headerMenuNav.classList.add('--active');
-      }
-    });
+      gsap.to(headerMenuBody, {
+        duration: 0.5,
+        y: 0,
+      });
+    } else {
+      headerMenuButton.classList.add('--active');
+      document.body.classList.add('--lock');
 
-    headerMenuNav.addEventListener('click', (e) => {
+      gsap.to(headerMenuBody, {
+        duration: 0.5,
+        y: '100%',
+      });
+    }
+  });
+
+  headerMenuList.addEventListener('click', (e) => {
+    const documentWidth = document.documentElement.clientWidth;
+
+    if (e.target.classList.contains('header-menu__link') && documentWidth < 1280) {
       e.preventDefault();
 
-      const target = e.target;
+      if (e.target.classList.contains('--active')) {
+        e.target.classList.remove('--active');
 
-      if (target && target.classList.contains('header-menu__nav-link')) {
-        if (target.nextElementSibling.classList.contains('header-menu__subnav')) {
-          if (target.nextElementSibling.classList.contains('--active')) {
-            target.nextElementSibling.classList.remove('--active');
-          } else {
-            target.nextElementSibling.classList.add('--active');
-          }
+        if (e.target.nextElementSibling.classList.contains('header-menu__submenu')) {
+          gsap.to(e.target.nextElementSibling, {
+            duration: 0.5,
+            height: 0,
+          });
+        }
+      } else {
+        e.target.classList.add('--active');
+
+        if (e.target.nextElementSibling.classList.contains('header-menu__submenu')) {
+          gsap.to(e.target.nextElementSibling, {
+            duration: 0.5,
+            height: 'auto',
+          });
         }
       }
-    });
-  }
+    }
+  });
 });

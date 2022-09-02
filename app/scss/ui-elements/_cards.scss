@@ -1,53 +1,58 @@
 @use "../helper" as *;
 
 /* UI elements "Cards" */
-.article-preview-card {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
-  // .article-preview-card__thumbnail
-  &__thumbnail {
+.article-preview {
+  // .article-preview__img-wrapepr
+  &__img-wrapepr {
+    position: relative;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
+    padding: 0 0 144px 0;
     border-radius: 4px;
-
-    // .article-preview-card__thumbnail_small
-    &_small {
-      height: 144px;
-    }
+    overflow: hidden;
   }
 
-  // .article-preview-card__link
+  // .article-preview__img
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // .article-preview__body
+  &__body {
+    margin: 12px 0 0 0;
+  }
+
+  // .article-preview__link
   &__link {
     display: flex;
     align-items: center;
-    margin: 12px 0 0 0;
-    color: inherit;
-    text-decoration: none;
-
-    > * + * {
-      margin: 0 0 0 10px;
-    }
-  }
-
-  // .article-preview-card__link-text
-  &__link-text {
     font-size: 14px;
     line-height: 17px;
+    text-decoration: none;
     color: inherit;
   }
 
-  // .article-preview-card__link-icon
+  // .article-preview__link-label
+  &__link-label {
+    color: inherit;
+  }
+
+  // .article-preview__link-icon
   &__link-icon {
+    margin: 0 0 0 10px;
     font-size: 24px;
-    color: inherit;
   }
 
-  // .article-preview-card__text
-  &__text {
+  // .article-preview__desr
+  &__desr {
     margin: 12px 0 0 0;
-    opacity: 0.5;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($color: $clr-gray-700, $alpha: 0.5);
   }
 }

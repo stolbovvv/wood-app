@@ -4,47 +4,49 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: 100;
+  left: 50%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px 0 15px;
+  transform: translateX(-50%);
   background-color: $clr-white;
+  z-index: 1000;
 
-  > .container {
+  @include for-min-size("lg") {
+    padding: 0 80px 0 80px;
+  }
+  @include for-min-size("xl") {
+    padding: 0 130px 0 130px;
+  }
+  @include for-min-size("xxl") {
+    width: min(100%, 1860px);
+  }
+
+  &::before {
+    content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    width: min(100%, 1860px);
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: inherit;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 50%;
-      width: 100vw;
-      height: 100%;
-      transform: translateX(-50%);
-      background-color: inherit;
-      z-index: -1;
-    }
+    z-index: -1;
   }
 
   // .header__inner
   &__inner {
     display: flex;
     align-items: center;
-    padding: 20px 0 20px 0;
-    border-bottom: 1px solid rgba(56, 56, 56, 0.5);
-    background-color: inherit;
+    margin: 0 auto;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.5);
   }
 
   // .header__logo
   &__logo {
-    height: 39px;
     width: 130px;
-    display: flex;
-    align-items: stretch;
+    height: 40px;
 
     @include for-min-size("md") {
       width: 160px;
@@ -55,12 +57,11 @@
   // .header__menu
   &__menu {
     order: 1;
-    flex: 0 0 auto;
     margin: 0 0 0 18px;
 
     @include for-min-size("md") {
       order: 0;
-      margin: 0 0 0 30px;
+      margin: 0 auto 0 28px;
     }
   }
 
@@ -70,8 +71,6 @@
 
     @include for-min-size("md") {
       display: block;
-      flex: 0 0 auto;
-      margin: 0 0 0 auto;
     }
   }
 
@@ -81,34 +80,16 @@
 
     @include for-min-size("md") {
       display: block;
-      flex: 0 0 auto;
-      margin: 0 0 0 32px;
-    }
-
-    @include for-min-size("lg") {
-      margin: 0 0 0 24px;
-    }
-
-    @include for-min-size("xl") {
       margin: 0 0 0 32px;
     }
   }
 
   // .header__contacts-link-group
   &__contacts-link-group {
-    display: flex;
-    align-items: center;
-
-    > * + * {
-      margin: 0 0 0 16px;
-    }
   }
 
-  // .header__account-and-cart
-
-  &__account-and-cart {
-    display: flex;
-    align-items: center;
+  // .header__accaunt-end-shopping-card
+  &__accaunt-end-shopping-card {
     margin: 0 0 0 auto;
 
     > * + * {
@@ -117,10 +98,6 @@
 
     @include for-min-size("md") {
       margin: 0 0 0 32px;
-    }
-
-    @include for-min-size("xl") {
-      margin: 0 0 0 50px;
     }
   }
 }

@@ -2,9 +2,12 @@
 
 /* Block "bunner" */
 .bunner {
+  position: relative;
+  margin: 35px 0 35px 0;
   background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
 
   @include for-min-size("md") {
+    min-height: 690px;
   }
 
   // .bunner__background
@@ -13,6 +16,11 @@
     height: 690px;
     object-fit: cover;
     object-position: center;
+
+    @include for-min-size("md") {
+      position: absolute;
+      height: 100%;
+    }
   }
 
   // .bunner__inner
@@ -22,19 +30,37 @@
     > * + * {
       margin: 32px 0 0 0;
     }
+
+    @include for-min-size("md") {
+      position: relative;
+      padding: 140px 0 70px 0;
+    }
   }
 
   // .bunner__title
   &__title {
     text-align: center;
+
+    @include for-min-size("md") {
+      max-width: 600px;
+      text-align: left;
+    }
   }
 
   // .bunner__text
   &__text {
     text-align: center;
+
+    @include for-min-size("md") {
+      max-width: 400px;
+      text-align: left;
+    }
   }
 
   // .bunner__button
   &__button {
+    @include for-min-size("md") {
+      max-width: 320px;
+    }
   }
 }

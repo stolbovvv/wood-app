@@ -482,7 +482,7 @@
 
       <!-- section: home-hero -->
       <main class="main">
-        <div class="home-hero">
+        <section class="home-hero">
           <div class="container">
             <div class="home-hero__inner">
               <h1 class="home-hero__title">Акустические пэт панели</h1>
@@ -493,7 +493,7 @@
               <a class="home-hero__button button-primary" href="#"><span>Читать описание продукции</span></a>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- section: description -->
         <section class="description">
@@ -503,12 +503,43 @@
                 Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
                 пластика и дерева. Собственное производство позволяет контролировать высокое качество.
               </p>
-              <a class="description__button button-primary" href="#">Заказать образцы</a>
+              <a class="description__button button-primary" href="#"><span>Заказать образцы</span></a>
             </div>
           </div>
         </section>
 
         <!--  -->
+
+        <!-- difference -->
+        <section class="difference">
+          <div class="container">
+            <div class="difference__inner">
+              <h2 class="difference__title title">Услышьте разницу</h2>
+              <div class="difference__player">
+                <button class="difference__player-button" id="audio_player_button" data-state="pause">
+                  <i class="difference__player-button-icon icon-ui-play"></i>
+                </button>
+                <div class="difference__player-waves">
+                  <div
+                    class="difference__player-waves-item"
+                    id="wave_audio_bad"
+                    data-sound="./audio/bad-sound.wav"
+                  ></div>
+                  <div
+                    class="difference__player-waves-item"
+                    id="wave_audio_great"
+                    data-sound="./audio/great-sound.wav"
+                  ></div>
+                </div>
+              </div>
+              <div class="difference__switch">
+                <span class="difference__switch-label --active" id="labe_audio_bad">С реверберацией</span>
+                <span class="difference__switch-toggler"><span></span></span>
+                <span class="difference__switch-label" id="labe_audio_great">Без реверберации</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- section: bunner -->
         <section class="bunner">
@@ -520,7 +551,7 @@
             <div class="bunner__inner">
               <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
               <p class="bunner__text text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
-              <a class="bunner__button button-primary" href="#">Попробуйте наш визуализатор</a>
+              <a class="bunner__button button-primary" href="#"><span>Попробуйте наш визуализатор</span></a>
             </div>
           </div>
         </section>
@@ -530,9 +561,9 @@
           <div class="container">
             <div class="video__inner">
               <div class="video__video-wrapper">
-                <video id="video-new-poject" src="./video/new-project.mp4" poster="" preload="metadata"></video>
+                <video id="video_new_poject" src="./video/new-project.mp4" poster="" preload="metadata"></video>
                 <div class="video__button-wrapper">
-                  <button class="video__button" id="video-button-play">
+                  <button class="video__button" id="video_button_play">
                     <i class="video__button-icon icon-ui-play"></i>
                   </button>
                 </div>

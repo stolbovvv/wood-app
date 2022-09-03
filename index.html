@@ -480,11 +480,18 @@
         </div>
       </header>
 
-      <!-- section: home-hero -->
       <main class="main">
+        <!-- home-hero -->
         <section class="home-hero">
           <div class="home-hero__bg">
-            <video class="home-hero__bg-video" preload="auto" autoplay muted loop>
+            <video
+              class="home-hero__bg-video"
+              preload="auto"
+              autoplay="autoplay"
+              muted
+              loop
+              poster="./video/video-poster.jpg"
+            >
               <source src="./video/new-project.mp4" type="video/mp4" />
             </video>
             <div class="home-hero__bg-cover"></div>
@@ -502,7 +509,7 @@
           </div>
         </section>
 
-        <!-- section: description -->
+        <!-- description -->
         <section class="description">
           <div class="container">
             <div class="description__inner">
@@ -515,7 +522,69 @@
           </div>
         </section>
 
+        <!-- panel -->
+        <section class="panel">
+          <div class="container">
+            <div class="panel__inner">
+              <div class="panel__img-wpapper">
+                <img class="panel__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                <img class="panel__img" src="./images/panels/base-panel_2.jpg" alt="" />
+                <img class="panel__img" src="./images/panels/base-panel_3.jpg" alt="" />
+                <img class="panel__img" src="./images/panels/base-panel_4.jpg" alt="" />
+                <img class="panel__img" src="./images/panels/base-panel_5.jpg" alt="" />
+                <img class="panel__img" src="./images/panels/base-panel_6.jpg" alt="" />
+              </div>
+              <div class="panel__body">
+                <h2 class="panel__body-title title">Акустические панели</h2>
+                <p class="panel__body-descr text">
+                  Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
+                  пластика и дерева. СобственноеАкустические пэт панели wood app - экологически чистое изделие,
+                  изготовленное из переработанного пластика и дерева. СобственноеАкустические пэт панели wood app -
+                  экологически чистое изделие, изготовленное из переработанного пластика и дерева.
+                </p>
+                <a class="panel__body-button button-primary" href="#"><span>Заказать образцы</span></a>
+              </div>
+              <div class="panel__footer">
+                <div class="panel__footer-data">
+                  <div class="panel__footer-data-color-and-num">
+                    <span class="panel__footer-data-color"></span>
+                    <span class="panel__footer-data-num">№44789</span>
+                  </div>
+                  <p class="panel__footer-data-name">Название панелей</p>
+                </div>
+                <div class="panel__footer-slider">
+                  <div class="color-slider swiper">
+                    <button class="color-slider__button color-slider__button_prev">
+                      <i class="color-slider__button-icon icon-ui-arrow-left"></i>
+                    </button>
+                    <div class="color-slider__wpapper swiper-wrapper">
+                      <div class="color-slider__slide swiper-slide">1</div>
+                      <div class="color-slider__slide swiper-slide">2</div>
+                      <div class="color-slider__slide swiper-slide">3</div>
+                      <div class="color-slider__slide swiper-slide">4</div>
+                      <div class="color-slider__slide swiper-slide">5</div>
+                      <div class="color-slider__slide swiper-slide">6</div>
+                    </div>
+                    <button class="color-slider__button color-slider__button_next">
+                      <i class="color-slider__button-icon icon-ui-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!--  -->
+
+        <!-- application -->
+        <section class="application">
+          <div class="container">
+            <div class="application__inner">
+              <h2 class="application__title title">Применение продукции</h2>
+            </div>
+          </div>
+        </section>
 
         <!-- difference -->
         <section class="difference">
@@ -569,7 +638,9 @@
           <div class="container">
             <div class="video__inner">
               <div class="video__video-wrapper">
-                <video id="video_new_poject" src="./video/new-project.mp4" poster="" preload="metadata"></video>
+                <video id="video_new_poject" preload="metadata" poster="./video/video-poster.jpg">
+                  <source src="./video/new-project.mp4" type="video/mp4" />
+                </video>
                 <div class="video__button-wrapper">
                   <button class="video__button" id="video_button_play">
                     <i class="video__button-icon icon-ui-play"></i>
@@ -605,6 +676,7 @@
                       <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
                     </div>
                     <div class="article-preview__body">
+                      <p class="article-preview__title">Анна</p>
                       <p class="article-preview__text text">
                         For most people, installing the panels would be an entertaining DIY project. It is very simple.
                       </p>
@@ -620,6 +692,7 @@
                       <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
                     </div>
                     <div class="article-preview__body">
+                      <p class="article-preview__title">Артём</p>
                       <p class="article-preview__text text">
                         For most people, installing the panels would be an entertaining DIY project. It is very simple.
                       </p>
@@ -635,6 +708,7 @@
                       <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
                     </div>
                     <div class="article-preview__body">
+                      <p class="article-preview__title">Мария</p>
                       <p class="article-preview__text text">
                         For most people, installing the panels would be an entertaining DIY project. It is very simple.
                       </p>
@@ -650,6 +724,7 @@
                       <img class="article-preview__img" src="./images/examples/examples-1.jpg" alt="" />
                     </div>
                     <div class="article-preview__body">
+                      <p class="article-preview__title">Валерий</p>
                       <p class="article-preview__text text">
                         For most people, installing the panels would be an entertaining DIY project. It is very simple.
                       </p>

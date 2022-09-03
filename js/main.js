@@ -89,103 +89,129 @@ window.addEventListener('DOMContentLoaded', function() {
   }); // sliders
 
   var articlesSlider = document.querySelector('.articles-slider__slider');
-  new Swiper(articlesSlider, {
-    // Default parameters
-    slidesPerView: 1,
-    spaceBetween: 92,
-    loop: true,
-    navigation: {
-      prevEl: '.slider-button-group__button-prev',
-      nextEl: '.slider-button-group__button-next'
-    },
-    // Responsive breakpoints
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 15
+  var colorSlider = document.querySelectorAll('.color-slider');
+
+  if (colorSlider.length > 0) {
+    colorSlider.forEach(function(slider) {
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 0,
+        navigation: {
+          prevEl: '.color-slider__button_prev',
+          nextEl: '.color-slider__button_next'
+        } // Responsive breakpoints
+
+      });
+    });
+  }
+
+  if (articlesSlider) {
+    new Swiper(articlesSlider, {
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: true,
+      navigation: {
+        prevEl: '.slider-button-group__button-prev',
+        nextEl: '.slider-button-group__button-next'
       },
-      1280: {
-        slidesPerView: 2,
-        spaceBetween: 32
-      },
-      1920: {
-        slidesPerView: 2,
-        spaceBetween: 92
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        1280: {
+          slidesPerView: 2,
+          spaceBetween: 32
+        },
+        1920: {
+          slidesPerView: 2,
+          spaceBetween: 92
+        }
       }
-    }
-  }); // video
+    });
+  } // video
+
 
   var videoContent = document.querySelector('#video_new_poject');
   var videoButton = document.querySelector('#video_button_play');
-  videoButton.addEventListener('click', function() {
-    videoContent.play();
-  }); // Audio wawes
 
-  var playerBytton = document.querySelector('#audio_player_button');
+  if (videoContent && videoButton) {
+    videoButton.addEventListener('click', function() {
+      videoContent.play();
+    });
+  } // Audio wawes
+
+
   var audioBad = document.querySelector('#wave_audio_bad').getAttribute('data-sound');
   var audioGreat = document.querySelector('#wave_audio_great').getAttribute('data-sound');
-  var audioToggler = document.querySelector('.difference__switch-toggler');
-  var audioLabels = document.querySelectorAll('.difference__switch-label');
-  var wavesSetting = {
-    waveColor: '#CACACA',
-    progressColor: '#787d46',
-    cursorColor: 'transparent',
-    height: 100,
-    barHeight: 5,
-    barMinHeight: 4,
-    barWidth: 4,
-    barRadius: 2,
-    barGap: 3
-  };
-  var wavesAudioBad = WaveSurfer.create(_objectSpread({
-    container: '#wave_audio_bad'
-  }, wavesSetting));
-  var wavesAudioGreat = WaveSurfer.create(_objectSpread({
-    container: '#wave_audio_great'
-  }, wavesSetting));
-  wavesAudioBad.load(audioBad);
-  wavesAudioGreat.load(audioGreat);
 
-  function muteAudio() {
-    if (audioToggler.getAttribute('data-state') === 'audio-bad') {
-      wavesAudioBad.setVolume(1);
-      wavesAudioGreat.setVolume(0);
+  function muteAudio(toggler, audioBad, audioGrat) {
+    if (toggler.getAttribute('data-state') === 'audio-bad') {
+      audioBad.setVolume(1);
+      audioGrat.setVolume(0);
     } else {
-      wavesAudioBad.setVolume(0);
-      wavesAudioGreat.setVolume(1);
+      audioBad.setVolume(0);
+      audioGrat.setVolume(1);
     }
   }
 
-  playerBytton.addEventListener('click', function() {
-    muteAudio();
+  if (audioBad && audioGreat) {
+    var playerBytton = document.querySelector('#audio_player_button');
+    var audioToggler = document.querySelector('.difference__switch-toggler');
+    var audioLabels = document.querySelectorAll('.difference__switch-label');
+    var wavesSetting = {
+      waveColor: '#CACACA',
+      progressColor: '#787d46',
+      cursorColor: 'transparent',
+      height: 100,
+      barHeight: 5,
+      barMinHeight: 4,
+      barWidth: 4,
+      barRadius: 2,
+      barGap: 3
+    };
+    var wavesAudioBad = WaveSurfer.create(_objectSpread({
+      container: '#wave_audio_bad'
+    }, wavesSetting));
+    var wavesAudioGreat = WaveSurfer.create(_objectSpread({
+      container: '#wave_audio_great'
+    }, wavesSetting));
+    wavesAudioBad.load(audioBad);
+    wavesAudioGreat.load(audioGreat);
+    playerBytton.addEventListener('click', function() {
+      muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
 
-    if (playerBytton.getAttribute('data-state') === 'pause') {
-      playerBytton.setAttribute('data-state', 'play');
-      wavesAudioBad.play();
-      wavesAudioGreat.play();
-    } else {
-      playerBytton.setAttribute('data-state', 'pause');
-      wavesAudioBad.pause();
-      wavesAudioGreat.pause();
-    }
-  });
-  audioToggler.addEventListener('click', function() {
-    if (audioToggler.getAttribute('data-state') === 'audio-bad') {
-      audioToggler.setAttribute('data-state', 'audio-great');
-      audioToggler.classList.add('--active');
-      audioLabels.forEach(function(label) {
-        if (label.id === 'labe_audio_great') label.classList.add('--active');
-        if (label.id === 'labe_audio_bad') label.classList.remove('--active');
-      });
-    } else {
-      audioToggler.setAttribute('data-state', 'audio-bad');
-      audioToggler.classList.remove('--active');
-      audioLabels.forEach(function(label) {
-        if (label.id === 'labe_audio_great') label.classList.remove('--active');
-        if (label.id === 'labe_audio_bad') label.classList.add('--active');
-      });
-    }
+      if (playerBytton.getAttribute('data-state') === 'pause') {
+        playerBytton.setAttribute('data-state', 'play');
+        wavesAudioBad.play();
+        wavesAudioGreat.play();
+      } else {
+        playerBytton.setAttribute('data-state', 'pause');
+        wavesAudioBad.pause();
+        wavesAudioGreat.pause();
+      }
+    });
+    audioToggler.addEventListener('click', function() {
+      if (audioToggler.getAttribute('data-state') === 'audio-bad') {
+        audioToggler.setAttribute('data-state', 'audio-great');
+        audioToggler.classList.add('--active');
+        audioLabels.forEach(function(label) {
+          if (label.id === 'labe_audio_great') label.classList.add('--active');
+          if (label.id === 'labe_audio_bad') label.classList.remove('--active');
+        });
+      } else {
+        audioToggler.setAttribute('data-state', 'audio-bad');
+        audioToggler.classList.remove('--active');
+        audioLabels.forEach(function(label) {
+          if (label.id === 'labe_audio_great') label.classList.remove('--active');
+          if (label.id === 'labe_audio_bad') label.classList.add('--active');
+        });
+      }
 
-    muteAudio();
-  });
+      muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
+    });
+  }
 });

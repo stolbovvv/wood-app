@@ -44,13 +44,26 @@
       margin: 0 0 0 0;
     }
 
-    &.--active {
-      > svg {
+    &[data-state="pause"] {
+      > .difference__player-button-icon {
         &:nth-child(1) {
-          width: 0;
+          display: inline-block;
+          transform: translateX(10%);
         }
         &:nth-child(2) {
-          width: 36px;
+          display: none;
+        }
+      }
+    }
+
+    &[data-state="play"] {
+      > .difference__player-button-icon {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: inline-block;
+          transform: translateX(0%);
         }
       }
     }
@@ -58,8 +71,6 @@
 
   // .difference__player-button
   &__player-button-icon {
-    display: inline-block;
-    transform: translateX(10%);
     font-size: 36px;
     color: $clr-primary;
   }

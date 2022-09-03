@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', () => {
   wavesAudioGreat.load(audioGreat);
 
   function muteAudio() {
-    if (audioToggler.getAttribute('data-state') === 'not-active') {
+    if (audioToggler.getAttribute('data-state') === 'audio-bad') {
       wavesAudioBad.setVolume(1);
       wavesAudioGreat.setVolume(0);
     } else {
@@ -143,19 +143,21 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   audioToggler.addEventListener('click', () => {
-    if (audioToggler.getAttribute('data-state') === 'not-active') {
-      audioToggler.setAttribute('data-state', 'active');
+    if (audioToggler.getAttribute('data-state') === 'audio-bad') {
+      audioToggler.setAttribute('data-state', 'audio-great');
+      audioToggler.classList.add('--active');
 
       audioLabels.forEach((label) => {
-        if (label.id === 'labe_audio_great') label.setAttribute('data-state', 'active');
-        if (label.id === 'labe_audio_bad') label.setAttribute('data-state', 'not-active');
+        if (label.id === 'labe_audio_great') label.classList.add('--active');
+        if (label.id === 'labe_audio_bad') label.classList.remove('--active');
       });
     } else {
-      audioToggler.setAttribute('data-state', 'not-active');
+      audioToggler.setAttribute('data-state', 'audio-bad');
+      audioToggler.classList.remove('--active');
 
       audioLabels.forEach((label) => {
-        if (label.id === 'labe_audio_great') label.setAttribute('data-state', 'note-active');
-        if (label.id === 'labe_audio_bad') label.setAttribute('data-state', 'active');
+        if (label.id === 'labe_audio_great') label.classList.remove('--active');
+        if (label.id === 'labe_audio_bad') label.classList.add('--active');
       });
     }
 

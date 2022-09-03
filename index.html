@@ -483,6 +483,13 @@
       <!-- section: home-hero -->
       <main class="main">
         <section class="home-hero">
+          <div class="home-hero__bg">
+            <video class="home-hero__bg-video" preload="auto" autoplay muted loop>
+              <source src="./video/new-project.mp4" type="video/mp4" />
+            </video>
+            <div class="home-hero__bg-cover"></div>
+          </div>
+
           <div class="container">
             <div class="home-hero__inner">
               <h1 class="home-hero__title">Акустические пэт панели</h1>
@@ -518,6 +525,7 @@
               <div class="difference__player">
                 <button class="difference__player-button" id="audio_player_button" data-state="pause">
                   <i class="difference__player-button-icon icon-ui-play"></i>
+                  <i class="difference__player-button-icon icon-ui-pause"></i>
                 </button>
                 <div class="difference__player-waves">
                   <div
@@ -534,7 +542,7 @@
               </div>
               <div class="difference__switch">
                 <span class="difference__switch-label --active" id="labe_audio_bad">С реверберацией</span>
-                <span class="difference__switch-toggler"><span></span></span>
+                <span class="difference__switch-toggler" data-state="audio-bad"><span></span></span>
                 <span class="difference__switch-label" id="labe_audio_great">Без реверберации</span>
               </div>
             </div>

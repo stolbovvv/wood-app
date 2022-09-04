@@ -1,3 +1,54 @@
 @use "../helper" as *;
 
 /* Block "benefits" */
+.benefits {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .benefits__inner
+  &__inner {
+  }
+
+  // .benefits__title
+  &__title {
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 356px;
+      height: 150px;
+      transform: translate(-50%, -50%);
+      background-image: url("../images/bg/bg-benefits.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: -1;
+    }
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .benefits__items
+  &__items {
+    margin: 42px 0 0 0;
+    display: grid;
+    gap: 32px;
+
+    @include for-min-size("md") {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include for-min-size("xxl") {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

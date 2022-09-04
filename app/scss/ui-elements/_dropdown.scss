@@ -1,4 +1,54 @@
 @use "../helper" as *;
 
 /* UI elements "Dropduwn" */
+.spoiler {
+  // .spoiler__head
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.5);
+    cursor: pointer;
+  }
 
+  // .spoiler__head-title
+  &__head-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    transition: color 0.5s ease 0s;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .spoiler[data-spoiler-state="open"] & {
+      color: $clr-primary;
+    }
+  }
+
+  // .spoiler__head-icon
+  &__head-icon {
+    margin: 0 0 0 16px;
+    font-size: 32px;
+    transition: all 0.5s ease 0s;
+
+    .spoiler[data-spoiler-state="open"] & {
+      color: $clr-primary;
+      transform: rotate(90deg);
+    }
+  }
+
+  // .spoiler__body
+  &__body {
+    height: 0;
+    overflow: hidden;
+  }
+
+  // .spoiler__text
+  &__text {
+    margin: 20px 0 0 0;
+  }
+}

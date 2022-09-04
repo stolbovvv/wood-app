@@ -89,20 +89,27 @@ window.addEventListener('DOMContentLoaded', function() {
   }); // sliders
 
   var articlesSlider = document.querySelector('.articles-slider__slider');
-  var colorSlider = document.querySelectorAll('.color-slider');
+  var applicationSlider = document.querySelector('.application-slider');
 
-  if (colorSlider.length > 0) {
-    colorSlider.forEach(function(slider) {
-      new Swiper(slider, {
-        // Default parameters
-        slidesPerView: 1,
-        spaceBetween: 0,
-        navigation: {
-          prevEl: '.color-slider__button_prev',
-          nextEl: '.color-slider__button_next'
-        } // Responsive breakpoints
-
-      });
+  if (applicationSlider) {
+    var prev = applicationSlider.closest('.application').querySelector('.slider-button-group__button-prev');
+    var next = applicationSlider.closest('.application').querySelector('.slider-button-group__button-next');
+    new Swiper(applicationSlider, {
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: true,
+      navigation: {
+        prevEl: prev,
+        nextEl: next
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 32
+        }
+      }
     });
   }
 
@@ -212,6 +219,40 @@ window.addEventListener('DOMContentLoaded', function() {
       }
 
       muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
+    });
+  } // spoilers
+
+
+  var spoilersList = document.querySelectorAll('.spoiler[data-spoiler-state]');
+
+  if (spoilersList.length > 0) {
+    spoilersList.forEach(function(spoiler) {
+      var spoilerHead = spoiler.querySelector('.spoiler__head');
+      var spoilerBody = spoiler.querySelector('.spoiler__body');
+      spoilerHead.addEventListener('click', function() {
+        console.log();
+
+        switch (spoiler.getAttribute('data-spoiler-state')) {
+          case 'open':
+            spoiler.setAttribute('data-spoiler-state', 'close');
+            gsap.to(spoilerBody, {
+              duration: 0.5,
+              height: 0
+            });
+            break;
+
+          case 'close':
+            spoiler.setAttribute('data-spoiler-state', 'open');
+            gsap.to(spoilerBody, {
+              duration: 0.5,
+              height: 'auto'
+            });
+            break;
+
+          default:
+            break;
+        }
+      });
     });
   }
 });

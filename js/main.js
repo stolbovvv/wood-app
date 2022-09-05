@@ -86,29 +86,44 @@ window.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
-  }); // sliders
+  }); // acoustic-panel tabs
 
+  var acousticPanelColorSlider = document.querySelector('.acoustic-panel__sldier');
+  var acousticPanelColorItem = document.querySelectorAll('.color-slider__slide-round');
+
+  if (acousticPanelColorSlider) {
+    if (acousticPanelColorItem.length > 0) {
+      acousticPanelColorItem.forEach(function(item) {
+        item.style.background = item.getAttribute('data-panel-color');
+      });
+    }
+
+    acousticPanelColorSlider.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if (target && target.classList.contains('color-slider__slide-round')) {
+        acousticPanelColorItem.forEach(function(item) {
+          return item.classList.remove('--active');
+        });
+        target.classList.add('--active');
+      }
+    });
+  } // sliders
+
+
+  var colorSlider = document.querySelector('.color-slider > .swiper');
   var articlesSlider = document.querySelector('.articles-slider__slider');
-  var applicationSlider = document.querySelector('.application-slider');
 
-  if (applicationSlider) {
-    var prev = applicationSlider.closest('.application').querySelector('.slider-button-group__button-prev');
-    var next = applicationSlider.closest('.application').querySelector('.slider-button-group__button-next');
-    new Swiper(applicationSlider, {
+  if (colorSlider) {
+    var prevBtn = colorSlider.previousElementSibling;
+    var nextBtn = colorSlider.nextElementSibling;
+    new Swiper(colorSlider, {
       // Default parameters
-      slidesPerView: 1,
-      spaceBetween: 15,
-      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 16,
       navigation: {
-        prevEl: prev,
-        nextEl: next
-      },
-      // Responsive breakpoints
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 32
-        }
+        prevEl: prevBtn,
+        nextEl: nextBtn
       }
     });
   }

@@ -53,29 +53,42 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // acoustic-panel tabs
+  const acousticPanelColorSlider = document.querySelector('.acoustic-panel__sldier');
+  const acousticPanelColorItem = document.querySelectorAll('.color-slider__slide-round');
+
+  if (acousticPanelColorSlider) {
+    if (acousticPanelColorItem.length > 0) {
+      acousticPanelColorItem.forEach((item) => {
+        item.style.background = item.getAttribute('data-panel-color');
+      });
+    }
+
+    acousticPanelColorSlider.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target && target.classList.contains('color-slider__slide-round')) {
+        acousticPanelColorItem.forEach((item) => item.classList.remove('--active'));
+        target.classList.add('--active');
+      }
+    });
+  }
+
   // sliders
+  const colorSlider = document.querySelector('.color-slider > .swiper');
   const articlesSlider = document.querySelector('.articles-slider__slider');
-  const applicationSlider = document.querySelector('.application-slider');
 
-  if (applicationSlider) {
-    const prev = applicationSlider.closest('.application').querySelector('.slider-button-group__button-prev');
-    const next = applicationSlider.closest('.application').querySelector('.slider-button-group__button-next');
+  if (colorSlider) {
+    const prevBtn = colorSlider.previousElementSibling;
+    const nextBtn = colorSlider.nextElementSibling;
 
-    new Swiper(applicationSlider, {
+    new Swiper(colorSlider, {
       // Default parameters
-      slidesPerView: 1,
-      spaceBetween: 15,
-      loop: true,
+      slidesPerView: 4,
+      spaceBetween: 16,
       navigation: {
-        prevEl: prev,
-        nextEl: next,
-      },
-      // Responsive breakpoints
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 32,
-        },
+        prevEl: prevBtn,
+        nextEl: nextBtn,
       },
     });
   }

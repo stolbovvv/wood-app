@@ -1,3 +1,99 @@
 @use "../helper" as *;
 
 /* UI elements "Carusels" */
+.color-slider {
+  // .color-slider__button
+
+  // .color-slider__button-prev
+
+  // .color-slider__button-next
+
+  // .color-slider__button-icon
+
+  // .color-slider__wrapper
+  &__wrapper {
+  }
+
+  // .color-slider__slide
+  &__slide {
+  }
+}
+
+.color-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > * + * {
+    margin: 0 0 0 8px;
+  }
+
+  // .color-slider__button
+  &__button {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  // .color-slider__button-prev
+  &__button-prev {
+    border-left-color: $clr-gray-700;
+    border-bottom-color: $clr-gray-700;
+    transform: rotate(45deg);
+
+    > .color-slider__button-icon {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // .color-slider__button-next
+  &__button-next {
+    border-right-color: $clr-gray-700;
+    border-bottom-color: $clr-gray-700;
+    transform: rotate(-45deg);
+
+    > .color-slider__button-icon {
+      transform: rotate(45deg);
+    }
+  }
+
+  // .color-slider__button-icon
+  &__button-icon {
+    font-size: 24px;
+  }
+
+  // .color-slider__body
+  &__body {
+    flex: 0 0 152px;
+  }
+
+  // .color-slider__wrapper
+  &__wrapper {
+  }
+
+  // .color-slider__slide
+  &__slide {
+  }
+
+  // .color-slider__slide-round
+  &__slide-round {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: $clr-black;
+    cursor: pointer;
+
+    &.--active {
+      border: 2px solid $clr-white;
+    }
+  }
+}
+

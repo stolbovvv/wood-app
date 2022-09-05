@@ -1,0 +1,198 @@
+@use "../helper" as *;
+
+/* Block "acoustic-panel" */
+.acoustic-panel {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .acoustic-panel__container
+  &__container {
+    @include for-min-size("lg") {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  // .acoustic-panel__inner
+  &__inner {
+    margin: 0 -15px;
+    padding: 0 0 70px 0;
+    background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+
+    @include for-min-size("lg") {
+      position: relative;
+      margin: 0 -80px;
+      padding: 150px 0 60px 80px;
+      background: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 78.125%;
+        height: 100%;
+        border-radius: 4px;
+        background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+        z-index: -1;
+      }
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 -130px;
+      padding: 150px 0 60px 130px;
+      max-width: 1600px;
+    }
+
+    @include for-min-size("xxl") {
+    }
+  }
+
+  // .acoustic-panel__body
+  &__body {
+    @include for-min-size("lg") {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  // .acoustic-panel__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+
+    @include for-min-size("md") {
+      height: 560px;
+    }
+
+    @include for-min-size("lg") {
+      order: 1;
+      flex: 0 0 624px;
+      height: 560px;
+      border-radius: 4px;
+    }
+  }
+
+  // .acoustic-panel__img
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // .acoustic-panel__contnet
+  &__contnet {
+    padding: 70px 15px 0 15px;
+
+    @include for-min-size("lg") {
+      padding: 70px 70px 0 0;
+    }
+  }
+
+  // .acoustic-panel__title
+  &__title {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .acoustic-panel__descr
+  &__descr {
+    margin: 28px 0 0 0;
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .acoustic-panel__button
+  &__button {
+    width: 234px;
+    margin: 28px auto 0 auto;
+
+    @include for-min-size("md") {
+      margin: 28px 0 0 0;
+    }
+  }
+
+  // .acoustic-panel__footer
+  &__footer {
+    margin: 50px 0 0 0;
+    padding: 0 15px 0 15px;
+
+    @include for-min-size("md") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include for-min-size("lg") {
+      padding: 0 0 0 0;
+    }
+  }
+
+  // .acoustic-panel__data
+  &__data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  // .acoustic-panel__data-head
+  &__data-head {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+      margin: 0 0 0 12px;
+    }
+  }
+
+  // .acoustic-panel__data-color
+  &__data-color {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ffd0a9;
+  }
+
+  // .acoustic-panel__data-number
+  &__data-number {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  // .acoustic-panel__name
+  &__name {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  // .acoustic-panel__sldier
+  &__sldier {
+    margin: 24px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 0 0 0 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 624px;
+      justify-content: flex-start;
+    }
+  }
+}

@@ -30,6 +30,27 @@
       background-position: center;
       background-size: contain;
       z-index: -1;
+
+      @include for-min-size("md") {
+        top: 320px;
+        height: 420px;
+        width: 925px;
+      }
+
+      @include for-min-size("lg") {
+        height: 420px;
+        width: 1494px;
+      }
+
+      @include for-min-size("xl") {
+        top: 300px;
+        height: 420px;
+        width: 1682px;
+      }
+
+      @include for-min-size("xxl") {
+        top: 240px;
+      }
     }
 
     @include for-min-size("md") {
@@ -41,7 +62,7 @@
   &__items {
     margin: 42px 0 0 0;
     display: grid;
-    gap: 32px;
+    gap: 28px 32px;
 
     @include for-min-size("md") {
       grid-template-columns: 1fr 1fr;

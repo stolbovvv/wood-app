@@ -2,24 +2,6 @@
 
 /* UI elements "Carusels" */
 .color-slider {
-  // .color-slider__button
-
-  // .color-slider__button-prev
-
-  // .color-slider__button-next
-
-  // .color-slider__button-icon
-
-  // .color-slider__wrapper
-  &__wrapper {
-  }
-
-  // .color-slider__slide
-  &__slide {
-  }
-}
-
-.color-slider {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +75,95 @@
 
     &.--active {
       border: 2px solid $clr-white;
+    }
+  }
+}
+
+.product-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px 10px 14px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background: $clr-white;
+  min-height: 64px;
+
+  > * + * {
+    margin: 0 0 0 16px;
+  }
+
+  @include for-min-size("md") {
+    > * + * {
+      margin: 0 0 0 32px;
+    }
+  }
+
+  // .product-slider__button
+  &__button {
+    flex: 0 0 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: $clr-gray-100;
+    cursor: pointer;
+
+    @include for-min-size("md") {
+      flex: 0 0 64px;
+      height: 64px;
+    }
+  }
+
+  // .product-slider__button-icon
+  &__button-icon {
+    font-size: 12px;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+    }
+  }
+
+  // .product-slider__body
+  &__body {
+    flex: 0 0 128px;
+
+    @include for-min-size("md") {
+      flex: 0 0 64px;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 256px;
+    }
+
+    @include for-min-size("xxl") {
+      flex: 0 0 544px;
+    }
+  }
+
+  // .product-slider__wrapper
+  &__wrapper {
+  }
+
+  // .product-slider__slide
+  &__slide {
+    cursor: pointer;
+  }
+
+  // .product-slider__slide-img
+  &__slide-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    @include for-min-size("md") {
+      width: 64px;
+      height: 64px;
     }
   }
 }

@@ -74,8 +74,37 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // visualization tabs
+  const visualizationTabs = document.querySelectorAll('.visualization__item[data-visualization-tab-id]');
+  const visualizationProduct = document.querySelectorAll('.product-slider__slide[data-visualization-id]');
+
+  if (visualizationProduct.length > 0 && visualizationTabs.length > 0) {
+    visualizationProduct.forEach((product) => {
+      product.addEventListener('click', () => {
+        visualizationTabs.forEach((tab) => {
+          if (tab.getAttribute('data-visualization-tab-id') === product.getAttribute('data-visualization-id')) {
+            tab.classList.add('--active');
+            gsap.to(tab, {
+              duration: 1,
+              display: 'block',
+              opacity: 1,
+            });
+          } else {
+            tab.classList.remove('--active');
+            gsap.to(tab, {
+              duration: 1,
+              display: 'none',
+              opacity: 0,
+            });
+          }
+        });
+      });
+    });
+  }
+
   // sliders
   const colorSlider = document.querySelector('.color-slider > .swiper');
+  const producrSlider = document.querySelector('.product-slider > .swiper');
   const articlesSlider = document.querySelector('.articles-slider__slider');
 
   if (colorSlider) {
@@ -89,6 +118,36 @@ window.addEventListener('DOMContentLoaded', () => {
       navigation: {
         prevEl: prevBtn,
         nextEl: nextBtn,
+      },
+    });
+  }
+
+  if (producrSlider) {
+    const prevBtn = producrSlider.previousElementSibling;
+    const nextBtn = producrSlider.nextElementSibling;
+
+    new Swiper(producrSlider, {
+      // Default parameters
+      slidesPerView: 3,
+      spaceBetween: 16,
+      navigation: {
+        prevEl: prevBtn,
+        nextEl: nextBtn,
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 32,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        1920: {
+          slidesPerView: 6,
+          spaceBetween: 32,
+        },
       },
     });
   }

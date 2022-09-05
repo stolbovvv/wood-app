@@ -1,3 +1,27 @@
 @use "../helper" as *;
 
 /* Block "page-head" */
+.page-head {
+  padding: 70px 0 0 0;
+
+  // .page-head__inner
+  &__inner {
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+  }
+
+  // .page-head__bread-crumbs
+  &__bread-crumbs {
+  }
+
+  // .page-head__title
+
+  &__title {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+}

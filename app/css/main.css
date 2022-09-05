@@ -699,6 +699,58 @@ body.--lock {
     text-decoration: underline;
 }
 
+.bread-crumbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    list-style-type: none;
+}
+
+.bread-crumbs>*+* {
+    margin: 0 0 0 12px;
+}
+
+.bread-crumbs__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: rgba(56, 56, 56, 0.5);
+}
+
+.bread-crumbs__item:hover,
+.bread-crumbs__item:focus-within {
+    color: rgba(56, 56, 56, 0.75);
+    text-decoration: underline;
+}
+
+.bread-crumbs__item>*+* {
+    margin: 0 0 0 12px;
+}
+
+.bread-crumbs__item_currnet {
+    color: #383838;
+}
+
+.bread-crumbs__link {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.bread-crumbs__icon {
+    font-size: 24px;
+    color: #383838;
+}
+
 /* UI elements "Covers" */
 /* UI elements "Cards" */
 .product-card {
@@ -1532,6 +1584,24 @@ body.--lock {
 }
 
 /* Block "page-head" */
+.page-head {
+    padding: 70px 0 0 0;
+}
+
+.page-head__inner>*+* {
+    margin: 24px 0 0 0;
+}
+
+.page-head__title {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .page-head__title {
+        text-align: left;
+    }
+}
+
 /* Block "home-hero" */
 .home-hero {
     position: relative;
@@ -2899,6 +2969,126 @@ body.--lock {
 }
 
 /* Block "story-feedback" */
+.story-feedback {
+    padding: 35px 0 35px 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .story-feedback {
+        padding: 60px 0 60px 0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .story-feedback__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .story-feedback__inner_reverse {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+    }
+}
+
+.story-feedback__img-wrapper {
+    position: relative;
+    height: 380px;
+    margin: 0 -15px 0 -15px;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .story-feedback__img-wrapper {
+        height: 480px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .story-feedback__img-wrapper {
+        margin: 0 0 0 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 480px;
+                flex: 0 0 480px;
+        height: 429px;
+        border-radius: 4px;
+    }
+
+    .story-feedback__inner_reverse .story-feedback__img-wrapper {
+        margin: 0 0 0 100px;
+    }
+}
+
+.story-feedback__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+
+.story-feedback__content>*+* {
+    margin: 16px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .story-feedback__content {
+        padding: 0 100px 0 100px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .story-feedback__content {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
+        padding: 0 0 0 0;
+    }
+}
+
+.story-feedback__title {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .story-feedback__title {
+        text-align: left;
+    }
+}
+
+.story-feedback__text {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .story-feedback__text {
+        text-align: left;
+    }
+}
+
+.story-feedback__button {
+    width: 184px;
+    margin: 16px auto 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .story-feedback__button {
+        margin: 16px 0 0 0;
+    }
+}
+
 /* Block "client-feedback" */
 /* Block "footer" */
 .footer {

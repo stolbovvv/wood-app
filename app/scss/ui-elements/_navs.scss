@@ -368,6 +368,10 @@
   justify-content: center;
   list-style-type: none;
 
+  @include for-min-size("md") {
+    justify-content: flex-start;
+  }
+
   > * + * {
     margin: 0 0 0 12px;
   }

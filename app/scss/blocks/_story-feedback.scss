@@ -13,6 +13,7 @@
     @include for-min-size("lg") {
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
 
     // .story-feedback__inner_reverse
@@ -35,14 +36,24 @@
     }
 
     @include for-min-size("lg") {
-      margin: 0 0 0 0;
+      margin: 0 0 0;
       flex: 0 0 480px;
       height: 429px;
       border-radius: 4px;
 
       .story-feedback__inner_reverse & {
-        margin: 0 0 0 100px;
+        margin: 0 0 0 0;
       }
+    }
+
+    @include for-min-size("xl") {
+      height: 513px;
+      flex: 0 0 572px;
+    }
+
+    @include for-min-size("xl") {
+      height: 605px;
+      flex: 0 0 673px;
     }
   }
 

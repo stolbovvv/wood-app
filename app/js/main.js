@@ -53,6 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // TABS
   // acoustic-panel tabs
   const acousticPanelColorSlider = document.querySelector('.acoustic-panel__sldier');
   const acousticPanelColorItem = document.querySelectorAll('.color-slider__slide-round');
@@ -102,9 +103,10 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // sliders
+  // SLIDERS
   const colorSlider = document.querySelector('.color-slider > .swiper');
   const producrSlider = document.querySelector('.product-slider > .swiper');
+  const applicationSlider = document.querySelector('.application-slider > .swiper');
   const articlesSlider = document.querySelector('.articles-slider__slider');
 
   if (colorSlider) {
@@ -152,6 +154,42 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (applicationSlider) {
+    const application = applicationSlider.closest('.application');
+    const prevBtn = application.querySelector('.slider-button-group__button-prev');
+    const nextBtn = application.querySelector('.slider-button-group__button-next');
+
+    new Swiper(applicationSlider, {
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loopAdditionalSlides: 2,
+      loop: true,
+      navigation: {
+        prevEl: prevBtn,
+        nextEl: nextBtn,
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          width: 230,
+        },
+        1280: {
+          width: 350,
+          spaceBetween: 15,
+        },
+        1600: {
+          width: 539,
+          spaceBetween: 0,
+        },
+        1920: {
+          width: 737,
+          spaceBetween: -5,
+        },
+      },
+    });
+  }
+
   if (articlesSlider) {
     new Swiper(articlesSlider, {
       // Default parameters
@@ -180,7 +218,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // video
+  // VIDEO
   const videoContent = document.querySelector('#video_new_poject');
   const videoButton = document.querySelector('#video_button_play');
 
@@ -190,7 +228,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Audio wawes
+  // AUDIO WAWES
   const audioBad = document.querySelector('#wave_audio_bad').getAttribute('data-sound');
   const audioGreat = document.querySelector('#wave_audio_great').getAttribute('data-sound');
 
@@ -266,7 +304,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // spoilers
+  // SPOILERS
   const spoilersList = document.querySelectorAll('.spoiler[data-spoiler-state]');
 
   if (spoilersList.length > 0) {

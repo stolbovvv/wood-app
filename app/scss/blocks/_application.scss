@@ -1,3 +1,220 @@
 @use "../helper" as *;
 
 /* Block "application" */
+.application {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .application__inner
+  &__inner {
+    @include for-min-size("lg") {
+      position: relative;
+    }
+  }
+
+  // .application__body
+  &__body {
+  }
+
+  // .application__content
+  &__content {
+    > * + * {
+      margin: 36px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      display: flex;
+      align-items: center;
+
+      > * + * {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  // .application__title
+  &__title {
+    position: relative;
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+      flex: 0 0 50%;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 40%;
+    }
+
+    @include for-min-size("xxl") {
+      flex: 0 0 33%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 204px;
+      height: 150px;
+      background-image: url("../images/bg/bg-application.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+
+      @include for-min-size("md") {
+        top: 65%;
+        left: 50%;
+        height: 420px;
+        width: 529px;
+      }
+
+      @include for-min-size("lg") {
+        width: 768px;
+      }
+
+      @include for-min-size("xl") {
+        height: 420px;
+        width: 962px;
+      }
+
+      @include for-min-size("xxl") {
+        top: 100%;
+        left: 35%;
+        height: 420px;
+        width: 962px;
+      }
+    }
+  }
+
+  // .application__slider
+  &__slider {
+    @include for-min-size("md") {
+      flex: 0 0 50%;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 60%;
+    }
+
+    @include for-min-size("xxl") {
+      flex: 0 0 66%;
+    }
+  }
+
+  // .application__footer
+  &__footer {
+    margin: 24px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-min-size("lg") {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  // .application__footer-col
+  &__footer-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+
+    @include for-min-size("md") {
+      flex: 0 0 50%;
+    }
+  }
+
+  // .application__slider-button-group
+  &__slider-button-group {
+    @include for-min-size("xxl") {
+      transform: translateY(-300px);
+    }
+  }
+
+  // .application__button
+  &__button {
+    flex: 1 1 183px;
+
+    @include for-min-size("md") {
+      flex: 0 0 230px;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 262px;
+      margin: 0 0 0 auto;
+    }
+
+    @include for-min-size("xl") {
+      flex: 0 0 197px;
+    }
+
+    @include for-min-size("xxl") {
+      flex: 0 0 250px;
+    }
+  }
+}
+
+.application-slider {
+  // .application-slider__body
+  &__body {
+  }
+
+  // .application-slider__wrapper
+  &__wrapper {
+  }
+
+  // .application-slider__slide
+  &__slide {
+  }
+
+  // .application-slider__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 4px;
+
+    @include for-min-size("md") {
+      height: 356px;
+      transform: scale(0.75);
+      transition: transform 0.5s ease 0s;
+
+      .swiper-slide-active & {
+        transform: scale(1);
+      }
+    }
+
+    @include for-min-size("lg") {
+      height: 546px;
+      transform: translateY(-30px) scale(0.75);
+    }
+
+    @include for-min-size("xl") {
+      height: 688px;
+    }
+
+    @include for-min-size("xxl") {
+      height: 942px;
+    }
+  }
+
+  // .application-slider__img
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

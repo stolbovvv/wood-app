@@ -86,7 +86,8 @@ window.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
-  }); // acoustic-panel tabs
+  }); // TABS
+  // acoustic-panel tabs
 
   var acousticPanelColorSlider = document.querySelector('.acoustic-panel__sldier');
   var acousticPanelColorItem = document.querySelectorAll('.color-slider__slide-round');
@@ -136,11 +137,12 @@ window.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
-  } // sliders
+  } // SLIDERS
 
 
   var colorSlider = document.querySelector('.color-slider > .swiper');
   var producrSlider = document.querySelector('.product-slider > .swiper');
+  var applicationSlider = document.querySelector('.application-slider > .swiper');
   var articlesSlider = document.querySelector('.articles-slider__slider');
 
   if (colorSlider) {
@@ -186,6 +188,44 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  if (applicationSlider) {
+    var application = applicationSlider.closest('.application');
+
+    var _prevBtn2 = application.querySelector('.slider-button-group__button-prev');
+
+    var _nextBtn2 = application.querySelector('.slider-button-group__button-next');
+
+    new Swiper(applicationSlider, {
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loopAdditionalSlides: 2,
+      loop: true,
+      navigation: {
+        prevEl: _prevBtn2,
+        nextEl: _nextBtn2
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          width: 230
+        },
+        1280: {
+          width: 350,
+          spaceBetween: 15
+        },
+        1600: {
+          width: 539,
+          spaceBetween: 0
+        },
+        1920: {
+          width: 737,
+          spaceBetween: -5
+        }
+      }
+    });
+  }
+
   if (articlesSlider) {
     new Swiper(articlesSlider, {
       // Default parameters
@@ -212,7 +252,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
-  } // video
+  } // VIDEO
 
 
   var videoContent = document.querySelector('#video_new_poject');
@@ -222,7 +262,7 @@ window.addEventListener('DOMContentLoaded', function() {
     videoButton.addEventListener('click', function() {
       videoContent.play();
     });
-  } // Audio wawes
+  } // AUDIO WAWES
 
 
   var audioBad = document.querySelector('#wave_audio_bad').getAttribute('data-sound');
@@ -293,7 +333,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
       muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
     });
-  } // spoilers
+  } // SPOILERS
 
 
   var spoilersList = document.querySelectorAll('.spoiler[data-spoiler-state]');

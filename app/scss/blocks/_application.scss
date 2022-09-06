@@ -146,6 +146,8 @@
 
     @include for-min-size("md") {
       flex: 0 0 230px;
+      position: relative;
+      z-index: 200;
     }
 
     @include for-min-size("lg") {

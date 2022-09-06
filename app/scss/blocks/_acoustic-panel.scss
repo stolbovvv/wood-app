@@ -24,30 +24,50 @@
 
     @include for-min-size("lg") {
       position: relative;
+      width: 100%;
+      max-width: 1600px;
       margin: 0 -80px;
-      padding: 150px 0 60px 80px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      padding-left: 80px;
       background: none;
+
+      .acoustic-panel_with-slider & {
+        padding-top: 150px;
+        padding-bottom: 60px;
+      }
+
+      .acoustic-panel_row-revers & {
+        padding-left: 0;
+        padding-right: 80px;
+      }
 
       &::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
-        width: 78.125%;
+        width: 77%;
         height: 100%;
         border-radius: 4px;
         background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
         z-index: -1;
+
+        .acoustic-panel_row-revers & {
+          left: auto;
+          right: 0;
+        }
       }
     }
 
-    @include for-min-size("lg") {
+    @include for-min-size("xl") {
       margin: 0 -130px;
-      padding: 150px 0 60px 130px;
-      max-width: 1600px;
-    }
+      padding-left: 130px;
 
-    @include for-min-size("xxl") {
+      .acoustic-panel_row-revers & {
+        padding-left: 0;
+        padding-right: 130px;
+      }
     }
   }
 
@@ -56,14 +76,17 @@
     @include for-min-size("lg") {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+
+      .acoustic-panel_row-revers & {
+        flex-direction: row-reverse;
+      }
     }
   }
 
   // .acoustic-panel__img-wrapper
-  &__img-wrapper {
-    position: relative;
+  &__img-container {
     height: 420px;
-    overflow: hidden;
 
     @include for-min-size("md") {
       height: 560px;
@@ -75,6 +98,18 @@
       height: 560px;
       border-radius: 4px;
     }
+
+    @include for-min-size("xl") {
+      flex: 0 0 670px;
+      height: 605px;
+    }
+  }
+
+  // .acoustic-panel__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
   }
 
   // .acoustic-panel__img
@@ -93,7 +128,36 @@
     padding: 70px 15px 0 15px;
 
     @include for-min-size("lg") {
-      padding: 70px 70px 0 0;
+      padding: 0 70px 0 0;
+
+      .acoustic-panel_with-slider & {
+        padding: 0 40px 0 0;
+        width: auto;
+      }
+
+      .acoustic-panel_row-revers & {
+        padding: 0 0 0 70px;
+      }
+    }
+
+    @include for-min-size("xl") {
+      padding: 0 130px 0 0;
+
+      .acoustic-panel_with-slider & {
+        padding: 0 50px 0 0;
+      }
+
+      .acoustic-panel_row-revers & {
+        padding: 0 0 0 140px;
+      }
+    }
+
+    @include for-min-size("xl") {
+      padding: 0 170px 0 0;
+
+      .acoustic-panel_row-revers & {
+        padding: 0 0 0 170px;
+      }
     }
   }
 
@@ -134,10 +198,13 @@
     @include for-min-size("md") {
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
 
     @include for-min-size("lg") {
+      left: 0;
+      bottom: 60px;
+      width: 100%;
+      margin: 24px 0 0 0;
       padding: 0 0 0 0;
     }
   }
@@ -185,7 +252,8 @@
     margin: 24px 0 0 0;
 
     @include for-min-size("md") {
-      margin: 0 0 0 0;
+      margin: 0 0 0 auto;
+
       display: flex;
       justify-content: flex-end;
     }
@@ -193,6 +261,35 @@
     @include for-min-size("lg") {
       flex: 0 0 624px;
       justify-content: flex-start;
+    }
+
+    @include for-min-size("xl") {
+      flex: 0 0 670px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__button-group {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 0 0;
+    padding: 0 15px 0 15px;
+
+    @include for-min-size("md") {
+      justify-content: flex-start;
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      .acoustic-panel_row-revers & {
+        left: 0;
+        right: auto;
+      }
     }
   }
 }

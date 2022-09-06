@@ -6,13 +6,11 @@
 
   // .page-head__inner
   &__inner {
-    > * + * {
-      margin: 24px 0 0 0;
-    }
   }
 
   // .page-head__bread-crumbs
   &__bread-crumbs {
+    padding: 0 0 14px 0;
   }
 
   // .page-head__title

@@ -380,12 +380,8 @@
   &__item {
     display: flex;
     align-items: center;
+    padding: 0 0 10px 0;
     color: rgba($color: $clr-gray-700, $alpha: 0.5);
-
-    @include for-hover-and-focus() {
-      color: rgba($color: $clr-gray-700, $alpha: 0.75);
-      text-decoration: underline;
-    }
 
     > * + * {
       margin: 0 0 0 12px;
@@ -403,12 +399,25 @@
     line-height: 17px;
     text-decoration: none;
     color: inherit;
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include for-hover-and-focus() {
+      color: $clr-primary;
+    }
+
+    .bread-crumbs__item_currnet & {
+      pointer-events: none;
+    }
   }
 
   // .bread-crumbs__icon
   &__icon {
     font-size: 24px;
-    color: $clr-gray-700;
+    color: inherit;
   }
 }
 

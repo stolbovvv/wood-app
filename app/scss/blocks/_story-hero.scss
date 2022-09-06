@@ -1,3 +1,52 @@
 @use "../helper" as *;
 
 /* Block "story-hero" */
+.story-hero {
+  background-image: url("../../images/bg/bg-story.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 0 35px 0;
+
+  @include for-min-size("md") {
+    margin: 0 0 60px 0;
+  }
+
+  // .story-hero__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 420px;
+
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+  }
+
+  // .story-hero__label
+  &__label {
+    text-align: center;
+    color: $clr-white;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .story-hero__title
+  &__title {
+    text-align: center;
+    color: $clr-white;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .story-hero__button
+  &__button {
+    width: 250px;
+  }
+}

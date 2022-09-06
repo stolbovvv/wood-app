@@ -18,9 +18,9 @@
   }
   @include for-min-size("xl") {
     padding: 0 130px 0 130px;
+    width: min(100%, 1860px);
   }
   @include for-min-size("xxl") {
-    width: min(100%, 1860px);
   }
 
   &::before {

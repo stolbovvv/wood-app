@@ -104,16 +104,18 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // SLIDERS
-  const colorSlider = document.querySelector('.color-slider > .swiper');
-  const producrSlider = document.querySelector('.product-slider > .swiper');
-  const applicationSlider = document.querySelector('.application-slider > .swiper');
+  const colorSlider = document.querySelector('.color-slider');
+  const producrSlider = document.querySelector('.product-slider');
+  const applicationSlider = document.querySelector('.application-slider');
   const articlesSlider = document.querySelector('.articles-slider__slider');
+  const acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
 
   if (colorSlider) {
-    const prevBtn = colorSlider.previousElementSibling;
-    const nextBtn = colorSlider.nextElementSibling;
+    const slider = colorSlider.querySelector('.color-slider__swiper');
+    const prevBtn = slider.previousElementSibling;
+    const nextBtn = slider.nextElementSibling;
 
-    new Swiper(colorSlider, {
+    new Swiper(slider, {
       // Default parameters
       slidesPerView: 4,
       spaceBetween: 16,
@@ -125,10 +127,11 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   if (producrSlider) {
-    const prevBtn = producrSlider.previousElementSibling;
-    const nextBtn = producrSlider.nextElementSibling;
+    const slider = producrSlider.querySelector('.swiper');
+    const prevBtn = slider.previousElementSibling;
+    const nextBtn = slider.nextElementSibling;
 
-    new Swiper(producrSlider, {
+    new Swiper(slider, {
       // Default parameters
       slidesPerView: 3,
       spaceBetween: 16,
@@ -155,11 +158,12 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   if (applicationSlider) {
-    const application = applicationSlider.closest('.application');
+    const slider = applicationSlider.querySelector('.swiper');
+    const application = slider.closest('.application');
     const prevBtn = application.querySelector('.slider-button-group__button-prev');
     const nextBtn = application.querySelector('.slider-button-group__button-next');
 
-    new Swiper(applicationSlider, {
+    new Swiper(slider, {
       // Default parameters
       slidesPerView: 1,
       spaceBetween: 15,
@@ -218,6 +222,26 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (acousticPanelSlider.length > 0) {
+    acousticPanelSlider.forEach((item) => {
+      const slider = item.querySelector('.acoustic-panel__img-swiper');
+      const prevBtn = item.querySelector('.slider-button-group__button-prev');
+      const nextBtn = item.querySelector('.slider-button-group__button-next');
+
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 15,
+        effect: 'fade',
+        loop: true,
+        navigation: {
+          prevEl: prevBtn,
+          nextEl: nextBtn,
+        },
+      });
+    });
+  }
+
   // VIDEO
   const videoContent = document.querySelector('#video_new_poject');
   const videoButton = document.querySelector('#video_button_play');
@@ -229,8 +253,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // AUDIO WAWES
-  const audioBad = document.querySelector('#wave_audio_bad').getAttribute('data-sound');
-  const audioGreat = document.querySelector('#wave_audio_great').getAttribute('data-sound');
+  const audioBad = document.querySelector('#wave_audio_bad');
+  const audioGreat = document.querySelector('#wave_audio_great');
 
   function muteAudio(toggler, audioBad, audioGrat) {
     if (toggler.getAttribute('data-state') === 'audio-bad') {
@@ -262,8 +286,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const wavesAudioBad = WaveSurfer.create({ container: '#wave_audio_bad', ...wavesSetting });
     const wavesAudioGreat = WaveSurfer.create({ container: '#wave_audio_great', ...wavesSetting });
 
-    wavesAudioBad.load(audioBad);
-    wavesAudioGreat.load(audioGreat);
+    wavesAudioBad.load(audioBad.getAttribute('data-sound'));
+    wavesAudioGreat.load(audioGreat.getAttribute('data-sound'));
 
     playerBytton.addEventListener('click', () => {
       muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);

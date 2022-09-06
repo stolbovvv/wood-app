@@ -489,14 +489,14 @@
                 <ul class="bread-crumbs">
                   <li class="bread-crumbs__item">
                     <a class="bread-crumbs__link" href="#">Главная</a>
-                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
                   </li>
                   <li class="bread-crumbs__item">
-                    <a class="bread-crumbs__link" href="#">Отзывы</a>
                     <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                    <a class="bread-crumbs__link" href="#">Отзывы</a>
                   </li>
                   <li class="bread-crumbs__item bread-crumbs__item_currnet">
-                    <span class="bread-crumbs__link">Конкретная история</span>
+                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                    <a class="bread-crumbs__link" href="#">Конкретная история</a>
                   </li>
                 </ul>
               </div>
@@ -506,9 +506,13 @@
 
         <!-- section: story-hero -->
         <section class="story-hero">
-          <p class="story-hero__label">WoodApp истории</p>
-          <h1 class="story-hero__title title">История</h1>
-          <a class="story-hero__link primary-button" href="#">Вернуться</a>
+          <div class="container">
+            <div class="story-hero__inner">
+              <p class="story-hero__label">WoodApp истории</p>
+              <h1 class="story-hero__title title">История</h1>
+              <a class="story-hero__button button-primary" href="#"><span>Вернуться</span></a>
+            </div>
+          </div>
         </section>
 
         <!-- section: description -->
@@ -523,25 +527,25 @@
           </div>
         </section>
 
-        <!-- section: base-panel -->
-        <section class="base-panel">
-          <div class="base-panel__inner">
-            <!-- panel-img-wrapper -->
-            <div class="base-panel__img-wrapper">
-              <img class="base-panel__img" src="./images/panels/base-panel_2.jpg" alt="" />
+        <!-- section: acoustic-panel -->
+        <section class="acoustic-panel">
+          <div class="acoustic-panel__container container">
+            <div class="acoustic-panel__inner">
+              <div class="acoustic-panel__body">
+                <div class="acoustic-panel__img-wrapper">
+                  <img class="acoustic-panel__img" src="./images/panels/base-panel_2.jpg" alt="" />
+                </div>
+
+                <div class="acoustic-panel__contnet">
+                  <h2 class="acoustic-panel__title title">Акустические панели</h2>
+                  <p class="acoustic-panel__descr">
+                    Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
+                    пластика и дерева. Собственное
+                  </p>
+                </div>
+              </div>
             </div>
-            <!-- panel-content -->
-            <div class="base-panel__content">
-              <h2 class="base-panel__content-title title">Акустические панели</h2>
-              <p class="base-panel__content-text text">
-                Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
-                пластика и дерева. Собственное
-              </p>
-              <a class="base-panel__contetn-button button-primary" href="#"><span>Купить</span></a>
-            </div>
-            <!-- panel-content end -->
           </div>
-          <!-- panel-inner end -->
         </section>
 
         <!-- section: story-gallery -->

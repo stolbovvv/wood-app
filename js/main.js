@@ -140,15 +140,17 @@ window.addEventListener('DOMContentLoaded', function() {
   } // SLIDERS
 
 
-  var colorSlider = document.querySelector('.color-slider > .swiper');
-  var producrSlider = document.querySelector('.product-slider > .swiper');
-  var applicationSlider = document.querySelector('.application-slider > .swiper');
+  var colorSlider = document.querySelector('.color-slider');
+  var producrSlider = document.querySelector('.product-slider');
+  var applicationSlider = document.querySelector('.application-slider');
   var articlesSlider = document.querySelector('.articles-slider__slider');
+  var acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
 
   if (colorSlider) {
-    var prevBtn = colorSlider.previousElementSibling;
-    var nextBtn = colorSlider.nextElementSibling;
-    new Swiper(colorSlider, {
+    var slider = colorSlider.querySelector('.color-slider__swiper');
+    var prevBtn = slider.previousElementSibling;
+    var nextBtn = slider.nextElementSibling;
+    new Swiper(slider, {
       // Default parameters
       slidesPerView: 4,
       spaceBetween: 16,
@@ -160,9 +162,11 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   if (producrSlider) {
-    var _prevBtn = producrSlider.previousElementSibling;
-    var _nextBtn = producrSlider.nextElementSibling;
-    new Swiper(producrSlider, {
+    var _slider = producrSlider.querySelector('.swiper');
+
+    var _prevBtn = _slider.previousElementSibling;
+    var _nextBtn = _slider.nextElementSibling;
+    new Swiper(_slider, {
       // Default parameters
       slidesPerView: 3,
       spaceBetween: 16,
@@ -189,13 +193,15 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   if (applicationSlider) {
-    var application = applicationSlider.closest('.application');
+    var _slider2 = applicationSlider.querySelector('.swiper');
+
+    var application = _slider2.closest('.application');
 
     var _prevBtn2 = application.querySelector('.slider-button-group__button-prev');
 
     var _nextBtn2 = application.querySelector('.slider-button-group__button-next');
 
-    new Swiper(applicationSlider, {
+    new Swiper(_slider2, {
       // Default parameters
       slidesPerView: 1,
       spaceBetween: 15,
@@ -252,6 +258,25 @@ window.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
+  }
+
+  if (acousticPanelSlider.length > 0) {
+    acousticPanelSlider.forEach(function(item) {
+      var slider = item.querySelector('.acoustic-panel__img-swiper');
+      var prevBtn = item.querySelector('.slider-button-group__button-prev');
+      var nextBtn = item.querySelector('.slider-button-group__button-next');
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 15,
+        effect: 'fade',
+        loop: true,
+        navigation: {
+          prevEl: prevBtn,
+          nextEl: nextBtn
+        }
+      });
+    });
   } // VIDEO
 
 
@@ -265,8 +290,8 @@ window.addEventListener('DOMContentLoaded', function() {
   } // AUDIO WAWES
 
 
-  var audioBad = document.querySelector('#wave_audio_bad').getAttribute('data-sound');
-  var audioGreat = document.querySelector('#wave_audio_great').getAttribute('data-sound');
+  var audioBad = document.querySelector('#wave_audio_bad');
+  var audioGreat = document.querySelector('#wave_audio_great');
 
   function muteAudio(toggler, audioBad, audioGrat) {
     if (toggler.getAttribute('data-state') === 'audio-bad') {
@@ -299,8 +324,8 @@ window.addEventListener('DOMContentLoaded', function() {
     var wavesAudioGreat = WaveSurfer.create(_objectSpread({
       container: '#wave_audio_great'
     }, wavesSetting));
-    wavesAudioBad.load(audioBad);
-    wavesAudioGreat.load(audioGreat);
+    wavesAudioBad.load(audioBad.getAttribute('data-sound'));
+    wavesAudioGreat.load(audioGreat.getAttribute('data-sound'));
     playerBytton.addEventListener('click', function() {
       muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
 

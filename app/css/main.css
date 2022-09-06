@@ -2983,7 +2983,7 @@ body.--lock {
 
 @media only screen and (min-width: 768px) {
     .story-feedback {
-        padding: 60px 0 60px 0;
+        padding: 70px 0 70px 0;
     }
 }
 
@@ -2995,25 +2995,20 @@ body.--lock {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
     }
 }
 
-@media only screen and (min-width: 1280px) {
-    .story-feedback__inner_reverse {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: row-reverse;
-                flex-direction: row-reverse;
-    }
+.story-feedback__inner_reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .story-feedback__img-wrapper {
     position: relative;
-    height: 380px;
     margin: 0 -15px 0 -15px;
+    padding: 0 0 380px 0;
     overflow: hidden;
 }
 
@@ -3025,34 +3020,30 @@ body.--lock {
 
 @media only screen and (min-width: 1280px) {
     .story-feedback__img-wrapper {
-        margin: 0 0 0;
         -webkit-box-flex: 0;
             -ms-flex: 0 0 480px;
                 flex: 0 0 480px;
-        height: 429px;
+        height: 430px;
+        margin: 0 0 0 0;
         border-radius: 4px;
     }
-
-    .story-feedback__inner_reverse .story-feedback__img-wrapper {
-        margin: 0 0 0 0;
-    }
 }
 
 @media only screen and (min-width: 1600px) {
     .story-feedback__img-wrapper {
-        height: 513px;
         -webkit-box-flex: 0;
-            -ms-flex: 0 0 572px;
-                flex: 0 0 572px;
+            -ms-flex: 0 0 570px;
+                flex: 0 0 570px;
+        height: 510px;
     }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1920px) {
     .story-feedback__img-wrapper {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 670px;
+                flex: 0 0 670px;
         height: 605px;
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 673px;
-                flex: 0 0 673px;
     }
 }
 
@@ -3062,28 +3053,51 @@ body.--lock {
     left: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
 }
 
-.story-feedback__content>*+* {
-    margin: 16px 0 0 0;
+.story-feedback__content {
+    margin: 36px 0 0 0;
 }
 
 @media only screen and (min-width: 768px) {
     .story-feedback__content {
-        padding: 0 100px 0 100px;
+        margin: 50px 96px 0 96px;
     }
 }
 
 @media only screen and (min-width: 1280px) {
     .story-feedback__content {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+        margin: 0 0 0 96px;
+    }
+
+    .story-feedback__inner_reverse .story-feedback__content {
+        margin: 0 96px 0 0;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .story-feedback__content {
+        margin: 0 0 0 114px;
+    }
+
+    .story-feedback__inner_reverse .story-feedback__content {
+        margin: 0 114px 0 0;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .story-feedback__content {
         -webkit-box-flex: 0;
-            -ms-flex: 0 1 50%;
-                flex: 0 1 50%;
-        padding: 0 0 0 0;
+            -ms-flex: 0 0 670px;
+                flex: 0 0 670px;
+        margin: 0 0 0 173px;
+    }
+
+    .story-feedback__inner_reverse .story-feedback__content {
+        margin: 0 173px 0 0;
     }
 }
 
@@ -3098,6 +3112,7 @@ body.--lock {
 }
 
 .story-feedback__text {
+    margin: 16px 0 0 0;
     text-align: center;
 }
 
@@ -3105,16 +3120,21 @@ body.--lock {
     .story-feedback__text {
         text-align: left;
     }
+
+    .story-feedback__text:nth-child(1) {
+        margin: 28px 0 0 0;
+    }
 }
 
 .story-feedback__button {
-    width: 184px;
     margin: 16px auto 0 auto;
+    width: 184px;
 }
 
 @media only screen and (min-width: 768px) {
     .story-feedback__button {
-        margin: 16px 0 0 0;
+        margin: 28px 0 0 0;
+        width: 250px;
     }
 }
 

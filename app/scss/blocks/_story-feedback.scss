@@ -5,7 +5,7 @@
   padding: 35px 0 35px 0;
 
   @include for-min-size("md") {
-    padding: 60px 0 60px 0;
+    padding: 70px 0 70px 0;
   }
 
   // .story-feedback__inner
@@ -13,22 +13,19 @@
     @include for-min-size("lg") {
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
 
     // .story-feedback__inner_reverse
     &_reverse {
-      @include for-min-size("lg") {
-        flex-direction: row-reverse;
-      }
+      flex-direction: row-reverse;
     }
   }
 
   // .story-feedback__img-wrapper
   &__img-wrapper {
     position: relative;
-    height: 380px;
     margin: 0 -15px 0 -15px;
+    padding: 0 0 380px 0;
     overflow: hidden;
 
     @include for-min-size("md") {
@@ -36,24 +33,20 @@
     }
 
     @include for-min-size("lg") {
-      margin: 0 0 0;
       flex: 0 0 480px;
-      height: 429px;
+      height: 430px;
+      margin: 0 0 0 0;
       border-radius: 4px;
-
-      .story-feedback__inner_reverse & {
-        margin: 0 0 0 0;
-      }
     }
 
     @include for-min-size("xl") {
-      height: 513px;
-      flex: 0 0 572px;
+      flex: 0 0 570px;
+      height: 510px;
     }
 
-    @include for-min-size("xl") {
+    @include for-min-size("xxl") {
+      flex: 0 0 670px;
       height: 605px;
-      flex: 0 0 673px;
     }
   }
 
@@ -64,23 +57,40 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
   }
 
   // .story-feedback__content
   &__content {
-    > * + * {
-      margin: 16px 0 0 0;
-    }
+    margin: 36px 0 0 0;
 
     @include for-min-size("md") {
-      padding: 0 100px 0 100px;
+      margin: 50px 96px 0 96px;
     }
 
     @include for-min-size("lg") {
-      flex: 0 1 50%;
-      padding: 0 0 0 0;
+      flex: 1 1 auto;
+      margin: 0 0 0 96px;
+
+      .story-feedback__inner_reverse & {
+        margin: 0 96px 0 0;
+      }
+    }
+
+    @include for-min-size("xl") {
+      margin: 0 0 0 114px;
+
+      .story-feedback__inner_reverse & {
+        margin: 0 114px 0 0;
+      }
+    }
+
+    @include for-min-size("xxl") {
+      flex: 0 0 670px;
+      margin: 0 0 0 173px;
+
+      .story-feedback__inner_reverse & {
+        margin: 0 173px 0 0;
+      }
     }
   }
 
@@ -95,20 +105,26 @@
 
   // .story-feedback__text
   &__text {
+    margin: 16px 0 0 0;
     text-align: center;
 
     @include for-min-size("md") {
       text-align: left;
+
+      &:nth-child(1) {
+        margin: 28px 0 0 0;
+      }
     }
   }
 
   // .story-feedback__button
   &__button {
-    width: 184px;
     margin: 16px auto 0 auto;
+    width: 184px;
 
     @include for-min-size("md") {
-      margin: 16px 0 0 0;
+      margin: 28px 0 0 0;
+      width: 250px;
     }
   }
 }

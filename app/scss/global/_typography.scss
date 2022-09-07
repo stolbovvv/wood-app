@@ -19,4 +19,14 @@
     font-size: 52px;
     line-height: 63px;
   }
+
+  @include for-min-size("lg") {
+    font-size: 62px;
+    line-height: 76px;
+  }
+
+  @include for-min-size("xl") {
+    font-size: 70px;
+    line-height: 85px;
+  }
 }

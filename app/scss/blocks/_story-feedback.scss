@@ -96,6 +96,7 @@
 
   // .story-feedback__title
   &__title {
+    font-weight: 400;
     text-align: center;
 
     @include for-min-size("md") {

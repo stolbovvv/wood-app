@@ -1,0 +1,132 @@
+@use "../helper" as *;
+
+/* Block "story-item" */
+.story-item {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .story-item__inner
+  &__inner {
+    @include for-min-size("lg") {
+      display: flex;
+      align-items: center;
+    }
+
+    // .story-item_reverse
+    .story-item_reverse & {
+      @include for-min-size("lg") {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  // .story-item__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    height: 440px;
+    margin: 0 -15px 0 -15px;
+
+    @include for-min-size("md") {
+      height: 684px;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 640px;
+      margin: 0;
+      height: 594px;
+      border-radius: 4px;
+    }
+
+    @include for-min-size("xl") {
+      flex: 0 0 768px;
+      height: 712px;
+    }
+
+    @include for-min-size("xxl") {
+      flex: 0 0 955px;
+      height: 886px;
+    }
+  }
+
+  // .story-item__img
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // .story-item__contetn
+  &__contetn {
+    margin: 32px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 50px 130px 0 130px;
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 0 0 0;
+      padding: 0 0 0 32px;
+
+      // .story-item_reverse
+      .story-item_reverse & {
+        @include for-min-size("lg") {
+          padding: 0 32px 0 0;
+        }
+      }
+    }
+
+    &_fluid {
+      margin: 50px 0 0 0;
+
+      @include for-min-size("lg") {
+        margin: 0 0 0 0;
+        padding: 0 0 0 32px;
+
+        // .story-item_reverse
+        .story-item_reverse & {
+          @include for-min-size("lg") {
+            padding: 0 32px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  // .story-item__title
+  &__title {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .story-item__divider
+  &__divider {
+    margin: 18px 0 0 0;
+    border: none;
+    border-bottom: 1px solid rgba($color: $clr-primary, $alpha: 0.5);
+
+    @include for-min-size("md") {
+      margin: 28px 0 0 0 0;
+    }
+  }
+
+  // .story-item__text
+  &__text {
+    margin: 18px 0 0 0;
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+      margin: 28px 0 0 0;
+    }
+  }
+}

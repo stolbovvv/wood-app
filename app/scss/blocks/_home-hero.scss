@@ -63,13 +63,11 @@
   &__title {
     font-size: 36px;
     line-height: 44px;
-    text-align: center;
     color: $clr-white;
 
     @include for-min-size("md") {
       font-size: 68px;
       line-height: 83px;
-      text-align: left;
     }
 
     @include for-min-size("lg") {
@@ -81,12 +79,10 @@
   // .home-hero__descr
   &__descr {
     margin: 24px 0 0 0;
-    text-align: center;
     color: $clr-white;
 
     @include for-min-size("md") {
       margin: 32px 0 0 0;
-      text-align: left;
     }
   }
 

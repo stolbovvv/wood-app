@@ -2,6 +2,7 @@
 
 /* Block "story-hero" */
 .story-hero {
+  display: flex;
   background-image: url("../../images/bg/bg-story.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -23,25 +24,35 @@
     > * + * {
       margin: 24px 0 0 0;
     }
+
+    @include for-min-size("md") {
+      height: 600px;
+      align-items: flex-start;
+    }
+
+    @include for-min-size("lg") {
+      height: 900px;
+    }
   }
 
   // .story-hero__label
   &__label {
-    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
     color: $clr-white;
 
     @include for-min-size("md") {
-      text-align: left;
+      font-size: 24px;
+      line-height: 29px;
     }
   }
 
   // .story-hero__title
   &__title {
-    text-align: center;
     color: $clr-white;
 
-    @include for-min-size("md") {
-      text-align: left;
+    @include for-min-size("lg") {
+      margin: 50px 0 0 0;
     }
   }
 

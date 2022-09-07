@@ -113,10 +113,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   var visualizationTabs = document.querySelectorAll('.visualization__item[data-visualization-tab-id]');
-  var visualizationProduct = document.querySelectorAll('.product-slider__slide[data-visualization-id]');
+  var visualizationTriggers = document.querySelectorAll('.visualization-slider__slide[data-visualization-id]');
 
-  if (visualizationProduct.length > 0 && visualizationTabs.length > 0) {
-    visualizationProduct.forEach(function(product) {
+  if (visualizationTriggers.length > 0 && visualizationTabs.length > 0) {
+    visualizationTriggers.forEach(function(product) {
       product.addEventListener('click', function() {
         visualizationTabs.forEach(function(tab) {
           if (tab.getAttribute('data-visualization-tab-id') === product.getAttribute('data-visualization-id')) {
@@ -141,10 +141,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   var colorSlider = document.querySelector('.color-slider');
-  var producrSlider = document.querySelector('.product-slider');
+  var visualizationSlider = document.querySelector('.visualization-slider');
   var applicationSlider = document.querySelector('.application-slider');
   var articlesSlider = document.querySelector('.articles-slider__slider');
   var acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
+  var productSlider = document.querySelector('.product-slider__slider');
 
   if (colorSlider) {
     var slider = colorSlider.querySelector('.color-slider__swiper');
@@ -161,8 +162,8 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  if (producrSlider) {
-    var _slider = producrSlider.querySelector('.swiper');
+  if (visualizationSlider) {
+    var _slider = visualizationSlider.querySelector('.swiper');
 
     var _prevBtn = _slider.previousElementSibling;
     var _nextBtn = _slider.nextElementSibling;
@@ -276,6 +277,30 @@ window.addEventListener('DOMContentLoaded', function() {
           nextEl: nextBtn
         }
       });
+    });
+  }
+
+  if (productSlider) {
+    new Swiper(productSlider, {
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: true,
+      navigation: {
+        prevEl: '.slider-button-group__button-prev',
+        nextEl: '.slider-button-group__button-next'
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 32
+        }
+      }
     });
   } // VIDEO
 

@@ -9,6 +9,10 @@
     font-size: 18px;
     line-height: 24px;
   }
+
+  &_clr-white {
+    color: $clr-white;
+  }
 }
 
 .title {
@@ -28,5 +32,9 @@
   @include for-min-size("xl") {
     font-size: 70px;
     line-height: 85px;
+  }
+
+  &_clr-white {
+    color: $clr-white;
   }
 }

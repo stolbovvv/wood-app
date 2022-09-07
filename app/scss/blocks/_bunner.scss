@@ -2,38 +2,85 @@
 
 /* Block "bunner" */
 .bunner {
-  position: relative;
-  margin: 35px 0 35px 0;
-  background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+  padding: 35px 0 35px 0;
 
   @include for-min-size("md") {
-    min-height: 690px;
+    padding: 60px 0 60px 0;
+  }
+
+  // .bunner__outer
+  &__outer {
+    position: relative;
+    min-height: 440px;
+    background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+
+    @include for-min-size("md") {
+      height: 690px;
+      display: flex;
+      align-items: center;
+      background: none;
+    }
+
+    .bunner_simple & {
+      display: flex;
+      align-items: center;
+    }
+
+    .bunner_simple &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      z-index: 1;
+    }
   }
 
   // .bunner__background
   &__background {
+    position: relative;
     width: 100%;
     height: 690px;
-    object-fit: cover;
-    object-position: center;
+    overflow: hidden;
 
     @include for-min-size("md") {
       position: absolute;
       height: 100%;
     }
+
+    .bunner_simple & {
+      position: absolute;
+      height: 100%;
+    }
+  }
+
+  // .bunner__background-img
+  &__background-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
   // .bunner__inner
   &__inner {
+    position: relative;
     padding: 70px 0 70px 0;
+    z-index: 2;
 
     > * + * {
       margin: 32px 0 0 0;
     }
 
     @include for-min-size("md") {
-      position: relative;
-      padding: 140px 0 70px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -42,7 +89,7 @@
     text-align: center;
 
     @include for-min-size("md") {
-      max-width: 673px;
+      max-width: 700px;
       text-align: left;
     }
   }
@@ -61,6 +108,16 @@
   &__button {
     @include for-min-size("md") {
       max-width: 320px;
+    }
+
+    .bunner_simple & {
+      margin: 32px auto 0 auto;
+      max-width: 190px;
+
+      @include for-min-size("md") {
+        margin: 32px 0 0 0;
+        max-width: 300px;
+      }
     }
   }
 }

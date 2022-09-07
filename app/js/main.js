@@ -77,10 +77,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // visualization tabs
   const visualizationTabs = document.querySelectorAll('.visualization__item[data-visualization-tab-id]');
-  const visualizationProduct = document.querySelectorAll('.product-slider__slide[data-visualization-id]');
+  const visualizationTriggers = document.querySelectorAll('.visualization-slider__slide[data-visualization-id]');
 
-  if (visualizationProduct.length > 0 && visualizationTabs.length > 0) {
-    visualizationProduct.forEach((product) => {
+  if (visualizationTriggers.length > 0 && visualizationTabs.length > 0) {
+    visualizationTriggers.forEach((product) => {
       product.addEventListener('click', () => {
         visualizationTabs.forEach((tab) => {
           if (tab.getAttribute('data-visualization-tab-id') === product.getAttribute('data-visualization-id')) {
@@ -105,10 +105,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // SLIDERS
   const colorSlider = document.querySelector('.color-slider');
-  const producrSlider = document.querySelector('.product-slider');
+  const visualizationSlider = document.querySelector('.visualization-slider');
   const applicationSlider = document.querySelector('.application-slider');
   const articlesSlider = document.querySelector('.articles-slider__slider');
   const acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
+  const productSlider = document.querySelector('.product-slider__slider');
 
   if (colorSlider) {
     const slider = colorSlider.querySelector('.color-slider__swiper');
@@ -126,8 +127,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (producrSlider) {
-    const slider = producrSlider.querySelector('.swiper');
+  if (visualizationSlider) {
+    const slider = visualizationSlider.querySelector('.swiper');
     const prevBtn = slider.previousElementSibling;
     const nextBtn = slider.nextElementSibling;
 
@@ -239,6 +240,30 @@ window.addEventListener('DOMContentLoaded', () => {
           nextEl: nextBtn,
         },
       });
+    });
+  }
+
+  if (productSlider) {
+    new Swiper(productSlider, {
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: true,
+      navigation: {
+        prevEl: '.slider-button-group__button-prev',
+        nextEl: '.slider-button-group__button-next',
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 32,
+        },
+      },
     });
   }
 

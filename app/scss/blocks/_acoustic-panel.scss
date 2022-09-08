@@ -190,12 +190,15 @@
 
   // .acoustic-panel__footer
   &__footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
     margin: 50px 0 0 0;
     padding: 0 15px 0 15px;
 
     @include for-min-size("md") {
-      display: flex;
-      align-items: center;
+      flex-direction: row;
     }
 
     @include for-min-size("lg") {
@@ -207,42 +210,11 @@
     }
   }
 
-  // .acoustic-panel__data
-  &__data {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  // .acoustic-panel__data-head
-  &__data-head {
-    display: flex;
-    align-items: center;
-
-    > * + * {
-      margin: 0 0 0 12px;
+  // .acoustic-panel__goods-short
+  &__goods-short {
+    @include for-min-size("md") {
+      flex: 1 0 auto;
     }
-  }
-
-  // .acoustic-panel__data-color
-  &__data-color {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #ffd0a9;
-  }
-
-  // .acoustic-panel__data-number
-  &__data-number {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-  }
-
-  // .acoustic-panel__name
-  &__name {
-    font-size: 16px;
-    line-height: 28px;
   }
 
   // .acoustic-panel__sldier
@@ -251,19 +223,14 @@
 
     @include for-min-size("md") {
       margin: 0 0 0 auto;
-
-      display: flex;
-      justify-content: flex-end;
     }
 
     @include for-min-size("lg") {
-      flex: 0 0 624px;
-      justify-content: flex-start;
+      flex: 0 1 624px;
     }
 
     @include for-min-size("xl") {
-      flex: 0 0 670px;
-      justify-content: flex-start;
+      flex: 0 1 670px;
     }
   }
 

@@ -104,26 +104,52 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // SLIDERS
-  const colorSlider = document.querySelector('.color-slider');
+  const colorSliderSmall = document.querySelectorAll('.color-slider.color-slider_small');
+  const colorSliderBig = document.querySelectorAll('.color-slider.color-slider_big');
   const visualizationSlider = document.querySelector('.visualization-slider');
   const applicationSlider = document.querySelector('.application-slider');
   const articlesSlider = document.querySelector('.articles-slider__slider');
   const acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
-  const productSlider = document.querySelector('.product-slider__slider');
+  const goodsSlider = document.querySelector('.goods-slider__slider');
 
-  if (colorSlider) {
-    const slider = colorSlider.querySelector('.color-slider__swiper');
-    const prevBtn = slider.previousElementSibling;
-    const nextBtn = slider.nextElementSibling;
+  if (colorSliderSmall.length > 0) {
+    colorSliderSmall.forEach((item) => {
+      const slider = item.querySelector('.color-slider__swiper');
+      const prevBtn = slider.previousElementSibling;
+      const nextBtn = slider.nextElementSibling;
 
-    new Swiper(slider, {
-      // Default parameters
-      slidesPerView: 4,
-      spaceBetween: 16,
-      navigation: {
-        prevEl: prevBtn,
-        nextEl: nextBtn,
-      },
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 4,
+        spaceBetween: 16,
+        watchOverflow: true,
+        navigation: {
+          prevEl: prevBtn,
+          nextEl: nextBtn,
+        },
+      });
+    });
+  }
+
+  if (colorSliderBig.length > 0) {
+    colorSliderBig.forEach((item) => {
+      const slider = item.querySelector('.color-slider__swiper');
+      const prevBtn = slider.previousElementSibling;
+      const nextBtn = slider.nextElementSibling;
+
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 5,
+        spaceBetween: 15,
+        watchOverflow: true,
+        navigation: {
+          prevEl: prevBtn,
+          nextEl: nextBtn,
+        },
+        768: {
+          spaceBetween: 16,
+        },
+      });
     });
   }
 
@@ -243,8 +269,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (productSlider) {
-    new Swiper(productSlider, {
+  if (goodsSlider) {
+    new Swiper(goodsSlider, {
       // Default parameters
       slidesPerView: 1,
       spaceBetween: 15,

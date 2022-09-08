@@ -1,22 +1,22 @@
 @use "../helper" as *;
 
-/* Block "product-slider" */
-.product-slider {
+/* Block "goods-slider" */
+.goods-slider {
   padding: 35px 0 35px 0;
 
   @include for-min-size("md") {
     padding: 60px 0 60px 0;
   }
 
-  // .product-slider__inner
+  // .goods-slider__inner
   &__inner {
   }
 
-  // .product-slider__slider
+  // .goods-slider__slider
   &__slider {
   }
 
-  // .product-slider__slider-head
+  // .goods-slider__slider-head
   &__slider-head {
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
     }
   }
 
-  // .product-slider__slider-title
+  // .goods-slider__slider-title
   &__slider-title {
     text-align: center;
 
@@ -45,7 +45,7 @@
     }
   }
 
-  // .product-slider__slider-button-group
+  // .goods-slider__slider-button-group
   &__slider-button-group {
     flex: 0 0 auto;
     display: flex;
@@ -53,7 +53,7 @@
     justify-content: center;
   }
 
-  // .product-slider__slider-wrapper
+  // .goods-slider__slider-wrapper
   &__slider-wrapper {
     margin: 24px 0 0 0;
 

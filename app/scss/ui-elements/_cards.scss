@@ -1,6 +1,57 @@
 @use "../helper" as *;
 
 /* UI elements "Cards" */
+.goods-short {
+  // .goods-short__row
+  &__row {
+    display: flex;
+    align-items: center;
+
+    > * + * {
+      margin: 0 0 0 12px;
+    }
+  }
+
+  // .goods-short__color
+  &__color {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #ffd0a9;
+  }
+
+  // .goods-short__title
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    &_big {
+      @include for-min-size("md") {
+        font-size: 32px;
+        line-height: 39px;
+      }
+    }
+  }
+
+  // .goods-short__text
+  &__text {
+    margin: 6px 0 0 0;
+    font-size: 16px;
+    line-height: 28px;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &_big {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+
 .visualization-card {
   display: flex;
   align-items: center;
@@ -249,8 +300,8 @@
   }
 }
 
-.product-preview {
-  // .product-preview__img-wrapper
+.goods-preview {
+  // .goods-preview__img-wrapper
   &__img-wrapper {
     position: relative;
     border-radius: 4px;
@@ -258,7 +309,7 @@
     overflow: hidden;
   }
 
-  // .product-preview__img
+  // .goods-preview__img
   &__img {
     position: absolute;
     top: 0;
@@ -269,7 +320,7 @@
     object-position: center;
   }
 
-  // .product-preview__header
+  // .goods-preview__header
   &__header {
     position: absolute;
     left: 0;
@@ -285,7 +336,7 @@
     }
   }
 
-  // .product-preview__name
+  // .goods-preview__name
   &__name {
     font-weight: 600;
     font-size: 18px;
@@ -298,7 +349,7 @@
     }
   }
 
-  // .product-preview__price
+  // .goods-preview__price
   &__price {
     margin: 8px 0 0 0;
     font-size: 14px;
@@ -311,13 +362,13 @@
     }
   }
 
-  // .product-preview__body
+  // .goods-preview__body
   &__body {
     margin: 24px 0 0 0;
     border-top: 1px solid rgba($color: $clr-gray-700, $alpha: 0.5);
   }
 
-  // .product-preview__text
+  // .goods-preview__text
   &__text {
     margin: 24px 0 0 0;
     text-align: center;
@@ -330,7 +381,7 @@
     }
   }
 
-  // .product-preview__button
+  // .goods-preview__button
   &__button {
     margin: 24px auto 0 auto;
     max-width: 250px;

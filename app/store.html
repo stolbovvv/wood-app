@@ -500,45 +500,203 @@
           </div>
         </div>
 
-        <!-- section: product -->
-        <section class="product">
+        <!-- section: goods -->
+        <section class="goods">
           <div class="container">
-            <div class="product__inner">
-              <div class="product__gallery">
-                <div class="product__gallery-img-wrapper">
-                  <img class="product__gallery-img" src="./images/product/product-1.jpg" alt="" />
+            <div class="goods__inner">
+              <div class="goods__gallery">
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/product/product-1.jpg" alt="" />
                 </div>
-                <div class="product__gallery-img-wrapper">
-                  <img class="product__gallery-img" src="./images/product/product-2.jpg" alt="" />
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/product/product-2.jpg" alt="" />
                 </div>
-                <div class="product__gallery-img-wrapper">
-                  <img class="product__gallery-img" src="./images/product/product-3.jpg" alt="" />
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/product/product-3.jpg" alt="" />
                 </div>
-                <div class="product__gallery-video-wrapper">
+                <div class="goods__gallery-video-wrapper">
                   <video
-                    class="product__gallery-video"
+                    class="goods__gallery-video"
                     src="./video/new-project.mp4"
                     poster="./video/video-poster.jpg"
-                    autoplay
                     muted
                   ></video>
                 </div>
               </div>
 
-              <div class="product__summary">данные</div>
+              <form class="goods__summary goods-summary">
+                <div class="goods-summary__row">
+                  <div class="goods-summary__head">
+                    <div class="goods-short">
+                      <div class="goods-short__row">
+                        <div class="goods-short__color"></div>
+                        <div class="goods-short__title goods-short__title_big">WoodUpp™</div>
+                      </div>
+                      <h3 class="goods-short__text goods-short__text_big">1400,00 ₽</h3>
+                    </div>
+
+                    <div class="goods-summary__not-available">Нет в наличии</div>
+                  </div>
+
+                  <div class="goods-summary__color-slider">
+                    <p class="goods-summary__color-code">Цвет - #D7BC91</p>
+
+                    <div class="color-slider color-slider_big">
+                      <button class="color-slider__button color-slider__button-prev">
+                        <i class="color-slider__button-icon icon-ui-arrow-left"></i>
+                      </button>
+                      <div class="color-slider__body color-slider__swiper swiper">
+                        <div class="color-slider__wrapper swiper-wrapper">
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round --active"
+                              data-active-border="dark"
+                              style="background: #ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              style="background: #efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              style="background: #a07c5c"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              style="background: #626262"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              style="background: #ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              style="background: #efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              style="background: #efc19a"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="color-slider__button color-slider__button-next">
+                        <i class="color-slider__button-icon icon-ui-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods-summary__row">
+                  <div class="goods-summary__counter goods-counter">
+                    <button class="goods-counter__button">–</button>
+                    <input class="goods-counter__input" type="number" name="quantity-of-goods" id="" value="1" />
+                    <button class="goods-counter__button">+</button>
+                  </div>
+
+                  <button class="goods-summary__button button-primary">
+                    <span>Добавить в корзину</span>
+                  </button>
+                </div>
+
+                <p class="goods-summary__descr">
+                  The Akupanel can be used for creating beautful slat walls and ceilings which adds a modern look to the
+                  room. The panel is sound dampening and removes reverberation within the room, which drastically
+                  improves the acoustics within the
+                </p>
+
+                <div class="goods-summary__spoilers">
+                  <div class="spoiler" data-spoiler-state="close">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уход за панелями</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler" data-spoiler-state="close">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Материалы и их качество</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler" data-spoiler-state="close">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уникальность цвета</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods-summary__row">
+                  <div class="goods-summary__size">
+                    <p class="goods-summary__size-label text">Размер панелей:</p>
+                    <select class="goods-summary__size-select" name="goods-size" id="">
+                      <option selected value="240 X 60 X 2.2 cm">240 X 60 X 2.2 cm</option>
+                      <option value="200 X 40 X 2.0 cm">200 X 40 X 2.0 cm</option>
+                      <option value="180 X 20 X 1.0 cm">180 X 20 X 1.0 cm</option>
+                      <option value="140 X 00 X 0.0 cm">140 X 00 X 0.0 cm</option>
+                    </select>
+                  </div>
+
+                  <div class="goods-summary__footer">
+                    <a class="goods-summary__download-3d" href="#">Скачать 3D модель</a>
+                    <div class="goods-summary__delivery">
+                      <p class="goods-summary__delivery-label">Доставим ваш товар в течении</p>
+                      <p class="goods-summary__delivery-days">7-14 дней</p>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </section>
 
-        <!-- section: product-slider -->
-        <section class="product-slider">
+        <!-- section: goods-slider -->
+        <section class="goods-slider">
           <div class="container">
-            <div class="product-slider__inner">
-              <div class="product-slider__slider swiper">
+            <div class="goods-slider__inner">
+              <div class="goods-slider__slider swiper">
                 <!-- slider-head -->
-                <div class="product-slider__slider-head">
-                  <h2 class="product-slider__slider-title title">С этим товаром можно заказать</h2>
-                  <div class="product-slider__slider-button-group slider-button-group">
+                <div class="goods-slider__slider-head">
+                  <h2 class="goods-slider__slider-title title">С этим товаром можно заказать</h2>
+                  <div class="goods-slider__slider-button-group slider-button-group">
                     <button class="slider-button-group__button-prev">
                       <i class="slider-button-group__button-icon icon-ui-arrow-left"></i>
                     </button>
@@ -549,76 +707,76 @@
                 </div>
 
                 <!-- slider-wrapper -->
-                <div class="product-slider__slider-wrapper swiper-wrapper">
-                  <!-- product item -->
-                  <article class="product-preview swiper-slide">
-                    <div class="product-preview__img-wrapper">
-                      <img class="product-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="product-preview__header">
-                        <p class="product-preview__name">Торцевые рейки</p>
-                        <p class="product-preview__price">1400,00 ₽</p>
+                <div class="goods-slider__slider-wrapper swiper-wrapper">
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">Торцевые рейки</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
                       </div>
                     </div>
-                    <div class="product-preview__body">
-                      <p class="product-preview__text">
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
                         For most people, installing the panels would be an entertaining DIY project.
                       </p>
-                      <a class="product-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
                     </div>
                   </article>
-                  <!-- product item -->
-                  <article class="product-preview swiper-slide">
-                    <div class="product-preview__img-wrapper">
-                      <img class="product-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="product-preview__header">
-                        <p class="product-preview__name">Шурупы</p>
-                        <p class="product-preview__price">1400,00 ₽</p>
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">Шурупы</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
                       </div>
                     </div>
-                    <div class="product-preview__body">
-                      <p class="product-preview__text">
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
                         For most people, installing the panels would be an entertaining DIY project.
                       </p>
-                      <a class="product-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
                     </div>
                   </article>
-                  <!-- product item -->
-                  <article class="product-preview swiper-slide">
-                    <div class="product-preview__img-wrapper">
-                      <img class="product-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="product-preview__header">
-                        <p class="product-preview__name">Клей</p>
-                        <p class="product-preview__price">1400,00 ₽</p>
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">Клей</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
                       </div>
                     </div>
-                    <div class="product-preview__body">
-                      <p class="product-preview__text">
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
                         For most people, installing the panels would be an entertaining DIY project.
                       </p>
-                      <a class="product-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
                     </div>
                   </article>
-                  <!-- product item -->
-                  <article class="product-preview swiper-slide">
-                    <div class="product-preview__img-wrapper">
-                      <img class="product-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="product-preview__header">
-                        <p class="product-preview__name">APP-Панели</p>
-                        <p class="product-preview__price">1400,00 ₽</p>
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">APP-Панели</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
                       </div>
                     </div>
-                    <div class="product-preview__body">
-                      <p class="product-preview__text">
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
                         For most people, installing the panels would be an entertaining DIY project.
                       </p>
-                      <a class="product-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
                     </div>
                   </article>
-                  <!-- product item end -->
+                  <!-- goods item end -->
                 </div>
                 <!-- slider-wrapper end -->
               </div>
-              <!-- product-slider__slider end -->
+              <!-- goods-slider__slider end -->
             </div>
           </div>
         </section>

@@ -86,8 +86,6 @@
       @include for-min-size("xxl") {
         top: 100%;
         left: 35%;
-        height: 420px;
-        width: 962px;
       }
     }
   }
@@ -136,7 +134,7 @@
   // .application__slider-button-group
   &__slider-button-group {
     @include for-min-size("xxl") {
-      transform: translateY(-300px);
+      transform: translateY(-20vh);
     }
   }
 
@@ -205,7 +203,7 @@
     }
 
     @include for-min-size("xxl") {
-      height: 942px;
+      height: calc(100vh - 160px);
     }
   }
 

@@ -1,0 +1,336 @@
+@use "../helper" as *;
+
+/* Block "goods" */
+.goods {
+  padding: 0 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 0 0 60px 0;
+  }
+
+  // .goods__inner
+  &__inner {
+    @include for-min-size("lg") {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  // .goods__gallery
+  &__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    @include for-min-size("lg") {
+      gap: 32px;
+      flex: 0 0 66.66%;
+      padding: 0 16px 0 0;
+    }
+  }
+
+  // .goods__gallery-img-wrapper
+  // .goods__gallery-video-wrapper
+  &__gallery-img-wrapper,
+  &__gallery-video-wrapper {
+    position: relative;
+    padding: 0 0 80% 0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  // .goods__gallery-img
+  // .goods__gallery-video
+  &__gallery-img,
+  &__gallery-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // .goods__summary
+  &__summary {
+    @include for-min-size("lg") {
+      flex: 0 0 33.33%;
+      margin: 0 0 0 0;
+      padding: 0 0 0 16px;
+    }
+  }
+}
+
+.goods-summary {
+  &__row {
+    display: block;
+
+    @include for-min-size("md") {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    @include for-min-size("lg") {
+      display: block;
+      grid-template-columns: none;
+    }
+  }
+
+  // .goods-summary__head
+  &__head {
+    margin: 24px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 0 0 0;
+    }
+  }
+
+  // .goods-summary__not-available
+  &__not-available {
+    margin: 24px 0 0 0;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ff0505;
+  }
+
+  // .goods-summary__color-slider
+  &__color-slider {
+    margin: 24px 0 0 0;
+
+    > * + * {
+      margin: 12px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .goods-summary__color-code
+  &__color-code {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  // .goods-summary__counter
+  &__counter {
+    margin: 24px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .goods-summary__button
+  &__button {
+    margin: 24px 0 0 0;
+    min-width: 237px;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+      min-width: 250px;
+    }
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .goods-summary__descr
+  &__descr {
+    margin: 24px 0 0 0;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .goods-summary__spoilers
+  &__spoilers {
+    margin: 8px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 24px 0 0 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+      display: block;
+      grid-template-columns: none;
+    }
+
+    @include for-min-size("lg") {
+      margin: 12px 0 0 0;
+    }
+  }
+
+  // .goods-summary__size
+  &__size {
+    margin: 24px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .goods-summary__size-label
+  &__size-label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .goods-summary__size-select
+  &__size-select {
+    margin: 12px 0 0 0;
+    width: 100%;
+    height: 48px;
+    padding: 0 18px;
+    border-radius: 4px;
+    border: none;
+    background: #f0f0f0;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include for-min-size("md") {
+      height: 58px;
+    }
+  }
+
+  // .goods-summary__download-3d
+  &__download-3d {
+    display: inline-block;
+    margin: 24px 0 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+    color: $clr-primary-accent;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .goods-summary__delivery
+  &__delivery {
+    margin: 24px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .goods-summary__delivery-label
+  &__delivery-label {
+    font-size: 16px;
+    line-height: 20px;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  // .goods-summary__delivery-days
+  &__delivery-days {
+    margin: 12px 0 0 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: $clr-primary-accent;
+
+    @include for-min-size("md") {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+}
+
+.goods-counter {
+  display: flex;
+  align-items: center;
+
+  > * + * {
+    margin: 0 0 0 18px;
+  }
+
+  // .goods-counter__button
+  &__button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #f0f0f0;
+    font-size: 32px;
+    line-height: 39px;
+    color: $clr-black;
+    cursor: pointer;
+
+    @include for-min-size("md") {
+      width: 58px;
+      height: 58px;
+    }
+  }
+
+  // .goods-counter__input
+  &__input {
+    width: 102px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid rgba($color: $clr-gray-700, $alpha: 1);
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    color: $clr-black;
+
+    @include for-min-size("md") {
+      height: 58px;
+    }
+  }
+}

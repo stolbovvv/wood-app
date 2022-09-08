@@ -4,10 +4,26 @@
 .color-slider {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 
   > * + * {
     margin: 0 0 0 8px;
+  }
+
+  &_small {
+    max-width: 262px;
+
+    @include for-min-size("md") {
+      max-width: 292px;
+    }
+  }
+
+  &_big {
+    max-width: 290px;
+
+    @include for-min-size("md") {
+      max-width: 340px;
+    }
   }
 
   // .color-slider__button
@@ -53,7 +69,8 @@
 
   // .color-slider__body
   &__body {
-    flex: 0 0 152px;
+    flex: 0 1 auto;
+    min-width: 0;
   }
 
   // .color-slider__wrapper
@@ -62,6 +79,7 @@
 
   // .color-slider__slide
   &__slide {
+    width: auto;
   }
 
   // .color-slider__slide-round
@@ -73,8 +91,17 @@
     background-color: $clr-black;
     cursor: pointer;
 
+    @include for-min-size("md") {
+      width: 32px;
+      height: 32px;
+    }
+
     &.--active {
       border: 2px solid $clr-white;
+
+      &[data-active-border="dark"] {
+        border-color: $clr-black;
+      }
     }
   }
 }

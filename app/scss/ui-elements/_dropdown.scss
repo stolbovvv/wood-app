@@ -5,7 +5,7 @@
   // .spoiler__head
   &__head {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     min-height: 64px;
     padding: 0 0 4px 0;
@@ -23,6 +23,21 @@
     @include for-min-size("md") {
       font-size: 24px;
       line-height: 29px;
+    }
+
+    .spoiler[data-spoiler-state="open"] & {
+      color: $clr-primary;
+    }
+  }
+
+  &__head-text {
+    font-size: 16px;
+    line-height: 20px;
+    transition: color 0.5s ease 0s;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
     }
 
     .spoiler[data-spoiler-state="open"] & {

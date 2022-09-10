@@ -4,7 +4,7 @@
 .button-primary {
   position: relative;
   display: block;
-  padding: 1.25em 1.75em;
+  padding: 1.1875em 1.5em;
   border: none;
   border-radius: 999px;
   background-color: $clr-primary;
@@ -38,7 +38,7 @@
     background-image: url("../images/bg/bg-button.svg");
     background-repeat: repeat-x;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     transition: left 0.5s ease 0s;
   }
 

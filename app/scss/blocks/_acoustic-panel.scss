@@ -234,6 +234,14 @@
     }
   }
 
+  &__sldier-container {
+    width: 254px;
+
+    @include for-min-size("md") {
+      width: 276px;
+    }
+  }
+
   &__button-group {
     display: flex;
     justify-content: center;

@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App | STORE</title>
+    <title>Wood App | Комплектующие</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
@@ -490,9 +490,13 @@
                   <li class="bread-crumbs__item">
                     <a class="bread-crumbs__link" href="#">Главная</a>
                   </li>
-                  <li class="bread-crumbs__item bread-crumbs__item_currnet">
+                  <li class="bread-crumbs__item">
                     <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
                     <a class="bread-crumbs__link" href="#">STORE</a>
+                  </li>
+                  <li class="bread-crumbs__item bread-crumbs__item_currnet">
+                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                    <a class="bread-crumbs__link" href="#">Комплектующие</a>
                   </li>
                 </ul>
               </div>
@@ -500,27 +504,30 @@
           </div>
         </div>
 
-        <!-- section: goods -->
-        <section class="goods goods_padding-top-none">
+        <!-- accessories-hero -->
+        <div class="accessories-hero">
+          <div class="accessories-hero__img-wrapper">
+            <img class="accessories-hero__img" src="./images/bg/bg-accessories.jpg" alt="" />
+          </div>
+          <div class="container">
+            <div class="accessories-hero__inner">
+              <h1 class="accessories-hero__title title">Комплектующие</h1>
+              <p class="accessories-hero__descr text">
+                For most people, installing the panels would be an entertaining DIY project. It is very simple - you can
+                cut the panels with almost any saw and fix it
+              </p>
+              <button class="accessories-hero__button button-primary"><span>Вернуться к STORE</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- goods -->
+        <section class="goods">
           <div class="container">
             <div class="goods__inner">
               <div class="goods__gallery">
                 <div class="goods__gallery-img-wrapper">
-                  <img class="goods__gallery-img" src="./images/product/product-1.jpg" alt="" />
-                </div>
-                <div class="goods__gallery-img-wrapper">
-                  <img class="goods__gallery-img" src="./images/product/product-2.jpg" alt="" />
-                </div>
-                <div class="goods__gallery-img-wrapper">
-                  <img class="goods__gallery-img" src="./images/product/product-3.jpg" alt="" />
-                </div>
-                <div class="goods__gallery-video-wrapper">
-                  <video
-                    class="goods__gallery-video"
-                    src="./video/new-project.mp4"
-                    poster="./video/video-poster.jpg"
-                    muted
-                  ></video>
+                  <img class="goods__gallery-img" src="./images/accessories/accessories-1.jpg" alt="" />
                 </div>
               </div>
 
@@ -528,18 +535,16 @@
                 <div class="goods__summary-header">
                   <div class="goods-short">
                     <div class="goods-short__row">
-                      <div class="goods-short__color"></div>
-                      <div class="goods-short__title goods-short__title_big">WoodUpp™</div>
+                      <div class="goods-short__color" style="background: #626262"></div>
+                      <div class="goods-short__title goods-short__title_big">Screws 150 pcs.</div>
                     </div>
                     <h3 class="goods-short__text goods-short__text_big">1400,00 ₽</h3>
                   </div>
-
-                  <div class="goods__not-available">Нет в наличии</div>
                 </div>
 
                 <div class="goods__summary-color">
-                  <p class="goods__summary-color-code">Цвет - #D7BC91</p>
-                  <div class="goods__summary-color-slider">
+                  <p class="goods__summary-color-code">Цветa:</p>
+                  <div class="goods__summary-color-slider goods__summary-color-slider_small">
                     <div class="color-slider">
                       <button class="color-slider__button color-slider__button-prev">
                         <i class="color-slider__button-icon icon-ui-arrow-left"></i>
@@ -688,7 +693,6 @@
                 </div>
 
                 <div class="goods__summary-footer">
-                  <a class="goods__summary-download-3d" href="#">Скачать 3D модель</a>
                   <div class="goods__summary-delivery">
                     <p class="goods__summary-delivery-label">Доставим ваш товар в течении</p>
                     <p class="goods__summary-delivery-days">7-14 дней</p>
@@ -699,321 +703,171 @@
           </div>
         </section>
 
-        <!-- section: goods-slider -->
-        <section class="goods-slider">
+        <!-- goods -->
+        <section class="goods">
           <div class="container">
-            <div class="goods-slider__inner">
-              <div class="goods-slider__slider swiper">
-                <!-- slider-head -->
-                <div class="goods-slider__slider-head">
-                  <h2 class="goods-slider__slider-title title">С этим товаром можно заказать</h2>
-                  <div class="goods-slider__slider-button-group slider-button-group">
-                    <button class="slider-button-group__button-prev">
-                      <i class="slider-button-group__button-icon icon-ui-arrow-left"></i>
-                    </button>
-                    <button class="slider-button-group__button-next">
-                      <i class="slider-button-group__button-icon icon-ui-arrow-right"></i>
-                    </button>
-                  </div>
+            <div class="goods__inner">
+              <div class="goods__gallery">
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/accessories/accessories-2.jpg" alt="" />
                 </div>
-
-                <!-- slider-wrapper -->
-                <div class="goods-slider__slider-wrapper swiper-wrapper">
-                  <!-- goods item -->
-                  <article class="goods-preview swiper-slide">
-                    <div class="goods-preview__img-wrapper">
-                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="goods-preview__header">
-                        <p class="goods-preview__name">Торцевые рейки</p>
-                        <p class="goods-preview__price">1400,00 ₽</p>
-                      </div>
-                    </div>
-                    <div class="goods-preview__body">
-                      <p class="goods-preview__text">
-                        For most people, installing the panels would be an entertaining DIY project.
-                      </p>
-                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
-                    </div>
-                  </article>
-                  <!-- goods item -->
-                  <article class="goods-preview swiper-slide">
-                    <div class="goods-preview__img-wrapper">
-                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="goods-preview__header">
-                        <p class="goods-preview__name">Шурупы</p>
-                        <p class="goods-preview__price">1400,00 ₽</p>
-                      </div>
-                    </div>
-                    <div class="goods-preview__body">
-                      <p class="goods-preview__text">
-                        For most people, installing the panels would be an entertaining DIY project.
-                      </p>
-                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
-                    </div>
-                  </article>
-                  <!-- goods item -->
-                  <article class="goods-preview swiper-slide">
-                    <div class="goods-preview__img-wrapper">
-                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="goods-preview__header">
-                        <p class="goods-preview__name">Клей</p>
-                        <p class="goods-preview__price">1400,00 ₽</p>
-                      </div>
-                    </div>
-                    <div class="goods-preview__body">
-                      <p class="goods-preview__text">
-                        For most people, installing the panels would be an entertaining DIY project.
-                      </p>
-                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
-                    </div>
-                  </article>
-                  <!-- goods item -->
-                  <article class="goods-preview swiper-slide">
-                    <div class="goods-preview__img-wrapper">
-                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
-                      <div class="goods-preview__header">
-                        <p class="goods-preview__name">APP-Панели</p>
-                        <p class="goods-preview__price">1400,00 ₽</p>
-                      </div>
-                    </div>
-                    <div class="goods-preview__body">
-                      <p class="goods-preview__text">
-                        For most people, installing the panels would be an entertaining DIY project.
-                      </p>
-                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
-                    </div>
-                  </article>
-                  <!-- goods item end -->
-                </div>
-                <!-- slider-wrapper end -->
               </div>
-              <!-- goods-slider__slider end -->
-            </div>
-          </div>
-        </section>
 
-        <!-- section: bunner -->
-        <section class="bunner bunner_simple">
-          <div class="bunner__outer">
-            <picture class="bunner__background">
-              <img class="bunner__background-img" src="./images/bunner/bunner-2.jpg" alt="" />
-            </picture>
-            <div class="container">
-              <div class="bunner__inner">
-                <h2 class="bunner__title title">Простая установка</h2>
-                <p class="bunner__text text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
-                <a class="bunner__button button-primary" href="#"><span>Перейти в Service</span></a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- section: preview -->
-        <section class="preview">
-          <div class="preview__outer">
-            <div class="container">
-              <div class="preview__inner">
-                <div class="preview__img-wrapper">
-                  <img class="preview__img" src="./images/preview/preview-2.png" alt="" />
-                </div>
-                <!-- preview-content -->
-                <div class="preview__content">
-                  <h2 class="preview__content-title title">Выберите образцы удобно и быстро</h2>
-                  <a class="preview__content-button button-primary" href="#"><span>Перейти в Service</span></a>
-                </div>
-                <!-- preview-content end -->
-              </div>
-              <!-- preview-inner end -->
-            </div>
-          </div>
-        </section>
-
-        <!-- benefits -->
-        <section class="benefits">
-          <div class="container">
-            <div class="benefits__inner">
-              <h2 class="benefits__title title">Преимущества продукции</h2>
-              <div class="benefits__items spoilers-container">
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Качественная акустика в доме</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">С заботой об окружающей среде</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Простая интеграция в существующий интерьер</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Легкий монтаж</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Звукоизоляция от шума соседей</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Стильное дизайнерское решение</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Большой выбор цветовых решений</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Легкий уход за панелями</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item -->
-                <div class="spoiler">
-                  <div class="spoiler__head">
-                    <h3 class="spoiler__head-title">Панели могу принять криволинейные формы</h3>
-                    <i class="spoiler__head-icon icon-ui-arrow-right"></i>
-                  </div>
-                  <div class="spoiler__body">
-                    <p class="spoiler__text">
-                      For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                      you can cut the panels with almost
-                    </p>
-                  </div>
-                </div>
-                <!-- benefits-item end -->
-              </div>
-              <!-- benefits-items end -->
-            </div>
-          </div>
-        </section>
-
-        <!-- application -->
-        <section class="application">
-          <div class="container">
-            <div class="application__inner">
-              <div class="application__body">
-                <div class="application__content">
-                  <h2 class="application__title title">Применение продукции</h2>
-
-                  <div class="application__slider application-slider">
-                    <div class="application-slider__body swiper">
-                      <div class="application-slider__wrapper swiper-wrapper">
-                        <!-- application-slider-slide -->
-                        <div class="application-slider__slide swiper-slide">
-                          <div class="application-slider__img-wrapper">
-                            <img class="application-slider__img" src="./images/application/application-1.jpg" alt="" />
-                          </div>
-                        </div>
-                        <!-- application-slider-slide -->
-                        <div class="application-slider__slide swiper-slide">
-                          <div class="application-slider__img-wrapper">
-                            <img class="application-slider__img" src="./images/application/application-2.jpg" alt="" />
-                          </div>
-                        </div>
-                        <!-- application-slider-slide -->
-                        <div class="application-slider__slide swiper-slide">
-                          <div class="application-slider__img-wrapper">
-                            <img class="application-slider__img" src="./images/application/application-1.jpg" alt="" />
-                          </div>
-                        </div>
-                        <!-- application-slider-slide -->
-                        <div class="application-slider__slide swiper-slide">
-                          <div class="application-slider__img-wrapper">
-                            <img class="application-slider__img" src="./images/application/application-2.jpg" alt="" />
-                          </div>
-                        </div>
-                        <!-- application-slider-slide end -->
-                      </div>
+              <div class="goods__summary">
+                <div class="goods__summary-header">
+                  <div class="goods-short">
+                    <div class="goods-short__row">
+                      <div class="goods-short__color" style="background: #626262"></div>
+                      <div class="goods-short__title goods-short__title_big">Screws 150 pcs.</div>
                     </div>
+                    <h3 class="goods-short__text goods-short__text_big">1400,00 ₽</h3>
                   </div>
-                  <!-- application-slider end -->
                 </div>
 
-                <div class="application__footer">
-                  <div class="application__footer-col">
-                    <div class="application__slider-button-group slider-button-group">
-                      <button class="slider-button-group__button-prev">
-                        <i class="slider-button-group__button-icon icon-ui-arrow-left"></i>
+                <div class="goods__summary-color">
+                  <p class="goods__summary-color-code">Цветa:</p>
+                  <div class="goods__summary-color-slider goods__summary-color-slider_small">
+                    <div class="color-slider">
+                      <button class="color-slider__button color-slider__button-prev">
+                        <i class="color-slider__button-icon icon-ui-arrow-left"></i>
                       </button>
-                      <button class="slider-button-group__button-next">
-                        <i class="slider-button-group__button-icon icon-ui-arrow-right"></i>
+                      <div class="color-slider__body color-slider__swiper swiper">
+                        <div class="color-slider__wrapper swiper-wrapper">
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round --active"
+                              data-active-border="dark"
+                              data-panel-color="#e5e5e5"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#a07c5c"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#626262"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#626262"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="color-slider__button color-slider__button-next">
+                        <i class="color-slider__button-icon icon-ui-arrow-right"></i>
                       </button>
                     </div>
                   </div>
+                </div>
 
-                  <div class="application__footer-col">
-                    <button class="application__button button-primary"><span>Подробнее</span></button>
+                <div class="goods__summary-counter goods-counter">
+                  <button class="goods-counter__button">–</button>
+                  <input class="goods-counter__input" type="number" name="quantity-of-goods" id="" value="1" />
+                  <button class="goods-counter__button">+</button>
+                </div>
+
+                <div class="goods__summary-button-wrapper">
+                  <button class="goods__summary-button button-primary">
+                    <span>Добавить в корзину</span>
+                  </button>
+                </div>
+
+                <p class="goods__summary-descr">
+                  The Akupanel can be used for creating beautful slat walls and ceilings which adds a modern look to the
+                  room. The panel is sound dampening and removes reverberation within the room, which drastically
+                  improves the acoustics within the
+                </p>
+
+                <div class="goods__summary-spoilers spoilers-container">
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уход за панелями</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Материалы и их качество</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уникальность цвета</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods__summary-footer">
+                  <div class="goods__summary-delivery">
+                    <p class="goods__summary-delivery-label">Доставим ваш товар в течении</p>
+                    <p class="goods__summary-delivery-days">7-14 дней</p>
                   </div>
                 </div>
               </div>
@@ -1021,18 +875,345 @@
           </div>
         </section>
 
-        <!-- section: bunner -->
-        <section class="bunner">
-          <div class="bunner__outer">
-            <picture class="bunner__background">
-              <source srcset="./images/bunner/bunner-1-lg.jpg" media="(min-width: 768px)" />
-              <img class="bunner__background-img" src="./images/bunner/bunner-1-md.jpg" alt="" />
-            </picture>
-            <div class="container">
-              <div class="bunner__inner">
-                <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
-                <p class="bunner__text text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
-                <a class="bunner__button button-primary" href="#"><span>Попробуйте наш визуализатор</span></a>
+        <!-- goods -->
+        <section class="goods">
+          <div class="container">
+            <div class="goods__inner">
+              <div class="goods__gallery">
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/accessories/accessories-3.jpg" alt="" />
+                </div>
+              </div>
+
+              <div class="goods__summary">
+                <div class="goods__summary-header">
+                  <div class="goods-short">
+                    <div class="goods-short__row">
+                      <div class="goods-short__color" style="background: #626262"></div>
+                      <div class="goods-short__title goods-short__title_big">Screws 150 pcs.</div>
+                    </div>
+                    <h3 class="goods-short__text goods-short__text_big">1400,00 ₽</h3>
+                  </div>
+                </div>
+
+                <div class="goods__summary-color">
+                  <p class="goods__summary-color-code">Цветa:</p>
+                  <div class="goods__summary-color-slider goods__summary-color-slider_small">
+                    <div class="color-slider">
+                      <button class="color-slider__button color-slider__button-prev">
+                        <i class="color-slider__button-icon icon-ui-arrow-left"></i>
+                      </button>
+                      <div class="color-slider__body color-slider__swiper swiper">
+                        <div class="color-slider__wrapper swiper-wrapper">
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round --active"
+                              data-active-border="dark"
+                              data-panel-color="#e5e5e5"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#a07c5c"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#626262"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#626262"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="color-slider__button color-slider__button-next">
+                        <i class="color-slider__button-icon icon-ui-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods__summary-counter goods-counter">
+                  <button class="goods-counter__button">–</button>
+                  <input class="goods-counter__input" type="number" name="quantity-of-goods" id="" value="1" />
+                  <button class="goods-counter__button">+</button>
+                </div>
+
+                <div class="goods__summary-button-wrapper">
+                  <button class="goods__summary-button button-primary">
+                    <span>Добавить в корзину</span>
+                  </button>
+                </div>
+
+                <p class="goods__summary-descr">
+                  The Akupanel can be used for creating beautful slat walls and ceilings which adds a modern look to the
+                  room. The panel is sound dampening and removes reverberation within the room, which drastically
+                  improves the acoustics within the
+                </p>
+
+                <div class="goods__summary-spoilers spoilers-container">
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уход за панелями</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Материалы и их качество</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уникальность цвета</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods__summary-footer">
+                  <div class="goods__summary-delivery">
+                    <p class="goods__summary-delivery-label">Доставим ваш товар в течении</p>
+                    <p class="goods__summary-delivery-days">7-14 дней</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- goods -->
+        <section class="goods">
+          <div class="container">
+            <div class="goods__inner">
+              <div class="goods__gallery">
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/accessories/accessories-4.jpg" alt="" />
+                </div>
+              </div>
+
+              <div class="goods__summary">
+                <div class="goods__summary-header">
+                  <div class="goods-short">
+                    <div class="goods-short__row">
+                      <div class="goods-short__color" style="background: #626262"></div>
+                      <div class="goods-short__title goods-short__title_big">Screws 150 pcs.</div>
+                    </div>
+                    <h3 class="goods-short__text goods-short__text_big">1400,00 ₽</h3>
+                  </div>
+                </div>
+
+                <div class="goods__summary-color">
+                  <p class="goods__summary-color-code">Цветa:</p>
+                  <div class="goods__summary-color-slider goods__summary-color-slider_small">
+                    <div class="color-slider">
+                      <button class="color-slider__button color-slider__button-prev">
+                        <i class="color-slider__button-icon icon-ui-arrow-left"></i>
+                      </button>
+                      <div class="color-slider__body color-slider__swiper swiper">
+                        <div class="color-slider__wrapper swiper-wrapper">
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round --active"
+                              data-active-border="dark"
+                              data-panel-color="#e5e5e5"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#a07c5c"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#626262"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#ffd0a9"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#efc19a"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-panel-color="#626262"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="color-slider__button color-slider__button-next">
+                        <i class="color-slider__button-icon icon-ui-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods__summary-counter goods-counter">
+                  <button class="goods-counter__button">–</button>
+                  <input class="goods-counter__input" type="number" name="quantity-of-goods" id="" value="1" />
+                  <button class="goods-counter__button">+</button>
+                </div>
+
+                <div class="goods__summary-button-wrapper">
+                  <button class="goods__summary-button button-primary">
+                    <span>Добавить в корзину</span>
+                  </button>
+                </div>
+
+                <p class="goods__summary-descr">
+                  The Akupanel can be used for creating beautful slat walls and ceilings which adds a modern look to the
+                  room. The panel is sound dampening and removes reverberation within the room, which drastically
+                  improves the acoustics within the
+                </p>
+
+                <div class="goods__summary-spoilers spoilers-container">
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уход за панелями</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Материалы и их качество</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уникальность цвета</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods__summary-footer">
+                  <div class="goods__summary-delivery">
+                    <p class="goods__summary-delivery-label">Доставим ваш товар в течении</p>
+                    <p class="goods__summary-delivery-days">7-14 дней</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

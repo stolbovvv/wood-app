@@ -24,10 +24,6 @@
       font-size: 24px;
       line-height: 29px;
     }
-
-    .spoiler[data-spoiler-state="open"] & {
-      color: $clr-primary;
-    }
   }
 
   &__head-text {
@@ -39,10 +35,6 @@
       font-size: 18px;
       line-height: 22px;
     }
-
-    .spoiler[data-spoiler-state="open"] & {
-      color: $clr-primary;
-    }
   }
 
   // .spoiler__head-icon
@@ -50,16 +42,11 @@
     margin: 0 0 0 16px;
     font-size: 32px;
     transition: all 0.5s ease 0s;
-
-    .spoiler[data-spoiler-state="open"] & {
-      color: $clr-primary;
-      transform: rotate(90deg);
-    }
   }
 
   // .spoiler__body
   &__body {
-    height: 0;
+    height: auto;
     overflow: hidden;
   }
 

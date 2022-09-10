@@ -1,4 +1,4 @@
-/* global gsap, Swiper, WaveSurfer */
+/* global gsap, Power0, Swiper, WaveSurfer */
 window.addEventListener('DOMContentLoaded', () => {
   // Header-menu
   const headerMenuButton = document.querySelector('.header-menu__button');
@@ -53,29 +53,31 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // TABS
-  // acoustic-panel tabs
-  const acousticPanelColorSlider = document.querySelector('.acoustic-panel__sldier');
-  const acousticPanelColorItem = document.querySelectorAll('.color-slider__slide-round');
+  // TABS COLORS
+  const colorContainers = document.querySelectorAll('.color-slider');
 
-  if (acousticPanelColorSlider) {
-    if (acousticPanelColorItem.length > 0) {
-      acousticPanelColorItem.forEach((item) => {
-        item.style.background = item.getAttribute('data-panel-color');
-      });
-    }
+  if (colorContainers.length > 0) {
+    colorContainers.forEach((container) => {
+      const colors = container.querySelectorAll('.color-slider__slide-round');
 
-    acousticPanelColorSlider.addEventListener('click', (e) => {
-      const target = e.target;
-
-      if (target && target.classList.contains('color-slider__slide-round')) {
-        acousticPanelColorItem.forEach((item) => item.classList.remove('--active'));
-        target.classList.add('--active');
+      if (colors.length > 0) {
+        colors.forEach((item) => {
+          item.style.background = item.getAttribute('data-panel-color');
+        });
       }
+
+      container.addEventListener('click', (e) => {
+        const target = e.target;
+
+        if (target && target.classList.contains('color-slider__slide-round')) {
+          colors.forEach((item) => item.classList.remove('--active'));
+          target.classList.add('--active');
+        }
+      });
     });
   }
 
-  // visualization tabs
+  // VISUALIZATION TABS
   const visualizationTabs = document.querySelectorAll('.visualization__item[data-visualization-tab-id]');
   const visualizationTriggers = document.querySelectorAll('.visualization-slider__slide[data-visualization-id]');
 
@@ -103,51 +105,171 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // VIDEO
+  const videoContent = document.querySelector('#video_new_poject');
+  const videoButton = document.querySelector('#video_button_play');
+
+  if (videoContent && videoButton) {
+    videoButton.addEventListener('click', () => {
+      videoContent.play();
+    });
+  }
+
+  // AUDIO WAWES
+  const audioBad = document.querySelector('#wave_audio_bad');
+  const audioGreat = document.querySelector('#wave_audio_great');
+
+  function muteAudio(toggler, audioBad, audioGrat) {
+    if (toggler.getAttribute('data-state') === 'audio-bad') {
+      audioBad.setVolume(1);
+      audioGrat.setVolume(0);
+    } else {
+      audioBad.setVolume(0);
+      audioGrat.setVolume(1);
+    }
+  }
+
+  if (audioBad && audioGreat) {
+    const playerBytton = document.querySelector('#audio_player_button');
+    const audioToggler = document.querySelector('.difference__switch-toggler');
+    const audioLabels = document.querySelectorAll('.difference__switch-label');
+
+    const wavesSetting = {
+      waveColor: '#CACACA',
+      progressColor: '#787d46',
+      cursorColor: 'transparent',
+      height: 100,
+      barHeight: 5,
+      barMinHeight: 4,
+      barWidth: 4,
+      barRadius: 2,
+      barGap: 3,
+    };
+
+    const wavesAudioBad = WaveSurfer.create({ container: '#wave_audio_bad', ...wavesSetting });
+    const wavesAudioGreat = WaveSurfer.create({ container: '#wave_audio_great', ...wavesSetting });
+
+    wavesAudioBad.load(audioBad.getAttribute('data-sound'));
+    wavesAudioGreat.load(audioGreat.getAttribute('data-sound'));
+
+    playerBytton.addEventListener('click', () => {
+      muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
+
+      if (playerBytton.getAttribute('data-state') === 'pause') {
+        playerBytton.setAttribute('data-state', 'play');
+
+        wavesAudioBad.play();
+        wavesAudioGreat.play();
+      } else {
+        playerBytton.setAttribute('data-state', 'pause');
+
+        wavesAudioBad.pause();
+        wavesAudioGreat.pause();
+      }
+    });
+
+    audioToggler.addEventListener('click', () => {
+      if (audioToggler.getAttribute('data-state') === 'audio-bad') {
+        audioToggler.setAttribute('data-state', 'audio-great');
+        audioToggler.classList.add('--active');
+
+        audioLabels.forEach((label) => {
+          if (label.id === 'labe_audio_great') label.classList.add('--active');
+          if (label.id === 'labe_audio_bad') label.classList.remove('--active');
+        });
+      } else {
+        audioToggler.setAttribute('data-state', 'audio-bad');
+        audioToggler.classList.remove('--active');
+
+        audioLabels.forEach((label) => {
+          if (label.id === 'labe_audio_great') label.classList.remove('--active');
+          if (label.id === 'labe_audio_bad') label.classList.add('--active');
+        });
+      }
+
+      muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
+    });
+  }
+
+  // SPOILERS
+  const spoilerContainer = document.querySelectorAll('.spoilers-container');
+
+  function createAnimation(element) {
+    const body = element.querySelector('.spoiler__body');
+    const head = element.querySelector('.spoiler__head');
+    const icon = element.querySelector('.spoiler__head-icon');
+
+    gsap.set(body, { height: 'auto' });
+
+    const animationBody = gsap
+      .from(body, {
+        height: 0,
+        duration: 0.25,
+        ease: Power0.easeNone,
+      })
+      .reverse();
+
+    const animationHead = gsap
+      .to(head, {
+        color: '#787d46',
+        duration: 0.25,
+        ease: Power0.easeNone,
+      })
+      .reverse();
+
+    const animationIcon = gsap
+      .to(icon, {
+        rotation: 90,
+        duration: 0.1,
+        ease: Power0.easeNone,
+      })
+      .reverse();
+
+    return function (clickedHead) {
+      if (clickedHead === head) {
+        animationBody.reversed(!animationBody.reversed());
+        animationHead.reversed(!animationHead.reversed());
+        animationIcon.reversed(!animationIcon.reversed());
+      } else {
+        animationBody.reverse();
+        animationHead.reverse();
+        animationIcon.reverse();
+      }
+    };
+  }
+
+  if (spoilerContainer.length > 0) {
+    spoilerContainer.forEach((container) => {
+      const spoilersGroup = gsap.utils.toArray(container.querySelectorAll('.spoiler'));
+      const spoilersHead = gsap.utils.toArray(container.querySelectorAll('.spoiler__head'));
+      const spoilersToggles = spoilersGroup.map(createAnimation);
+
+      function toggleMenu(clickedHead) {
+        spoilersToggles.forEach((toggleFn) => toggleFn(clickedHead));
+      }
+
+      spoilersHead.forEach((menu) => {
+        menu.addEventListener('click', () => toggleMenu(menu));
+      });
+    });
+  }
+
   // SLIDERS
-  const colorSliderSmall = document.querySelectorAll('.color-slider.color-slider_small');
-  const colorSliderBig = document.querySelectorAll('.color-slider.color-slider_big');
+  const colorSlider = document.querySelectorAll('.color-slider');
   const visualizationSlider = document.querySelector('.visualization-slider');
   const applicationSlider = document.querySelector('.application-slider');
   const articlesSlider = document.querySelector('.articles-slider__slider');
   const acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
   const goodsSlider = document.querySelector('.goods-slider__slider');
 
-  if (colorSliderSmall.length > 0) {
-    colorSliderSmall.forEach((item) => {
-      const slider = item.querySelector('.color-slider__swiper');
-      const prevBtn = slider.previousElementSibling;
-      const nextBtn = slider.nextElementSibling;
-
-      new Swiper(slider, {
+  if (colorSlider.length > 0) {
+    colorSlider.forEach((slider) => {
+      new Swiper(slider.querySelector('.swiper'), {
         // Default parameters
-        slidesPerView: 4,
-        spaceBetween: 16,
-        watchOverflow: true,
+        slidesPerView: 'auto',
         navigation: {
-          prevEl: prevBtn,
-          nextEl: nextBtn,
-        },
-      });
-    });
-  }
-
-  if (colorSliderBig.length > 0) {
-    colorSliderBig.forEach((item) => {
-      const slider = item.querySelector('.color-slider__swiper');
-      const prevBtn = slider.previousElementSibling;
-      const nextBtn = slider.nextElementSibling;
-
-      new Swiper(slider, {
-        // Default parameters
-        slidesPerView: 5,
-        spaceBetween: 15,
-        watchOverflow: true,
-        navigation: {
-          prevEl: prevBtn,
-          nextEl: nextBtn,
-        },
-        768: {
-          spaceBetween: 16,
+          prevEl: slider.querySelector('.color-slider__button-prev'),
+          nextEl: slider.querySelector('.color-slider__button-next'),
         },
       });
     });
@@ -290,127 +412,6 @@ window.addEventListener('DOMContentLoaded', () => {
           spaceBetween: 32,
         },
       },
-    });
-  }
-
-  // VIDEO
-  const videoContent = document.querySelector('#video_new_poject');
-  const videoButton = document.querySelector('#video_button_play');
-
-  if (videoContent && videoButton) {
-    videoButton.addEventListener('click', () => {
-      videoContent.play();
-    });
-  }
-
-  // AUDIO WAWES
-  const audioBad = document.querySelector('#wave_audio_bad');
-  const audioGreat = document.querySelector('#wave_audio_great');
-
-  function muteAudio(toggler, audioBad, audioGrat) {
-    if (toggler.getAttribute('data-state') === 'audio-bad') {
-      audioBad.setVolume(1);
-      audioGrat.setVolume(0);
-    } else {
-      audioBad.setVolume(0);
-      audioGrat.setVolume(1);
-    }
-  }
-
-  if (audioBad && audioGreat) {
-    const playerBytton = document.querySelector('#audio_player_button');
-    const audioToggler = document.querySelector('.difference__switch-toggler');
-    const audioLabels = document.querySelectorAll('.difference__switch-label');
-
-    const wavesSetting = {
-      waveColor: '#CACACA',
-      progressColor: '#787d46',
-      cursorColor: 'transparent',
-      height: 100,
-      barHeight: 5,
-      barMinHeight: 4,
-      barWidth: 4,
-      barRadius: 2,
-      barGap: 3,
-    };
-
-    const wavesAudioBad = WaveSurfer.create({ container: '#wave_audio_bad', ...wavesSetting });
-    const wavesAudioGreat = WaveSurfer.create({ container: '#wave_audio_great', ...wavesSetting });
-
-    wavesAudioBad.load(audioBad.getAttribute('data-sound'));
-    wavesAudioGreat.load(audioGreat.getAttribute('data-sound'));
-
-    playerBytton.addEventListener('click', () => {
-      muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
-
-      if (playerBytton.getAttribute('data-state') === 'pause') {
-        playerBytton.setAttribute('data-state', 'play');
-
-        wavesAudioBad.play();
-        wavesAudioGreat.play();
-      } else {
-        playerBytton.setAttribute('data-state', 'pause');
-
-        wavesAudioBad.pause();
-        wavesAudioGreat.pause();
-      }
-    });
-
-    audioToggler.addEventListener('click', () => {
-      if (audioToggler.getAttribute('data-state') === 'audio-bad') {
-        audioToggler.setAttribute('data-state', 'audio-great');
-        audioToggler.classList.add('--active');
-
-        audioLabels.forEach((label) => {
-          if (label.id === 'labe_audio_great') label.classList.add('--active');
-          if (label.id === 'labe_audio_bad') label.classList.remove('--active');
-        });
-      } else {
-        audioToggler.setAttribute('data-state', 'audio-bad');
-        audioToggler.classList.remove('--active');
-
-        audioLabels.forEach((label) => {
-          if (label.id === 'labe_audio_great') label.classList.remove('--active');
-          if (label.id === 'labe_audio_bad') label.classList.add('--active');
-        });
-      }
-
-      muteAudio(audioToggler, wavesAudioBad, wavesAudioGreat);
-    });
-  }
-
-  // SPOILERS
-  const spoilersList = document.querySelectorAll('.spoiler[data-spoiler-state]');
-
-  if (spoilersList.length > 0) {
-    spoilersList.forEach((spoiler) => {
-      const spoilerHead = spoiler.querySelector('.spoiler__head');
-      const spoilerBody = spoiler.querySelector('.spoiler__body');
-
-      spoilerHead.addEventListener('click', () => {
-        console.log();
-
-        switch (spoiler.getAttribute('data-spoiler-state')) {
-          case 'open':
-            spoiler.setAttribute('data-spoiler-state', 'close');
-            gsap.to(spoilerBody, {
-              duration: 0.5,
-              height: 0,
-            });
-            break;
-
-          case 'close':
-            spoiler.setAttribute('data-spoiler-state', 'open');
-            gsap.to(spoilerBody, {
-              duration: 0.5,
-              height: 'auto',
-            });
-            break;
-
-          default:
-            break;
-        }
-      });
     });
   }
 });

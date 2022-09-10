@@ -2,29 +2,9 @@
 
 /* UI elements "Carusels" */
 .color-slider {
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 100%;
-
-  > * + * {
-    margin: 0 0 0 8px;
-  }
-
-  &_small {
-    max-width: 262px;
-
-    @include for-min-size("md") {
-      max-width: 292px;
-    }
-  }
-
-  &_big {
-    max-width: 290px;
-
-    @include for-min-size("md") {
-      max-width: 340px;
-    }
-  }
 
   // .color-slider__button
   &__button {
@@ -42,8 +22,8 @@
 
   // .color-slider__button-prev
   &__button-prev {
-    border-left-color: $clr-gray-700;
-    border-bottom-color: $clr-gray-700;
+    border-left-color: $clr-primary;
+    border-bottom-color: $clr-primary;
     transform: rotate(45deg);
 
     > .color-slider__button-icon {
@@ -53,8 +33,8 @@
 
   // .color-slider__button-next
   &__button-next {
-    border-right-color: $clr-gray-700;
-    border-bottom-color: $clr-gray-700;
+    border-right-color: $clr-primary;
+    border-bottom-color: $clr-primary;
     transform: rotate(-45deg);
 
     > .color-slider__button-icon {
@@ -65,11 +45,11 @@
   // .color-slider__button-icon
   &__button-icon {
     font-size: 24px;
+    color: $clr-primary;
   }
 
   // .color-slider__body
   &__body {
-    flex: 0 1 auto;
     min-width: 0;
   }
 
@@ -79,7 +59,13 @@
 
   // .color-slider__slide
   &__slide {
-    width: auto;
+    width: 42px;
+    display: flex;
+    justify-content: center;
+
+    @include for-min-size("md") {
+      width: 48px;
+    }
   }
 
   // .color-slider__slide-round

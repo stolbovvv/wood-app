@@ -496,7 +496,7 @@
                   </li>
                 </ul>
               </div>
-              <h1 class="page-head__title title">Личные данные</h1>
+              <h1 class="page-head__title title">Мои заказы</h1>
             </div>
           </div>
         </div>
@@ -506,10 +506,10 @@
             <div class="personal-area__inner">
               <nav class="personal-area__menu personal-area-menu">
                 <ul class="personal-area-menu__list">
-                  <li class="personal-area-menu__item">
+                  <li class="personal-area-menu__item personal-area-menu__item_current">
                     <a class="personal-area-menu__link" href="./personal-orders.html">Мои заказы</a>
                   </li>
-                  <li class="personal-area-menu__item personal-area-menu__item_current">
+                  <li class="personal-area-menu__item">
                     <a class="personal-area-menu__link" href="./personal-data.html">Личные данные</a>
                   </li>
                   <li class="personal-area-menu__item">
@@ -519,50 +519,174 @@
                     <a class="personal-area-menu__link" href="./personal-help.html">Помощь</a>
                   </li>
                   <li class="personal-area-menu__item">
-                    <a href="#" class="personal-area-menu__link">Выход</a>
+                    <a class="personal-area-menu__link" href="#">Выход</a>
                   </li>
                 </ul>
               </nav>
 
-              <form class="personal-area__form" action="#" name="personal-data">
-                <div class="personal-area__form-item">
-                  <label for="personal_name" class="personal-area__form-label">Имя:</label>
-                  <input class="personal-area__form-input" type="text" name="personal-data-name" id="personal_name" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="personal_surname" class="personal-area__form-label">Фамилия:</label>
-                  <input
-                    class="personal-area__form-input"
-                    type="text"
-                    name="personal-data-surname"
-                    id="personal_surname"
-                  />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="personal_tel" class="personal-area__form-label">Телефон:</label>
-                  <input class="personal-area__form-input" type="tel" name="personal-data-tel" id="personal_tel" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="personal_email" class="personal-area__form-label">Email:</label>
-                  <input
-                    class="personal-area__form-input"
-                    type="email"
-                    name="personal-data-email"
-                    id="personal_email"
-                  />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="personal_addres" class="personal-area__form-label">Адрес:</label>
-                  <input
-                    class="personal-area__form-input"
-                    type="text"
-                    name="personal-data-addres"
-                    id="personal_addres"
-                  />
-                </div>
+              <div class="personal-area__orders">
+                <div class="personal-area__orders-slider">
+                  <div class="personal-area__orders-list">
+                    <article class="orders-card">
+                      <div class="orders-card__img-wrapper">
+                        <img class="orders-card__img" src="./images/accessories/accessories-4.jpg" alt="" />
+                      </div>
+                      <div class="orders-card__body">
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Классический Серый</p>
+                          <p class="orders-card__body-value">1400,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Статус</p>
+                          <p class="orders-card__body-value">В обработке</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Кол-во</p>
+                          <p class="orders-card__body-value">5 шт.</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Сумма</p>
+                          <p class="orders-card__body-value">8000,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Дата добавления</p>
+                          <p class="orders-card__body-value">24.01.2021</p>
+                        </div>
+                      </div>
+                    </article>
 
-                <button class="personal-area__form-button button-primary" type="submit"><span>Изменить</span></button>
-              </form>
+                    <article class="orders-card">
+                      <div class="orders-card__img-wrapper">
+                        <img class="orders-card__img" src="./images/accessories/accessories-4.jpg" alt="" />
+                      </div>
+                      <div class="orders-card__body">
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Классический Серый</p>
+                          <p class="orders-card__body-value">1400,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Статус</p>
+                          <p class="orders-card__body-value">В обработке</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Кол-во</p>
+                          <p class="orders-card__body-value">5 шт.</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Сумма</p>
+                          <p class="orders-card__body-value">8000,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Дата добавления</p>
+                          <p class="orders-card__body-value">24.01.2021</p>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="orders-card">
+                      <div class="orders-card__img-wrapper">
+                        <img class="orders-card__img" src="./images/accessories/accessories-4.jpg" alt="" />
+                      </div>
+                      <div class="orders-card__body">
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Классический Серый</p>
+                          <p class="orders-card__body-value">1400,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Статус</p>
+                          <p class="orders-card__body-value">В обработке</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Кол-во</p>
+                          <p class="orders-card__body-value">5 шт.</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Сумма</p>
+                          <p class="orders-card__body-value">8000,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Дата добавления</p>
+                          <p class="orders-card__body-value">24.01.2021</p>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="orders-card">
+                      <div class="orders-card__img-wrapper">
+                        <img class="orders-card__img" src="./images/accessories/accessories-4.jpg" alt="" />
+                      </div>
+                      <div class="orders-card__body">
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Классический Серый</p>
+                          <p class="orders-card__body-value">1400,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Статус</p>
+                          <p class="orders-card__body-value">В обработке</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Кол-во</p>
+                          <p class="orders-card__body-value">5 шт.</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Сумма</p>
+                          <p class="orders-card__body-value">8000,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Дата добавления</p>
+                          <p class="orders-card__body-value">24.01.2021</p>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="orders-card">
+                      <div class="orders-card__img-wrapper">
+                        <img class="orders-card__img" src="./images/accessories/accessories-4.jpg" alt="" />
+                      </div>
+                      <div class="orders-card__body">
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Классический Серый</p>
+                          <p class="orders-card__body-value">1400,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Статус</p>
+                          <p class="orders-card__body-value">В обработке</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Кол-во</p>
+                          <p class="orders-card__body-value">5 шт.</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Сумма</p>
+                          <p class="orders-card__body-value">8000,00 ₽</p>
+                        </div>
+                        <div class="orders-card__body-item">
+                          <p class="orders-card__body-label">Дата добавления</p>
+                          <p class="orders-card__body-value">24.01.2021</p>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="personal-area__orders-controls">
+                    <div class="personal-area__orders-paginations">
+                      <span class="personal-area__orders-paginations-dot --active"></span>
+                      <span class="personal-area__orders-paginations-dot"></span>
+                      <span class="personal-area__orders-paginations-dot"></span>
+                      <span class="personal-area__orders-paginations-dot"></span>
+                      <span class="personal-area__orders-paginations-dot"></span>
+                    </div>
+                    <div class="personal-area__orders-buttons">
+                      <button class="personal-area__orders-button-prev">
+                        <i class="personal-area__orders-button-icon icon-ui-arrow-left"></i>
+                      </button>
+                      <button class="personal-area__orders-button-next">
+                        <i class="personal-area__orders-button-icon icon-ui-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

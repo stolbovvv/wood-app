@@ -225,7 +225,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   var spoilerContainer = document.querySelectorAll('.spoilers-container');
 
-  function createAnimation(element) {
+  function createAnimationForSpoiler(element) {
     var body = element.querySelector('.spoiler__body');
     var head = element.querySelector('.spoiler__head');
     var icon = element.querySelector('.spoiler__head-icon');
@@ -264,7 +264,7 @@ window.addEventListener('DOMContentLoaded', function() {
     spoilerContainer.forEach(function(container) {
       var spoilersGroup = gsap.utils.toArray(container.querySelectorAll('.spoiler'));
       var spoilersHead = gsap.utils.toArray(container.querySelectorAll('.spoiler__head'));
-      var spoilersToggles = spoilersGroup.map(createAnimation);
+      var spoilersToggles = spoilersGroup.map(createAnimationForSpoiler);
 
       function toggleMenu(clickedHead) {
         spoilersToggles.forEach(function(toggleFn) {
@@ -278,6 +278,63 @@ window.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
+  } // SELECTS
+
+
+  var selectsArray = document.querySelectorAll('.custom-select');
+
+  function animationActiveSelect(element, icon) {
+    element.classList.add('--active');
+    gsap.to(icon, {
+      rotation: 90,
+      duration: 0.25
+    });
+  }
+
+  function animationDeactivationSelect(element, icon) {
+    element.classList.remove('--active');
+    gsap.to(icon, {
+      rotation: 0,
+      duration: 0.25
+    });
+  }
+
+  function animationSelect(element) {
+    var icon = element.querySelector('.goods__summary-size-select-icon');
+
+    if (element.classList.contains('--active')) {
+      animationDeactivationSelect(element, icon);
+    } else {
+      animationActiveSelect(element, icon);
+    }
+  }
+
+  if (selectsArray.length > 0) {
+    selectsArray.forEach(function(select) {
+      var selectBody = select.querySelector('select');
+      select.classList.remove('--active');
+      selectBody.addEventListener('click', function() {
+        return animationSelect(select);
+      });
+      selectBody.addEventListener('blur', function() {
+        animationDeactivationSelect(select, select.querySelector('.goods__summary-size-select-icon'));
+      });
+    });
+  } // COUNTER
+
+
+  var counterArray = document.querySelectorAll('.goods-counter');
+
+  if (counterArray.length > 0) {
+    counterArray.forEach(function(counter) {
+      var input = counter.querySelector('input.goods-counter__input');
+      var incrementBtn = counter.querySelector('.goods-counter__button[data-type="increment"]');
+      var decrementBtn = counter.querySelector('.goods-counter__button[data-type="decrement"]');
+      counter.addEventListener('click', function(e) {
+        if (e.target && e.target === incrementBtn) input.value = +input.value + 1;
+        if (e.target && e.target === decrementBtn && input.value > 0) input.value = +input.value - 1;
+      });
+    });
   } // SLIDERS
 
 
@@ -287,6 +344,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var articlesSlider = document.querySelector('.articles-slider__slider');
   var acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
   var goodsSlider = document.querySelector('.goods-slider__slider');
+  var ordersSlider = document.querySelector('.personal-area__orders-slider');
 
   if (colorSlider.length > 0) {
     colorSlider.forEach(function(slider) {
@@ -439,6 +497,21 @@ window.addEventListener('DOMContentLoaded', function() {
           spaceBetween: 32
         }
       }
+    });
+  }
+
+  if (ordersSlider) {
+    new Swiper(ordersSlider, {
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 15,
+      direction: 'vertical',
+      navigation: {
+        prevEl: '.personal-area__orders-button-prev',
+        nextEl: '.personal-area__orders-button-next'
+      },
+      // Responsive breakpoints
+      breakpoints: {}
     });
   }
 });

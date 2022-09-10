@@ -1,0 +1,142 @@
+@use "../helper" as *;
+
+/* UI elements "accessories-hero" */
+.personal-area-menu {
+  // .personal-area-menu__list
+  &__list {
+  }
+
+  // .personal-area-menu__item
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    background: #ededed;
+    border-radius: 4px 4px 0px 0px;
+    color: #383838;
+    padding: 0 24px;
+
+    @include for-min-size("md") {
+      justify-content: flex-start;
+    }
+
+    // .personal-area-menu__item_current
+    &_current {
+      background: #787d46;
+      color: white;
+    }
+  }
+
+  // .personal-area-menu__link
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: inherit;
+    text-decoration: none;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+.personal-area {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    margin: 35px 0 60px 0;
+  }
+
+  // .personal-area__inner
+  &__inner {
+    > * + * {
+      margin: 36px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      display: flex;
+
+      > * + * {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  // .personal-area__menu
+  &__menu {
+    @include for-min-size("md") {
+      flex: 0 0 33.33%;
+      padding: 0 16px 0 0;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 25%;
+    }
+  }
+
+  // .personal-area__form
+  &__form {
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      flex: 0 0 66.66%;
+      padding: 0 0 0 16px;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 75%;
+    }
+  }
+
+  // .personal-area__form-item
+  &__form-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .personal-area__form-label
+  &__form-label {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  // .personal-area__form-input
+  // .personal-area__form-textarea
+  &__form-input,
+  &__form-textarea {
+    margin: 16px 0 0 0;
+    height: 48px;
+    background: #ededed;
+    border-radius: 4px;
+    border: none;
+    padding: 0 16px 0 16px;
+  }
+
+  // .personal-area__form-textarea
+  &__form-textarea {
+    min-height: 128px;
+    padding: 12px 16px 12px 16px;
+  }
+
+  // .personal-area__form-button
+  &__form-button {
+    width: 100%;
+    margin: 36px 0 0 0;
+
+    @include for-min-size("md") {
+      width: 200px;
+      margin: 32px 0 0 auto;
+    }
+  }
+}

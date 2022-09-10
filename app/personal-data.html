@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Basic Page Options -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Connecting favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <!-- Basic Page Information -->
+    <meta name="description" content="" />
+    <title>Wood App | Личный кабинет</title>
+
+    <!-- Connetcing Libs Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
+
+    <!-- Connecting Page Styles -->
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__inner">
+          <!-- logo -->
+          <div class="header__logo site-logo">
+            <a class="site-logo__link" href="./">
+              <img class="site-logo__img" src="./images/logo_wood_app.jpg" alt="Wood App" />
+            </a>
+          </div>
+          <!-- header-menu -->
+          <nav class="header__menu header-menu">
+            <button class="header-menu__button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <div class="header-menu__body">
+              <ul class="header-menu__list">
+                <!-- header-menu-item -->
+                <li class="header-menu__item">
+                  <!-- header-menu-link -->
+                  <a class="header-menu__link" href="#">
+                    <span class="header-menu__link-label">STORE</span>
+                    <i class="header-menu__link-icon icon-ui-arrow-right"></i>
+                  </a>
+                  <!-- header-menu-submenu -->
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__submenu-inner">
+                      <ul class="header-menu__sublist">
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Комлектующие</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Образцы</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">STORE-панели</a>
+                        </li>
+                      </ul>
+                      <!-- header-menu-submenu-articles -->
+                      <div class="header-menu__submenu-articles">
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">STORE</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">Вопросы и ответы</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">Вопросы и ответы</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview end -->
+                      </div>
+                    </div>
+                    <!-- header-menu__submenu-inner end -->
+                  </div>
+                  <!-- header-menu__submenu end -->
+                </li>
+
+                <!-- header-menu-item -->
+                <li class="header-menu__item">
+                  <!-- header-menu-link -->
+                  <a class="header-menu__link" href="#">
+                    <span class="header-menu__link-label">Service</span>
+                    <i class="header-menu__link-icon icon-ui-arrow-right"></i>
+                  </a>
+                  <!-- header-menu-submenu -->
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__submenu-inner">
+                      <ul class="header-menu__sublist">
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Установка</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Доставка</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Вопросы - ответы</a>
+                        </li>
+                      </ul>
+                      <!-- header-menu-submenu-articles -->
+                      <div class="header-menu__submenu-articles">
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">STORE</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">Вопросы и ответы</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview end -->
+                      </div>
+                    </div>
+                    <!-- header-menu__submenu-inner end -->
+                  </div>
+                  <!-- header-menu__submenu end -->
+                </li>
+
+                <!-- header-menu-item -->
+                <li class="header-menu__item">
+                  <!-- header-menu-link -->
+                  <a class="header-menu__link" href="#">
+                    <span class="header-menu__link-label">Команда</span>
+                    <i class="header-menu__link-icon icon-ui-arrow-right"></i>
+                  </a>
+                  <!-- header-menu-submenu -->
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__submenu-inner">
+                      <ul class="header-menu__sublist">
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Блог</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Команда</a>
+                        </li>
+                      </ul>
+                      <!-- header-menu-submenu-articles -->
+                      <div class="header-menu__submenu-articles">
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">STORE</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">Вопросы и ответы</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview end -->
+                      </div>
+                    </div>
+                    <!-- header-menu__submenu-inner end -->
+                  </div>
+                  <!-- header-menu__submenu end -->
+                </li>
+
+                <!-- header-menu-item -->
+                <li class="header-menu__item">
+                  <!-- header-menu-link -->
+                  <a class="header-menu__link" href="#">
+                    <span class="header-menu__link-label">Сотрудничество</span>
+                    <i class="header-menu__link-icon icon-ui-arrow-right"></i>
+                  </a>
+                  <!-- header-menu-submenu -->
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__submenu-inner">
+                      <ul class="header-menu__sublist">
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Сотрудничество</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Применение</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">STORE</a>
+                        </li>
+                      </ul>
+                      <!-- header-menu-submenu-articles -->
+                      <div class="header-menu__submenu-articles">
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">STORE</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">Вопросы и ответы</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview end -->
+                      </div>
+                    </div>
+                    <!-- header-menu__submenu-inner end -->
+                  </div>
+                  <!-- header-menu__submenu end -->
+                </li>
+
+                <!-- header-menu-item -->
+                <li class="header-menu__item">
+                  <!-- header-menu-link -->
+                  <a class="header-menu__link" href="#">
+                    <span class="header-menu__link-label">Вдохновение</span>
+                    <i class="header-menu__link-icon icon-ui-arrow-right"></i>
+                  </a>
+                  <!-- header-menu-submenu -->
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__submenu-inner">
+                      <ul class="header-menu__sublist">
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Сотрудничество</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Применение</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">STORE</a>
+                        </li>
+                      </ul>
+                      <!-- header-menu-submenu-articles -->
+                      <div class="header-menu__submenu-articles">
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">STORE</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">Вопросы и ответы</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview end -->
+                      </div>
+                    </div>
+                    <!-- header-menu__submenu-inner end -->
+                  </div>
+                  <!-- header-menu__submenu end -->
+                </li>
+
+                <!-- header-menu-item -->
+                <li class="header-menu__item">
+                  <!-- header-menu-link -->
+                  <a class="header-menu__link" href="#">
+                    <span class="header-menu__link-label">Контакты</span>
+                    <i class="header-menu__link-icon icon-ui-arrow-right"></i>
+                  </a>
+                  <!-- header-menu-submenu -->
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__submenu-inner">
+                      <ul class="header-menu__sublist">
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Контакты</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">Вопросы-ответы</a>
+                        </li>
+                        <li class="header-menu__subitem">
+                          <a class="header-menu__sublink" href="#">STORE</a>
+                        </li>
+                      </ul>
+                      <!-- header-menu-submenu-articles -->
+                      <div class="header-menu__submenu-articles">
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-1.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">STORE</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview -->
+                        <article class="article-preview">
+                          <div class="article-preview__img-wrapper">
+                            <img class="article-preview__img" src="./images/articles/article-2.jpg" alt="" />
+                          </div>
+                          <div class="article-preview__body">
+                            <a class="article-preview__link" href="#">
+                              <span class="article-preview__link-label">Вопросы и ответы</span>
+                              <i class="article-preview__link-icon icon-ui-arrow-right"></i>
+                            </a>
+                            <p class="article-preview__desr">
+                              For most people, installing the panels would be an entertaining DIY project. It is very
+                              simple.
+                            </p>
+                          </div>
+                        </article>
+                        <!-- article-preview end -->
+                      </div>
+                    </div>
+                    <!-- header-menu__submenu-inner end -->
+                  </div>
+                  <!-- header-menu__submenu end -->
+                </li>
+              </ul>
+
+              <!-- header-menu-body-footer -->
+              <div class="header-menu__body-footer">
+                <!-- header-color-palette -->
+                <div class="color-palette">
+                  <a class="color-palette__link" href="#">
+                    <i class="color-palette__link-icon icon-ui-color-palette"></i>
+                    <span class="color-palette__link-label">Заказать образцы</span>
+                  </a>
+                </div>
+                <!-- header-contacnt -->
+                <div class="header__contacts-link-group">
+                  <a class="phone-link" href="tel:+79801922024">+7 (980) 192-20-24</a>
+                </div>
+              </div>
+              <!-- header-menu-body-footer end -->
+            </div>
+          </nav>
+          <!-- header-color-palette -->
+          <div class="header__color-palette color-palette">
+            <a class="color-palette__link" href="#">
+              <i class="color-palette__link-icon icon-ui-color-palette"></i>
+              <span class="color-palette__link-label">Заказать образцы</span>
+            </a>
+          </div>
+          <!-- header-contacnt -->
+          <div class="header__contacts">
+            <div class="header__contacts-link-group">
+              <a class="phone-link" href="tel:+79801922024">+7 (980) 192-20-24</a>
+            </div>
+          </div>
+          <!-- header-accaunt-end-shopping -->
+          <div class="header__accaunt-end-shopping-card">
+            <a class="accaunt-link" href="#">
+              <i class="accaunt-link__icon icon-ui-user"></i>
+            </a>
+            <a class="shopping-card-link" href="#">
+              <i class="shopping-card-link__icon icon-ui-shopping-cart"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <!-- page-head -->
+        <div class="page-head">
+          <div class="container">
+            <div class="page-head__inner">
+              <div class="page-head__bread-crumbs">
+                <ul class="bread-crumbs">
+                  <li class="bread-crumbs__item">
+                    <a class="bread-crumbs__link" href="#">Главная</a>
+                  </li>
+                  <li class="bread-crumbs__item bread-crumbs__item_currnet">
+                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                    <a class="bread-crumbs__link" href="#">Личный кабинет</a>
+                  </li>
+                </ul>
+              </div>
+              <h1 class="page-head__title title">Личные данные</h1>
+            </div>
+          </div>
+        </div>
+
+        <section class="personal-area">
+          <div class="container">
+            <div class="personal-area__inner">
+              <nav class="personal-area__menu personal-area-menu">
+                <ul class="personal-area-menu__list">
+                  <li class="personal-area-menu__item">
+                    <a href="#" class="personal-area-menu__link">Мои заказы</a>
+                  </li>
+                  <li class="personal-area-menu__item personal-area-menu__item_current">
+                    <a href="#" class="personal-area-menu__link">Личные данные</a>
+                  </li>
+                  <li class="personal-area-menu__item">
+                    <a href="#" class="personal-area-menu__link">Смена пароля</a>
+                  </li>
+                  <li class="personal-area-menu__item">
+                    <a href="#" class="personal-area-menu__link">Помощь</a>
+                  </li>
+                  <li class="personal-area-menu__item">
+                    <a href="#" class="personal-area-menu__link">Выход</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <form class="personal-area__form" action="#" name="personal-data">
+                <div class="personal-area__form-item">
+                  <label for="personal_name" class="personal-area__form-label">Имя:</label>
+                  <input class="personal-area__form-input" type="text" name="personal-data-name" id="personal_name" />
+                </div>
+                <div class="personal-area__form-item">
+                  <label for="personal_surname" class="personal-area__form-label">Фамилия:</label>
+                  <input
+                    class="personal-area__form-input"
+                    type="text"
+                    name="personal-data-surname"
+                    id="personal_surname"
+                  />
+                </div>
+                <div class="personal-area__form-item">
+                  <label for="personal_tel" class="personal-area__form-label">Телефон:</label>
+                  <input class="personal-area__form-input" type="tel" name="personal-data-tel" id="personal_tel" />
+                </div>
+                <div class="personal-area__form-item">
+                  <label for="personal_email" class="personal-area__form-label">Email:</label>
+                  <input
+                    class="personal-area__form-input"
+                    type="email"
+                    name="personal-data-email"
+                    id="personal_email"
+                  />
+                </div>
+                <div class="personal-area__form-item">
+                  <label for="personal_addres" class="personal-area__form-label">Адрес:</label>
+                  <input
+                    class="personal-area__form-input"
+                    type="text"
+                    name="personal-data-addres"
+                    id="personal_addres"
+                  />
+                </div>
+
+                <button class="personal-area__form-button button-primary" type="submit"><span>Изменить</span></button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <!-- logo -->
+            <div class="footer__logo site-logo">
+              <a class="site-logo__link" href="./">
+                <img class="site-logo__img" src="./images/logo_wood_app.jpg" alt="Wood App" />
+              </a>
+            </div>
+            <!-- footer-menu -->
+            <nav class="footer__menu footer-menu">
+              <ul class="footer-menu__list">
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">STORE</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Комлектующие</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Образцы</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">STORE-панели</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Service</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Установка</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Доставка</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Вопросы - ответы</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Команда</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Блог</a>
+                      </li>
+
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Команда</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Сотрудничество</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Сотрудничество</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Применение</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">STORE</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- menu-item -->
+                <li class="footer-menu__list-item">
+                  <div class="footer-menu__list-item-body">
+                    <a class="footer-menu__lsit-title" href="#">Контакты</a>
+                    <ul class="footer-menu__sublist">
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Контакты</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">Вопросы-ответы</a>
+                      </li>
+                      <li class="footer-menu__sublist-item">
+                        <a class="footer-menu__sublist-link" href="#">STORE</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- menu-item end -->
+              </ul>
+              <!-- menu-list end -->
+            </nav>
+            <!-- footer-bottom -->
+            <div class="footer__bottom">
+              <!-- footer-copyrigth -->
+              <div class="footer__copyrigth">
+                <p class="footer__copyrigth-text">© Все права защищены 2022</p>
+                <div class="footer__copyrigth-link-group">
+                  <a class="footer__copyrigth-link" href="#">Политика конфиденциальности</a>
+                  <a class="footer__copyrigth-link" href="#">Договор оферты</a>
+                </div>
+              </div>
+              <!-- footer-contacts -->
+              <div class="footer__contacts">
+                <div class="footer__contacts-link-group">
+                  <a class="phone-link" href="tel:+79801922024">+7 (980) 192-20-24</a>
+                  <a class="email-link" href="mailto:apppanels@info.ru">apppanels@info.ru</a>
+                </div>
+                <!-- social -->
+                <div class="footer__social social-link-group">
+                  <a class="social-link-group__item" href="#"><i class="icon-social-behance"></i></a>
+                  <a class="social-link-group__item" href="#"><i class="icon-social-youtube"></i></a>
+                  <a class="social-link-group__item" href="#"><i class="icon-social-twitter"></i></a>
+                  <a class="social-link-group__item" href="#"><i class="icon-social-vk"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- footer-bottom end -->
+          </div>
+          <!-- footer-inner end -->
+        </div>
+        <!-- container end -->
+      </footer>
+    </div>
+
+    <!-- Connection Libs Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.2.0/wavesurfer.min.js"></script>
+
+    <!-- Connecting Page Scripts -->
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

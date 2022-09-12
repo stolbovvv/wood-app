@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App | Личный кабинет</title>
+    <title>Wood App | Оформление заказа</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
@@ -500,62 +500,117 @@
                   <li class="bread-crumbs__item">
                     <a class="bread-crumbs__link" href="./">Главная</a>
                   </li>
+                  <li class="bread-crumbs__item">
+                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                    <a class="bread-crumbs__link" href="#">Корзина</a>
+                  </li>
                   <li class="bread-crumbs__item bread-crumbs__item_currnet">
                     <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
-                    <a class="bread-crumbs__link" href="#">Личный кабинет</a>
+                    <a class="bread-crumbs__link" href="#">Оформление заказа</a>
                   </li>
                 </ul>
               </div>
-              <h1 class="page-head__title title">Смена пароля</h1>
+              <h1 class="page-head__title title">Оформление заказа</h1>
             </div>
           </div>
         </div>
 
-        <section class="personal-area">
+        <section class="making-an-order">
           <div class="container">
-            <div class="personal-area__inner">
-              <nav class="personal-area__menu personal-area-menu">
-                <ul class="personal-area-menu__list">
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-orders.html">Мои заказы</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-data.html">Личные данные</a>
-                  </li>
-                  <li class="personal-area-menu__item personal-area-menu__item_current">
-                    <a class="personal-area-menu__link" href="./personal-password.html">Смена пароля</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-help.html">Помощь</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a href="#" class="personal-area-menu__link">Выход</a>
-                  </li>
-                </ul>
-              </nav>
+            <form class="order-form" action="#">
+              <div class="order-form__col">
+                <div class="order-form__item">
+                  <p class="order-form__item-title">Контактные данные</p>
+                  <div class="order-form__item-body">
+                    <input class="order-form__input" name="name" type="text" placeholder="Ваше имя" />
+                    <input class="order-form__input" name="phone" type="tel" placeholder="Ваш телефон" />
+                    <input class="order-form__input" name="e-mail" type="email" placeholder="Ваш e-mail" />
+                    <input class="order-form__input" name="region" type="text" placeholder="Ваш регион" />
+                    <input class="order-form__input" name="city" type="text" placeholder="Ваш город" />
+                    <input class="order-form__input" name="address" type="text" placeholder="Ваш адрес" />
+                    <input class="order-form__input" name="index" type="number" placeholder="Ваш индекс" />
+                  </div>
+                </div>
+              </div>
 
-              <form class="personal-area__form" action="#" name="personal-data">
-                <div class="personal-area__form-item">
-                  <label for="password_old" class="personal-area__form-label">Старый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-old" id="password_old" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_new" class="personal-area__form-label">Новый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-new" id="password_new" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_repeat" class="personal-area__form-label">Повторите новый пароль:</label>
-                  <input
-                    class="personal-area__form-input"
-                    type="password"
-                    name="password-repeat"
-                    id="password_repeat"
-                  />
+              <div class="order-form__col">
+                <div class="order-form__item">
+                  <p class="order-form__item-title">Способ доставки</p>
+                  <div class="order-form__item-body">
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-main" />
+                      <span class="order-form__radio-label">Самовывоз со склада</span>
+                    </label>
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-main" />
+                      <span class="order-form__radio-label">Доставка по Москве</span>
+                    </label>
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-main" />
+                      <span class="order-form__radio-label">Доставка по Московской области</span>
+                    </label>
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-main" />
+                      <span class="order-form__radio-label">Доставка по России (транспортной компанией "...")</span>
+                    </label>
+                  </div>
                 </div>
 
-                <button class="personal-area__form-button button-primary" type="submit"><span>Изменить</span></button>
-              </form>
-            </div>
+                <div class="order-form__item">
+                  <p class="order-form__item-title">Способ доставки</p>
+                  <p class="order-form__item-subtitle">(только образцов)</p>
+                  <div class="order-form__item-body">
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-second" />
+                      <span class="order-form__radio-label">Самовывоз со склада</span>
+                    </label>
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-second" />
+                      <span class="order-form__radio-label">Доставка по Москве</span>
+                    </label>
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-second" />
+                      <span class="order-form__radio-label">Доставка по Московской области</span>
+                    </label>
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="delivery-method-second" />
+                      <span class="order-form__radio-label">Доставка по России (транспортной компанией "...")</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-form__col">
+                <div class="order-form__item">
+                  <p class="order-form__item-title">Способ оплаты</p>
+                  <div class="order-form__item-body">
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="payment-method" />
+                      <span class="order-form__radio-label">Оплата онлайн</span>
+                    </label>
+                    <label class="order-form__radio-item">
+                      <input class="order-form__radio-input" type="radio" name="payment-method" />
+                      <span class="order-form__radio-label">Оплата в офисе (наличными или картой)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-form__col">
+                <div class="order-form__item">
+                  <p class="order-form__item-title">Комментарий к заказу</p>
+                  <div class="order-form__item-body">
+                    <textarea
+                      class="order-form__textarea"
+                      name="message"
+                      placeholder="Напишите сообщение..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <button class="order-form__button button-primary" type="submit"><span>Оформить заказ</span></button>
+            </form>
           </div>
         </section>
       </main>

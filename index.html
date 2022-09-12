@@ -21,12 +21,22 @@
     <title>Wood App</title>
 
     <!-- Connetcing Libs Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
+
+    <noscript>
+      <style>
+        /* Reinstate scrolling for non-JS clients */
+        .simplebar-content-wrapper {
+          overflow: auto;
+        }
+      </style>
+    </noscript>
 
     <!-- Connecting Page Styles -->
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
-  <body>
+  <body data-simplebar>
     <div class="wrapper">
       <header class="header">
         <div class="header__inner">
@@ -46,14 +56,11 @@
 
             <div class="header-menu__body">
               <ul class="header-menu__list">
-                <!-- header-menu-item -->
                 <li class="header-menu__item">
-                  <!-- header-menu-link -->
                   <a class="header-menu__link" href="#">
                     <span class="header-menu__link-label">STORE</span>
                     <i class="header-menu__link-icon icon-ui-arrow-right"></i>
                   </a>
-                  <!-- header-menu-submenu -->
                   <div class="header-menu__submenu">
                     <div class="header-menu__submenu-inner">
                       <ul class="header-menu__sublist">
@@ -1198,7 +1205,7 @@
                 <!-- menu-item -->
                 <li class="footer-menu__list-item">
                   <div class="footer-menu__list-item-body">
-                    <a class="footer-menu__lsit-title" href="#">Сотрудничество</a>
+                    <a class="footer-menu__lsit-title" href="#">Сотрyдничество</a>
                     <ul class="footer-menu__sublist">
                       <li class="footer-menu__sublist-item">
                         <a class="footer-menu__sublist-link" href="#">Сотрудничество</a>
@@ -1268,6 +1275,7 @@
 
     <!-- Connection Libs Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.2.0/wavesurfer.min.js"></script>
 

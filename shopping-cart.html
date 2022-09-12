@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App | Личный кабинет</title>
+    <title>Wood App | Корзина</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
@@ -502,59 +502,226 @@
                   </li>
                   <li class="bread-crumbs__item bread-crumbs__item_currnet">
                     <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
-                    <a class="bread-crumbs__link" href="#">Личный кабинет</a>
+                    <a class="bread-crumbs__link" href="#">Корзина</a>
                   </li>
                 </ul>
               </div>
-              <h1 class="page-head__title title">Смена пароля</h1>
+              <h1 class="page-head__title title">Корзина</h1>
             </div>
           </div>
         </div>
 
-        <section class="personal-area">
+        <section class="shopping-cart">
           <div class="container">
-            <div class="personal-area__inner">
-              <nav class="personal-area__menu personal-area-menu">
-                <ul class="personal-area-menu__list">
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-orders.html">Мои заказы</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-data.html">Личные данные</a>
-                  </li>
-                  <li class="personal-area-menu__item personal-area-menu__item_current">
-                    <a class="personal-area-menu__link" href="./personal-password.html">Смена пароля</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-help.html">Помощь</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a href="#" class="personal-area-menu__link">Выход</a>
-                  </li>
-                </ul>
-              </nav>
+            <div class="shopping-cart__inner">
+              <div class="shopping-cart__lsit">
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
 
-              <form class="personal-area__form" action="#" name="personal-data">
-                <div class="personal-area__form-item">
-                  <label for="password_old" class="personal-area__form-label">Старый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-old" id="password_old" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_new" class="personal-area__form-label">Новый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-new" id="password_new" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_repeat" class="personal-area__form-label">Повторите новый пароль:</label>
-                  <input
-                    class="personal-area__form-input"
-                    type="password"
-                    name="password-repeat"
-                    id="password_repeat"
-                  />
-                </div>
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
 
-                <button class="personal-area__form-button button-primary" type="submit"><span>Изменить</span></button>
-              </form>
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="shopping-cart__total total-block">
+                <div class="total-block__body">
+                  <div class="total-block__item">
+                    <p class="total-block__price-label">Итого:</p>
+                    <p class="total-block__price-value">1400,00 ₽</p>
+                  </div>
+                  <div class="total-block__item">
+                    <p class="total-block__delivery-label">Доставка:</p>
+                    <p class="total-block__delivery-value">Бесплатно</p>
+                  </div>
+                  <div class="total-block__item">
+                    <p class="total-block__period-label">Срок доставки:</p>
+                    <p class="total-block__period-value">3-7 дней</p>
+                  </div>
+                </div>
+                <div class="total-block__footer">
+                  <button class="total-block__button button-primary"><span>Перейти к оформлению заказа</span></button>
+                </div>
+              </div>
             </div>
           </div>
         </section>

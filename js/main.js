@@ -513,5 +513,29 @@ window.addEventListener('DOMContentLoaded', function() {
       // Responsive breakpoints
       breakpoints: {}
     });
+  } // SAMPLES
+
+
+  var samplesSelectorList = document.querySelector('.samples__selector-list');
+  var samplesSelectorInfo = document.querySelector('.samples__selector-info');
+  var samplesSelectorTotal = document.querySelector('.samples__selector-total');
+
+  if (samplesSelectorList) {
+    var chosenNum = samplesSelectorInfo.querySelector('#selector-chosen-num');
+    chosenNum.textContent = 0;
+    samplesSelectorList.addEventListener('click', function(e) {
+      var target = e.target;
+      var chosenSample = samplesSelectorList.querySelectorAll('.samples-card__check-input:checked');
+
+      if (chosenSample.length > 0) {
+        chosenSample.forEach(function(item) {
+          console.log(item.closest('.samples-card').querySelector('.samples-card__price').textContent);
+        });
+      }
+
+      if (target && target.classList.contains('samples-card__check-input')) {
+        chosenNum.textContent = chosenSample.length;
+      }
+    });
   }
 });

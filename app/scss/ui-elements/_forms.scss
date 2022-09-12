@@ -1,3 +1,86 @@
 @use "../helper" as *;
 
 /* UI elements "Forms" */
+.total-block {
+  @include for-min-size("lg") {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  @include for-min-size("xl") {
+    flex: 0 0 33.33%;
+    display: block;
+    margin: 0 0 0 0;
+    padding: 0 0 0 16px;
+    position: sticky;
+  }
+
+  // .total-block__body
+  &__body {
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 40%;
+    }
+  }
+
+  // .total-block__item
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .total-block__price-label
+  // .total-block__delivery-label
+  // .total-block__period-label
+  &__price-label,
+  &__delivery-label,
+  &__period-label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  // .total-block__delivery-label
+  // .total-block__period-label
+  &__delivery-label,
+  &__period-label {
+    color: rgba($color: $clr-gray-700, $alpha: 0.7);
+  }
+
+  // .total-block__price-value
+  // .total-block__delivery-value
+  // .total-block__period-value
+  &__price-value,
+  &__delivery-value,
+  &__period-value {
+    margin: 0 0 0 8px;
+    font-size: 16px;
+    line-height: 22px;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  // .total-block__footer
+  &__footer {
+    margin: 24px 0 0 0;
+  }
+
+  // .total-block__button
+  &__button {
+    width: 100%;
+  }
+}
+

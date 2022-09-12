@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App | Личный кабинет</title>
+    <title>Wood App | Сообщение</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
@@ -491,70 +491,12 @@
       </header>
 
       <main class="main">
-        <!-- page-head -->
-        <div class="page-head">
+        <section class="order-message">
           <div class="container">
-            <div class="page-head__inner">
-              <div class="page-head__bread-crumbs">
-                <ul class="bread-crumbs">
-                  <li class="bread-crumbs__item">
-                    <a class="bread-crumbs__link" href="./">Главная</a>
-                  </li>
-                  <li class="bread-crumbs__item bread-crumbs__item_currnet">
-                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
-                    <a class="bread-crumbs__link" href="#">Личный кабинет</a>
-                  </li>
-                </ul>
-              </div>
-              <h1 class="page-head__title title">Смена пароля</h1>
-            </div>
-          </div>
-        </div>
-
-        <section class="personal-area">
-          <div class="container">
-            <div class="personal-area__inner">
-              <nav class="personal-area__menu personal-area-menu">
-                <ul class="personal-area-menu__list">
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-orders.html">Мои заказы</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-data.html">Личные данные</a>
-                  </li>
-                  <li class="personal-area-menu__item personal-area-menu__item_current">
-                    <a class="personal-area-menu__link" href="./personal-password.html">Смена пароля</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-help.html">Помощь</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a href="#" class="personal-area-menu__link">Выход</a>
-                  </li>
-                </ul>
-              </nav>
-
-              <form class="personal-area__form" action="#" name="personal-data">
-                <div class="personal-area__form-item">
-                  <label for="password_old" class="personal-area__form-label">Старый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-old" id="password_old" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_new" class="personal-area__form-label">Новый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-new" id="password_new" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_repeat" class="personal-area__form-label">Повторите новый пароль:</label>
-                  <input
-                    class="personal-area__form-input"
-                    type="password"
-                    name="password-repeat"
-                    id="password_repeat"
-                  />
-                </div>
-
-                <button class="personal-area__form-button button-primary" type="submit"><span>Изменить</span></button>
-              </form>
+            <div class="order-message__inner">
+              <p class="order-message__title title">Оплата прошла успешно!</p>
+              <p class="order-message__text text">Мы свяжемся с вами в ближайшее время</p>
+              <a href="./" class="order-message__button button-primary"><span>Вернуться на главную</span></a>
             </div>
           </div>
         </section>

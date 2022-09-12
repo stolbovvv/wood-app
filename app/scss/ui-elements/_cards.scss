@@ -432,3 +432,250 @@
     }
   }
 }
+
+.order-card {
+  overflow: hidden;
+  border: 1px solid rgba($color: $clr-gray-700, $alpha: 0.5);
+  border-radius: 4px;
+
+  @include for-min-size("lg") {
+    display: flex;
+  }
+
+  // .order-card__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 110px;
+
+    @include for-min-size("lg") {
+      flex: 0 0 180px;
+    }
+  }
+
+  // .order-card__img
+  &__img {
+    @include responsive-img;
+  }
+
+  // .order-card__body
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 24px 0;
+
+    @include for-min-size("md") {
+      flex: 1 1 auto;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    @include for-min-size("xl") {
+      flex-wrap: nowrap;
+    }
+  }
+
+  // .order-card__col
+  &__col {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    @include for-min-size("xl") {
+      flex: 0 1 auto;
+      flex-direction: row;
+    }
+
+    &_shrink-0 {
+      @include for-min-size("xl") {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  // .order-card__item
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px 24px 0 24px;
+
+    > * + * {
+      margin: 8px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      align-items: flex-start;
+    }
+  }
+
+  // .order-card__title
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  // .order-card__text
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .order-card__row
+}
+
+.shopping-cart-card {
+  overflow: hidden;
+  border: 1px solid rgba($color: $clr-gray-700, $alpha: 0.5);
+  border-radius: 4px;
+
+  @include for-min-size("md") {
+    display: flex;
+  }
+
+  // .shopping-cart-card__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+    min-height: 110px;
+
+    @include for-min-size("md") {
+      flex: 0 0 180px;
+    }
+  }
+
+  // .shopping-cart-card__img
+  &__img {
+    @include responsive-img;
+  }
+
+  // .shopping-cart-card__body
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0 24px 0;
+
+    @include for-min-size("md") {
+      flex: 1 1 auto;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    @include for-min-size("xl") {
+      flex-wrap: nowrap;
+    }
+  }
+
+  // .shopping-cart-card__col
+  &__col {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    @include for-min-size("xl") {
+      flex: 0 1 auto;
+      flex-direction: row;
+    }
+
+    &_shrink-0 {
+      @include for-min-size("xl") {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  // .shopping-cart-card__item
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px 24px 0 24px;
+
+    > * + * {
+      margin: 8px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      align-items: flex-start;
+    }
+  }
+
+  // .shopping-cart-card__text
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // .shopping-cart-card__title
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  // .shopping-cart-card__controls
+  &__controls {
+    display: flex;
+    margin: 0 auto 0 auto;
+    padding: 24px 24px 0 24px;
+
+    @include for-min-size("md") {
+      margin: 0 0 0 auto;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 60%;
+      justify-content: space-between;
+    }
+  }
+
+  // .shopping-cart-card__counter
+  &__counter {
+    & > .goods-counter__input {
+      width: 48px;
+    }
+
+    @include for-min-size("md") {
+      & > .goods-counter__input {
+        width: 58px;
+      }
+    }
+
+    @include for-min-size("lg") {
+      & > .goods-counter__input {
+        width: 100px;
+      }
+    }
+  }
+
+  // .shopping-cart-card__button
+  &__button {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    margin: 0 0 0 12px;
+    cursor: pointer;
+
+    @include for-min-size("md") {
+      width: 58px;
+      height: 58px;
+    }
+  }
+
+  // .shopping-cart-card__button-icon
+  &__button-icon {
+    font-size: 24px;
+  }
+}

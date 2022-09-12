@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App | Личный кабинет</title>
+    <title>Wood App | Образцы</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
@@ -500,61 +500,225 @@
                   <li class="bread-crumbs__item">
                     <a class="bread-crumbs__link" href="./">Главная</a>
                   </li>
+                  <li class="bread-crumbs__item">
+                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                    <a class="bread-crumbs__link" href="./store.html">STORE</a>
+                  </li>
                   <li class="bread-crumbs__item bread-crumbs__item_currnet">
                     <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
-                    <a class="bread-crumbs__link" href="#">Личный кабинет</a>
+                    <a class="bread-crumbs__link" href="#">Образцы</a>
                   </li>
                 </ul>
               </div>
-              <h1 class="page-head__title title">Смена пароля</h1>
+              <h1 class="page-head__title title">Образцы</h1>
             </div>
           </div>
         </div>
 
-        <section class="personal-area">
-          <div class="container">
-            <div class="personal-area__inner">
-              <nav class="personal-area__menu personal-area-menu">
-                <ul class="personal-area-menu__list">
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-orders.html">Мои заказы</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-data.html">Личные данные</a>
-                  </li>
-                  <li class="personal-area-menu__item personal-area-menu__item_current">
-                    <a class="personal-area-menu__link" href="./personal-password.html">Смена пароля</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-help.html">Помощь</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a href="#" class="personal-area-menu__link">Выход</a>
-                  </li>
-                </ul>
-              </nav>
+        <section class="samples">
+          <div class="samples__inner">
+            <div class="samples__gallery">
+              <div class="samples__gallery-no-chosen">
+                <img class="samples__gallery-no-chosen-img" src="./images/samples/not-selected-img.png" alt="" />
+                <p class="samples__gallery-no-chosen-label">You have not selected any samples yet</p>
+              </div>
+            </div>
+            <div class="samples__selector">
+              <div class="samples__selector-info">
+                <p class="samples__selector-info-label">Выбор цвета панелей</p>
+                <p class="samples__selector-info-value">Выбрано цветов: <span id="selector-chosen-num">0</span></p>
+              </div>
+              <div class="samples__selector-list">
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
 
-              <form class="personal-area__form" action="#" name="personal-data">
-                <div class="personal-area__form-item">
-                  <label for="password_old" class="personal-area__form-label">Старый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-old" id="password_old" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_new" class="personal-area__form-label">Новый пароль:</label>
-                  <input class="personal-area__form-input" type="password" name="password-new" id="password_new" />
-                </div>
-                <div class="personal-area__form-item">
-                  <label for="password_repeat" class="personal-area__form-label">Повторите новый пароль:</label>
-                  <input
-                    class="personal-area__form-input"
-                    type="password"
-                    name="password-repeat"
-                    id="password_repeat"
-                  />
-                </div>
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
 
-                <button class="personal-area__form-button button-primary" type="submit"><span>Изменить</span></button>
-              </form>
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="samples-card">
+                  <div class="samples-card__img-wrapper">
+                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                  </div>
+                  <div class="samples-card__body">
+                    <div class="samples-card__item">
+                      <p class="samples-card__text">Классический Серый</p>
+                      <p class="samples-card__title">1400,00 ₽</p>
+                    </div>
+                    <div class="samples-card__item">
+                      <div class="samples-card__check">
+                        <i class="samples-card__check-icon icon-ui-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="samples__selector-total total-block">
+                <div class="total-block__body">
+                  <div class="total-block__item">
+                    <p class="total-block__price-label">Итого:</p>
+                    <p class="total-block__price-value">1400,00 ₽</p>
+                  </div>
+                  <div class="total-block__item">
+                    <p class="total-block__delivery-label">Доставка:</p>
+                    <p class="total-block__delivery-value">Бесплатно</p>
+                  </div>
+                  <div class="total-block__item">
+                    <p class="total-block__period-label">Срок доставки:</p>
+                    <p class="total-block__period-value">3-7 дней</p>
+                  </div>
+                </div>
+                <div class="total-block__footer">
+                  <button class="total-block__button button-primary"><span>Перейти к оформлению заказа</span></button>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -19,6 +19,7 @@
 
 // Blocks, Layout-related sections
 @forward "./blocks/header";
+@forward "./blocks/footer";
 @forward "./blocks/page-head";
 @forward "./blocks/home-hero";
 @forward "./blocks/story-hero";
@@ -41,4 +42,7 @@
 @forward "./blocks/goods";
 @forward "./blocks/accessories-hero";
 @forward "./blocks/personal-area";
-@forward "./blocks/footer";
+@forward "./blocks/shopping-cart";
+@forward "./blocks/making-an-order";
+@forward "./blocks/order-message";
+@forward "./blocks/samples";

@@ -21,12 +21,22 @@
     <title>Wood App | Корзина</title>
 
     <!-- Connetcing Libs Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
+
+    <noscript>
+      <style>
+        /* Reinstate scrolling for non-JS clients */
+        .simplebar-content-wrapper {
+          overflow: auto;
+        }
+      </style>
+    </noscript>
 
     <!-- Connecting Page Styles -->
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
-  <body>
+  <body data-simplebar>
     <div class="wrapper">
       <header class="header">
         <div class="header__inner">
@@ -488,7 +498,7 @@
               <div class="page-head__bread-crumbs">
                 <ul class="bread-crumbs">
                   <li class="bread-crumbs__item">
-                    <a class="bread-crumbs__link" href="#">Главная</a>
+                    <a class="bread-crumbs__link" href="./">Главная</a>
                   </li>
                   <li class="bread-crumbs__item bread-crumbs__item_currnet">
                     <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
@@ -499,31 +509,222 @@
               <h1 class="page-head__title title">Корзина</h1>
             </div>
           </div>
+        </div>
 
-          <section class="shopping-cart">
-            <div class="container">
-              <div class="shopping-cart__inner">
-                <div class="shopping-cart__lsit"></div>
+        <section class="shopping-cart">
+          <div class="container">
+            <div class="shopping-cart__inner">
+              <div class="shopping-cart__lsit">
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
 
-                <div class="shopping-cart__total">
-                  <div class="shopping-cart__total-item">
-                    <p class="shopping-cart__total-price-label">Итого</p>
-                    <p class="shopping-cart__total-price-value">1400,00 ₽</p>
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
                   </div>
-                  <div class="shopping-cart__total-item">
-                    <p class="shopping-cart__total-delivery-label">Доставка</p>
-                    <p class="shopping-cart__total-delivery-value">Бесплатно</p>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
                   </div>
-                  <div class="shopping-cart__total-item">
-                    <p class="shopping-cart__total-delivery-period">Доставка: 3-7 дней</p>
-                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
 
-                  <button class="shopping-cart__button button-primary"><span>Перейти к оформлению заказа</span></button>
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <article class="shopping-cart-card">
+                  <div class="shopping-cart-card__img-wrapper">
+                    <img class="shopping-cart-card__img" alt="" src="./images/panels/base-panel_1.jpg" />
+                  </div>
+                  <div class="shopping-cart-card__body">
+                    <div class="shopping-cart-card__col">
+                      <div class="shopping-cart-card__item">
+                        <p class="shopping-cart-card__text">Классический Серый</p>
+                        <p class="shopping-cart-card__title">1400,00 ₽</p>
+                      </div>
+                    </div>
+
+                    <div class="shopping-cart-card__controls">
+                      <div class="shopping-cart-card__counter goods-counter">
+                        <button class="goods-counter__button" data-type="decrement">–</button>
+                        <input
+                          class="goods-counter__input"
+                          type="number"
+                          name="quantity-of-goods"
+                          id=""
+                          value="1"
+                          min="0"
+                        />
+                        <button class="goods-counter__button" data-type="increment">+</button>
+                      </div>
+                      <button class="shopping-cart-card__button">
+                        <i class="shopping-cart-card__button-icon icon-ui-cart-delete"></i>
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="shopping-cart__total total-block">
+                <div class="total-block__body">
+                  <div class="total-block__item">
+                    <p class="total-block__price-label">Итого:</p>
+                    <p class="total-block__price-value">1400,00 ₽</p>
+                  </div>
+                  <div class="total-block__item">
+                    <p class="total-block__delivery-label">Доставка:</p>
+                    <p class="total-block__delivery-value">Бесплатно</p>
+                  </div>
+                  <div class="total-block__item">
+                    <p class="total-block__period-label">Срок доставки:</p>
+                    <p class="total-block__period-value">3-7 дней</p>
+                  </div>
+                </div>
+                <div class="total-block__footer">
+                  <button class="total-block__button button-primary"><span>Перейти к оформлению заказа</span></button>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
@@ -660,6 +861,7 @@
 
     <!-- Connection Libs Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.2.0/wavesurfer.min.js"></script>
 

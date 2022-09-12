@@ -1,0 +1,36 @@
+@use "../helper" as *;
+
+/* Block "order-message" */
+.order-message {
+  padding: 70px 0 70px 0;
+
+  @include for-min-size("md") {
+    padding: 120px 0 120px 0;
+  }
+
+  @include for-min-size("lg") {
+    padding: 170px 0 170px 0;
+  }
+
+  // .order-message__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  // .order-message__title
+  &__title {
+  }
+
+  // .order-message__text
+  &__text {
+    margin: 16px 0 0 0;
+  }
+
+  // .order-message__button
+  &__button {
+    display: block;
+    margin: 32px auto 0 auto;
+  }
+}

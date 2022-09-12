@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App | Личный кабинет</title>
+    <title>Wood App | Корзина</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
@@ -492,64 +492,38 @@
                   </li>
                   <li class="bread-crumbs__item bread-crumbs__item_currnet">
                     <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
-                    <a class="bread-crumbs__link" href="#">Личный кабинет</a>
+                    <a class="bread-crumbs__link" href="#">Корзина</a>
                   </li>
                 </ul>
               </div>
-              <h1 class="page-head__title title">Мои заказы</h1>
+              <h1 class="page-head__title title">Корзина</h1>
             </div>
           </div>
-        </div>
 
-        <section class="personal-area">
-          <div class="container">
-            <div class="personal-area__inner">
-              <nav class="personal-area__menu personal-area-menu">
-                <ul class="personal-area-menu__list">
-                  <li class="personal-area-menu__item personal-area-menu__item_current">
-                    <a class="personal-area-menu__link" href="./personal-orders.html">Мои заказы</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-data.html">Личные данные</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-password.html">Смена пароля</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="./personal-help.html">Помощь</a>
-                  </li>
-                  <li class="personal-area-menu__item">
-                    <a class="personal-area-menu__link" href="#">Выход</a>
-                  </li>
-                </ul>
-              </nav>
+          <section class="shopping-cart">
+            <div class="container">
+              <div class="shopping-cart__inner">
+                <div class="shopping-cart__lsit"></div>
 
-              <div class="personal-area__orders">
-                <div class="personal-area__orders-slider">
-                  <div class="personal-area__orders-list"></div>
-
-                  <div class="personal-area__orders-controls">
-                    <div class="personal-area__orders-paginations">
-                      <span class="personal-area__orders-paginations-dot --active"></span>
-                      <span class="personal-area__orders-paginations-dot"></span>
-                      <span class="personal-area__orders-paginations-dot"></span>
-                      <span class="personal-area__orders-paginations-dot"></span>
-                      <span class="personal-area__orders-paginations-dot"></span>
-                    </div>
-                    <div class="personal-area__orders-buttons">
-                      <button class="personal-area__orders-button-prev">
-                        <i class="personal-area__orders-button-icon icon-ui-arrow-left"></i>
-                      </button>
-                      <button class="personal-area__orders-button-next">
-                        <i class="personal-area__orders-button-icon icon-ui-arrow-right"></i>
-                      </button>
-                    </div>
+                <div class="shopping-cart__total">
+                  <div class="shopping-cart__total-item">
+                    <p class="shopping-cart__total-price-label">Итого</p>
+                    <p class="shopping-cart__total-price-value">1400,00 ₽</p>
                   </div>
+                  <div class="shopping-cart__total-item">
+                    <p class="shopping-cart__total-delivery-label">Доставка</p>
+                    <p class="shopping-cart__total-delivery-value">Бесплатно</p>
+                  </div>
+                  <div class="shopping-cart__total-item">
+                    <p class="shopping-cart__total-delivery-period">Доставка: 3-7 дней</p>
+                  </div>
+
+                  <button class="shopping-cart__button button-primary"><span>Перейти к оформлению заказа</span></button>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       <footer class="footer">

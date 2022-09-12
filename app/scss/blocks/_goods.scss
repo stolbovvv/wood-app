@@ -1,47 +1,6 @@
 @use "../helper" as *;
 
 /* Block "goods" */
-.goods-counter {
-  display: flex;
-  align-items: center;
-
-  // .goods-counter__button
-  &__button {
-    width: 48px;
-    height: 48px;
-    border: none;
-    border-radius: 50%;
-    background: #f0f0f0;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    color: #000000;
-    cursor: pointer;
-
-    @include for-min-size("md") {
-      width: 58px;
-      height: 58px;
-    }
-  }
-
-  // .goods-counter__input
-  &__input {
-    width: 102px;
-    height: 48px;
-    margin: 0 18px;
-    border-radius: 4px;
-    border: 1px solid rgba($color: #383838, $alpha: 0.5);
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    color: #000000;
-
-    @include for-min-size("md") {
-      height: 58px;
-    }
-  }
-}
-
 .goods {
   padding: 35px 0 35px 0;
 

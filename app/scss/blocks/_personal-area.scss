@@ -245,6 +245,10 @@
     > * + * {
       margin: 0 0 0 24px;
     }
+
+    @include for-min-size("md") {
+      margin: 0 0 0 0;
+    }
   }
 
   // .personal__orders-button-prev

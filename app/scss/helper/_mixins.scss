@@ -12,6 +12,7 @@
          + "Available breakpoints are: #{map.keys($breakpoint-list)}.";
   }
 }
+
 // hover and focus-whith
 @mixin for-hover-and-focus {
   &:hover,
@@ -29,4 +30,16 @@
     font-style: $style;
     font-display: swap;
   }
+}
+
+// Responsive images
+
+@mixin responsive-img($fit: cover, $pos: center) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: $fit;
+  object-position: $pos;
 }

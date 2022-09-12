@@ -16,6 +16,10 @@
     position: sticky;
   }
 
+  &_display-blok {
+    display: block;
+  }
+
   // .total-block__body
   &__body {
     > * + * {

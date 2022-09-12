@@ -478,4 +478,30 @@ window.addEventListener('DOMContentLoaded', () => {
       breakpoints: {},
     });
   }
+
+  // SAMPLES
+  const samplesSelectorList = document.querySelector('.samples__selector-list');
+  const samplesSelectorInfo = document.querySelector('.samples__selector-info');
+  const samplesSelectorTotal = document.querySelector('.samples__selector-total');
+
+  if (samplesSelectorList) {
+    const chosenNum = samplesSelectorInfo.querySelector('#selector-chosen-num');
+
+    chosenNum.textContent = 0;
+
+    samplesSelectorList.addEventListener('click', (e) => {
+      const target = e.target;
+      const chosenSample = samplesSelectorList.querySelectorAll('.samples-card__check-input:checked');
+
+      if (chosenSample.length > 0) {
+        chosenSample.forEach((item) => {
+          console.log(item.closest('.samples-card').querySelector('.samples-card__price').textContent);
+        });
+      }
+
+      if (target && target.classList.contains('samples-card__check-input')) {
+        chosenNum.textContent = chosenSample.length;
+      }
+    });
+  }
 });

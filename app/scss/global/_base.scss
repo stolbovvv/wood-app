@@ -13,6 +13,10 @@ body {
   }
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -50,12 +54,4 @@ body {
   @include for-min-size("xxl") {
     width: min(100%, 1860px);
   }
-}
-
-body > .simplebar-track > .simplebar-scrollbar::before {
-  background-color: $clr-primary;
-}
-
-body > .simplebar-track > .simplebar-scrollbar.simplebar-visible::before {
-  opacity: 0.75;
 }

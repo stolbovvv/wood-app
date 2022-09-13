@@ -483,24 +483,77 @@ window.addEventListener('DOMContentLoaded', () => {
   const samplesSelectorList = document.querySelector('.samples__selector-list');
   const samplesSelectorInfo = document.querySelector('.samples__selector-info');
   const samplesSelectorTotal = document.querySelector('.samples__selector-total');
+  const samplesGallery = document.querySelector('.samples__gallery');
+
+  function updateSampleSum(arrElements, attr) {
+    let total = 0;
+
+    arrElements.forEach((item) => (total += +item.getAttribute(attr)));
+
+    return total;
+  }
+
+  function createSampleThumbnail(id, thubnailSrc) {
+    const sampleImgWrapper = document.createElement('div');
+    const sampleImgThunbnail = document.createElement('img');
+
+    sampleImgWrapper.classList.add('samples__gallery-img-wrapper');
+    sampleImgWrapper.setAttribute('data-sample-id', id);
+    sampleImgThunbnail.classList.add('samples__gallery-img');
+    sampleImgThunbnail.src = thubnailSrc;
+
+    gsap.from(sampleImgThunbnail, {
+      duration: 0.5,
+      opacity: 0,
+    });
+
+    sampleImgWrapper.append(sampleImgThunbnail);
+
+    return sampleImgWrapper;
+  }
 
   if (samplesSelectorList) {
-    const chosenNum = samplesSelectorInfo.querySelector('#selector-chosen-num');
+    const numberSelectedSamples = samplesSelectorInfo.querySelector('#samples_chosen_num');
+    const priceSelectedSamples = samplesSelectorTotal.querySelector('#samples_total_price');
+    const galleryNoChosen = samplesGallery.querySelector('.samples__gallery-no-chosen');
+    const galleryWrapper = samplesGallery.querySelector('.samples__gallery-wrapper');
+    const galleryItems = galleryWrapper.querySelector('.samples__gallery-items');
 
-    chosenNum.textContent = 0;
+    numberSelectedSamples.textContent = '0';
+    priceSelectedSamples.textContent = '0.00';
 
     samplesSelectorList.addEventListener('click', (e) => {
       const target = e.target;
-      const chosenSample = samplesSelectorList.querySelectorAll('.samples-card__check-input:checked');
+      const chosenSapmplesList = samplesSelectorList.querySelectorAll('.samples-card__input:checked');
+      const chosenGalleryItems = galleryItems.querySelectorAll('.samples__gallery-img-wrapper');
 
-      if (chosenSample.length > 0) {
-        chosenSample.forEach((item) => {
-          console.log(item.closest('.samples-card').querySelector('.samples-card__price').textContent);
-        });
+      if (chosenSapmplesList.length > 0) {
+        galleryNoChosen.style.display = 'none';
+        galleryWrapper.style.display = 'flex';
+      } else {
+        galleryNoChosen.style.display = 'flex';
+        galleryWrapper.style.display = 'none';
       }
 
-      if (target && target.classList.contains('samples-card__check-input')) {
-        chosenNum.textContent = chosenSample.length;
+      if (chosenSapmplesList.length > 9) {
+        galleryItems.classList.add('samples__gallery-items_col-4');
+      } else {
+        galleryItems.classList.remove('samples__gallery-items_col-4');
+      }
+
+      if (target && target.classList.contains('samples-card__input')) {
+        numberSelectedSamples.textContent = chosenSapmplesList.length;
+        priceSelectedSamples.textContent = updateSampleSum(chosenSapmplesList, 'data-sample-price').toFixed(2);
+
+        // galleryItems.append(createSampleThumbnail(target.id, target.getAttribute('data-sample-thumb')));
+
+        if (target.checked) {
+          galleryItems.append(createSampleThumbnail(target.id, target.getAttribute('data-sample-thumb')));
+        } else {
+          chosenGalleryItems.forEach((item) => {
+            if (item.getAttribute('data-sample-id') === target.id) item.remove();
+          });
+        }
       }
     });
   }

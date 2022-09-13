@@ -1,0 +1,256 @@
+@use "../helper" as *;
+
+/* Block "delivery" */
+.delivery {
+  padding: 35px 0 35px 0;
+  background-image: url("../images/bg/bg-delivery.svg");
+  background-repeat: no-repeat;
+  background-position: center 300px;
+  background-size: contain;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  @include for-min-size("lg") {
+    background-position: center 200px;
+  }
+
+  // .delivery__inner
+  &__inner {
+  }
+
+  // .delivery__tabs
+  &__tabs {
+    > * + * {
+      margin: 2px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      display: flex;
+
+      > * + * {
+        margin: 0 0 0 2px;
+      }
+    }
+  }
+
+  // .delivery__tabs-item
+  &__tabs-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 77px;
+    padding: 17px 24px 16px 24px;
+    background-color: #e7dfd9;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &.--active {
+      background-color: #787d46;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 33.33%;
+    }
+  }
+
+  // .delivery__tabs-label
+  &__tabs-label {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    pointer-events: none;
+
+    .--active > & {
+      color: $clr-white;
+    }
+  }
+
+  // .delivery__content
+  &__content {
+  }
+
+  // .delivery__content-item
+  &__content-item {
+    padding: 50px 0 0 0;
+
+    @include for-min-size("md") {
+      padding: 70px 0 0 0;
+    }
+  }
+
+  // .delivery__content-title
+  &__content-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  // .delivery__content-prices
+  &__content-prices {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 36px 0 0 0;
+
+    > * + * {
+      margin: 36px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+
+      > * + * {
+        margin: 50px 0 0 0;
+      }
+    }
+
+    @include for-min-size("lg") {
+      flex-direction: row;
+      align-items: flex-start;
+
+      > * + * {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  // .delivery__content-prices-item
+  &__content-prices-item {
+    @include for-min-size("lg") {
+      flex: 0 0 45%;
+    }
+  }
+
+  // .delivery__content-prices-title
+  &__content-prices-title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    > span {
+      color: $clr-primary;
+    }
+
+    @include for-min-size("md") {
+      font-size: 52px;
+      line-height: 63px;
+    }
+  }
+
+  // .delivery__content-prices-descr
+  &__content-prices-descr {
+    margin: 24px 0 0 0;
+
+    > * + * {
+      margin: 16px 0 0 0;
+    }
+  }
+
+  // .delivery__content-prices-descr-title
+  &__content-prices-descr-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  // .delivery__content-prices-descr-text
+  &__content-prices-descr-text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  // .delivery__content-prices-or
+  &__content-prices-or {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 10%;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  // .delivery__content-questions
+  &__content-questions {
+    margin: 50px 0 0 0;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  // .delivery__content-questions-link
+  &__content-questions-link {
+    display: inline-block;
+    font-weight: 600;
+    color: $clr-primary;
+    text-decoration: none;
+    width: 100%;
+
+    @include for-min-size("md") {
+      width: auto;
+    }
+  }
+
+  // .delivery__content-descr
+  &__content-descr {
+    margin: 32px 0 0 0;
+
+    > * + * {
+      margin: 32px 0 0 0;
+    }
+  }
+
+  // .delivery__content-descr-item
+  &__content-descr-item {
+  }
+
+  // .delivery__content-descr-title
+  &__content-descr-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .delivery__content-descr-text
+  &__content-descr-text {
+    margin: 16px 0 0 0;
+    text-align: center;
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+}

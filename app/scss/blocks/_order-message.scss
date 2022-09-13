@@ -20,7 +20,14 @@
   }
 
   // .order-message__title
-  &__title {
+  // .order-message__text
+  &__title,
+  &__text {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: center;
+    }
   }
 
   // .order-message__text

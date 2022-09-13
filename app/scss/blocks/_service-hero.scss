@@ -1,0 +1,101 @@
+@use "../helper" as *;
+
+/* UI elements "service-hero" */
+.service-hero {
+  padding: 0 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 0 0 60px 0;
+  }
+
+  // .service-hero__inner
+  &__inner {
+    @include for-min-size("lg") {
+      display: flex;
+    }
+  }
+
+  // .service-hero__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    min-height: 380px;
+    margin: 0 -15px 0 -15px;
+    overflow: hidden;
+
+    @include for-min-size("lg") {
+      flex: 0 0 544px;
+      margin: 0 0 0 0;
+      border-radius: 4px;
+    }
+
+    @include for-min-size("xl") {
+      flex: 0 0 654px;
+    }
+
+    @include for-min-size("xxl") {
+      flex: 0 0 800px;
+    }
+  }
+
+  // .service-hero__img
+  &__img {
+    @include responsive-img;
+  }
+
+  // .service-hero__body
+  &__body {
+    margin: 36px 0 0 0;
+
+    > * + * {
+      margin: 20px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 0 0 32px;
+    }
+  }
+
+  // .service-hero__body-item
+  &__body-item {
+  }
+
+  // .service-hero__title
+  // .service-hero__descr
+  &__title,
+  &__descr {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .service-hero__descr
+  &__descr {
+    margin: 10px 0 0 0;
+  }
+
+  // .service-hero__list
+  &__list {
+    margin: 24px 0 0 0;
+    list-style-type: none;
+
+    > * + * {
+      margin: 14px 0 0 0;
+    }
+  }
+
+  // .service-hero__list-item
+  &__list-item {
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba($color: $clr-gray-700, $alpha: 0.7);
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}

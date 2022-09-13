@@ -522,235 +522,457 @@
                 <img class="samples__gallery-no-chosen-img" src="./images/samples/not-selected-img.png" alt="" />
                 <p class="samples__gallery-no-chosen-label">You have not selected any samples yet</p>
               </div>
+              <div class="samples__gallery-wrapper">
+                <div class="samples__gallery-items"></div>
+              </div>
             </div>
             <form class="samples__selector" action="#">
               <div class="samples__selector-info">
                 <p class="samples__selector-info-label">Выбор цвета панелей</p>
-                <p class="samples__selector-info-value">Выбрано цветов: <span id="selector-chosen-num">0</span></p>
+                <p class="samples__selector-info-value">Выбрано цветов: <span id="samples_chosen_num">0</span></p>
               </div>
               <div class="samples__selector-list" data-simplebar>
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_1"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-1"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-1.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_1">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_2"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-2"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-2.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_2">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_3"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-3"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-3.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_3">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_4"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-4"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-4.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_4">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_5"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-5"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-5.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_5">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_6"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-6"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-6.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_6">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_7"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-7"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-1.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_7">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_8"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-8"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-2.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_8">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_9"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-9"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-3.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_9">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_10"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-10"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-4.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_10">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_11"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-11"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-5.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_11">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
 
-                <label class="samples-card">
-                  <div class="samples-card__img-wrapper">
-                    <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="samples-card__body">
-                    <div class="samples-card__item">
-                      <p class="samples-card__label">Классический Серый</p>
-                      <p class="samples-card__price">1400,00 ₽</p>
+                <article class="samples-card">
+                  <input
+                    id="samples_12"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-12"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-6.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_12">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
                     </div>
-                    <div class="samples-card__item">
-                      <input class="samples-card__check-input" type="checkbox" name="" id="" />
-                      <div class="samples-card__check">
-                        <i class="samples-card__check-icon icon-ui-check"></i>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </label>
+                  </label>
+                </article>
+
+                <article class="samples-card">
+                  <input
+                    id="samples_13"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-13"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-3.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_13">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                    </div>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </article>
+
+                <article class="samples-card">
+                  <input
+                    id="samples_14"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-14"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-4.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_14">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                    </div>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </article>
+
+                <article class="samples-card">
+                  <input
+                    id="samples_15"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-15"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-5.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_15">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                    </div>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </article>
+
+                <article class="samples-card">
+                  <input
+                    id="samples_16"
+                    class="samples-card__input"
+                    type="checkbox"
+                    name="samples-16"
+                    data-sample-price="1400"
+                    data-sample-thumb="./images/samples/thumbnail-sample-6.png"
+                  />
+                  <label class="samples-card__wrapper" for="samples_16">
+                    <div class="samples-card__img-wrapper">
+                      <img class="samples-card__img" src="./images/panels/base-panel_1.jpg" alt="" />
+                    </div>
+                    <div class="samples-card__body">
+                      <div class="samples-card__item">
+                        <p class="samples-card__name">Классический Серый</p>
+                        <p class="samples-card__price">1400,00 ₽</p>
+                      </div>
+                      <div class="samples-card__item">
+                        <div class="samples-card__check">
+                          <i class="samples-card__check-icon icon-ui-check"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </article>
               </div>
 
               <div class="samples__selector-total total-block">
                 <div class="total-block__body">
                   <div class="total-block__item">
                     <p class="total-block__price-label">Итого:</p>
-                    <p class="total-block__price-value">1400,00 ₽</p>
+                    <p class="total-block__price-value">
+                      <span id="samples_total_price">1400,00</span>
+                      <span> ₽</span>
+                    </p>
                   </div>
                   <div class="total-block__item">
                     <p class="total-block__delivery-label">Доставка:</p>

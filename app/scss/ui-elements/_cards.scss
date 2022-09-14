@@ -91,104 +91,6 @@
   }
 }
 
-.article-preview {
-  // .article-preview__img-wrapper
-  &__img-wrapper {
-    position: relative;
-    width: 100%;
-    padding: 0 0 144px 0;
-    border-radius: 4px;
-    overflow: hidden;
-
-    // .article-preview__img-wrapper_big
-    &_big {
-      padding: 0 0 240px 0;
-
-      @include for-min-size("md") {
-        padding: 0 0 290px 0;
-      }
-
-      @include for-min-size("lg") {
-        padding: 0 0 450px 0;
-      }
-
-      @include for-min-size("xl") {
-        padding: 0 0 540px 0;
-      }
-    }
-  }
-
-  // .article-preview__img
-  &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  // .article-preview__body
-  &__body {
-    margin: 12px 0 0 0;
-
-    > * + * {
-      margin: 12px 0 0 0;
-    }
-  }
-
-  // .article-preview__title
-  &__title {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-
-    @include for-min-size("md") {
-      font-size: 24px;
-      line-height: 29px;
-    }
-  }
-
-  // .article-preview__link
-  &__link {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 17px;
-    text-decoration: none;
-    color: inherit;
-
-    @include for-min-size("md") {
-      font-size: 18px;
-      line-height: 22px;
-    }
-
-    // .article-preview__link_color-primary
-    &_color-primary {
-      color: $clr-primary;
-    }
-  }
-
-  // .article-preview__link-label
-  &__link-label {
-    color: inherit;
-  }
-
-  // .article-preview__link-icon
-  &__link-icon {
-    margin: 0 0 0 10px;
-    font-size: 24px;
-  }
-
-  // .article-preview__desr
-  &__desr {
-    font-size: 14px;
-    line-height: 20px;
-    color: rgba($color: $clr-gray-700, $alpha: 0.5);
-  }
-}
-
 .client-feedback-card {
   // .client-feedback-card__head
   &__head {
@@ -779,5 +681,232 @@
     .samples-card__input:checked + .samples-card__wrapper & {
       color: $clr-white;
     }
+  }
+}
+
+// .article-preview {
+//   // .article-preview__img-wrapper
+//   &__img-wrapper {
+//     position: relative;
+//     width: 100%;
+//     padding: 0 0 144px 0;
+//     border-radius: 4px;
+//     overflow: hidden;
+
+//     // .article-preview__img-wrapper_big
+//     &_big {
+//       padding: 0 0 240px 0;
+
+//       @include for-min-size("md") {
+//         padding: 0 0 290px 0;
+//       }
+
+//       @include for-min-size("lg") {
+//         padding: 0 0 450px 0;
+//       }
+
+//       @include for-min-size("xl") {
+//         padding: 0 0 540px 0;
+//       }
+//     }
+//   }
+
+//   // .article-preview__img
+//   &__img {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     object-position: center;
+//   }
+
+//   // .article-preview__body
+//   &__body {
+//     margin: 12px 0 0 0;
+
+//     > * + * {
+//       margin: 12px 0 0 0;
+//     }
+//   }
+
+//   // .article-preview__title
+//   &__title {
+//     font-weight: 600;
+//     font-size: 18px;
+//     line-height: 22px;
+
+//     @include for-min-size("md") {
+//       font-size: 24px;
+//       line-height: 29px;
+//     }
+//   }
+
+//   // .article-preview__link
+//   &__link {
+//     display: flex;
+//     align-items: center;
+//     font-size: 14px;
+//     line-height: 17px;
+//     text-decoration: none;
+//     color: inherit;
+
+//     @include for-min-size("md") {
+//       font-size: 18px;
+//       line-height: 22px;
+//     }
+
+//     // .article-preview__link_color-primary
+//     &_color-primary {
+//       color: $clr-primary;
+//     }
+//   }
+
+//   // .article-preview__link-label
+//   &__link-label {
+//     color: inherit;
+//   }
+
+//   // .article-preview__link-icon
+//   &__link-icon {
+//     margin: 0 0 0 10px;
+//     font-size: 24px;
+//   }
+
+//   // .article-preview__desr
+//   &__desr {
+//     font-size: 14px;
+//     line-height: 20px;
+//     color: rgba($color: $clr-gray-700, $alpha: 0.5);
+//   }
+// }
+
+.card {
+  // .card__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 0 220px 0;
+
+    @include for-min-size("md") {
+      padding: 0 0 270px 0;
+    }
+
+    @include for-min-size("xl") {
+      padding: 0 0 330px;
+    }
+
+    @include for-min-size("xxl") {
+      padding: 0 0 410px;
+    }
+
+    // .card__img-wrapper_heigth-small
+    &_heigth-small {
+      padding: 0 0 144px 0;
+    }
+
+    // .card__img-wrapper_heigth-large
+    &_heigth-large {
+      padding: 0 0 230px 0;
+
+      @include for-min-size("md") {
+        padding: 0 0 290px 0;
+      }
+
+      @include for-min-size("lg") {
+        padding: 0 0 450px 0;
+      }
+
+      @include for-min-size("xl") {
+        padding: 0 0 540px 0;
+      }
+    }
+  }
+
+  // .card__img
+  &__img {
+    @include responsive-img;
+  }
+
+  // .card__body
+  &__body {
+    margin: 24px 0 0 0;
+
+    > * + * {
+      margin: 16px 0 0 0;
+    }
+  }
+
+  // .card__divider
+  &__divider {
+    border: none;
+    border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.25);
+  }
+
+  // .card__title
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    > a {
+      text-decoration: none;
+      color: inherit;
+
+      @include for-hover-and-focus() {
+        color: $clr-primary;
+      }
+    }
+  }
+
+  // .card__text
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($color: $clr-gray-700, $alpha: 0.7);
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  // .card__link
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: inherit;
+
+    @include for-hover-and-focus() {
+      color: $clr-primary;
+    }
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    // .card__link_color-primary
+    &_color-primary {
+      color: $clr-primary;
+    }
+  }
+
+  // .card__link-label
+  &__link-label {
+    color: inherit;
+    transition: color 0.25s ease 0s;
+  }
+
+  // .card__link-icon
+  &__link-icon {
+    margin: 0 0 0 10px;
+    font-size: 24px;
+    transition: color 0.25s ease 0s;
   }
 }

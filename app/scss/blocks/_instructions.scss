@@ -1,0 +1,135 @@
+@use "../helper" as *;
+
+/* Block "making-an-order" */
+.instructions {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .instructions__inner
+  &__inner {
+  }
+
+  // .instructions__title
+  &__title {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .instructions__body
+  &__body {
+    margin: 36px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      position: relative;
+      padding: 0 0 130px 0;
+    }
+
+    @include for-min-size("xl") {
+      padding: 0 0 100px 0;
+    }
+  }
+
+  // .instructions__video-wrapper
+  &__video-wrapper {
+    position: relative;
+    height: 258px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include for-min-size("md") {
+      height: 465px;
+    }
+
+    @include for-min-size("lg") {
+      width: 80%;
+
+      @include for-hover-and-focus() {
+        z-index: 1;
+      }
+    }
+
+    @include for-min-size("xl") {
+      height: 557px;
+    }
+
+    @include for-min-size("xxl") {
+      height: 690px;
+    }
+  }
+
+  // .instructions__video
+  &__video {
+    @include responsive-img;
+
+    > source {
+      @include responsive-img;
+    }
+  }
+
+  // .instructions__card
+  &__card {
+    margin: 24px 0 0 0;
+    padding: 20px 20px 20px 20px;
+    border-radius: 4px;
+    background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+
+    > * + * {
+      margin: 28px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      margin: 32px 0 0 0;
+      padding: 32px 32px 32px 32px;
+    }
+
+    @include for-min-size("lg") {
+      position: absolute;
+      width: 35%;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  // .instructions__card-title
+  &__card-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    + .instructions__card-text {
+      margin: 24px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  // .instructions__card-text
+  &__card-text {
+    margin: 16px 0 0 0;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  // .instructions__card-button
+  &__card-button {
+    margin: 28px 0 0 0;
+  }
+}

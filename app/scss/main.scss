@@ -33,13 +33,15 @@
 @forward "./blocks/difference";
 @forward "./blocks/bunner";
 @forward "./blocks/video";
-@forward "./blocks/articles-slider";
+@forward "./blocks/simple-slider";
 @forward "./blocks/story-feedback";
 @forward "./blocks/story-gallery";
 @forward "./blocks/preview";
 @forward "./blocks/story-item";
 @forward "./blocks/simple-background";
 @forward "./blocks/client-feedback";
+@forward "./blocks/instructions";
+@forward "./blocks/question";
 @forward "./blocks/goods-slider.scss";
 @forward "./blocks/goods";
 @forward "./blocks/accessories-hero";
@@ -47,4 +49,5 @@
 @forward "./blocks/shopping-cart";
 @forward "./blocks/making-an-order";
 @forward "./blocks/order-message";
+@forward "./blocks/contacts";
 @forward "./blocks/samples";

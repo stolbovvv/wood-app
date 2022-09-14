@@ -1,23 +1,19 @@
 @use "../helper" as *;
 
-/* Block "articles-slider" */
-.articles-slider {
+/* Block "simple-slider" */
+.simple-slider {
   padding: 35px 0 35px 0;
 
   @include for-min-size("md") {
     padding: 60px 0 60px 0;
   }
 
-  // .articles-slider__inner
+  // .simple-slider__inner
   &__inner {
   }
 
-  // .articles-slider__slider
-  &__slider {
-  }
-
-  // .articles-slider__slider-head
-  &__slider-head {
+  // .simple-slider__head
+  &__head {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,8 +32,8 @@
     }
   }
 
-  // .articles-slider__slider-title
-  &__slider-title {
+  // .simple-slider__title
+  &__title {
     text-align: center;
 
     @include for-min-size("md") {
@@ -45,19 +41,23 @@
     }
   }
 
-  // .articles-slider__slider-button-group
-  &__slider-button-group {
+  // .simple-slider__controls
+  &__controls {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  // .articles-slider__slider-wrapper
-  &__slider-wrapper {
+  // .simple-slider__body
+  &__body {
     margin: 24px 0 0 0;
 
     @include for-min-size("md") {
       margin: 50px 0 0 0;
     }
+  }
+
+  // .simple-slider__wrapper
+  &__wrapper {
   }
 }

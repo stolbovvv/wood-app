@@ -185,12 +185,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   var colorSlider = document.querySelectorAll('.color-slider');
-  var visualizationSlider = document.querySelector('.visualization-slider');
+  var simpleSlider = document.querySelectorAll('.simple-slider');
   var applicationSlider = document.querySelector('.application-slider');
-  var articlesSlider = document.querySelector('.articles-slider__slider');
   var acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
+  var visualizationSlider = document.querySelector('.visualization-slider');
   var goodsSlider = document.querySelector('.goods-slider__slider');
-  var ordersSlider = document.querySelector('.personal-area__orders-slider');
 
   if (colorSlider.length > 0) {
     colorSlider.forEach(function(slider) {
@@ -205,54 +204,54 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  if (visualizationSlider) {
-    var slider = visualizationSlider.querySelector('.swiper');
-    var prevBtn = slider.previousElementSibling;
-    var nextBtn = slider.nextElementSibling;
-    new Swiper(slider, {
-      // Default parameters
-      slidesPerView: 3,
-      spaceBetween: 16,
-      navigation: {
-        prevEl: prevBtn,
-        nextEl: nextBtn
-      },
-      // Responsive breakpoints
-      breakpoints: {
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 32
+  if (simpleSlider.length > 0) {
+    simpleSlider.forEach(function(item) {
+      var slider = item.querySelector('.swiper');
+      var prev = item.querySelector('.slider-button-group__button-prev');
+      var next = item.querySelector('.slider-button-group__button-next');
+      console.log(slider);
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 15,
+        loop: true,
+        navigation: {
+          prevEl: prev,
+          nextEl: next
         },
-        1280: {
-          slidesPerView: 3,
-          spaceBetween: 32
-        },
-        1920: {
-          slidesPerView: 6,
-          spaceBetween: 32
+        // Responsive breakpoints
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 15
+          },
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 32
+          },
+          1920: {
+            slidesPerView: 2,
+            spaceBetween: 92
+          }
         }
-      }
+      });
     });
   }
 
   if (applicationSlider) {
-    var _slider = applicationSlider.querySelector('.swiper');
-
-    var application = _slider.closest('.application');
-
-    var _prevBtn = application.querySelector('.slider-button-group__button-prev');
-
-    var _nextBtn = application.querySelector('.slider-button-group__button-next');
-
-    new Swiper(_slider, {
+    var slider = applicationSlider.querySelector('.swiper');
+    var application = slider.closest('.application');
+    var prevBtn = application.querySelector('.slider-button-group__button-prev');
+    var nextBtn = application.querySelector('.slider-button-group__button-next');
+    new Swiper(slider, {
       // Default parameters
       slidesPerView: 1,
       spaceBetween: 15,
       loopAdditionalSlides: 2,
       loop: true,
       navigation: {
-        prevEl: _prevBtn,
-        nextEl: _nextBtn
+        prevEl: prevBtn,
+        nextEl: nextBtn
       },
       // Responsive breakpoints
       breakpoints: {
@@ -270,34 +269,6 @@ window.addEventListener('DOMContentLoaded', function() {
         1920: {
           width: 737,
           spaceBetween: -5
-        }
-      }
-    });
-  }
-
-  if (articlesSlider) {
-    new Swiper(articlesSlider, {
-      // Default parameters
-      slidesPerView: 1,
-      spaceBetween: 15,
-      loop: true,
-      navigation: {
-        prevEl: '.slider-button-group__button-prev',
-        nextEl: '.slider-button-group__button-next'
-      },
-      // Responsive breakpoints
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 15
-        },
-        1280: {
-          slidesPerView: 2,
-          spaceBetween: 32
-        },
-        1920: {
-          slidesPerView: 2,
-          spaceBetween: 92
         }
       }
     });
@@ -322,6 +293,37 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  if (visualizationSlider) {
+    var _slider = visualizationSlider.querySelector('.swiper');
+
+    var _prevBtn = _slider.previousElementSibling;
+    var _nextBtn = _slider.nextElementSibling;
+    new Swiper(_slider, {
+      // Default parameters
+      slidesPerView: 3,
+      spaceBetween: 16,
+      navigation: {
+        prevEl: _prevBtn,
+        nextEl: _nextBtn
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 32
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 32
+        },
+        1920: {
+          slidesPerView: 6,
+          spaceBetween: 32
+        }
+      }
+    });
+  }
+
   if (goodsSlider) {
     new Swiper(goodsSlider, {
       // Default parameters
@@ -343,21 +345,6 @@ window.addEventListener('DOMContentLoaded', function() {
           spaceBetween: 32
         }
       }
-    });
-  }
-
-  if (ordersSlider) {
-    new Swiper(ordersSlider, {
-      // Default parameters
-      slidesPerView: 1,
-      spaceBetween: 15,
-      direction: 'vertical',
-      navigation: {
-        prevEl: '.personal-area__orders-button-prev',
-        nextEl: '.personal-area__orders-button-next'
-      },
-      // Responsive breakpoints
-      breakpoints: {}
     });
   } // COLORS TABS
 
@@ -587,40 +574,46 @@ window.addEventListener('DOMContentLoaded', function() {
   } // DELIVERY TABS
 
 
-  var deliveryTabsItem = document.querySelectorAll('.delivery__tabs-item');
-  var deliveryTabsWrapper = document.querySelector('.delivery__tabs');
-  var deliveryContentItem = document.querySelectorAll('.delivery__content-item');
+  var tabsWrapper = document.querySelectorAll('.tabs-wrapper');
 
-  function hideTabsContent() {
-    deliveryTabsItem.forEach(function(tab) {
-      return tab.classList.remove('--active');
+  function hideTabsContent(triggersArr, contentsArr) {
+    triggersArr.forEach(function(trigger) {
+      return trigger.classList.remove('--active');
     });
-    deliveryContentItem.forEach(function(content) {
+    contentsArr.forEach(function(content) {
       return content.style.display = 'none';
     });
   }
 
-  function showTabsContent() {
-    var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    deliveryTabsItem[i].classList.add('--active');
-    deliveryContentItem.forEach(function(content) {
-      if (content.getAttribute('data-tab-content-id') === deliveryTabsItem[i].getAttribute('data-tab-id')) {
+  function showTabsContent(triggersArr, contentsArr) {
+    var i = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    triggersArr[i].classList.add('--active');
+    contentsArr.forEach(function(content) {
+      if (content.getAttribute('data-content-id') === triggersArr[i].getAttribute('data-tab-id')) {
         content.style.display = 'block';
       }
     });
   }
 
-  if (deliveryTabsItem.length > 0 && deliveryContentItem.length > 0) {
-    hideTabsContent();
-    showTabsContent();
-    deliveryTabsWrapper.addEventListener('click', function(e) {
-      var target = e.target;
+  if (tabsWrapper.length > 0) {
+    tabsWrapper.forEach(function(item) {
+      var tabsTriggers = item.querySelector('.tabs-triggers');
+      var tabsTriggersItems = item.querySelectorAll('.tabs-triggers-item');
+      var tabsContentItems = item.querySelectorAll('.tabs-content-item');
 
-      if (target && target.classList.contains('delivery__tabs-item')) {
-        deliveryTabsItem.forEach(function(tab, i) {
-          if (target === tab) {
-            hideTabsContent();
-            showTabsContent(i);
+      if (tabsTriggersItems.length > 0 && tabsContentItems.length > 0) {
+        hideTabsContent(tabsTriggersItems, tabsContentItems);
+        showTabsContent(tabsTriggersItems, tabsContentItems);
+        tabsTriggers.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if (target && target.classList.contains('tabs-triggers-item')) {
+            tabsTriggersItems.forEach(function(tab, i) {
+              if (target === tab) {
+                hideTabsContent(tabsTriggersItems, tabsContentItems);
+                showTabsContent(tabsTriggersItems, tabsContentItems, i);
+              }
+            });
           }
         });
       }

@@ -186,6 +186,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   var colorSlider = document.querySelectorAll('.color-slider');
   var simpleSlider = document.querySelectorAll('.simple-slider');
+  var hardSlider = document.querySelectorAll('.hard-slider');
   var applicationSlider = document.querySelector('.application-slider');
   var acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
   var visualizationSlider = document.querySelector('.visualization-slider');
@@ -209,7 +210,6 @@ window.addEventListener('DOMContentLoaded', function() {
       var slider = item.querySelector('.swiper');
       var prev = item.querySelector('.slider-button-group__button-prev');
       var next = item.querySelector('.slider-button-group__button-next');
-      console.log(slider);
       new Swiper(slider, {
         // Default parameters
         slidesPerView: 1,
@@ -232,6 +232,31 @@ window.addEventListener('DOMContentLoaded', function() {
           1920: {
             slidesPerView: 2,
             spaceBetween: 92
+          }
+        }
+      });
+    });
+  }
+
+  if (hardSlider.length > 0) {
+    hardSlider.forEach(function(item) {
+      var slider = item.querySelector('.swiper');
+      var prev = item.querySelector('.slider-button-group__button-prev');
+      var next = item.querySelector('.slider-button-group__button-next');
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        loopAdditionalSlides: 4,
+        loop: true,
+        navigation: {
+          prevEl: prev,
+          nextEl: next
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          768: {
+            width: 230
           }
         }
       });

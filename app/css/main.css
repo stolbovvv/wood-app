@@ -7269,7 +7269,7 @@ body::-webkit-scrollbar {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-image: url("../../images/bg/bg-contacts.svg");
+    background-image: url("../images/bg/bg-contacts.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;

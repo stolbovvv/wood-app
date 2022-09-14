@@ -1,0 +1,31 @@
+@use "../helper" as *;
+
+/* Block "team-photo" */
+.team-photo {
+  padding: 35px 0 35px 0;
+  background-image: url("../images/bg/bg-decor-waves.svg");
+  background-repeat: repeat-x;
+  background-size: auto 200px;
+  background-position: center;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+  // .team-photo__inner
+  &__inner {
+  }
+
+  // .team-photo__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 0 50% 0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  // .team-photo__img
+  &__img {
+    @include responsive-img;
+  }
+}

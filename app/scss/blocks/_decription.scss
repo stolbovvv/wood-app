@@ -3,13 +3,25 @@
 /* Block "decription" */
 .description {
   padding: 35px 0 35px 0;
-  background-image: url("../images/bg/bg-decor-waves.svg");
-  background-repeat: repeat-x;
-  background-size: auto 75%;
-  background-position: center 10%;
 
   @include for-min-size("md") {
     padding: 60px 0 60px 0;
+  }
+
+  &_margin-top-50 {
+    margin-top: 50px;
+  }
+
+  // .description__inner
+  &__outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/bg/bg-decor-waves.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+    min-height: 296px;
   }
 
   // .description__inner
@@ -27,6 +39,11 @@
       line-height: 46px;
       max-width: 1410px;
       margin: 0 auto;
+    }
+
+    &_accent {
+      font-weight: 600;
+      color: $clr-primary;
     }
   }
 

@@ -15,10 +15,6 @@
     }
   }
 
-  // .application__body
-  &__body {
-  }
-
   // .application__content
   &__content {
     > * + * {
@@ -51,42 +47,6 @@
 
     @include for-min-size("xxl") {
       flex: 0 0 33%;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 204px;
-      height: 150px;
-      background-image: url("../images/bg/bg-application.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-
-      @include for-min-size("md") {
-        top: 65%;
-        left: 50%;
-        height: 420px;
-        width: 529px;
-      }
-
-      @include for-min-size("lg") {
-        width: 768px;
-      }
-
-      @include for-min-size("xl") {
-        height: 420px;
-        width: 962px;
-      }
-
-      @include for-min-size("xxl") {
-        top: 100%;
-        left: 35%;
-      }
     }
   }
 

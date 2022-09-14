@@ -8,6 +8,39 @@
     padding: 60px 0 60px 0;
   }
 
+  // .simple-slider_bg-blog
+  &_bg-blog {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 420px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 30px);
+      padding: 0 0 25% 0;
+      background-image: url("../images/bg/bg-blog.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      pointer-events: none;
+
+      @include for-min-size("md") {
+        top: 470px;
+      }
+
+      @include for-min-size("lg") {
+        top: auto;
+        left: auto;
+        right: -5%;
+        transform: none;
+        bottom: -60px;
+        width: 1240px;
+      }
+    }
+  }
+
   // .simple-slider__inner
   &__inner {
   }

@@ -63,8 +63,8 @@
   // .slider-button-group__button-next
   &__button-prev,
   &__button-next {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,6 +77,11 @@
     @include for-hover-and-focus() {
       background-color: $clr-gray-100;
       color: $clr-primary-accent;
+    }
+
+    @include for-min-size("md") {
+      width: 58px;
+      height: 58px;
     }
   }
 

@@ -158,6 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // SLIDERS
   const colorSlider = document.querySelectorAll('.color-slider');
   const simpleSlider = document.querySelectorAll('.simple-slider');
+  const hardSlider = document.querySelectorAll('.hard-slider');
   const applicationSlider = document.querySelector('.application-slider');
   const acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
   const visualizationSlider = document.querySelector('.visualization-slider');
@@ -182,8 +183,6 @@ window.addEventListener('DOMContentLoaded', () => {
       const prev = item.querySelector('.slider-button-group__button-prev');
       const next = item.querySelector('.slider-button-group__button-next');
 
-      console.log(slider);
-
       new Swiper(slider, {
         // Default parameters
         slidesPerView: 1,
@@ -206,6 +205,32 @@ window.addEventListener('DOMContentLoaded', () => {
           1920: {
             slidesPerView: 2,
             spaceBetween: 92,
+          },
+        },
+      });
+    });
+  }
+
+  if (hardSlider.length > 0) {
+    hardSlider.forEach((item) => {
+      const slider = item.querySelector('.swiper');
+      const prev = item.querySelector('.slider-button-group__button-prev');
+      const next = item.querySelector('.slider-button-group__button-next');
+
+      new Swiper(slider, {
+        // Default parameters
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        loopAdditionalSlides: 4,
+        loop: true,
+        navigation: {
+          prevEl: prev,
+          nextEl: next,
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          768: {
+            width: 230,
           },
         },
       });

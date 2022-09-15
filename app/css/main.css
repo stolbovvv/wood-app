@@ -8716,3 +8716,142 @@ body::-webkit-scrollbar {
         text-align: left;
     }
 }
+
+/* Block "inspiration" */
+.inspiration {
+    padding: 35px 0 35px 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .inspiration {
+        padding: 60px 0 60px 0;
+    }
+}
+
+.inspiration__title {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .inspiration__title {
+        text-align: left;
+    }
+}
+
+.inspiration__gallery {
+    margin: 16px 0 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .inspiration__gallery {
+        margin: 34px 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .inspiration__gallery {
+        margin: 18px 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .inspiration__gallery-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .inspiration__gallery-col {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .inspiration__gallery-col {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 calc(50% - 16px);
+                flex: 0 0 calc(50% - 16px);
+    }
+
+    .inspiration__gallery-col+.inspiration__gallery-col {
+        margin: 0 0 0 32px;
+    }
+}
+
+.inspiration__img-wrapper {
+    margin: 16px 0 0 0;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 0 100% 0;
+}
+
+@media only screen and (min-width: 1280px) {
+    .inspiration__img-wrapper {
+        margin: 32px 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .inspiration__img-wrapper_big {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+    }
+}
+
+.inspiration__img-wrapper_long {
+    padding: 0 0 50% 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .inspiration__img-wrapper_long {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .inspiration__img-wrapper_small {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 calc(50% - 8px);
+                flex: 0 0 calc(50% - 8px);
+        padding: 0 0 50% 0;
+    }
+
+    .inspiration__img-wrapper_small+.inspiration__img-wrapper_small {
+        margin: 16px 0 0 16px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .inspiration__img-wrapper_small {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 calc(50% - 16px);
+                flex: 0 0 calc(50% - 16px);
+        padding: 0 0 50% 0;
+    }
+
+    .inspiration__img-wrapper_small+.inspiration__img-wrapper_small {
+        margin: 32px 0 0 32px;
+    }
+}
+
+.inspiration__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}

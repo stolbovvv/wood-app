@@ -1,0 +1,114 @@
+@use "../helper" as *;
+
+/* Block "inspiration" */
+.inspiration {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .inspiration__inner
+  &__inner {
+  }
+
+  // .inspiration__title
+  &__title {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .inspiration__gallery
+  &__gallery {
+    margin: 16px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 34px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      margin: 18px 0 0 0;
+    }
+  }
+
+  // .inspiration__gallery-row
+  &__gallery-row {
+    @include for-min-size("lg") {
+      display: flex;
+    }
+  }
+
+  // .inspiration__gallery-col
+  &__gallery-col {
+    @include for-min-size("md") {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 calc(50% - 16px);
+
+      & + & {
+        margin: 0 0 0 32px;
+      }
+    }
+  }
+
+  // .inspiration__img-wrapper
+  &__img-wrapper {
+    margin: 16px 0 0 0;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 0 100% 0;
+
+    @include for-min-size("lg") {
+      margin: 32px 0 0 0;
+    }
+
+    // .inspiration__img-wrapper_big
+    &_big {
+      @include for-min-size("md") {
+        flex: 0 0 100%;
+      }
+    }
+
+    // .inspiration__img-wrapper_long
+    &_long {
+      padding: 0 0 50% 0;
+
+      @include for-min-size("md") {
+        flex: 0 0 100%;
+      }
+    }
+
+    // .inspiration__img-wrapper_small
+    &_small {
+      @include for-min-size("md") {
+        flex: 0 0 calc(50% - 8px);
+        padding: 0 0 50% 0;
+
+        & + & {
+          margin: 16px 0 0 16px;
+        }
+      }
+
+      @include for-min-size("lg") {
+        flex: 0 0 calc(50% - 16px);
+        padding: 0 0 50% 0;
+
+        & + & {
+          margin: 32px 0 0 32px;
+        }
+      }
+    }
+  }
+
+  // .inspiration__img
+  &__img {
+    @include responsive-img;
+  }
+}

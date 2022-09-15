@@ -48,6 +48,42 @@
     @include for-min-size("xxl") {
       flex: 0 0 33%;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 204px;
+      height: 150px;
+      background-image: url("../images/bg/bg-application.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+
+      @include for-min-size("md") {
+        top: 65%;
+        left: 50%;
+        height: 420px;
+        width: 529px;
+      }
+
+      @include for-min-size("lg") {
+        width: 768px;
+      }
+
+      @include for-min-size("xl") {
+        height: 420px;
+        width: 962px;
+      }
+
+      @include for-min-size("xxl") {
+        top: 100%;
+        left: 35%;
+      }
+    }
   }
 
   // .application__slider
@@ -176,5 +212,58 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+  }
+
+  // .application-slider__img-label
+  &__img-label {
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    min-width: 200px;
+    max-width: 90%;
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(18.5px);
+    border-radius: 0px 4px 4px 0px;
+    display: flex;
+    align-items: center;
+
+    @include for-min-size("lg") {
+      padding: 20px 40px;
+    }
+  }
+
+  // .application-slider__img-num
+  &__img-num {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    color: #ffffff;
+
+    @include for-min-size("xl") {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  // .application-slider__img-title
+  &__img-title {
+    margin: 0 0 0 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include for-min-size("xl") {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+    }
   }
 }

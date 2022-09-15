@@ -158,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // SLIDERS
   const colorSlider = document.querySelectorAll('.color-slider');
   const simpleSlider = document.querySelectorAll('.simple-slider');
-  const hardSlider = document.querySelectorAll('.hard-slider');
+  const teamSlider = document.querySelectorAll('.team-slider');
   const applicationSlider = document.querySelector('.application-slider');
   const acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
   const visualizationSlider = document.querySelector('.visualization-slider');
@@ -211,17 +211,18 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (hardSlider.length > 0) {
-    hardSlider.forEach((item) => {
+  if (teamSlider.length > 0) {
+    teamSlider.forEach((item) => {
       const slider = item.querySelector('.swiper');
       const prev = item.querySelector('.slider-button-group__button-prev');
       const next = item.querySelector('.slider-button-group__button-next');
 
       new Swiper(slider, {
         // Default parameters
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 15,
-        loopAdditionalSlides: 4,
+        loopAdditionalSlides: 5,
+        loopedSlides: 5,
         loop: true,
         navigation: {
           prevEl: prev,
@@ -230,7 +231,8 @@ window.addEventListener('DOMContentLoaded', () => {
         // Responsive breakpoints
         breakpoints: {
           768: {
-            width: 230,
+            width: 352,
+            spaceBetween: -32,
           },
         },
       });

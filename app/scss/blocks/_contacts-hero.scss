@@ -1,0 +1,127 @@
+@use "../helper" as *;
+
+/* section: "contacts-hero" */
+.contacts-hero {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .contacts-hero__inner
+  &__inner {
+  }
+
+  // .contacts-hero__body
+  &__body {
+    margin: 0 -15px 0 -15px;
+
+    @include for-min-size("lg") {
+      position: relative;
+      margin: 0 0 0 0;
+      padding: 0 0 175px 0;
+    }
+
+    @include for-min-size("xxl") {
+      padding: 0 0 100px 0;
+    }
+  }
+
+  // .contacts-hero__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    height: 440px;
+    overflow: hidden;
+
+    @include for-min-size("md") {
+      height: 460px;
+    }
+
+    @include for-min-size("lg") {
+      width: 80%;
+      height: 557px;
+      border-radius: 4px;
+    }
+
+    @include for-min-size("xxl") {
+      height: 690px;
+    }
+  }
+
+  // .contacts-hero__img
+  &__img {
+    @include responsive-img;
+  }
+
+  // .contacts-hero__card
+  &__card {
+    padding: 20px 20px 20px 20px;
+    background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
+
+    > * + * {
+      margin: 28px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      padding: 32px 32px 32px 32px;
+    }
+
+    @include for-min-size("lg") {
+      position: absolute;
+      width: 40%;
+      right: 0;
+      bottom: 0;
+      border-radius: 4px;
+    }
+  }
+
+  // .contacts-hero__card-title
+  &__card-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+
+    + .contacts-hero__card-item {
+      margin: 24px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  // .contacts-hero__card-item
+  &__card-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .contacts-hero__card-label
+  &__card-label {
+    flex: 0 0 calc(40% - 8px);
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba($color: $clr-gray-700, $alpha: 0.7);
+
+    @include for-min-size("md") {
+      flex: 0 0 calc(25% - 8px);
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  // .contacts-hero__card-value
+  &__card-value {
+    flex: 0 0 calc(60% - 8px);
+    font-size: 16px;
+    line-height: 20px;
+
+    @include for-min-size("md") {
+      flex: 0 0 calc(75% - 8px);
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}

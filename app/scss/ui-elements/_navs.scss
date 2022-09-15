@@ -130,12 +130,17 @@
     @include for-min-size("lg") {
       padding: 29px 0 29px 0;
 
+      > .header-menu__submenu {
+        visibility: hidden;
+      }
+
       @include for-hover-and-focus() {
         > .header-menu__submenu {
           opacity: 1;
           transform: translateY(100%);
           transition: all 0.5s ease 0s;
           z-index: -2;
+          visibility: visible;
         }
       }
     }

@@ -1,0 +1,194 @@
+@use "../helper" as *;
+
+/* section: "cooperation-form" */
+.cooperation-form {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .cooperation-form__inner
+  &__inner {
+    @include for-min-size("lg") {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include for-min-size("xxl") {
+      margin: 0 auto;
+      max-width: 1920px;
+    }
+  }
+
+  // .cooperation-form__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    padding: 0 0 440px 0;
+    overflow: hidden;
+
+    @include for-min-size("md") {
+      padding: 0 0 640px 0;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 calc(40% - 16px);
+    }
+  }
+
+  // .cooperation-form__img
+  &__img {
+    @include responsive-img;
+  }
+
+  // .cooperation-form__body
+  &__body {
+    padding: 32px 15px;
+    background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%), #d9d9d9;
+
+    @include for-min-size("lg") {
+      flex: 0 0 calc(60% - 16px);
+      padding: 32px 80px 32px 32px;
+    }
+
+    @include for-min-size("xl") {
+      padding: 32px 130px 32px 32px;
+    }
+
+    @include for-min-size("xxl") {
+      padding: 32px 160px 32px 32px;
+    }
+  }
+
+  // .cooperation-form__title
+  &__title {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 50px;
+      line-height: 61px;
+      text-align: left;
+    }
+  }
+
+  &__fields {
+    margin: 44px 0 0 0;
+
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+
+    @include for-min-size("md") {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > *:nth-child(2) {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  // .cooperation-form__input
+  // .cooperation-form__textarea
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 12px 0 12px 0;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.25);
+    font-size: 14px;
+    line-height: 17px;
+
+    @include for-min-size("md") {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &::placeholder {
+      color: rgba($color: $clr-gray-700, $alpha: 0.5);
+    }
+  }
+
+  // .cooperation-form__input
+  &__input {
+    flex: 0 0 calc(50% - 16px);
+  }
+
+  // .cooperation-form__textarea
+  &__textarea {
+    flex: 0 0 100%;
+    min-height: 100px;
+  }
+
+  // .cooperation-form__button
+  &__button {
+    width: 100%;
+    margin: 36px 0 0 0;
+  }
+
+  // .cooperation-form__agreement
+  &__agreement {
+    margin: 24px 0 0 0;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+
+    > a {
+      color: $clr-primary;
+    }
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 22px;
+      max-width: 700px;
+      margin: 24px auto 0 auto;
+    }
+  }
+
+  // .cooperation-form__footer
+  &__footer {
+    margin: 36px 0 0 0;
+
+    @include for-min-size("xl") {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // .cooperation-form__phone-text
+  &__phone-text {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  // .cooperation-form__phone-link
+  &__phone-link {
+    display: block;
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: $clr-primary;
+
+    @include for-min-size("md") {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @include for-min-size("xl") {
+      margin: 0 0 0 16px;
+    }
+  }
+}

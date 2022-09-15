@@ -9,7 +9,9 @@
   }
   // .map__inner
   &__inner {
-    margin: 0 125px 0 125px;
+    @include for-min-size("md") {
+      margin: 0 125px 0 125px;
+    }
 
     @include for-min-size("lg") {
       display: flex;

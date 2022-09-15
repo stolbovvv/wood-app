@@ -67,24 +67,22 @@
   // .question__tabs
   &__tabs {
     margin: 36px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     > * + * {
-      margin: 24px 0 0 0;
+      margin: 16px 0 0 0;
     }
 
-    @include for-min-size("md") {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      > * + * {
-        margin: 16px 0 0 0;
-      }
+    > * + * {
+      margin: 16px 0 0 0;
     }
   }
 
   // .question__tabs-item
   &__tabs-item {
+    flex: 0 0 calc(50% - 8px);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -95,18 +93,26 @@
     transition: background 0.25s ease 0s;
     cursor: pointer;
 
+    &:nth-child(2) {
+      margin: 0 0 0 0;
+    }
+
     > * {
       pointer-events: none;
     }
 
     > svg {
       width: auto;
-      height: 80px;
+      height: 40px;
 
       > path {
         fill: $clr-gray-700;
         stroke: $clr-gray-700;
         transition: all 0.25s ease 0s;
+      }
+
+      @include for-min-size("md") {
+        height: 80px;
       }
     }
 
@@ -114,9 +120,6 @@
       background: $clr-primary;
 
       > svg {
-        width: auto;
-        height: 80px;
-
         > path {
           fill: $clr-white;
           stroke: $clr-white;
@@ -125,12 +128,7 @@
     }
 
     @include for-min-size("md") {
-      flex: 0 0 calc(50% - 8px);
       padding: 45px 8px 45px 8px;
-
-      &:nth-child(2) {
-        margin: 0 0 0 0;
-      }
     }
 
     @include for-min-size("lg") {
@@ -147,8 +145,8 @@
   &__tabs-item-labl {
     margin: 12px 0 0 0;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 16px;
 
     .--active > & {
       color: $clr-white;

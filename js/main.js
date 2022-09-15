@@ -186,7 +186,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   var colorSlider = document.querySelectorAll('.color-slider');
   var simpleSlider = document.querySelectorAll('.simple-slider');
-  var hardSlider = document.querySelectorAll('.hard-slider');
+  var teamSlider = document.querySelectorAll('.team-slider');
   var applicationSlider = document.querySelector('.application-slider');
   var acousticPanelSlider = document.querySelectorAll('.acoustic-panel');
   var visualizationSlider = document.querySelector('.visualization-slider');
@@ -238,16 +238,17 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  if (hardSlider.length > 0) {
-    hardSlider.forEach(function(item) {
+  if (teamSlider.length > 0) {
+    teamSlider.forEach(function(item) {
       var slider = item.querySelector('.swiper');
       var prev = item.querySelector('.slider-button-group__button-prev');
       var next = item.querySelector('.slider-button-group__button-next');
       new Swiper(slider, {
         // Default parameters
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 15,
-        loopAdditionalSlides: 4,
+        loopAdditionalSlides: 5,
+        loopedSlides: 5,
         loop: true,
         navigation: {
           prevEl: prev,
@@ -256,7 +257,8 @@ window.addEventListener('DOMContentLoaded', function() {
         // Responsive breakpoints
         breakpoints: {
           768: {
-            width: 230
+            width: 352,
+            spaceBetween: -32
           }
         }
       });

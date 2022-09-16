@@ -1,0 +1,121 @@
+@use "../helper" as *;
+
+/* Block "description-hero" */
+.description-hero {
+  padding: 0 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 0 0 60px 0;
+  }
+
+  // .description-hero__outer
+  &__outer {
+    @include for-min-size("lg") {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 4px 0 0 4px;
+        background: #ebebeb;
+        z-index: -1;
+      }
+    }
+
+    @include for-min-size("xl") {
+      &::before {
+        width: 45%;
+      }
+    }
+  }
+
+  // .description-hero__inner
+  &__inner {
+    @include for-min-size("lg") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 0;
+    }
+  }
+
+  // .description-hero__img-wrapper
+  &__img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -15px;
+    padding: 50px 15px;
+    min-height: 280px;
+    background: #ebebeb;
+
+    @include for-min-size("lg") {
+      flex: 0 0 calc(60% - 16px);
+      order: 1;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      background: none;
+    }
+
+    @include for-min-size("xl") {
+      flex: 0 0 calc(46% - 16px);
+    }
+  }
+
+  // .description-hero__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    @include for-min-size("lg") {
+      transform: scale(1.25);
+      transform-origin: 10%;
+    }
+
+    @include for-min-size("lg") {
+      transform: scale(1.25);
+      min-height: 470px;
+      transform-origin: 75%;
+    }
+  }
+
+  // .description-hero__body
+  &__body {
+    margin: 36px 0 0 0;
+
+    @include for-min-size("md") {
+      margin: 50px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      flex: 0 0 calc(40% - 16px);
+      order: 0;
+    }
+
+    @include for-min-size("xl") {
+      flex: 0 0 calc(55% - 16px);
+    }
+  }
+
+  // .description-hero__title
+  // .description-hero__text
+  &__title,
+  &__text {
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+  }
+
+  // .description-hero__text
+  &__text {
+    margin: 24px 0 0 0;
+    max-width: 650px;
+  }
+}

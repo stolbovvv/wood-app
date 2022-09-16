@@ -1,0 +1,93 @@
+@use "../helper" as *;
+
+/* Block "description-.description-article" */
+.description-article {
+  padding: 35px 0 35px 0;
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .description-article__inner
+  &__inner {
+    > * + * {
+      margin: 70px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      > * + * {
+        margin: 140px 0 0 0;
+      }
+    }
+  }
+
+  // .description-article__item
+  &__item {
+  }
+
+  // .description-article__title
+  // .description-article__text
+  &__title,
+  &__text {
+    max-width: 740px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      text-align: left;
+    }
+
+    @include for-min-size("xl") {
+      max-width: 900px;
+    }
+
+    @include for-min-size("xxl") {
+      max-width: 1100px;
+    }
+  }
+
+  // .description-article__title
+  &__title {
+    margin: 0 auto;
+  }
+
+  // .description-article__text
+  &__text {
+    margin: 24px auto 0 auto;
+  }
+
+  // .description-article__img-container
+  &__img-container {
+    margin: 36px 0 0 0;
+
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      margin: 50px 0 0 0;
+    }
+  }
+
+  // .description-article__img-container-row
+  &__img-container-row {
+    margin: 36px 0 0 0;
+
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+
+    @include for-min-size("lg") {
+      display: flex;
+      align-items: flex-start;
+
+      > img {
+        width: calc(50% - 16px);
+        margin: 24px 8px 0 8px;
+      }
+    }
+  }
+
+  // .description-article__img
+  &__img {
+  }
+}

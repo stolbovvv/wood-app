@@ -7099,6 +7099,9 @@ body::-webkit-scrollbar {
     color: #171717;
     border: none;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 @media only screen and (min-width: 768px) {

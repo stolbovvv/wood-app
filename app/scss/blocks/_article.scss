@@ -1,0 +1,58 @@
+@use "../helper" as *;
+
+/* Block "benefits" */
+.article {
+  padding: 35px 0 35px 0;
+  border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.25);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @include for-min-size("md") {
+    padding: 60px 0 60px 0;
+  }
+
+  // .article__inner
+  &__inner {
+  }
+
+  // .article__ing-wrapper
+  &__img-wrapper {
+    position: relative;
+    padding: 0 0 440px 0;
+    margin: 0 -15px 0 -15px;
+    overflow: hidden;
+
+    @include for-min-size("md") {
+      padding: 0 0 490px 0;
+    }
+
+    @include for-min-size("lg") {
+      width: calc(50% - 35px);
+      margin: 0 70px 50px 0;
+      padding: 0 0 40% 0;
+      border-radius: 4px;
+      float: left;
+    }
+  }
+
+  // .article__img
+  &__img {
+    @include responsive-img;
+  }
+
+  // .article__title
+  &__title {
+    margin: 36px 0 0 0;
+
+    @include for-min-size("lg") {
+      margin: 0;
+    }
+  }
+
+  // .article__text
+  &__text {
+    margin: 28px 0 0 0;
+  }
+}

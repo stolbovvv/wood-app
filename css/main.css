@@ -9149,6 +9149,7 @@ body::-webkit-scrollbar {
     .article__img-wrapper {
         width: calc(50% - 35px);
         margin: 0 70px 50px 0;
+        padding: 0 0 40% 0;
         border-radius: 4px;
         float: left;
     }

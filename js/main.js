@@ -652,7 +652,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var asideBtnBack = document.querySelector('.aside-video__back-button');
   var asideBody = document.querySelector('.aside-video');
   var adminAside = gsap.to(asideBody, {
-    top: '0',
+    y: '0',
     duration: 0.5
   }).reverse();
 

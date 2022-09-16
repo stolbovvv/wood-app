@@ -9244,10 +9244,13 @@ body::-webkit-scrollbar {
 
 .aside-video {
     position: fixed;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+            transform: translateY(100%);
     padding: 35px 15px 35px 15px;
     background: #ebebeb;
     overflow: auto;
@@ -9328,6 +9331,10 @@ body::-webkit-scrollbar {
         display: -ms-grid;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .aside-video__container>*+* {
+        margin: 0 0 0 0;
     }
 }
 

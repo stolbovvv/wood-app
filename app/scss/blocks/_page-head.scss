@@ -4,6 +4,21 @@
 .page-head {
   padding: 70px 0 0 0;
 
+  &_only-mobile {
+    display: block;
+
+    @include for-min-size("lg") {
+      display: none;
+    }
+  }
+  &_only-desctop {
+    display: none;
+
+    @include for-min-size("lg") {
+      display: block;
+    }
+  }
+
   // .page-head__inner
   &__inner {
   }

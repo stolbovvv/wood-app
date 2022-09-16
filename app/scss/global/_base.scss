@@ -54,4 +54,31 @@ body::-webkit-scrollbar {
   @include for-min-size("xxl") {
     width: min(100%, 1860px);
   }
+
+  &__flex {
+    @include for-min-size("lg") {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
+
+  &__flex-25 {
+    @include for-min-size("lg") {
+      flex: 0 0 calc(20% - 16px);
+    }
+  }
+
+  &__flex-50 {
+    @include for-min-size("lg") {
+      flex: 0 0 calc(60% - 32px);
+      margin: 0 auto;
+    }
+  }
+
+  &__flex-order-1 {
+    @include for-min-size("lg") {
+      order: 1;
+    }
+  }
 }

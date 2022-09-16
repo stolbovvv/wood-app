@@ -617,4 +617,41 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // VIDEO ASIDE
+  const asideBtnOpen = document.querySelector('.aside-video__button-open');
+  const asideBtnBack = document.querySelector('.aside-video__back-button');
+  const asideBody = document.querySelector('.aside-video');
+
+  const adminAside = gsap
+    .to(asideBody, {
+      top: '0',
+      duration: 0.5,
+    })
+    .reverse();
+
+  if (asideBtnOpen && asideBtnBack && asideBody) {
+    asideBtnOpen.addEventListener('click', () => adminAside.play());
+    asideBtnBack.addEventListener('click', () => adminAside.reverse());
+  }
+
+  // MENU ASIDE
+  const asideMenu = document.querySelector('.aside-page-menu');
+
+  if (asideMenu) {
+    const asideMenuItem = asideMenu.querySelectorAll('.aside-page-menu__item');
+
+    asideMenuItem[0].classList.add('--active');
+
+    asideMenu.addEventListener('click', (e) => {
+      const target = e.target;
+      const tergetItems = asideMenu.querySelectorAll('.aside-page-menu__item');
+
+      tergetItems.forEach((item) => item.classList.remove('--active'));
+
+      if (target && target.classList.contains('aside-page-menu__link')) {
+        target.parentElement.classList.add('--active');
+      }
+    });
+  }
 });

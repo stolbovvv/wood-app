@@ -15,7 +15,7 @@
     background: #ededed;
     border-radius: 4px 4px 0px 0px;
     transition: background 0.25s ease 0s;
-    color: #383838;
+    color: #171717;
 
     @include for-hover-and-focus() {
       background: rgba($color: #787d46, $alpha: 0.25);

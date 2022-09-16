@@ -89,7 +89,7 @@
   &__list-item {
     font-size: 14px;
     line-height: 17px;
-    color: rgba($color: $clr-gray-700, $alpha: 0.7);
+    color: rgba($color: $clr-gray-900, $alpha: 0.7);
     text-align: center;
 
     @include for-min-size("md") {

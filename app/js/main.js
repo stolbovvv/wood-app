@@ -625,7 +625,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const adminAside = gsap
     .to(asideBody, {
-      top: '0',
+      y: '0',
       duration: 0.5,
     })
     .reverse();

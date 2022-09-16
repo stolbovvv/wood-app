@@ -98,7 +98,7 @@
     padding: 12px 0 12px 0;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.25);
+    border-bottom: 1px solid rgba($color: $clr-gray-900, $alpha: 0.25);
     font-size: 14px;
     line-height: 17px;
 
@@ -108,7 +108,7 @@
     }
 
     &::placeholder {
-      color: rgba($color: $clr-gray-700, $alpha: 0.5);
+      color: rgba($color: $clr-gray-900, $alpha: 0.5);
     }
   }
 

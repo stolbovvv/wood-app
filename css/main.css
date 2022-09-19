@@ -1445,8 +1445,8 @@ body::-webkit-scrollbar {
 @media only screen and (min-width: 1280px) {
     .shopping-cart-card__controls {
         -webkit-box-flex: 0;
-            -ms-flex: 0 0 60%;
-                flex: 0 0 60%;
+            -ms-flex: 0 0 45%;
+                flex: 0 0 45%;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;

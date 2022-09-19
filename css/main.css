@@ -2047,9 +2047,9 @@ body::-webkit-scrollbar {
     background-repeat: repeat-x;
     background-position: center;
     background-size: contain;
-    -webkit-transition: left 0.5s ease 0s;
-    -o-transition: left 0.5s ease 0s;
-    transition: left 0.5s ease 0s;
+    -webkit-transition: left 1.5s ease 0s;
+    -o-transition: left 1.5s ease 0s;
+    transition: left 1.5s ease 0s;
 }
 
 .button-primary:hover,
@@ -5282,6 +5282,16 @@ body::-webkit-scrollbar {
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
+}
+
+.video__video-wrapper .plyr__control.plyr__control--overlaid {
+    padding: calc(var(--plyr-control-spacing, 10px) * 1.5);
+}
+
+@media only screen and (min-width: 768px) {
+    .video__video-wrapper .plyr__control.plyr__control--overlaid {
+        padding: calc(var(--plyr-control-spacing, 10px) * 3);
+    }
 }
 
 .video__button-wrapper {

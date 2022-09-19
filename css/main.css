@@ -3949,6 +3949,26 @@ body::-webkit-scrollbar {
     }
 }
 
+.acoustic-panel__button_mobile {
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .acoustic-panel__button_mobile {
+        display: none;
+    }
+}
+
+.acoustic-panel__button_desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .acoustic-panel__button_desktop {
+        display: block;
+    }
+}
+
 .acoustic-panel__footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7940,6 +7960,7 @@ body::-webkit-scrollbar {
     -moze-appearance: none;
     -moz-appearance: none;
          appearance: none;
+    opacity: 0;
 }
 
 .order-form__radio-input:checked+.order-form__radio-label::before {

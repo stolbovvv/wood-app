@@ -753,21 +753,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   var homePageVideo = document.querySelector('#video_new_poject');
-  var storePageVideo = document.querySelector('#goods-video');
-  var storePageVideoPoster = storePageVideo.getAttribute('poster');
   if (homePageVideo) new Plyr(homePageVideo, {
     resetOnEnd: true
   });
-
-  if (storePageVideo) {
-    new Plyr(storePageVideo, {
-      resetOnEnd: true,
-      previewThumbnails: {
-        enabled: true,
-        src: './video/video-poster.jpg'
-      }
-    });
-  }
-
-  console.log(storePageVideo.getAttribute('poster'));
 });

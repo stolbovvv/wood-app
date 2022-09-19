@@ -23,6 +23,7 @@
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.css" />
 
     <noscript>
       <style>
@@ -523,11 +524,13 @@
                 </div>
                 <div class="goods__gallery-video-wrapper">
                   <video
+                    id="goods-video"
                     class="goods__gallery-video"
-                    src="./video/new-project.mp4"
+                    preload="metadata"
                     poster="./video/video-poster.jpg"
-                    muted
-                  ></video>
+                  >
+                    <source src="./video/new-project.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
 
@@ -535,7 +538,7 @@
                 <div class="goods__summary-header">
                   <div class="goods-short">
                     <div class="goods-short__row">
-                      <div class="goods-short__color"></div>
+                      <div class="goods-short__color" id="goods-short-color"></div>
                       <div class="goods-short__title goods-short__title_big">WoodUpp™</div>
                     </div>
                     <h3 class="goods-short__text goods-short__text_big">1400,00 ₽</h3>
@@ -557,63 +560,63 @@
                             <span
                               class="color-slider__slide-round --active"
                               data-active-border="dark"
-                              data-panel-color="#e5e5e5"
+                              data-goods-short-color="#e5e5e5"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#ffd0a9"
+                              data-goods-short-color="#ffd0a9"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#efc19a"
+                              data-goods-short-color="#efc19a"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#a07c5c"
+                              data-goods-short-color="#a07c5c"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#626262"
+                              data-goods-short-color="#626262"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#ffd0a9"
+                              data-goods-short-color="#ffd0a9"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#efc19a"
+                              data-goods-short-color="#efc19a"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#efc19a"
+                              data-goods-short-color="#efc19a"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
                               class="color-slider__slide-round"
                               data-active-border="dark"
-                              data-panel-color="#626262"
+                              data-goods-short-color="#626262"
                             ></span>
                           </div>
                         </div>
@@ -1200,6 +1203,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.2.0/wavesurfer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
 
     <!-- Connecting Page Scripts -->
     <script src="js/main.min.js"></script>

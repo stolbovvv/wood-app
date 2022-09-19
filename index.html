@@ -533,7 +533,7 @@
         </section>
 
         <!-- acoustic-panel -->
-        <section class="acoustic-panel acoustic-panel_with-slider">
+        <section class="acoustic-panel">
           <div class="acoustic-panel__container container">
             <div class="acoustic-panel__inner">
               <div class="acoustic-panel__body">
@@ -576,10 +576,10 @@
               <div class="acoustic-panel__footer">
                 <div class="acoustic-panel__goods-short goods-short">
                   <div class="goods-short__row">
-                    <div class="goods-short__color"></div>
-                    <div class="goods-short__title">№44789</div>
+                    <div class="goods-short__color" id="goods-short-color"></div>
+                    <div class="goods-short__title" id="goods-short-number">№44789</div>
                   </div>
-                  <h3 class="goods-short__text">Название панелей</h3>
+                  <h3 class="goods-short__text" id="goods-short-name">Название панелей</h3>
                 </div>
 
                 <div class="acoustic-panel__sldier">
@@ -591,22 +591,52 @@
                       <div class="color-slider__body color-slider__swiper swiper">
                         <div class="color-slider__wrapper swiper-wrapper">
                           <div class="color-slider__slide swiper-slide">
-                            <span class="color-slider__slide-round --active" data-panel-color="#FFD0A9"></span>
+                            <span
+                              class="color-slider__slide-round --active"
+                              data-goods-short-color="#FFD0A9"
+                              data-goods-short-number="№44789"
+                              data-goods-short-name="Название панелей 1"
+                            ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
-                            <span class="color-slider__slide-round" data-panel-color="#EFC19A"></span>
+                            <span
+                              class="color-slider__slide-round"
+                              data-goods-short-color="#EFC19A"
+                              data-goods-short-number="№55288"
+                              data-goods-short-name="Название панелей 2"
+                            ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
-                            <span class="color-slider__slide-round" data-panel-color="#A07C5C"></span>
+                            <span
+                              class="color-slider__slide-round"
+                              data-goods-short-color="#A07C5C"
+                              data-goods-short-number="№99722"
+                              data-goods-short-name="Название панелей 3"
+                            ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
-                            <span class="color-slider__slide-round" data-panel-color="#626262"></span>
+                            <span
+                              class="color-slider__slide-round"
+                              data-goods-short-color="#626262"
+                              data-goods-short-number="№99771"
+                              data-goods-short-name="Название панелей 4"
+                            ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
-                            <span class="color-slider__slide-round" data-panel-color="#FFD0A9"></span>
+                            <span
+                              class="color-slider__slide-round"
+                              data-goods-short-color="#FFD0A9"
+                              data-goods-short-number="№55772"
+                              data-goods-short-name="Название панелей 5"
+                            ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
-                            <span class="color-slider__slide-round" data-panel-color="#EFC19A"></span>
+                            <span
+                              class="color-slider__slide-round"
+                              data-goods-short-color="#EFC19A"
+                              data-goods-short-number="№88774"
+                              data-goods-short-name="Название панелей 6"
+                            ></span>
                           </div>
                         </div>
                       </div>
@@ -756,14 +786,7 @@
           <div class="visual__outer">
             <div class="container">
               <div class="visual__inner">
-                <div class="visual__img-wrapper">
-                  <img
-                    class="visual__img"
-                    id="visual-preview-img"
-                    src="./images/visualization/example/visualization-1.jpg"
-                    alt=""
-                  />
-                </div>
+                <div class="visual__img-wrapper"></div>
 
                 <div class="visual__card">
                   <img
@@ -773,8 +796,8 @@
                     alt=""
                   />
                   <div class="visual__card-data">
-                    <p class="visual__card-name" id="visual-card-name">ВудАпп™ Панель 1</p>
-                    <p class="visual__card-price" id="visual-card-price">1111 ₽ / за шт.</p>
+                    <p class="visual__card-name" id="visual-card-name"></p>
+                    <p class="visual__card-price" id="visual-card-price"></p>
                   </div>
                   <a class="visual__card-link" id="visual-card-link" href="#">
                     <i class="visual__card-link-icon icon-ui-shopping-cart"></i>
@@ -789,6 +812,7 @@
                     <div class="visual__slider-wrapper swiper-wrapper">
                       <!-- visualization-slider-slide -->
                       <div
+                        id="visual-1"
                         class="visual__slider-slide swiper-slide --active"
                         data-visual-preview-img="./images/visualization/example/visualization-1.jpg"
                         data-visual-card-img="./images/visualization/product/product-1.jpg"
@@ -804,6 +828,7 @@
                       </div>
                       <!-- visualization-slider-slide -->
                       <div
+                        id="visual-2"
                         class="visual__slider-slide swiper-slide"
                         data-visual-preview-img="./images/visualization/example/visualization-2.jpg"
                         data-visual-card-img="./images/visualization/product/product-2.jpg"
@@ -819,6 +844,7 @@
                       </div>
                       <!-- visualization-slider-slide -->
                       <div
+                        id="visual-3"
                         class="visual__slider-slide swiper-slide"
                         data-visual-preview-img="./images/visualization/example/visualization-3.jpg"
                         data-visual-card-img="./images/visualization/product/product-3.jpg"
@@ -834,6 +860,7 @@
                       </div>
                       <!-- visualization-slider-slide -->
                       <div
+                        id="visual-4"
                         class="visual__slider-slide swiper-slide"
                         data-visual-preview-img="./images/visualization/example/visualization-4.jpg"
                         data-visual-card-img="./images/visualization/product/product-4.jpg"
@@ -849,6 +876,7 @@
                       </div>
                       <!-- visualization-slider-slide -->
                       <div
+                        id="visual-5"
                         class="visual__slider-slide swiper-slide"
                         data-visual-preview-img="./images/visualization/example/visualization-5.jpg"
                         data-visual-card-img="./images/visualization/product/product-5.jpg"
@@ -864,6 +892,7 @@
                       </div>
                       <!-- visualization-slider-slide -->
                       <div
+                        id="visual-6"
                         class="visual__slider-slide swiper-slide"
                         data-visual-preview-img="./images/visualization/example/visualization-6.jpg"
                         data-visual-card-img="./images/visualization/product/product-6.jpg"
@@ -1023,11 +1052,6 @@
                 <video id="video_new_poject" preload="metadata" poster="./video/video-poster.jpg">
                   <source src="./video/new-project.mp4" type="video/mp4" />
                 </video>
-                <!-- <div class="video__button-wrapper">
-                  <button class="video__button" id="video_button_play">
-                    <i class="video__button-icon icon-ui-play"></i>
-                  </button>
-                </div> -->
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@
 
     <!-- Basic Page Information -->
     <meta name="description" content="" />
-    <title>Wood App</title>
+    <title>Wood App | STORE NOT AVAILABLE</title>
 
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
@@ -489,87 +489,70 @@
       </header>
 
       <main class="main">
-        <!-- home-hero -->
-        <section class="home-hero">
-          <div class="home-hero__bg">
-            <video
-              class="home-hero__bg-video"
-              preload="auto"
-              autoplay="true"
-              muted="muted"
-              loop="true"
-              poster="./video/video-poster.jpg"
-              playsinline=""
-            >
-              <source src="./video/new-project.mp4" type="video/mp4" />
-            </video>
-            <div class="home-hero__bg-cover"></div>
-          </div>
-
+        <!-- page-head -->
+        <div class="page-head">
           <div class="container">
-            <div class="home-hero__inner">
-              <h1 class="home-hero__title">Акустические пэт панели</h1>
-              <p class="home-hero__descr text">
-                For most people, installing the panels would be an entertaining DIY project. It is very simple - you can
-                cut the panels with almost any saw and fix it
-              </p>
-              <a class="home-hero__button button-primary" href="#"><span>Читать описание продукции</span></a>
-            </div>
-          </div>
-        </section>
-
-        <!-- description -->
-        <section class="description">
-          <div class="description__outer">
-            <div class="container">
-              <div class="description__inner">
-                <p class="description__text">
-                  Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
-                  пластика и дерева. Собственное производство позволяет контролировать высокое качество.
-                </p>
-                <a class="description__button button-primary" href="#"><span>Заказать образцы</span></a>
+            <div class="page-head__inner">
+              <div class="page-head__bread-crumbs">
+                <ul class="bread-crumbs">
+                  <li class="bread-crumbs__item">
+                    <a class="bread-crumbs__link" href="./">Главная</a>
+                  </li>
+                  <li class="bread-crumbs__item bread-crumbs__item_currnet">
+                    <i class="bread-crumbs__icon icon-ui-arrow-right"></i>
+                    <a class="bread-crumbs__link" href="./store.html">STORE</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <!-- acoustic-panel -->
-        <section class="acoustic-panel">
-          <div class="acoustic-panel__container container">
-            <div class="acoustic-panel__inner">
-              <div class="acoustic-panel__body">
-                <div class="acoustic-panel__contnet">
-                  <h2 class="acoustic-panel__title title">Акустические панели</h2>
-                  <p class="acoustic-panel__descr">
-                    Акустические пэт панели wood app - экологически чистое изделие, изготовленное из переработанного
-                    пластика и дерева. Собственное Акустические пэт панели wood app - экологически чистое изделие,
-                    изготовленное из переработанного пластика и дерева.
-                  </p>
-                  <p class="acoustic-panel__descr">
-                    Собственное Акустические пэт панели wood app - экологически чистое изделие, изготовленное из
-                    переработанного пластика и дерева.
-                  </p>
-                  <a class="acoustic-panel__button acoustic-panel__button_desktop button-primary" href="#">
-                    <span>Купить</span>
-                  </a>
+        <!-- section: goods -->
+        <section class="goods goods_padding-top-none">
+          <div class="container">
+            <div class="goods__inner">
+              <div class="goods__gallery">
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/product/product-1.jpg" alt="" />
                 </div>
-
-                <div class="acoustic-panel__img-container">
-                  <div class="acoustic-panel__img-wrapper acoustic-panel__img-wrapper_margin-top-35"></div>
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/product/product-2.jpg" alt="" />
+                </div>
+                <div class="goods__gallery-img-wrapper">
+                  <img class="goods__gallery-img" src="./images/product/product-3.jpg" alt="" />
+                </div>
+                <div class="goods__gallery-video-wrapper">
+                  <video
+                    class="goods__gallery-video"
+                    preload="auto"
+                    autoplay="true"
+                    muted="muted"
+                    loop="true"
+                    poster="./video/video-poster.jpg"
+                    playsinline=""
+                  >
+                    <source src="./video/new-project.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
 
-              <div class="acoustic-panel__footer">
-                <div class="acoustic-panel__goods-short goods-short">
-                  <div class="goods-short__row">
-                    <div class="goods-short__color" id="goods-short-color"></div>
-                    <div class="goods-short__title" id="goods-short-number">НОМЕР ЦВЕТА</div>
+              <div class="goods__summary">
+                <div class="goods__summary-header">
+                  <div class="goods-short">
+                    <div class="goods-short__row">
+                      <div class="goods-short__color" id="goods-short-color"></div>
+                      <div class="goods-short__title goods-short__title_big" id="goods-short-name">Название цвета</div>
+                    </div>
+                    <h3 class="goods-short__text goods-short__text_big">1400,00 ₽</h3>
                   </div>
-                  <h3 class="goods-short__text" id="goods-short-name">Название панели</h3>
                 </div>
 
-                <div class="acoustic-panel__sldier">
-                  <div class="acoustic-panel__sldier-container">
+                <div class="goods__not-available">Нет в наличии</div>
+
+                <div class="goods__summary-color">
+                  <p class="goods__summary-color-label">Цвет панели:</p>
+                  <div class="goods__summary-color-slider">
                     <div class="color-slider">
                       <button class="color-slider__button color-slider__button-prev">
                         <i class="color-slider__button-icon icon-ui-arrow-left"></i>
@@ -578,68 +561,74 @@
                         <div class="color-slider__wrapper swiper-wrapper">
                           <div class="color-slider__slide swiper-slide">
                             <span
-                              id="goods-short-1"
                               class="color-slider__slide-round --active"
-                              data-goods-short-color="#FFD0A9"
-                              data-goods-short-number="№44789"
-                              data-goods-short-name="Название панелей 1"
-                              data-goods-short-img="./images/panels/base-panel_1.jpg"
-                              data-goods-short-link="#1"
+                              data-active-border="dark"
+                              data-goods-short-color="#e5e5e5"
+                              data-goods-short-name="Название цвета 1"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
-                              id="goods-short-2"
                               class="color-slider__slide-round"
-                              data-goods-short-color="#EFC19A"
-                              data-goods-short-number="№55288"
-                              data-goods-short-name="Название панелей 2"
-                              data-goods-short-img="./images/panels/base-panel_2.jpg"
-                              data-goods-short-link="#2"
+                              data-active-border="dark"
+                              data-goods-short-color="#ffd0a9"
+                              data-goods-short-name="Название цвета 2"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
-                              id="goods-short-3"
                               class="color-slider__slide-round"
-                              data-goods-short-color="#A07C5C"
-                              data-goods-short-number="№99722"
-                              data-goods-short-name="Название панелей 3"
-                              data-goods-short-img="./images/panels/base-panel_3.jpg"
-                              data-goods-short-link="#3"
+                              data-active-border="dark"
+                              data-goods-short-color="#efc19a"
+                              data-goods-short-name="Название цвета 3"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
-                              id="goods-short-4"
                               class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-goods-short-color="#a07c5c"
+                              data-goods-short-name="Название цвета 4"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
                               data-goods-short-color="#626262"
-                              data-goods-short-number="№99771"
-                              data-goods-short-name="Название панелей 4"
-                              data-goods-short-img="./images/panels/base-panel_4.jpg"
-                              data-goods-short-link="#4"
+                              data-goods-short-name="Название цвета 5"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
-                              id="goods-short-5"
                               class="color-slider__slide-round"
-                              data-goods-short-color="#FFD0A9"
-                              data-goods-short-number="№55772"
-                              data-goods-short-name="Название панелей 5"
-                              data-goods-short-img="./images/panels/base-panel_5.jpg"
-                              data-goods-short-link="#5"
+                              data-active-border="dark"
+                              data-goods-short-color="#ffd0a9"
+                              data-goods-short-name="Название цвета 6"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
-                              id="goods-short-6"
                               class="color-slider__slide-round"
-                              data-goods-short-color="#EFC19A"
-                              data-goods-short-number="№88774"
-                              data-goods-short-name="Название панелей 6"
-                              data-goods-short-img="./images/panels/base-panel_6.jpg"
-                              data-goods-short-link="#6"
+                              data-active-border="dark"
+                              data-goods-short-color="#efc19a"
+                              data-goods-short-name="Название цвета 7"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-goods-short-color="#efc19a"
+                              data-goods-short-name="Название цвета 8"
+                            ></span>
+                          </div>
+                          <div class="color-slider__slide swiper-slide">
+                            <span
+                              class="color-slider__slide-round"
+                              data-active-border="dark"
+                              data-goods-short-color="#626262"
+                              data-goods-short-name="Название цвета 9"
                             ></span>
                           </div>
                         </div>
@@ -650,11 +639,224 @@
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <a class="acoustic-panel__button acoustic-panel__button_mobile button-primary" href="#">
-                <span>Купить</span>
-              </a>
+                <div class="goods__summary-size">
+                  <p class="goods__summary-size-label text">Размер панелей:</p>
+                  <div class="goods__summary-size-select custom-select">
+                    <select class="goods__summary-size-select-body" name="goods-size" id="" tabindex="0" disabled>
+                      <option selected value="240 X 60 X 2.2 cm">240 X 60 X 2.2 cm</option>
+                      <option value="200 X 40 X 2.0 cm">200 X 40 X 2.0 cm</option>
+                      <option value="180 X 20 X 1.0 cm">180 X 20 X 1.0 cm</option>
+                      <option value="140 X 00 X 0.0 cm">140 X 00 X 0.0 cm</option>
+                    </select>
+                    <i class="goods__summary-size-select-icon icon-ui-arrow-right"></i>
+                  </div>
+                </div>
+
+                <div class="goods__summary-counter goods-counter">
+                  <button class="goods-counter__button" data-type="decrement" disabled>–</button>
+                  <input
+                    class="goods-counter__input"
+                    type="number"
+                    name="quantity-of-goods"
+                    id=""
+                    value="0"
+                    min="0"
+                    disabled
+                  />
+                  <button class="goods-counter__button" data-type="increment" disabled>+</button>
+                </div>
+
+                <div class="goods__summary-button-wrapper">
+                  <button class="goods__summary-button button-primary" disabled>
+                    <span>Добавить в корзину</span>
+                  </button>
+                </div>
+
+                <p class="goods__summary-descr">
+                  The Akupanel can be used for creating beautful slat walls and ceilings which adds a modern look to the
+                  room. The panel is sound dampening and removes reverberation within the room, which drastically
+                  improves the acoustics within the
+                </p>
+
+                <div class="goods__summary-spoilers spoilers-container">
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уход за панелями</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Материалы и их качество</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="spoiler">
+                    <div class="spoiler__head">
+                      <p class="spoiler__head-text">Уникальность цвета</p>
+                      <i class="spoiler__head-icon icon-ui-arrow-right"></i>
+                    </div>
+                    <div class="spoiler__body">
+                      <p class="spoiler__text">
+                        The panels is made from sustainable materials. The acoustical felt is made from recycled plastic
+                        (primarily plastic bottles), and the slats are made from MDF with a veneer surface.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="goods__summary-footer">
+                  <a class="goods__summary-download-3d" href="#">Скачать 3D модель</a>
+                  <div class="goods__summary-delivery">
+                    <p class="goods__summary-delivery-label">Доставим ваш товар в течении</p>
+                    <p class="goods__summary-delivery-days">7-14 дней</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- section: goods-slider -->
+        <section class="goods-slider">
+          <div class="container">
+            <div class="goods-slider__inner">
+              <div class="goods-slider__slider swiper">
+                <!-- slider-head -->
+                <div class="goods-slider__slider-head">
+                  <h2 class="goods-slider__slider-title title">С этим товаром можно заказать</h2>
+                  <div class="goods-slider__slider-button-group slider-button-group">
+                    <button class="slider-button-group__button-prev">
+                      <i class="slider-button-group__button-icon icon-ui-arrow-left"></i>
+                    </button>
+                    <button class="slider-button-group__button-next">
+                      <i class="slider-button-group__button-icon icon-ui-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- slider-wrapper -->
+                <div class="goods-slider__slider-wrapper swiper-wrapper">
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">Торцевые рейки</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
+                      </div>
+                    </div>
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
+                        For most people, installing the panels would be an entertaining DIY project.
+                      </p>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                    </div>
+                  </article>
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">Шурупы</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
+                      </div>
+                    </div>
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
+                        For most people, installing the panels would be an entertaining DIY project.
+                      </p>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                    </div>
+                  </article>
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">Клей</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
+                      </div>
+                    </div>
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
+                        For most people, installing the panels would be an entertaining DIY project.
+                      </p>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                    </div>
+                  </article>
+                  <!-- goods item -->
+                  <article class="goods-preview swiper-slide">
+                    <div class="goods-preview__img-wrapper">
+                      <img class="goods-preview__img" src="./images/product/product.jpg" alt="" />
+                      <div class="goods-preview__header">
+                        <p class="goods-preview__name">APP-Панели</p>
+                        <p class="goods-preview__price">1400,00 ₽</p>
+                      </div>
+                    </div>
+                    <div class="goods-preview__body">
+                      <p class="goods-preview__text">
+                        For most people, installing the panels would be an entertaining DIY project.
+                      </p>
+                      <a class="goods-preview__button button-primary" href="#"><span>Подробнее о товаре</span></a>
+                    </div>
+                  </article>
+                  <!-- goods item end -->
+                </div>
+                <!-- slider-wrapper end -->
+              </div>
+              <!-- goods-slider__slider end -->
+            </div>
+          </div>
+        </section>
+
+        <!-- section: bunner -->
+        <section class="bunner bunner_simple">
+          <div class="bunner__outer">
+            <picture class="bunner__background">
+              <img class="bunner__background-img" src="./images/bunner/bunner-2.jpg" alt="" />
+            </picture>
+            <div class="container">
+              <div class="bunner__inner">
+                <h2 class="bunner__title title">Простая установка</h2>
+                <p class="bunner__text text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
+                <a class="bunner__button button-primary" href="#"><span>Перейти в Service</span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- section: preview -->
+        <section class="preview">
+          <div class="preview__outer">
+            <div class="container">
+              <div class="preview__inner">
+                <div class="preview__img-wrapper">
+                  <img class="preview__img" src="./images/preview/preview-2.png" alt="" />
+                </div>
+                <!-- preview-content -->
+                <div class="preview__content">
+                  <h2 class="preview__content-title title">Выберите образцы удобно и быстро</h2>
+                  <a class="preview__content-button button-primary" href="#"><span>Перейти в Service</span></a>
+                </div>
+                <!-- preview-content end -->
+              </div>
+              <!-- preview-inner end -->
             </div>
           </div>
         </section>
@@ -789,143 +991,6 @@
           </div>
         </section>
 
-        <!-- section: visual -->
-        <section class="visual">
-          <div class="visual__outer">
-            <div class="container">
-              <div class="visual__inner">
-                <div class="visual__img-wrapper"></div>
-
-                <div class="visual__card">
-                  <img
-                    class="visual__card-img"
-                    id="visual-card-img"
-                    src="./images/visualization/product/product-1.jpg"
-                    alt=""
-                  />
-                  <div class="visual__card-data">
-                    <p class="visual__card-name" id="visual-card-name"></p>
-                    <p class="visual__card-price" id="visual-card-price"></p>
-                  </div>
-                  <a class="visual__card-link" id="visual-card-link" href="#">
-                    <i class="visual__card-link-icon icon-ui-shopping-cart"></i>
-                  </a>
-                </div>
-
-                <div class="visual__slider">
-                  <button class="visual__slider-button">
-                    <i class="visual__slider-button-icon icon-ui-arrow-left-bold"></i>
-                  </button>
-                  <div class="visual__slider-body swiper">
-                    <div class="visual__slider-wrapper swiper-wrapper">
-                      <!-- visualization-slider-slide -->
-                      <div
-                        id="visual-1"
-                        class="visual__slider-slide swiper-slide --active"
-                        data-visual-preview-img="./images/visualization/example/visualization-1.jpg"
-                        data-visual-card-img="./images/visualization/product/product-1.jpg"
-                        data-visual-card-name="ВудАпп™ Панель 1"
-                        data-visual-card-price="1111 ₽ / за шт."
-                        data-visual-card-link="#1"
-                      >
-                        <img
-                          class="visual__slider-slide-img"
-                          src="./images/visualization/product/product-1.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <!-- visualization-slider-slide -->
-                      <div
-                        id="visual-2"
-                        class="visual__slider-slide swiper-slide"
-                        data-visual-preview-img="./images/visualization/example/visualization-2.jpg"
-                        data-visual-card-img="./images/visualization/product/product-2.jpg"
-                        data-visual-card-name="ВудАпп™ Панель 2"
-                        data-visual-card-price="2222 ₽ / за шт."
-                        data-visual-card-link="#2"
-                      >
-                        <img
-                          class="visual__slider-slide-img"
-                          src="./images/visualization/product/product-2.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <!-- visualization-slider-slide -->
-                      <div
-                        id="visual-3"
-                        class="visual__slider-slide swiper-slide"
-                        data-visual-preview-img="./images/visualization/example/visualization-3.jpg"
-                        data-visual-card-img="./images/visualization/product/product-3.jpg"
-                        data-visual-card-name="ВудАпп™ Панель 3"
-                        data-visual-card-price="3333 ₽ / за шт."
-                        data-visual-card-link="#3"
-                      >
-                        <img
-                          class="visual__slider-slide-img"
-                          src="./images/visualization/product/product-3.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <!-- visualization-slider-slide -->
-                      <div
-                        id="visual-4"
-                        class="visual__slider-slide swiper-slide"
-                        data-visual-preview-img="./images/visualization/example/visualization-4.jpg"
-                        data-visual-card-img="./images/visualization/product/product-4.jpg"
-                        data-visual-card-name="ВудАпп™ Панель 4"
-                        data-visual-card-price="4444 ₽ / за шт."
-                        data-visual-card-link="#4"
-                      >
-                        <img
-                          class="visual__slider-slide-img"
-                          src="./images/visualization/product/product-4.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <!-- visualization-slider-slide -->
-                      <div
-                        id="visual-5"
-                        class="visual__slider-slide swiper-slide"
-                        data-visual-preview-img="./images/visualization/example/visualization-5.jpg"
-                        data-visual-card-img="./images/visualization/product/product-5.jpg"
-                        data-visual-card-name="ВудАпп™ Панель 5"
-                        data-visual-card-price="5555 ₽ / за шт."
-                        data-visual-card-link="#5"
-                      >
-                        <img
-                          class="visual__slider-slide-img"
-                          src="./images/visualization/product/product-5.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <!-- visualization-slider-slide -->
-                      <div
-                        id="visual-6"
-                        class="visual__slider-slide swiper-slide"
-                        data-visual-preview-img="./images/visualization/example/visualization-6.jpg"
-                        data-visual-card-img="./images/visualization/product/product-6.jpg"
-                        data-visual-card-name="ВудАпп™ Панель 6"
-                        data-visual-card-price="6000 ₽ / за шт."
-                        data-visual-card-link="#6"
-                      >
-                        <img
-                          class="visual__slider-slide-img"
-                          src="./images/visualization/product/product-6.jpg"
-                          alt=""
-                        />
-                      </div>
-                      <!-- visualization-slider-slide end -->
-                    </div>
-                  </div>
-                  <button class="visual__slider-button">
-                    <i class="visual__slider-button-icon icon-ui-arrow-right-bold"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <!-- application -->
         <section class="application">
           <div class="container">
@@ -1003,38 +1068,6 @@
           </div>
         </section>
 
-        <!-- difference -->
-        <section class="difference">
-          <div class="container">
-            <div class="difference__inner">
-              <h2 class="difference__title title">Услышьте разницу</h2>
-              <div class="difference__player">
-                <button class="difference__player-button" id="audio_player_button" data-state="pause">
-                  <i class="difference__player-button-icon icon-ui-play"></i>
-                  <i class="difference__player-button-icon icon-ui-pause"></i>
-                </button>
-                <div class="difference__player-waves">
-                  <div
-                    class="difference__player-waves-item"
-                    id="wave_audio_bad"
-                    data-sound="./audio/bad-sound.wav"
-                  ></div>
-                  <div
-                    class="difference__player-waves-item"
-                    id="wave_audio_great"
-                    data-sound="./audio/great-sound.wav"
-                  ></div>
-                </div>
-              </div>
-              <div class="difference__switch">
-                <span class="difference__switch-label --active" id="labe_audio_bad">С реверберацией</span>
-                <span class="difference__switch-toggler" data-state="audio-bad"><span></span></span>
-                <span class="difference__switch-label" id="labe_audio_great">Без реверберации</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <!-- section: bunner -->
         <section class="bunner">
           <div class="bunner__outer">
@@ -1047,76 +1080,6 @@
                 <h2 class="bunner__title title">Смотрите нашу продукцию в своём интерьере</h2>
                 <p class="bunner__text text">Сделайте снимок, выберите панель и найдите подходящую для вашей стены.</p>
                 <a class="bunner__button button-primary" href="#"><span>Попробуйте наш визуализатор</span></a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- section: video -->
-        <section class="video">
-          <div class="container">
-            <div class="video__inner">
-              <div class="video__video-wrapper">
-                <video id="video_new_poject" preload="metadata" poster="./video/video-poster.jpg">
-                  <source src="./video/new-project.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- section: simple-slider -->
-        <section class="simple-slider">
-          <div class="container">
-            <div class="simple-slider__inner">
-              <div class="simple-slider__head">
-                <h2 class="simple-slider__title title">Примеры наших работ</h2>
-                <div class="simple-slider__controls slider-button-group">
-                  <button class="slider-button-group__button-prev">
-                    <i class="slider-button-group__button-icon icon-ui-arrow-left"></i>
-                  </button>
-                  <button class="slider-button-group__button-next">
-                    <i class="slider-button-group__button-icon icon-ui-arrow-right"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="simple-slider__body swiper">
-                <div class="simple-slider__wrapper swiper-wrapper">
-                  <article class="card swiper-slide">
-                    <div class="card__img-wrapper card__img-wrapper_heigth-large">
-                      <img class="card__img" src="./images/examples/examples-1.jpg" alt="" />
-                    </div>
-                    <div class="card__body">
-                      <h3 class="card__title">Анна</h3>
-                      <p class="card__text">
-                        For most people, installing the panels would be an entertaining DIY project. It is very simple -
-                        you can cut the panels.
-                      </p>
-                      <a class="card__link card__link_color-primary" href="#">
-                        <span class="card__link-label">Подробнее</span>
-                        <i class="card__link-icon icon-ui-arrow-right"></i>
-                      </a>
-                    </div>
-                  </article>
-
-                  <article class="card swiper-slide">
-                    <div class="card__img-wrapper card__img-wrapper_heigth-large">
-                      <img class="card__img" src="./images/examples/examples-1.jpg" alt="" />
-                    </div>
-                    <div class="card__body">
-                      <h3 class="card__title">Артём</h3>
-                      <p class="card__text">
-                        “Перед нами аккуратный сайт с тщательно продуманной навигацией — я и не ожидал ничего другого от
-                        высококлассного агентства, которое разрабатывает UI/UX или, как они говорят на своей главной
-                        странице”
-                      </p>
-                      <a class="card__link card__link_color-primary" href="#">
-                        <span class="card__link-label">Подробнее</span>
-                        <i class="card__link-icon icon-ui-arrow-right"></i>
-                      </a>
-                    </div>
-                  </article>
-                </div>
               </div>
             </div>
           </div>
@@ -1187,7 +1150,7 @@
                 <!-- menu-item -->
                 <li class="footer-menu__list-item">
                   <div class="footer-menu__list-item-body">
-                    <a class="footer-menu__lsit-title" href="#">Сотрyдничество</a>
+                    <a class="footer-menu__lsit-title" href="#">Сотрудничество</a>
                     <ul class="footer-menu__sublist">
                       <li class="footer-menu__sublist-item">
                         <a class="footer-menu__sublist-link" href="#">Сотрудничество</a>
@@ -1263,6 +1226,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
 
     <!-- Connecting Page Scripts -->
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

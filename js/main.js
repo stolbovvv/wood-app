@@ -546,16 +546,35 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   var colorTabsContainers = document.querySelectorAll('.color-slider__wrapper');
+  var colorImgContainer = document.querySelector('.acoustic-panel__img-wrapper');
 
   function activeColorTab(tabs) {
-    var i = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var images = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+    var i = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
     tabs[i].classList.add('--active');
+
+    if (images.length > 0) {
+      images.forEach(function(image) {
+        if (image.getAttribute('data-goods-short-id') === tabs[i].id) {
+          image.style['opacity'] = 1;
+          image.style['z-index'] = 2;
+        }
+      });
+    }
   }
 
   function deactiveColorTab(tabs) {
+    var images = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
     tabs.forEach(function(tab) {
       return tab.classList.remove('--active');
     });
+
+    if (images.length > 0) {
+      images.forEach(function(image) {
+        image.style['opacity'] = 0.25;
+        image.style['z-index'] = 1;
+      });
+    }
   }
 
   if (colorTabsContainers.length > 0) {
@@ -564,8 +583,21 @@ window.addEventListener('DOMContentLoaded', function() {
       var goodsShortColor = document.querySelector('#goods-short-color');
       var goodsShortNumber = document.querySelector('#goods-short-number');
       var goodsShortName = document.querySelector('#goods-short-name');
-      deactiveColorTab(colorTabs);
-      activeColorTab(colorTabs);
+      var colorImgArr = [];
+
+      if (colorImgContainer) {
+        colorTabs.forEach(function(item) {
+          var colorImg = document.createElement('img');
+          colorImg.classList.add('acoustic-panel__img');
+          colorImg.setAttribute('data-goods-short-id', item.id);
+          colorImg.src = item.getAttribute('data-goods-short-img');
+          colorImgContainer.append(colorImg);
+        });
+        colorImgArr = colorImgContainer.querySelectorAll('.acoustic-panel__img');
+      }
+
+      deactiveColorTab(colorTabs, colorImgArr);
+      activeColorTab(colorTabs, colorImgArr);
       if (goodsShortColor) goodsShortColor.style['background'] = colorTabs[0].getAttribute('data-goods-short-color');
       if (goodsShortNumber) goodsShortNumber.textContent = colorTabs[0].getAttribute('data-goods-short-number');
       if (goodsShortName) goodsShortName.textContent = colorTabs[0].getAttribute('data-goods-short-name');
@@ -573,10 +605,10 @@ window.addEventListener('DOMContentLoaded', function() {
         var target = e.target;
 
         if (target && target.classList.contains('color-slider__slide-round')) {
-          deactiveColorTab(colorTabs);
+          deactiveColorTab(colorTabs, colorImgArr);
           colorTabs.forEach(function(tab, i) {
             if (target === tab) {
-              activeColorTab(colorTabs, i);
+              activeColorTab(colorTabs, colorImgArr, i);
 
               if (goodsShortColor) {
                 goodsShortColor.style['background'] = colorTabs[i].getAttribute('data-goods-short-color');

@@ -1,7 +1,8 @@
 @use "../helper" as *;
 
 /* UI elements "Buttons" */
-.button-primary {
+.button-primary,
+.button-secondary {
   position: relative;
   display: block;
   padding: 1.1875em 1.25em;
@@ -26,28 +27,56 @@
 
   > span {
     position: relative;
+    pointer-events: none;
   }
 
   &::before {
     content: "";
     position: absolute;
     top: 0%;
-    left: -100%;
+    left: -15%;
     height: 100%;
-    width: 100%;
+    width: 15%;
     background-image: url("../images/bg/bg-decor-waves-button.svg");
     background-repeat: repeat-x;
-    background-position: center;
+    background-position: left;
     background-size: contain;
-
-    transition: left 1.5s ease 0s;
+    transition: width 1s ease 0s;
   }
 
   @include for-hover-and-focus() {
     background-color: $clr-primary-accent;
 
     &::before {
-      left: 0%;
+      width: 115%;
+    }
+  }
+
+  &[disabled] {
+    filter: grayscale(0.75);
+    opacity: 0.75;
+    cursor: default;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.button-secondary {
+  color: $clr-gray-900;
+  background: #f0f0f0;
+
+  &::before {
+    filter: grayscale(0.75);
+    opacity: 0.15;
+  }
+
+  @include for-hover-and-focus() {
+    background-color: #f0f0f0;
+
+    &::before {
+      width: 115%;
     }
   }
 }

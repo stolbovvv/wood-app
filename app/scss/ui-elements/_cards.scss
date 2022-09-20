@@ -133,6 +133,16 @@
       width: 58px;
       height: 58px;
     }
+
+    &[disabled] {
+      filter: grayscale(0.75);
+      opacity: 0.75;
+      cursor: default;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   // .goods-counter__input
@@ -149,6 +159,16 @@
 
     @include for-min-size("md") {
       height: 58px;
+    }
+
+    &[disabled] {
+      filter: grayscale(0.75);
+      opacity: 0.75;
+      cursor: default;
+
+      &::before {
+        display: none;
+      }
     }
   }
 }

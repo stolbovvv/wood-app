@@ -1,0 +1,346 @@
+@use "../helper" as *;
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  backdrop-filter: blur(3px);
+  background-color: rgba($color: #000, $alpha: 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease 0s;
+
+  // .modal__dialog
+  &__dialog {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: calc(100% - 30px);
+    max-width: 530px;
+    border-radius: 4px;
+    background: $clr-white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease 0s;
+
+    @include for-min-size("lg") {
+      top: 15%;
+    }
+
+    .modal-order-samples & {
+      max-width: 290px;
+      background-image: url("../images/modal/modal-order-samples.png");
+      background-position: center bottom 10px;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include for-min-size("md") {
+        max-width: 800px;
+      }
+    }
+  }
+
+  // .modal__dialog-button-close
+  &__dialog-button-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: $clr-gray-900;
+      pointer-events: none;
+
+      &:nth-child(1) {
+        width: 2px;
+        height: 100%;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        height: 2px;
+      }
+    }
+
+    @include for-hover-and-focus() {
+      > span {
+        background: $clr-primary;
+      }
+    }
+  }
+
+  // .modal__dialog-head
+  &__dialog-head {
+    padding: 24px 12px 24px 12px;
+    border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.5);
+
+    .modal-order-samples & {
+      border-bottom: none;
+    }
+  }
+
+  // .modal__dialog-title
+  &__dialog-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  // .modal__dialog-text
+  &__dialog-text {
+    margin: 12px 0 0 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    > a {
+      color: $clr-primary;
+    }
+  }
+
+  // .modal__dialog-body
+  // .modal__dialog-form
+  &__dialog-body,
+  &__dialog-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 32px 12px 32px 12px;
+
+    > * + * {
+      margin-top: 24px;
+    }
+
+    .modal-order-samples & {
+      padding-top: 0px;
+      padding-bottom: 175px;
+
+      @include for-min-size("md") {
+        padding-top: 150px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  // .modal__dialog-input
+  &__dialog-input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    max-width: 450px;
+    padding: 18px 24px 18px 24px;
+    border: none;
+    border-radius: 999px;
+    background: #ededed;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include for-min-size("md") {
+      height: 58px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &::placeholder {
+      color: rgba($color: $clr-gray-900, $alpha: 0.7);
+    }
+  }
+
+  // .modal__dialog-button
+  &__dialog-button {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  // .modal__dialog-button
+  &__dialog-link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    color: rgba($color: $clr-gray-900, $alpha: 0.7);
+
+    @include for-hover-and-focus() {
+      color: $clr-primary;
+      text-decoration: underline;
+    }
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.modal-bunner {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  width: 100%;
+  height: calc(100% - 100px);
+  border-radius: 4px;
+  background-color: $clr-white;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+  z-index: 500;
+  overflow: auto;
+  transform: translateX(calc(-120%));
+  transition: transform 0.5s ease 0s;
+
+  &.--active {
+    transform: translateX(0);
+  }
+
+  @include for-min-size("md") {
+    height: auto;
+    padding: 0 250px 0 0;
+    max-width: 700px;
+    background-image: url("../../images/modal/modal-bunner-competition.png");
+    background-position: right -10% center;
+    background-size: 45%;
+    background-repeat: no-repeat;
+  }
+
+  // .modal-bunner__dialog-button-close
+  &__dialog-button-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: $clr-gray-900;
+      pointer-events: none;
+
+      &:nth-child(1) {
+        width: 2px;
+        height: 100%;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        height: 2px;
+      }
+    }
+
+    @include for-hover-and-focus() {
+      > span {
+        background: $clr-primary;
+      }
+    }
+  }
+
+  // .modal-bunner__dialog-head
+  &__dialog-head {
+    padding: 24px 12px 24px 12px;
+
+    @include for-min-size("lg") {
+      padding: 24px 32px 24px 32px;
+    }
+  }
+
+  // .modal-bunner__dialog-title
+  &__dialog-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+
+    @include for-min-size("md") {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  // .modal-bunner__dialog-text
+  &__dialog-text {
+    margin: 12px 0 0 0;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include for-min-size("md") {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    > a {
+      color: $clr-primary;
+    }
+
+    // .modal-bunner__dialog-text_color-gray
+    &_color-gray {
+      color: rgba($color: $clr-gray-900, $alpha: 0.7);
+    }
+  }
+
+  // .modal-bunner__dialog-form
+  &__dialog-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px 32px 12px;
+
+    > * + * {
+      margin-top: 24px;
+    }
+
+    @include for-min-size("lg") {
+      padding: 0 32px 32px 32px;
+    }
+  }
+
+  // .modal-bunner__dialog-input
+  &__dialog-input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 18px 24px 18px 24px;
+    border: none;
+    border-radius: 999px;
+    background: #ededed;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include for-min-size("md") {
+      height: 58px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &::placeholder {
+      color: rgba($color: $clr-gray-900, $alpha: 0.7);
+    }
+  }
+
+  // .modal-bunner__dialog-button
+  &__dialog-button {
+    width: 100%;
+  }
+}

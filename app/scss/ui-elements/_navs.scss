@@ -127,6 +127,8 @@
 
   // .header-menu__item
   &__item {
+    color: $clr-gray-900;
+
     @include for-min-size("lg") {
       padding: 29px 0 29px 0;
 
@@ -135,6 +137,8 @@
       }
 
       @include for-hover-and-focus() {
+        color: $clr-primary;
+
         > .header-menu__submenu {
           opacity: 1;
           transform: translateY(100%);
@@ -154,7 +158,8 @@
     font-size: 16px;
     line-height: 20px;
     text-decoration: none;
-    color: $clr-gray-900;
+    color: inherit;
+    transition: color 0.25s ease 0s;
   }
 
   // .header-menu__link-label

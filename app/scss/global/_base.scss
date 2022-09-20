@@ -4,6 +4,10 @@
   --plyr-color-main: #{$clr-primary};
 }
 
+* {
+  outline-color: $clr-primary;
+}
+
 /* Base Styles */
 body {
   font-size: $fs-400;

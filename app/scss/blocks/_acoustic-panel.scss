@@ -18,7 +18,7 @@
   // .acoustic-panel__inner
   &__inner {
     margin: 0 -15px;
-    padding: 0 0 70px 0;
+    padding: 0 0 35px 0;
     background: linear-gradient(98.34deg, #e1d9d2 3.08%, #e9e2dc 97.21%);
 
     @include for-min-size("lg") {
@@ -108,6 +108,14 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+
+    &_margin-top-35 {
+      margin: 35px 0 0 0;
+
+      @include for-min-size("lg") {
+        margin: 0 0 0 0;
+      }
+    }
   }
 
   // .acoustic-panel__img
@@ -119,11 +127,12 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: opacity 0.25s ease 0s;
   }
 
   // .acoustic-panel__contnet
   &__contnet {
-    padding: 70px 15px 0 15px;
+    padding: 35px 15px 0 15px;
 
     @include for-min-size("lg") {
       padding: 0 70px 0 0;
@@ -189,8 +198,14 @@
 
     &_mobile {
       display: block;
+      width: 254px;
 
       @include for-min-size("md") {
+        width: 276px;
+        margin: 28px 15px 0 auto;
+      }
+
+      @include for-min-size("lg") {
         display: none;
       }
     }
@@ -198,7 +213,7 @@
     &_desktop {
       display: none;
 
-      @include for-min-size("md") {
+      @include for-min-size("lg") {
         display: block;
       }
     }
@@ -210,7 +225,7 @@
     align-items: center;
     flex-direction: column;
 
-    margin: 50px 0 0 0;
+    margin: 35px 0 0 0;
     padding: 0 15px 0 15px;
 
     @include for-min-size("md") {

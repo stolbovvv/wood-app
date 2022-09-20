@@ -518,13 +518,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // COLORS TABS
   const colorTabsContainers = document.querySelectorAll('.color-slider__wrapper');
+  const colorImgContainer = document.querySelector('.acoustic-panel__img-wrapper');
 
-  function activeColorTab(tabs, i = 0) {
+  function activeColorTab(tabs, images = [], i = 0) {
     tabs[i].classList.add('--active');
+
+    if (images.length > 0) {
+      images.forEach((image) => {
+        if (image.getAttribute('data-goods-short-id') === tabs[i].id) {
+          image.style['opacity'] = 1;
+          image.style['z-index'] = 2;
+        }
+      });
+    }
   }
 
-  function deactiveColorTab(tabs) {
+  function deactiveColorTab(tabs, images = []) {
     tabs.forEach((tab) => tab.classList.remove('--active'));
+
+    if (images.length > 0) {
+      images.forEach((image) => {
+        image.style['opacity'] = 0.25;
+        image.style['z-index'] = 1;
+      });
+    }
   }
 
   if (colorTabsContainers.length > 0) {
@@ -534,8 +551,22 @@ window.addEventListener('DOMContentLoaded', () => {
       const goodsShortNumber = document.querySelector('#goods-short-number');
       const goodsShortName = document.querySelector('#goods-short-name');
 
-      deactiveColorTab(colorTabs);
-      activeColorTab(colorTabs);
+      let colorImgArr = [];
+
+      if (colorImgContainer) {
+        colorTabs.forEach((item) => {
+          const colorImg = document.createElement('img');
+          colorImg.classList.add('acoustic-panel__img');
+          colorImg.setAttribute('data-goods-short-id', item.id);
+          colorImg.src = item.getAttribute('data-goods-short-img');
+          colorImgContainer.append(colorImg);
+        });
+
+        colorImgArr = colorImgContainer.querySelectorAll('.acoustic-panel__img');
+      }
+
+      deactiveColorTab(colorTabs, colorImgArr);
+      activeColorTab(colorTabs, colorImgArr);
 
       if (goodsShortColor) goodsShortColor.style['background'] = colorTabs[0].getAttribute('data-goods-short-color');
       if (goodsShortNumber) goodsShortNumber.textContent = colorTabs[0].getAttribute('data-goods-short-number');
@@ -545,11 +576,11 @@ window.addEventListener('DOMContentLoaded', () => {
         const target = e.target;
 
         if (target && target.classList.contains('color-slider__slide-round')) {
-          deactiveColorTab(colorTabs);
+          deactiveColorTab(colorTabs, colorImgArr);
 
           colorTabs.forEach((tab, i) => {
             if (target === tab) {
-              activeColorTab(colorTabs, i);
+              activeColorTab(colorTabs, colorImgArr, i);
 
               if (goodsShortColor) {
                 goodsShortColor.style['background'] = colorTabs[i].getAttribute('data-goods-short-color');
@@ -728,4 +759,95 @@ window.addEventListener('DOMContentLoaded', () => {
   const homePageVideo = document.querySelector('#video_new_poject');
 
   if (homePageVideo) new Plyr(homePageVideo, { resetOnEnd: true });
+
+  // MODALS
+  const modalAccaunt = document.querySelector('.modal-accaunt');
+  const modalDialogLogin = modalAccaunt.querySelector('.modal-accaunt-login');
+  const modalDialogRegistration = modalAccaunt.querySelector('.modal-accaunt-registration');
+  const modalOrderSamples = document.querySelector('.modal-order-samples');
+  const modalAddToCard = document.querySelector('.modal-add-to-card');
+  const modalCompetition = document.querySelector('.modal-bunner-competition');
+
+  const modalAccountOpenButton = document.querySelector('.accaunt-button');
+  const modalAddToCartButtons = document.querySelectorAll('button[data-button-action="add-to-cart"]');
+
+  function showModal(modal) {
+    const dialogs = modal.querySelectorAll('.modal__dialog');
+
+    document.body.classList.add('--lock');
+    modal.style['visibility'] = 'visible';
+    modal.style['opacity'] = 1;
+
+    dialogs[0].style['visibility'] = 'visible';
+    dialogs[0].style['opacity'] = 1;
+  }
+
+  function hideModal(modal) {
+    const dialogs = modal.querySelectorAll('.modal__dialog');
+
+    document.body.classList.remove('--lock');
+    modal.style['visibility'] = 'hidden';
+    modal.style['opacity'] = 0;
+
+    dialogs.forEach((dialog) => {
+      dialog.style['visibility'] = 'hidden';
+      dialog.style['opacity'] = 0;
+    });
+  }
+
+  function chsngeDialog(hide, show) {
+    hide.style['visibility'] = 'hidden';
+    hide.style['opacity'] = 0;
+
+    setTimeout(() => {
+      show.style['visibility'] = 'visible';
+      show.style['opacity'] = 1;
+    }, 250);
+  }
+
+  function addEventListenerToModal(modal) {
+    modal.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target && target.classList.contains('modal')) hideModal(modal);
+      if (target && target.getAttribute('data-modal-action') === 'close') hideModal(modal);
+
+      if (target && target.getAttribute('data-modal-change-to') === 'login') {
+        e.preventDefault();
+        chsngeDialog(modalDialogRegistration, modalDialogLogin);
+      }
+      if (target && target.getAttribute('data-modal-change-to') === 'registration') {
+        e.preventDefault();
+        chsngeDialog(modalDialogLogin, modalDialogRegistration);
+      }
+    });
+  }
+
+  modalAccountOpenButton.addEventListener('click', () => showModal(modalAccaunt));
+
+  if (modalAddToCartButtons.length > 0) {
+    modalAddToCartButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        showModal(modalAddToCard);
+      });
+    });
+  }
+
+  if (modalCompetition) {
+    modalCompetition.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target && target.getAttribute('data-modal-action') === 'close') {
+        modalCompetition.classList.remove('--active');
+      }
+    });
+
+    setTimeout(() => modalCompetition.classList.add('--active'), 5000);
+  }
+
+  if (modalOrderSamples) setTimeout(() => showModal(modalOrderSamples), 10000);
+
+  if (modalAccaunt) addEventListenerToModal(modalAccaunt);
+  if (modalAddToCard) addEventListenerToModal(modalAddToCard);
+  if (modalOrderSamples) addEventListenerToModal(modalOrderSamples);
 });

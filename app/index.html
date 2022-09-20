@@ -478,9 +478,9 @@
           </div>
           <!-- header-accaunt-end-shopping -->
           <div class="header__accaunt-end-shopping-card">
-            <a class="accaunt-link" href="#">
-              <i class="accaunt-link__icon icon-ui-user"></i>
-            </a>
+            <button class="accaunt-button">
+              <i class="accaunt-button__icon icon-ui-user"></i>
+            </button>
             <a class="shopping-card-link" href="#">
               <i class="shopping-card-link__icon icon-ui-shopping-cart"></i>
             </a>
@@ -549,30 +549,13 @@
                     Собственное Акустические пэт панели wood app - экологически чистое изделие, изготовленное из
                     переработанного пластика и дерева.
                   </p>
-                  <button class="acoustic-panel__button acoustic-panel__button_desktop button-primary">
+                  <a class="acoustic-panel__button acoustic-panel__button_desktop button-primary" href="#">
                     <span>Купить</span>
-                  </button>
+                  </a>
                 </div>
 
                 <div class="acoustic-panel__img-container">
-                  <div class="acoustic-panel__img-wrapper">
-                    <img class="acoustic-panel__img" src="./images/panels/base-panel_1.jpg" alt="" />
-                  </div>
-                  <div class="acoustic-panel__img-wrapper" style="display: none">
-                    <img class="acoustic-panel__img" src="./images/panels/base-panel_2.jpg" alt="" />
-                  </div>
-                  <div class="acoustic-panel__img-wrapper" style="display: none">
-                    <img class="acoustic-panel__img" src="./images/panels/base-panel_3.jpg" alt="" />
-                  </div>
-                  <div class="acoustic-panel__img-wrapper" style="display: none">
-                    <img class="acoustic-panel__img" src="./images/panels/base-panel_4.jpg" alt="" />
-                  </div>
-                  <div class="acoustic-panel__img-wrapper" style="display: none">
-                    <img class="acoustic-panel__img" src="./images/panels/base-panel_5.jpg" alt="" />
-                  </div>
-                  <div class="acoustic-panel__img-wrapper" style="display: none">
-                    <img class="acoustic-panel__img" src="./images/panels/base-panel_6.jpg" alt="" />
-                  </div>
+                  <div class="acoustic-panel__img-wrapper acoustic-panel__img-wrapper_margin-top-35"></div>
                 </div>
               </div>
 
@@ -580,9 +563,9 @@
                 <div class="acoustic-panel__goods-short goods-short">
                   <div class="goods-short__row">
                     <div class="goods-short__color" id="goods-short-color"></div>
-                    <div class="goods-short__title" id="goods-short-number">№44789</div>
+                    <div class="goods-short__title" id="goods-short-number">НОМЕР ЦВЕТА</div>
                   </div>
-                  <h3 class="goods-short__text" id="goods-short-name">Название панелей</h3>
+                  <h3 class="goods-short__text" id="goods-short-name">Название панели</h3>
                 </div>
 
                 <div class="acoustic-panel__sldier">
@@ -595,50 +578,68 @@
                         <div class="color-slider__wrapper swiper-wrapper">
                           <div class="color-slider__slide swiper-slide">
                             <span
+                              id="goods-short-1"
                               class="color-slider__slide-round --active"
                               data-goods-short-color="#FFD0A9"
                               data-goods-short-number="№44789"
                               data-goods-short-name="Название панелей 1"
+                              data-goods-short-img="./images/panels/base-panel_1.jpg"
+                              data-goods-short-link="#1"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
+                              id="goods-short-2"
                               class="color-slider__slide-round"
                               data-goods-short-color="#EFC19A"
                               data-goods-short-number="№55288"
                               data-goods-short-name="Название панелей 2"
+                              data-goods-short-img="./images/panels/base-panel_2.jpg"
+                              data-goods-short-link="#2"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
+                              id="goods-short-3"
                               class="color-slider__slide-round"
                               data-goods-short-color="#A07C5C"
                               data-goods-short-number="№99722"
                               data-goods-short-name="Название панелей 3"
+                              data-goods-short-img="./images/panels/base-panel_3.jpg"
+                              data-goods-short-link="#3"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
+                              id="goods-short-4"
                               class="color-slider__slide-round"
                               data-goods-short-color="#626262"
                               data-goods-short-number="№99771"
                               data-goods-short-name="Название панелей 4"
+                              data-goods-short-img="./images/panels/base-panel_4.jpg"
+                              data-goods-short-link="#4"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
+                              id="goods-short-5"
                               class="color-slider__slide-round"
                               data-goods-short-color="#FFD0A9"
                               data-goods-short-number="№55772"
                               data-goods-short-name="Название панелей 5"
+                              data-goods-short-img="./images/panels/base-panel_5.jpg"
+                              data-goods-short-link="#5"
                             ></span>
                           </div>
                           <div class="color-slider__slide swiper-slide">
                             <span
+                              id="goods-short-6"
                               class="color-slider__slide-round"
                               data-goods-short-color="#EFC19A"
                               data-goods-short-number="№88774"
                               data-goods-short-name="Название панелей 6"
+                              data-goods-short-img="./images/panels/base-panel_6.jpg"
+                              data-goods-short-link="#6"
                             ></span>
                           </div>
                         </div>
@@ -649,11 +650,11 @@
                     </div>
                   </div>
                 </div>
-
-                <button class="acoustic-panel__button acoustic-panel__button_mobile button-primary">
-                  <span>Купить</span>
-                </button>
               </div>
+
+              <a class="acoustic-panel__button acoustic-panel__button_mobile button-primary" href="#">
+                <span>Купить</span>
+              </a>
             </div>
           </div>
         </section>
@@ -1252,6 +1253,116 @@
         </div>
         <!-- container end -->
       </footer>
+    </div>
+
+    <!-- modals -->
+    <div class="modal modal-accaunt">
+      <div class="modal__dialog modal-accaunt-login">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Вход</div>
+          <div class="modal__dialog-text">
+            Еще нет аккаунта? <a href="#" data-modal-change-to="registration">Зарегистрируйтесь</a>
+          </div>
+        </div>
+        <form class="modal__dialog-form" action="#">
+          <input class="modal__dialog-input" type="email" name="login_email" placeholder="Введите Email" required />
+          <input
+            class="modal__dialog-input"
+            type="password"
+            name="login_password"
+            placeholder="Введите пароль"
+            required
+          />
+          <button class="modal__dialog-button button-primary" type="submit"><span>Войти</span></button>
+          <a class="modal__dialog-link" href="#">Забыли пароль?</a>
+        </form>
+      </div>
+      <div class="modal__dialog modal-accaunt-registration">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Регистрация</div>
+          <div class="modal__dialog-text">Есть аккаунт? <a href="#" data-modal-change-to="login">Войти</a></div>
+        </div>
+        <form class="modal__dialog-form" action="#">
+          <input class="modal__dialog-input" type="text" name="reg_name" placeholder="Введите имя" required />
+          <input class="modal__dialog-input" type="text" name="reg_surname" placeholder="Введите фамилию" required />
+          <input class="modal__dialog-input" type="text" name="reg_password" placeholder="Введите Email" required />
+          <input
+            class="modal__dialog-input"
+            type="text"
+            name="reg_password-repeat"
+            placeholder="Повторите пароль"
+            required
+          />
+          <button class="modal__dialog-button button-primary" type="submit"><span>Войти</span></button>
+          <a class="modal__dialog-link" href="#">Забыли пароль?</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal modal-add-to-card">
+      <div class="modal__dialog">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Товар добавлен в корзину</div>
+        </div>
+        <div class="modal__dialog-body" action="#">
+          <button class="modal__dialog-button button-primary" data-modal-action="close">
+            <span>Продолжить покупки</span>
+          </button>
+          <a class="modal__dialog-button button-secondary" href="#"><span>Перейти в корзину</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-order-samples">
+      <div class="modal__dialog">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Сложно определиться с выбором цвета?</div>
+          <div class="modal__dialog-text">Закажите образцы и уже завтра мы их доставим вам</div>
+        </div>
+        <div class="modal__dialog-body" action="#">
+          <a class="modal__dialog-button button-primary" href="#"><span>Заказать образцы</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-bunner modal-bunner-competition">
+      <button class="modal-bunner__dialog-button-close" data-modal-action="close">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="modal-bunner__dialog-head">
+        <div class="modal-bunner__dialog-title">Заполните контакты и участвуйте в конкурсе!</div>
+        <div class="modal-bunner__dialog-text">11 числа каждого месяца мы разыгрываем по 3 панели</div>
+      </div>
+      <form class="modal-bunner__dialog-form" action="#">
+        <input class="modal-bunner__dialog-input" type="text" name="name" placeholder="Введите имя" required />
+        <input class="modal-bunner__dialog-input" type="tel" name="surname" placeholder="Введите телефон" required />
+        <input class="modal-bunner__dialog-input" type="email" name="password" placeholder="Введите Email" required />
+        <button class="modal-bunner__dialog-button button-primary" type="submit">
+          <span>Учавствовать в розыгрыше</span>
+        </button>
+        <p class="modal-bunner__dialog-text modal-bunner__dialog-text_color-gray">
+          Отправляя данную форму, Вы соглашаетесь с
+          <a href="#">Политикой конфиденциальности</a>
+        </p>
+        <p class="modal-bunner__dialog-text">Розыгрыш проходит в вк, победителю уведомление приходит на почту!</p>
+      </form>
     </div>
 
     <!-- Connection Libs Scripts -->

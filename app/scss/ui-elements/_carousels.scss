@@ -18,6 +18,11 @@
     border: 2px solid transparent;
     background-color: transparent;
     cursor: pointer;
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
   }
 
   // .color-slider__button-prev

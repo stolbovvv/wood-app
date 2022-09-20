@@ -81,14 +81,22 @@
   }
 }
 
-.accaunt-link {
+.accaunt-button {
   color: inherit;
+  border: none;
   text-decoration: none;
+  background: transparent;
+  transition: color 0.25s ease 0s;
+  cursor: pointer;
 
-  // .accaunt-link__icon
+  // .accaunt-button__icon
   &__icon {
     font-size: 24px;
     color: inherit;
+  }
+
+  @include for-hover-and-focus() {
+    color: $clr-primary;
   }
 }
 

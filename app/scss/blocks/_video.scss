@@ -3,13 +3,16 @@
 /* Block "video" */
 .video {
   padding: 35px 0 35px 0;
-  background-image: url("../images/bg/bg-decor-waves.svg");
-  background-repeat: repeat-x;
-  background-size: auto 200px;
-  background-position: center;
 
   @include for-min-size("md") {
     padding: 60px 0 60px 0;
+  }
+
+  @include for-min-size("lg") {
+    background-image: url("../images/bg/bg-decor-waves.svg");
+    background-repeat: repeat-x;
+    background-size: auto 200px;
+    background-position: center;
   }
 
   // .video__inner
@@ -28,6 +31,16 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+    }
+
+    .plyr__control.plyr__control--overlaid {
+      padding: calc(var(--plyr-control-spacing, 10px) * 1.5);
+    }
+
+    @include for-min-size("md") {
+      .plyr__control.plyr__control--overlaid {
+        padding: calc(var(--plyr-control-spacing, 10px) * 3);
+      }
     }
   }
 

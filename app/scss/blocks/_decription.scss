@@ -20,8 +20,12 @@
     background-image: url("../images/bg/bg-decor-waves.svg");
     background-repeat: repeat-x;
     background-position: center;
-    background-size: contain;
+    background-size: 43%;
     min-height: 296px;
+
+    @include for-min-size("md") {
+      background-size: contain;
+    }
   }
 
   // .description__inner

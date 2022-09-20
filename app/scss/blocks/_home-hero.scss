@@ -4,10 +4,6 @@
 .home-hero {
   position: relative;
   margin: 0 0 35px 0;
-  // background-image: url("../images/bg/bg-hero.jpg");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
 
   // .home-hero__bg
   &__bg {
@@ -16,6 +12,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    > .plyr {
+      height: 100%;
+    }
   }
 
   &__bg-cover {

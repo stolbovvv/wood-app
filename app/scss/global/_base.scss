@@ -1,5 +1,9 @@
 @use "../helper" as *;
 
+:root {
+  --plyr-color-main: #{$clr-primary};
+}
+
 /* Base Styles */
 body {
   font-size: $fs-400;

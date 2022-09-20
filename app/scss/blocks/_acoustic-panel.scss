@@ -186,6 +186,22 @@
     @include for-min-size("md") {
       margin: 28px 0 0 0;
     }
+
+    &_mobile {
+      display: block;
+
+      @include for-min-size("md") {
+        display: none;
+      }
+    }
+
+    &_desktop {
+      display: none;
+
+      @include for-min-size("md") {
+        display: block;
+      }
+    }
   }
 
   // .acoustic-panel__footer

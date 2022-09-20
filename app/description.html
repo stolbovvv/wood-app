@@ -23,6 +23,7 @@
     <!-- Connetcing Libs Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.css" />
 
     <noscript>
       <style>
@@ -543,170 +544,138 @@
           </div>
         </section>
 
-        <!-- visualization -->
-        <section class="visualization">
-          <div class="container">
-            <div class="visualization__inner">
-              <div class="visualization__tabs-content">
-                <!-- visualization-item -->
-                <div class="visualization__item --active" data-visualization-tab-id="1">
-                  <div class="visualization__img-wrapper">
-                    <img class="visualization__img" src="./images/visualization/example/visualization-1.jpg" alt="" />
-                  </div>
-                  <div class="visualization__card visualization-card">
-                    <img class="visualization-card__img" src="./images/visualization/product/product-1.jpg" alt="" />
-                    <div class="visualization-card__data">
-                      <p class="visualization-card__name">ВудАпп™ Акупанель</p>
-                      <p class="visualization-card__price">9999 ₽ / за шт.</p>
-                    </div>
-                    <button class="visualization-card__button">
-                      <i class="visualization-card__button-icon icon-ui-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- visualization-item -->
-                <div class="visualization__item" data-visualization-tab-id="2">
-                  <div class="visualization__img-wrapper">
-                    <img class="visualization__img" src="./images/visualization/example/visualization-2.jpg" alt="" />
-                  </div>
-                  <div class="visualization__card visualization-card">
-                    <img class="visualization-card__img" src="./images/visualization/product/product-2.jpg" alt="" />
-                    <div class="visualization-card__data">
-                      <p class="visualization-card__name">ВудАпп™ Акупанель</p>
-                      <p class="visualization-card__price">9999 ₽ / за шт.</p>
-                    </div>
-                    <button class="visualization-card__button">
-                      <i class="visualization-card__button-icon icon-ui-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- visualization-item -->
-                <div class="visualization__item" data-visualization-tab-id="3">
-                  <div class="visualization__img-wrapper">
-                    <img class="visualization__img" src="./images/visualization/example/visualization-3.jpg" alt="" />
-                  </div>
-                  <div class="visualization__card visualization-card">
-                    <img class="visualization-card__img" src="./images/visualization/product/product-3.jpg" alt="" />
-                    <div class="visualization-card__data">
-                      <p class="visualization-card__name">ВудАпп™ Акупанель</p>
-                      <p class="visualization-card__price">9999 ₽ / за шт.</p>
-                    </div>
-                    <button class="visualization-card__button">
-                      <i class="visualization-card__button-icon icon-ui-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- visualization-item -->
-                <div class="visualization__item" data-visualization-tab-id="4">
-                  <div class="visualization__img-wrapper">
-                    <img class="visualization__img" src="./images/visualization/example/visualization-4.jpg" alt="" />
-                  </div>
-                  <div class="visualization__card visualization-card">
-                    <img class="visualization-card__img" src="./images/visualization/product/product-4.jpg" alt="" />
-                    <div class="visualization-card__data">
-                      <p class="visualization-card__name">ВудАпп™ Акупанель</p>
-                      <p class="visualization-card__price">9999 ₽ / за шт.</p>
-                    </div>
-                    <button class="visualization-card__button">
-                      <i class="visualization-card__button-icon icon-ui-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- visualization-item -->
-                <div class="visualization__item" data-visualization-tab-id="5">
-                  <div class="visualization__img-wrapper">
-                    <img class="visualization__img" src="./images/visualization/example/visualization-5.jpg" alt="" />
-                  </div>
-                  <div class="visualization__card visualization-card">
-                    <img class="visualization-card__img" src="./images/visualization/product/product-5.jpg" alt="" />
-                    <div class="visualization-card__data">
-                      <p class="visualization-card__name">ВудАпп™ Акупанель</p>
-                      <p class="visualization-card__price">9999 ₽ / за шт.</p>
-                    </div>
-                    <button class="visualization-card__button">
-                      <i class="visualization-card__button-icon icon-ui-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- visualization-item -->
-                <div class="visualization__item" data-visualization-tab-id="6">
-                  <div class="visualization__img-wrapper">
-                    <img class="visualization__img" src="./images/visualization/example/visualization-6.jpg" alt="" />
-                  </div>
-                  <div class="visualization__card visualization-card">
-                    <img class="visualization-card__img" src="./images/visualization/product/product-6.jpg" alt="" />
-                    <div class="visualization-card__data">
-                      <p class="visualization-card__name">ВудАпп™ Акупанель</p>
-                      <p class="visualization-card__price">9999 ₽ / за шт.</p>
-                    </div>
-                    <button class="visualization-card__button">
-                      <i class="visualization-card__button-icon icon-ui-shopping-cart"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- visualization-item end -->
-              </div>
+        <!-- section: visual -->
+        <section class="visual">
+          <div class="visual__outer">
+            <div class="container">
+              <div class="visual__inner">
+                <div class="visual__img-wrapper"></div>
 
-              <div class="visualization__slider visualization-slider">
-                <button class="visualization-slider__button">
-                  <i class="visualization-slider__button-icon icon-ui-arrow-left-bold"></i>
-                </button>
-                <div class="visualization-slider__body swiper">
-                  <div class="visualization-slider__wrapper swiper-wrapper">
-                    <!-- visualization-slider-slide -->
-                    <div class="visualization-slider__slide swiper-slide" data-visualization-id="1">
-                      <img
-                        class="visualization-slider__slide-img"
-                        src="./images/visualization/product/product-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <!-- visualization-slider-slide -->
-                    <div class="visualization-slider__slide swiper-slide" data-visualization-id="2">
-                      <img
-                        class="visualization-slider__slide-img"
-                        src="./images/visualization/product/product-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <!-- visualization-slider-slide -->
-                    <div class="visualization-slider__slide swiper-slide" data-visualization-id="3">
-                      <img
-                        class="visualization-slider__slide-img"
-                        src="./images/visualization/product/product-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <!-- visualization-slider-slide -->
-                    <div class="visualization-slider__slide swiper-slide" data-visualization-id="4">
-                      <img
-                        class="visualization-slider__slide-img"
-                        src="./images/visualization/product/product-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <!-- visualization-slider-slide -->
-                    <div class="visualization-slider__slide swiper-slide" data-visualization-id="5">
-                      <img
-                        class="visualization-slider__slide-img"
-                        src="./images/visualization/product/product-5.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <!-- visualization-slider-slide -->
-                    <div class="visualization-slider__slide swiper-slide" data-visualization-id="6">
-                      <img
-                        class="visualization-slider__slide-img"
-                        src="./images/visualization/product/product-6.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <!-- visualization-slider-slide end -->
+                <div class="visual__card">
+                  <img
+                    class="visual__card-img"
+                    id="visual-card-img"
+                    src="./images/visualization/product/product-1.jpg"
+                    alt=""
+                  />
+                  <div class="visual__card-data">
+                    <p class="visual__card-name" id="visual-card-name">ВудАпп™ Панель 1</p>
+                    <p class="visual__card-price" id="visual-card-price">1111 ₽ / за шт.</p>
                   </div>
+                  <a class="visual__card-link" id="visual-card-link" href="#">
+                    <i class="visual__card-link-icon icon-ui-shopping-cart"></i>
+                  </a>
                 </div>
-                <button class="visualization-slider__button">
-                  <i class="visualization-slider__button-icon icon-ui-arrow-right-bold"></i>
-                </button>
+
+                <div class="visual__slider">
+                  <button class="visual__slider-button">
+                    <i class="visual__slider-button-icon icon-ui-arrow-left-bold"></i>
+                  </button>
+                  <div class="visual__slider-body swiper">
+                    <div class="visual__slider-wrapper swiper-wrapper">
+                      <!-- visualization-slider-slide -->
+                      <div
+                        id="visual-1"
+                        class="visual__slider-slide swiper-slide --active"
+                        data-visual-preview-img="./images/visualization/example/visualization-1.jpg"
+                        data-visual-card-img="./images/visualization/product/product-1.jpg"
+                        data-visual-card-name="ВудАпп™ Панель 1"
+                        data-visual-card-price="1111 ₽ / за шт."
+                        data-visual-card-link="#1"
+                      >
+                        <img
+                          class="visual__slider-slide-img"
+                          src="./images/visualization/product/product-1.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <!-- visualization-slider-slide -->
+                      <div
+                        id="visual-2"
+                        class="visual__slider-slide swiper-slide"
+                        data-visual-preview-img="./images/visualization/example/visualization-2.jpg"
+                        data-visual-card-img="./images/visualization/product/product-2.jpg"
+                        data-visual-card-name="ВудАпп™ Панель 2"
+                        data-visual-card-price="2222 ₽ / за шт."
+                        data-visual-card-link="#2"
+                      >
+                        <img
+                          class="visual__slider-slide-img"
+                          src="./images/visualization/product/product-2.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <!-- visualization-slider-slide -->
+                      <div
+                        id="visual-3"
+                        class="visual__slider-slide swiper-slide"
+                        data-visual-preview-img="./images/visualization/example/visualization-3.jpg"
+                        data-visual-card-img="./images/visualization/product/product-3.jpg"
+                        data-visual-card-name="ВудАпп™ Панель 3"
+                        data-visual-card-price="3333 ₽ / за шт."
+                        data-visual-card-link="#3"
+                      >
+                        <img
+                          class="visual__slider-slide-img"
+                          src="./images/visualization/product/product-3.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <!-- visualization-slider-slide -->
+                      <div
+                        id="visual-4"
+                        class="visual__slider-slide swiper-slide"
+                        data-visual-preview-img="./images/visualization/example/visualization-4.jpg"
+                        data-visual-card-img="./images/visualization/product/product-4.jpg"
+                        data-visual-card-name="ВудАпп™ Панель 4"
+                        data-visual-card-price="4444 ₽ / за шт."
+                        data-visual-card-link="#4"
+                      >
+                        <img
+                          class="visual__slider-slide-img"
+                          src="./images/visualization/product/product-4.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <!-- visualization-slider-slide -->
+                      <div
+                        id="visual-5"
+                        class="visual__slider-slide swiper-slide"
+                        data-visual-preview-img="./images/visualization/example/visualization-5.jpg"
+                        data-visual-card-img="./images/visualization/product/product-5.jpg"
+                        data-visual-card-name="ВудАпп™ Панель 5"
+                        data-visual-card-price="5555 ₽ / за шт."
+                        data-visual-card-link="#5"
+                      >
+                        <img
+                          class="visual__slider-slide-img"
+                          src="./images/visualization/product/product-5.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <!-- visualization-slider-slide -->
+                      <div
+                        id="visual-6"
+                        class="visual__slider-slide swiper-slide"
+                        data-visual-preview-img="./images/visualization/example/visualization-6.jpg"
+                        data-visual-card-img="./images/visualization/product/product-6.jpg"
+                        data-visual-card-name="ВудАпп™ Панель 6"
+                        data-visual-card-price="6000 ₽ / за шт."
+                        data-visual-card-link="#6"
+                      >
+                        <img
+                          class="visual__slider-slide-img"
+                          src="./images/visualization/product/product-6.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <!-- visualization-slider-slide end -->
+                    </div>
+                  </div>
+                  <button class="visual__slider-button">
+                    <i class="visual__slider-button-icon icon-ui-arrow-right-bold"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1053,6 +1022,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/6.2.0/wavesurfer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.2/plyr.min.js"></script>
 
     <!-- Connecting Page Scripts -->
     <script src="js/main.min.js"></script>

@@ -47,6 +47,16 @@
     overflow: hidden;
   }
 
+  &__gallery-video-wrapper {
+    .plyr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   // .goods__gallery-img
   // .goods__gallery-video
   &__gallery-img,

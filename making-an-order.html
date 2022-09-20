@@ -478,9 +478,9 @@
           </div>
           <!-- header-accaunt-end-shopping -->
           <div class="header__accaunt-end-shopping-card">
-            <a class="accaunt-link" href="#">
-              <i class="accaunt-link__icon icon-ui-user"></i>
-            </a>
+            <button class="accaunt-button">
+              <i class="accaunt-button__icon icon-ui-user"></i>
+            </button>
             <a class="shopping-card-link" href="#">
               <i class="shopping-card-link__icon icon-ui-shopping-cart"></i>
             </a>
@@ -743,6 +743,91 @@
         </div>
         <!-- container end -->
       </footer>
+    </div>
+
+    <div class="modal modal-accaunt">
+      <div class="modal__dialog modal-accaunt-login">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Вход</div>
+          <div class="modal__dialog-text">
+            Еще нет аккаунта? <a href="#" data-modal-change-to="registration">Зарегистрируйтесь</a>
+          </div>
+        </div>
+        <form class="modal__dialog-form" action="#">
+          <input class="modal__dialog-input" type="email" name="login_email" placeholder="Введите Email" required />
+          <input
+            class="modal__dialog-input"
+            type="password"
+            name="login_password"
+            placeholder="Введите пароль"
+            required
+          />
+          <button class="modal__dialog-button button-primary" type="submit"><span>Войти</span></button>
+          <a class="modal__dialog-link" href="#">Забыли пароль?</a>
+        </form>
+      </div>
+      <div class="modal__dialog modal-accaunt-registration">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Регистрация</div>
+          <div class="modal__dialog-text">Есть аккаунт? <a href="#" data-modal-change-to="login">Войти</a></div>
+        </div>
+        <form class="modal__dialog-form" action="#">
+          <input class="modal__dialog-input" type="text" name="reg_name" placeholder="Введите имя" required />
+          <input class="modal__dialog-input" type="text" name="reg_surname" placeholder="Введите фамилию" required />
+          <input class="modal__dialog-input" type="text" name="reg_password" placeholder="Введите Email" required />
+          <input
+            class="modal__dialog-input"
+            type="text"
+            name="reg_password-repeat"
+            placeholder="Повторите пароль"
+            required
+          />
+          <button class="modal__dialog-button button-primary" type="submit"><span>Войти</span></button>
+          <a class="modal__dialog-link" href="#">Забыли пароль?</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal modal-add-to-card">
+      <div class="modal__dialog">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Товар добавлен в корзину</div>
+        </div>
+        <div class="modal__dialog-body" action="#">
+          <button class="modal__dialog-button button-primary" data-modal-action="close">
+            <span>Продолжить покупки</span>
+          </button>
+          <a class="modal__dialog-button button-secondary" href="#"><span>Перейти в корзину</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-order-samples">
+      <div class="modal__dialog">
+        <button class="modal__dialog-button-close" data-modal-action="close">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__dialog-head">
+          <div class="modal__dialog-title">Сложно определиться с выбором цвета?</div>
+          <div class="modal__dialog-text">Закажите образцы и уже завтра мы их доставим вам</div>
+        </div>
+        <div class="modal__dialog-body" action="#">
+          <a class="modal__dialog-button button-primary" href="#"><span>Заказать образцы</span></a>
+        </div>
+      </div>
     </div>
 
     <!-- Connection Libs Scripts -->

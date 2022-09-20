@@ -787,5 +787,93 @@ window.addEventListener('DOMContentLoaded', function() {
   var homePageVideo = document.querySelector('#video_new_poject');
   if (homePageVideo) new Plyr(homePageVideo, {
     resetOnEnd: true
+  }); // MODALS
+
+  var modalAccaunt = document.querySelector('.modal-accaunt');
+  var modalDialogLogin = modalAccaunt.querySelector('.modal-accaunt-login');
+  var modalDialogRegistration = modalAccaunt.querySelector('.modal-accaunt-registration');
+  var modalOrderSamples = document.querySelector('.modal-order-samples');
+  var modalAddToCard = document.querySelector('.modal-add-to-card');
+  var modalCompetition = document.querySelector('.modal-bunner-competition');
+  var modalAccountOpenButton = document.querySelector('.accaunt-button');
+  var modalAddToCartButtons = document.querySelectorAll('button[data-button-action="add-to-cart"]');
+
+  function showModal(modal) {
+    var dialogs = modal.querySelectorAll('.modal__dialog');
+    document.body.classList.add('--lock');
+    modal.style['visibility'] = 'visible';
+    modal.style['opacity'] = 1;
+    dialogs[0].style['visibility'] = 'visible';
+    dialogs[0].style['opacity'] = 1;
+  }
+
+  function hideModal(modal) {
+    var dialogs = modal.querySelectorAll('.modal__dialog');
+    document.body.classList.remove('--lock');
+    modal.style['visibility'] = 'hidden';
+    modal.style['opacity'] = 0;
+    dialogs.forEach(function(dialog) {
+      dialog.style['visibility'] = 'hidden';
+      dialog.style['opacity'] = 0;
+    });
+  }
+
+  function chsngeDialog(hide, show) {
+    hide.style['visibility'] = 'hidden';
+    hide.style['opacity'] = 0;
+    setTimeout(function() {
+      show.style['visibility'] = 'visible';
+      show.style['opacity'] = 1;
+    }, 250);
+  }
+
+  function addEventListenerToModal(modal) {
+    modal.addEventListener('click', function(e) {
+      var target = e.target;
+      if (target && target.classList.contains('modal')) hideModal(modal);
+      if (target && target.getAttribute('data-modal-action') === 'close') hideModal(modal);
+
+      if (target && target.getAttribute('data-modal-change-to') === 'login') {
+        e.preventDefault();
+        chsngeDialog(modalDialogRegistration, modalDialogLogin);
+      }
+
+      if (target && target.getAttribute('data-modal-change-to') === 'registration') {
+        e.preventDefault();
+        chsngeDialog(modalDialogLogin, modalDialogRegistration);
+      }
+    });
+  }
+
+  modalAccountOpenButton.addEventListener('click', function() {
+    return showModal(modalAccaunt);
   });
+
+  if (modalAddToCartButtons.length > 0) {
+    modalAddToCartButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        showModal(modalAddToCard);
+      });
+    });
+  }
+
+  if (modalCompetition) {
+    modalCompetition.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if (target && target.getAttribute('data-modal-action') === 'close') {
+        modalCompetition.classList.remove('--active');
+      }
+    });
+    setTimeout(function() {
+      return modalCompetition.classList.add('--active');
+    }, 5000);
+  }
+
+  if (modalOrderSamples) setTimeout(function() {
+    return showModal(modalOrderSamples);
+  }, 10000);
+  if (modalAccaunt) addEventListenerToModal(modalAccaunt);
+  if (modalAddToCard) addEventListenerToModal(modalAddToCard);
+  if (modalOrderSamples) addEventListenerToModal(modalOrderSamples);
 });

@@ -3,10 +3,6 @@
 /* Block "simple-background" */
 .simple-background {
   margin: 35px 0 35px 0;
-  // background-image: url("../images/bg/bg-simple.jpg");
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: cover;
   height: 280px;
 
   @include for-min-size("md") {
@@ -17,4 +13,7 @@
   @include for-min-size("lg") {
     height: 670px;
   }
+}
+
+.parallax__img {
 }

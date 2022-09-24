@@ -847,4 +847,6 @@ window.addEventListener('DOMContentLoaded', () => {
   if (modalAccaunt) addEventListenerToModal(modalAccaunt);
   if (modalAddToCard) addEventListenerToModal(modalAddToCard);
   if (modalOrderSamples) addEventListenerToModal(modalOrderSamples);
+
+  // PARALLAX
 });

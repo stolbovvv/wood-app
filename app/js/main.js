@@ -743,16 +743,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const asideBtnBack = document.querySelector('.aside-video__back-button');
   const asideBody = document.querySelector('.aside-video');
 
-  const adminAside = gsap
-    .to(asideBody, {
-      y: '0',
-      duration: 0.5,
-    })
-    .reverse();
-
   if (asideBtnOpen && asideBtnBack && asideBody) {
-    asideBtnOpen.addEventListener('click', () => adminAside.play());
-    asideBtnBack.addEventListener('click', () => adminAside.reverse());
+    asideBtnOpen.addEventListener('click', () => asideBody.classList.add('--active'));
+    asideBtnBack.addEventListener('click', () => asideBody.classList.remove('--active'));
   }
 
   // VIDEO

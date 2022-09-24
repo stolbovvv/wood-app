@@ -708,11 +708,12 @@
   // .card__link
   &__link {
     display: flex;
+    font-weight: 500;
     align-items: center;
     font-size: 14px;
     line-height: 17px;
     text-decoration: none;
-    color: inherit;
+    color: $clr-gray-900;
 
     @include for-hover-and-focus() {
       color: $clr-primary;

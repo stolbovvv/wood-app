@@ -860,6 +860,10 @@ window.addEventListener('DOMContentLoaded', function() {
       if (target && target.getAttribute('data-modal-action') === 'close') {
         modalCompetition.classList.remove('--active');
       }
+
+      if (target && target.classList.contains('modal-bunner')) {
+        modalCompetition.classList.remove('--active');
+      }
     });
     setTimeout(function() {
       return modalCompetition.classList.add('--active');

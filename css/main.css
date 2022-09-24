@@ -10108,10 +10108,6 @@ body::-webkit-scrollbar {
         height: auto;
         padding: 0 250px 0 0;
         max-width: 700px;
-        background-image: url("../../images/modal/modal-bunner-competition.png");
-        background-position: right -10% center;
-        background-size: 45%;
-        background-repeat: no-repeat;
     }
 }
 

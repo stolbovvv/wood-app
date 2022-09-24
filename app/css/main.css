@@ -5089,7 +5089,7 @@ body::-webkit-scrollbar {
 }
 
 .difference__player-button-icon {
-    font-size: 36px;
+    font-size: 28px;
     color: #787d46;
 }
 
@@ -6434,10 +6434,6 @@ body::-webkit-scrollbar {
 /* Block "simple-background" */
 .simple-background {
     margin: 35px 0 35px 0;
-    background-image: url("../images/bg/bg-simple.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     height: 280px;
 }
 

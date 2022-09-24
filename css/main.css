@@ -216,7 +216,6 @@ body::-webkit-scrollbar {
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 .main {
@@ -1767,13 +1766,14 @@ body::-webkit-scrollbar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-weight: 500;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     font-size: 14px;
     line-height: 17px;
     text-decoration: none;
-    color: inherit;
+    color: #171717;
 }
 
 .card__link:hover,
@@ -9467,6 +9467,11 @@ body::-webkit-scrollbar {
     padding: 35px 15px 35px 15px;
     background: #ebebeb;
     overflow: auto;
+    -webkit-transition: -webkit-transform 0.5s ease 0s;
+    transition: -webkit-transform 0.5s ease 0s;
+    -o-transition: transform 0.5s ease 0s;
+    transition: transform 0.5s ease 0s;
+    transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
     z-index: 2000;
 }
 
@@ -9474,14 +9479,26 @@ body::-webkit-scrollbar {
     margin: 32px 0 0 0;
 }
 
+.aside-video.--active {
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+}
+
 @media only screen and (min-width: 1280px) {
     .aside-video {
-        position: static;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 112px;
         width: auto;
         height: auto;
-        padding: 70px 0 0 0;
+        max-height: calc(100vh - 112px);
+        margin: 70px 0 0 0;
+        padding: 0 24px 0 0;
         background: transparent;
-        overflow: visible;
+        -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+                transform: translateY(0%);
         z-index: 0;
     }
 
@@ -9497,6 +9514,7 @@ body::-webkit-scrollbar {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0 0 24px 0;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -9555,10 +9573,15 @@ body::-webkit-scrollbar {
     .aside-video__container {
         display: block;
     }
+
+    .aside-video__container>*+* {
+        margin: 24px 0 0 0;
+    }
 }
 
 .aside-video__wrapper {
     position: relative;
+    display: block;
     border-radius: 4px;
     padding: 0 0 140px 0;
     overflow: hidden;
@@ -9574,6 +9597,39 @@ body::-webkit-scrollbar {
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
+}
+
+.aside-video__wrapper:hover>.aside-video__icon,
+.aside-video__wrapper:focus-within>.aside-video__icon {
+    color: #787d46;
+    border-color: #787d46;
+}
+
+.aside-video__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    -webkit-transition: all 0.25s ease 0s;
+    -o-transition: all 0.25s ease 0s;
+    transition: all 0.25s ease 0s;
+}
+
+.aside-video__icon::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-35%, -50%);
+        -ms-transform: translate(-35%, -50%);
+            transform: translate(-35%, -50%);
+    font-size: 18px;
 }
 
 .aside-video__name {
@@ -9617,9 +9673,9 @@ body::-webkit-scrollbar {
 @media only screen and (min-width: 1280px) {
     .aside-page-menu {
         margin: 70px 0 0 0;
+        top: 112px;
         position: -webkit-sticky;
         position: sticky;
-        top: 90px;
     }
 }
 

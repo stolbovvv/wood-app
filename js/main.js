@@ -769,17 +769,13 @@ window.addEventListener('DOMContentLoaded', function() {
   var asideBtnOpen = document.querySelector('.aside-video__button-open');
   var asideBtnBack = document.querySelector('.aside-video__back-button');
   var asideBody = document.querySelector('.aside-video');
-  var adminAside = gsap.to(asideBody, {
-    y: '0',
-    duration: 0.5
-  }).reverse();
 
   if (asideBtnOpen && asideBtnBack && asideBody) {
     asideBtnOpen.addEventListener('click', function() {
-      return adminAside.play();
+      return asideBody.classList.add('--active');
     });
     asideBtnBack.addEventListener('click', function() {
-      return adminAside.reverse();
+      return asideBody.classList.remove('--active');
     });
   } // VIDEO
 

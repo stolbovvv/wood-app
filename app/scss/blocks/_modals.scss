@@ -197,30 +197,63 @@
 
 .modal-bunner {
   position: fixed;
-  left: 15px;
-  bottom: 15px;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: calc(100% - 100px);
-  border-radius: 4px;
-  background-color: $clr-white;
-  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
-  z-index: 500;
+  height: 100%;
+  z-index: 1000;
   overflow: auto;
-  transform: translateX(calc(-120%));
-  transition: transform 0.5s ease 0s;
+  backdrop-filter: blur(3px);
+  background-color: rgba($color: #000, $alpha: 0.5);
+  border-radius: 4px;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: all 0.5s ease 0s;
 
   &.--active {
-    transform: translateX(0);
+    opacity: 1;
   }
 
   @include for-min-size("md") {
+    left: 15px;
+    bottom: 15px;
+    width: auto;
     height: auto;
-    padding: 0 250px 0 0;
-    max-width: 700px;
-    background-image: url("../../images/modal/modal-bunner-competition.png");
-    background-position: right -10% center;
-    background-size: 45%;
-    background-repeat: no-repeat;
+    backdrop-filter: blur(0);
+    background-color: transparent;
+    transform: translateX(calc(-120%));
+    opacity: 1;
+
+    &.--active {
+      transform: translateX(0);
+    }
+  }
+
+  // .modal-bunner__dialog
+  &__dialog {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: auto;
+    max-height: calc(100vh - 30px);
+    left: 15px;
+    bottom: 15px;
+    border-radius: 4px;
+    background-color: $clr-white;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include for-min-size("md") {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      padding: 0 250px 0 0;
+      width: auto;
+      height: auto;
+      max-height: calc(100vh - 112px);
+      padding: 0 250px 0 0;
+      max-width: 700px;
+    }
   }
 
   // .modal-bunner__dialog-button-close
@@ -233,6 +266,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    z-index: 2;
 
     > span {
       position: absolute;
@@ -298,6 +332,21 @@
     // .modal-bunner__dialog-text_color-gray
     &_color-gray {
       color: rgba($color: $clr-gray-900, $alpha: 0.7);
+    }
+  }
+
+  // .modal-bunner__img
+  &__img {
+    display: none;
+
+    @include for-min-size("md") {
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%);
+      width: 40%;
+      z-index: 0;
     }
   }
 

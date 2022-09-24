@@ -216,6 +216,11 @@ body::-webkit-scrollbar {
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper_overflow-visible {
+    overflow: visible;
 }
 
 .main {
@@ -10077,41 +10082,76 @@ body::-webkit-scrollbar {
 
 .modal-bunner {
     position: fixed;
-    left: 15px;
-    bottom: 15px;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    height: calc(100% - 100px);
+    height: 100%;
+    z-index: 1000;
+    overflow: auto;
+    -webkit-backdrop-filter: blur(3px);
+            backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 4px;
-    background-color: #ffffff;
     -webkit-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
             box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
-    z-index: 500;
-    overflow: auto;
-    -webkit-transform: translateX(-120%);
-        -ms-transform: translateX(-120%);
-            transform: translateX(-120%);
-    -webkit-transition: -webkit-transform 0.5s ease 0s;
-    transition: -webkit-transform 0.5s ease 0s;
-    -o-transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 
 .modal-bunner.--active {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
     .modal-bunner {
+        left: 15px;
+        bottom: 15px;
+        width: auto;
         height: auto;
+        -webkit-backdrop-filter: blur(0);
+                backdrop-filter: blur(0);
+        background-color: transparent;
+        -webkit-transform: translateX(-120%);
+            -ms-transform: translateX(-120%);
+                transform: translateX(-120%);
+        opacity: 1;
+    }
+
+    .modal-bunner.--active {
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+.modal-bunner__dialog {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: auto;
+    max-height: calc(100vh - 30px);
+    left: 15px;
+    bottom: 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .modal-bunner__dialog {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        padding: 0 250px 0 0;
+        width: auto;
+        height: auto;
+        max-height: calc(100vh - 112px);
         padding: 0 250px 0 0;
         max-width: 700px;
-        background-image: url("../../images/modal/modal-bunner-competition.png");
-        background-position: right -10% center;
-        background-size: 45%;
-        background-repeat: no-repeat;
     }
 }
 
@@ -10124,6 +10164,7 @@ body::-webkit-scrollbar {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    z-index: 2;
 }
 
 .modal-bunner__dialog-button-close>span {
@@ -10194,6 +10235,24 @@ body::-webkit-scrollbar {
 
 .modal-bunner__dialog-text_color-gray {
     color: rgba(23, 23, 23, 0.7);
+}
+
+.modal-bunner__img {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .modal-bunner__img {
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: -25px;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 40%;
+        z-index: 0;
+    }
 }
 
 .modal-bunner__dialog-form {

@@ -6436,22 +6436,22 @@ body::-webkit-scrollbar {
     }
 }
 
-/* Block "simple-background" */
-.simple-background {
+/* Block "parallax" */
+.parallax {
     margin: 35px 0 35px 0;
-    height: 280px;
+    height: 250px;
 }
 
 @media only screen and (min-width: 768px) {
-    .simple-background {
+    .parallax {
         margin: 70px 0 70px 0;
-        height: 480px;
+        height: 450px;
     }
 }
 
 @media only screen and (min-width: 1280px) {
-    .simple-background {
-        height: 670px;
+    .parallax {
+        height: 650px;
     }
 }
 

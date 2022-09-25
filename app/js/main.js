@@ -1,4 +1,4 @@
-/* global gsap, Power0, Swiper, WaveSurfer, Plyr */
+/* global gsap, Power0, Swiper, WaveSurfer, Plyr, ScrollTrigger */
 window.addEventListener('DOMContentLoaded', () => {
   // Header-menu
   const headerMenuButton = document.querySelector('.header-menu__button');
@@ -849,4 +849,43 @@ window.addEventListener('DOMContentLoaded', () => {
   if (modalOrderSamples) addEventListenerToModal(modalOrderSamples);
 
   // PARALLAX
+  gsap.registerPlugin(ScrollTrigger);
+
+  const parallaxArr = document.querySelectorAll('.parallax');
+
+  if (parallaxArr.length > 0) {
+    parallaxArr.forEach((parallax) => {
+      const scale = parallax.getAttribute('data-parallax-scale');
+      const source = parallax.getAttribute('data-parallax-src');
+
+      parallax.style['position'] = 'relative';
+      parallax.style['overflow'] = 'hidden';
+
+      if (source) {
+        const image = document.createElement('img');
+
+        image.classList.add('.parallax__img');
+        image.style['position'] = 'absolute';
+        image.style['left'] = '0';
+        image.style['bottom'] = '0';
+        image.style['width'] = '100%';
+        image.style['height'] = scale ? `${100 * scale}%` : '100%';
+        image.style['object-fit'] = 'cover';
+        image.src = source;
+
+        parallax.append(image);
+
+        gsap.to(image, {
+          y: scale ? `${100 * (scale - 1)}%` : '0%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: parallax,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true,
+          },
+        });
+      }
+    });
+  }
 });

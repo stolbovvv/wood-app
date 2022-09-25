@@ -882,16 +882,24 @@ window.addEventListener('DOMContentLoaded', function() {
 
   if (parallaxArr.length > 0) {
     parallaxArr.forEach(function(parallax) {
-      var parallaxImg = document.querySelector('.parallax__img');
+      var scale = parallax.getAttribute('data-parallax-scale');
+      var source = parallax.getAttribute('data-parallax-src');
+      parallax.style['position'] = 'relative';
+      parallax.style['overflow'] = 'hidden';
 
-      if (parallaxImg) {
-        // parallaxScroll.style['background-image'] = `url(${parallaxScroll.getAttribute('data-parallax-img')})`;
-        // parallaxScroll.style['background-repeat'] = 'no-repeat';
-        // parallaxScroll.style['background-size'] = 'cover';
-        // parallaxScroll.style['background-position'] = 'center';
-        gsap.to(parallaxImg, {
-          x: 0,
-          y: '100%',
+      if (source) {
+        var image = document.createElement('img');
+        image.classList.add('.parallax__img');
+        image.style['position'] = 'absolute';
+        image.style['left'] = '0';
+        image.style['bottom'] = '0';
+        image.style['width'] = '100%';
+        image.style['height'] = scale ? "".concat(100 * scale, "%") : '100%';
+        image.style['object-fit'] = 'cover';
+        image.src = source;
+        parallax.append(image);
+        gsap.to(image, {
+          y: scale ? "".concat(100 * (scale - 1), "%") : '0%',
           ease: 'none',
           scrollTrigger: {
             trigger: parallax,

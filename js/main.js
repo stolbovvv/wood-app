@@ -37,7 +37,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-/* global gsap, Power0, Swiper, WaveSurfer, Plyr */
+/* global gsap, Power0, Swiper, WaveSurfer, Plyr, ScrollTrigger */
 window.addEventListener('DOMContentLoaded', function() {
   // Header-menu
   var headerMenuButton = document.querySelector('.header-menu__button');
@@ -875,5 +875,32 @@ window.addEventListener('DOMContentLoaded', function() {
   }, 10000);
   if (modalAccaunt) addEventListenerToModal(modalAccaunt);
   if (modalAddToCard) addEventListenerToModal(modalAddToCard);
-  if (modalOrderSamples) addEventListenerToModal(modalOrderSamples);
+  if (modalOrderSamples) addEventListenerToModal(modalOrderSamples); // PARALLAX
+
+  gsap.registerPlugin(ScrollTrigger);
+  var parallaxArr = document.querySelectorAll('.parallax');
+
+  if (parallaxArr.length > 0) {
+    parallaxArr.forEach(function(parallax) {
+      var parallaxImg = document.querySelector('.parallax__img');
+
+      if (parallaxImg) {
+        // parallaxScroll.style['background-image'] = `url(${parallaxScroll.getAttribute('data-parallax-img')})`;
+        // parallaxScroll.style['background-repeat'] = 'no-repeat';
+        // parallaxScroll.style['background-size'] = 'cover';
+        // parallaxScroll.style['background-position'] = 'center';
+        gsap.to(parallaxImg, {
+          x: 0,
+          y: '100%',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: parallax,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+          }
+        });
+      }
+    });
+  }
 });

@@ -6436,23 +6436,35 @@ body::-webkit-scrollbar {
     }
 }
 
-/* Block "simple-background" */
-.simple-background {
+/* Block "parallax" */
+.parallax {
+    position: relative;
     margin: 35px 0 35px 0;
     height: 280px;
+    overflow: hidden;
+    background-color: blue;
 }
 
 @media only screen and (min-width: 768px) {
-    .simple-background {
+    .parallax {
         margin: 70px 0 70px 0;
         height: 480px;
     }
 }
 
 @media only screen and (min-width: 1280px) {
-    .simple-background {
+    .parallax {
         height: 670px;
     }
+}
+
+.parallax__img {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 200%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 /* Block "client-feedback" */

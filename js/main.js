@@ -822,9 +822,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
   var accauntButton = document.querySelector('.accaunt-button');
+  var goodsSummaryButtons = document.querySelectorAll('.goods__summary-button');
   var modalAccaunt = document.querySelector('.modal-accaunt');
+  var modalAddToCart = document.querySelector('.modal-add-to-cart');
   var modalCompetition = document.querySelector('.modal-competition');
   var modalOrderSamples = document.querySelector('.modal-order-samples');
+  var modalButtons = document.querySelectorAll('.modal-button');
 
   function showModal(modal) {
     var lockBody = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
@@ -869,8 +872,10 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   function setTimeoutForModal(modal) {
-    if (modal.getAttribute('data-modal-timeout') && modal.getAttribute('data-modal-timeout') > 0) {
+    if (modal && modal.getAttribute('data-modal-timeout') && modal.getAttribute('data-modal-timeout') > 0) {
       return modal.getAttribute('data-modal-timeout') * 1000;
+    } else {
+      return 0;
     }
   }
 
@@ -883,7 +888,35 @@ window.addEventListener('DOMContentLoaded', function() {
   if (accauntButton) accauntButton.addEventListener('click', function() {
     return showModal(modalAccaunt);
   });
+
+  if (goodsSummaryButtons.length > 0) {
+    goodsSummaryButtons.forEach(function(button) {
+      return button.addEventListener('click', function() {
+        return showModal(modalAddToCart);
+      });
+    });
+  }
+
+  if (modalButtons.length > 0) {
+    modalButtons.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        var target = e.target;
+
+        if (target && target.getAttribute('data-show-modal') === 'modal-competition') {
+          clearTimeout(modalCompetitionID);
+          showModal(modalCompetition, false);
+        }
+
+        if (target && target.getAttribute('data-show-modal') === 'modal-order-samples') {
+          clearTimeout(modalOrderSamplesID);
+          showModal(modalOrderSamples, false);
+        }
+      });
+    });
+  }
+
   if (modalAccaunt) addEventListenerForModal(modalAccaunt);
+  if (modalAddToCart) addEventListenerForModal(modalAddToCart);
   if (modalCompetition) addEventListenerForModal(modalCompetition);
   if (modalOrderSamples) addEventListenerForModal(modalOrderSamples);
 });

@@ -473,7 +473,10 @@
           <!-- header-contacnt -->
           <div class="header__contacts">
             <div class="header__contacts-link-group">
-              <a class="phone-link" href="tel:+79801922024">+7 (980) 192-20-24</a>
+              <a class="phone-link" href="tel:+79801922024">
+                <i class="phone-link__icon icon-ui-phone"></i>
+                <span class="phone-link__nember">+7 (980) 192-20-24</span>
+              </a>
             </div>
           </div>
           <!-- header-accaunt-end-shopping -->
@@ -1257,15 +1260,17 @@
 
     <!-- modals -->
     <div class="modal-buttons">
+      <button class="modal-button" data-show-modal="modal-competition">
+        <i class="modal-button__icon icon-ui-gift"></i>
+      </button>
+
       <button class="modal-button" data-show-modal="modal-order-samples">
         <i class="modal-button__icon icon-ui-color-palette"></i>
       </button>
-
-      <button class="modal-button" data-show-modal="modal-competition"></button>
     </div>
 
     <div class="modal modal-accaunt">
-      <div class="modal__dialog modal__dialog_position-absolute modal__dialog_max-width-500" data-dialog="login">
+      <div class="modal__dialog modal__dialog_position-absolute modal__dialog_md-max-width-500" data-dialog="login">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
@@ -1284,7 +1289,10 @@
         </form>
       </div>
 
-      <div class="modal__dialog modal__dialog_position-absolute modal__dialog_max-width-500" data-dialog="registration">
+      <div
+        class="modal__dialog modal__dialog_position-absolute modal__dialog_md-max-width-500"
+        data-dialog="registration"
+      >
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
@@ -1304,7 +1312,7 @@
     </div>
 
     <div class="modal modal-add-to-cart">
-      <div class="modal__dialog modal__dialog_max-width-500">
+      <div class="modal__dialog modal__dialog_md-max-width-500">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
@@ -1321,17 +1329,17 @@
       </div>
     </div>
 
-    <div class="modal modal_md-position-left-bottom modal-order-samples" data-modal-timeout="5">
-      <div class="modal__dialog modal__dialog_max-width-800">
+    <div class="modal modal_md-position-left-bottom modal-order-samples" data-modal-timeout="60">
+      <div class="modal__dialog modal__dialog_md-max-width-738">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
         </button>
-        <div class="modal__dialog-head modal__dialog-head_padding-block-75 modal__dialog-head_border-bottom-none">
+        <div class="modal__dialog-head modal__dialog-head_md-padding-block-75 modal__dialog-head_border-bottom-none">
           <p class="modal__dialog-title">Сложно определиться с выбором цвета?</p>
           <p class="modal__dialog-text"><span>Закажите образцы</span> и уже завтра мы их доставим вам</p>
         </div>
-        <div class="modal__dialog-body modal__dialog-body_padding-block-75">
+        <div class="modal__dialog-body modal__dialog-body_md-padding-block-75">
           <a class="modal__dialog-button modal__dialog-button_max-width-400 button-primary" href="#">
             <span>Заказать образцы</span>
           </a>
@@ -1339,8 +1347,8 @@
       </div>
     </div>
 
-    <div class="modal modal_md-position-left-bottom modal-competition" data-modal-timeout="2">
-      <div class="modal__dialog modal__dialog_max-width-800 modal__dialog_padding-right-250">
+    <div class="modal modal_md-position-left-bottom modal-competition" data-modal-timeout="120">
+      <div class="modal__dialog modal__dialog_md-max-width-738 modal__dialog_md-padding-right-250">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>

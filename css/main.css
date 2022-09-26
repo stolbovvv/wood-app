@@ -80,20 +80,28 @@ i {
     content: "\e90d";
 }
 
-.icon-ui-pause:before {
+.icon-ui-gift:before {
     content: "\e90e";
 }
 
-.icon-ui-play:before {
+.icon-ui-pause:before {
     content: "\e90f";
 }
 
-.icon-ui-shopping-cart:before {
+.icon-ui-phone:before {
     content: "\e910";
 }
 
-.icon-ui-user:before {
+.icon-ui-play:before {
     content: "\e911";
+}
+
+.icon-ui-shopping-cart:before {
+    content: "\e912";
+}
+
+.icon-ui-user:before {
+    content: "\e913";
 }
 
 /* Box sizing rules */
@@ -1899,6 +1907,28 @@ body::-webkit-scrollbar {
     line-height: 17px;
 }
 
+.phone-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.phone-link>*+* {
+    margin: 0 0 0 6px;
+}
+
+.phone-link__icon {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.phone-link__nember {
+    font-size: inherit;
+}
+
 .accaunt-button {
     color: inherit;
     border: none;
@@ -2520,25 +2550,64 @@ body::-webkit-scrollbar {
 }
 
 .header__contacts {
+    margin: 0 0 0 auto;
+}
+
+.header__contacts .phone-link__nember {
     display: none;
 }
 
 @media only screen and (min-width: 768px) {
     .header__contacts {
-        display: block;
         margin: 0 0 0 32px;
+    }
+
+    .header__contacts .phone-link__nember {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .header__contacts {
+        margin: 0 0 0 16px;
+    }
+
+    .header__contacts .phone-link__icon {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .header__contacts {
+        margin: 0 0 0 32px;
+    }
+
+    .header__contacts .phone-link__icon {
+        display: block;
     }
 }
 
 .header__accaunt-end-shopping-card {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 12px;
 }
 
 .header__accaunt-end-shopping-card>*+* {
-    margin: 0 0 0 18px;
+    margin: 0 0 0 12px;
 }
 
 @media only screen and (min-width: 768px) {
+    .header__accaunt-end-shopping-card {
+        margin: 0 0 0 32px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .header__accaunt-end-shopping-card {
+        margin: 0 0 0 22px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
     .header__accaunt-end-shopping-card {
         margin: 0 0 0 32px;
     }
@@ -9847,8 +9916,8 @@ body::-webkit-scrollbar {
 /* Modals */
 .modal-buttons {
     position: fixed;
-    left: 32px;
-    bottom: 32px;
+    left: 15px;
+    bottom: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9859,10 +9928,29 @@ body::-webkit-scrollbar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    z-index: 100;
 }
 
 .modal-buttons>*+* {
-    margin: 24px 0 0 0;
+    margin: 16px 0 0 0;
+}
+
+@media only screen and (min-width: 1280px) {
+    .modal-buttons {
+        left: 11px;
+        bottom: 11px;
+    }
+
+    .modal-buttons>*+* {
+        margin: 24px 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .modal-buttons {
+        left: 36px;
+        bottom: 36px;
+    }
 }
 
 .modal-button {
@@ -9880,16 +9968,30 @@ body::-webkit-scrollbar {
     background-color: #787d46;
     border: none;
     border-radius: 50%;
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
     -webkit-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
             box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
 
+@media only screen and (min-width: 768px) {
+    .modal-button {
+        width: 58px;
+        height: 58px;
+    }
+}
+
 .modal-button__icon {
-    font-size: 28px;
+    font-size: 24px;
     color: #ffffff;
+    pointer-events: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .modal-button__icon {
+        font-size: 28px;
+    }
 }
 
 .modal {
@@ -9900,12 +10002,13 @@ body::-webkit-scrollbar {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2000;
+    padding: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -9914,6 +10017,14 @@ body::-webkit-scrollbar {
     transition: all 0.25s ease 0s;
     visibility: hidden;
     opacity: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .modal {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
 }
 
 .modal.--active {
@@ -9928,6 +10039,7 @@ body::-webkit-scrollbar {
         bottom: 15px;
         width: auto;
         height: auto;
+        padding: 0px;
         border-radius: 4px;
         -webkit-box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
                 box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
@@ -9943,10 +10055,17 @@ body::-webkit-scrollbar {
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+
+    .modal_md-position-left-bottom>.modal__dialog {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .modal__dialog {
     position: relative;
+    width: 100%;
+    max-width: calc(100vw - 30px);
     max-height: calc(100vh - 30px);
     border-radius: 4px;
     background: #ffffff;
@@ -9965,25 +10084,38 @@ body::-webkit-scrollbar {
 
 .modal__dialog_position-absolute {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, 15px);
+        -ms-transform: translate(-50%, 15px);
+            transform: translate(-50%, 15px);
 }
 
-.modal__dialog_max-width-500 {
-    width: 100%;
-    max-width: 500px;
+@media only screen and (min-width: 768px) {
+    .modal__dialog_position-absolute {
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    }
 }
 
-.modal__dialog_max-width-800 {
-    width: 100%;
-    max-width: 800px;
+@media only screen and (min-width: 768px) {
+    .modal__dialog_md-max-width-500 {
+        max-width: 500px;
+    }
 }
 
-.modal__dialog_padding-right-250 {
-    padding-right: 250px;
+@media only screen and (min-width: 768px) {
+    .modal__dialog_md-max-width-738 {
+        max-width: 738px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .modal__dialog_md-padding-right-250 {
+        padding-right: 250px;
+    }
 }
 
 .modal-order-samples>.modal__dialog {
@@ -10053,13 +10185,21 @@ body::-webkit-scrollbar {
 }
 
 .modal__dialog-head {
-    padding: 24px 24px 24px 24px;
+    padding: 24px 24px 12px 24px;
     border-bottom: 1px solid rgba(56, 56, 56, 0.5);
 }
 
-.modal__dialog-head_padding-block-75 {
-    padding-top: 75px;
-    padding-bottom: 75px;
+@media only screen and (min-width: 768px) {
+    .modal__dialog-head {
+        padding: 24px 24px 24px 24px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .modal__dialog-head_md-padding-block-75 {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
 }
 
 .modal__dialog-head_border-bottom-none {
@@ -10134,16 +10274,28 @@ body::-webkit-scrollbar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 32px 24px 32px 24px;
+    padding: 12px 24px 24px 24px;
 }
 
 .modal__dialog-body>*+* {
-    margin-top: 24px;
+    margin-top: 16px;
 }
 
-.modal__dialog-body_padding-block-75 {
-    padding-top: 75px;
-    padding-bottom: 75px;
+@media only screen and (min-width: 768px) {
+    .modal__dialog-body {
+        padding: 32px 24px 32px 24px;
+    }
+
+    .modal__dialog-body>*+* {
+        margin-top: 24px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .modal__dialog-body_md-padding-block-75 {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
 }
 
 .modal__dialog-input {

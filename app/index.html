@@ -1256,67 +1256,63 @@
     </div>
 
     <!-- modals -->
+    <div class="modal-buttons">
+      <button class="modal-button" data-show-modal="modal-order-samples">
+        <i class="modal-button__icon icon-ui-color-palette"></i>
+      </button>
+
+      <button class="modal-button" data-show-modal="modal-competition"></button>
+    </div>
+
     <div class="modal modal-accaunt">
-      <div class="modal__dialog modal-accaunt-login">
+      <div class="modal__dialog modal__dialog_position-absolute modal__dialog_max-width-500" data-dialog="login">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
         </button>
         <div class="modal__dialog-head">
-          <div class="modal__dialog-title">Вход</div>
-          <div class="modal__dialog-text">
-            Еще нет аккаунта? <a href="#" data-modal-change-to="registration">Зарегистрируйтесь</a>
-          </div>
+          <p class="modal__dialog-title">Вход</p>
+          <p class="modal__dialog-text">
+            Еще нет аккаунта? <a href="#" data-change-dialog-to="registration">Зарегистрируйтесь</a>
+          </p>
         </div>
-        <form class="modal__dialog-form" action="#">
-          <input class="modal__dialog-input" type="email" name="login_email" placeholder="Введите Email" required />
-          <input
-            class="modal__dialog-input"
-            type="password"
-            name="login_password"
-            placeholder="Введите пароль"
-            required
-          />
+        <form class="modal__dialog-body" action="#">
+          <input class="modal__dialog-input" type="email" name="email" placeholder="Введите Email" required />
+          <input class="modal__dialog-input" type="password" name="pass" placeholder="Введите пароль" required />
           <button class="modal__dialog-button button-primary" type="submit"><span>Войти</span></button>
           <a class="modal__dialog-link" href="#">Забыли пароль?</a>
         </form>
       </div>
-      <div class="modal__dialog modal-accaunt-registration">
+
+      <div class="modal__dialog modal__dialog_position-absolute modal__dialog_max-width-500" data-dialog="registration">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
         </button>
         <div class="modal__dialog-head">
-          <div class="modal__dialog-title">Регистрация</div>
-          <div class="modal__dialog-text">Есть аккаунт? <a href="#" data-modal-change-to="login">Войти</a></div>
+          <p class="modal__dialog-title">Регистрация</p>
+          <p class="modal__dialog-text">Есть аккаунт? <a href="#" data-change-dialog-to="login">Войти</a></p>
         </div>
-        <form class="modal__dialog-form" action="#">
-          <input class="modal__dialog-input" type="text" name="reg_name" placeholder="Введите имя" required />
-          <input class="modal__dialog-input" type="text" name="reg_surname" placeholder="Введите фамилию" required />
-          <input class="modal__dialog-input" type="text" name="reg_password" placeholder="Введите Email" required />
-          <input
-            class="modal__dialog-input"
-            type="text"
-            name="reg_password-repeat"
-            placeholder="Повторите пароль"
-            required
-          />
-          <button class="modal__dialog-button button-primary" type="submit"><span>Войти</span></button>
-          <a class="modal__dialog-link" href="#">Забыли пароль?</a>
+        <form class="modal__dialog-body" action="#">
+          <input class="modal__dialog-input" type="text" name="name" placeholder="Введите имя" required />
+          <input class="modal__dialog-input" type="text" name="surname" placeholder="Введите фамилию" required />
+          <input class="modal__dialog-input" type="text" name="pass" placeholder="Введите пароль" required />
+          <input class="modal__dialog-input" type="text" name="pass-repeat" placeholder="Повторите пароль" required />
+          <button class="modal__dialog-button button-primary" type="submit"><span>Зарегистрироваться</span></button>
         </form>
       </div>
     </div>
 
-    <div class="modal modal-add-to-card">
-      <div class="modal__dialog">
+    <div class="modal modal-add-to-cart">
+      <div class="modal__dialog modal__dialog_max-width-500">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
         </button>
         <div class="modal__dialog-head">
-          <div class="modal__dialog-title">Товар добавлен в корзину</div>
+          <p class="modal__dialog-title">Товар добавлен в корзину</p>
         </div>
-        <div class="modal__dialog-body" action="#">
+        <div class="modal__dialog-body">
           <button class="modal__dialog-button button-primary" data-modal-action="close">
             <span>Продолжить покупки</span>
           </button>
@@ -1325,50 +1321,54 @@
       </div>
     </div>
 
-    <div class="modal modal-order-samples">
-      <div class="modal__dialog">
+    <div class="modal modal_md-position-left-bottom modal-order-samples" data-modal-timeout="60">
+      <div class="modal__dialog modal__dialog_max-width-800">
         <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
         </button>
-        <div class="modal__dialog-head">
-          <div class="modal__dialog-title">Сложно определиться с выбором цвета?</div>
-          <div class="modal__dialog-text">Закажите образцы и уже завтра мы их доставим вам</div>
+        <div class="modal__dialog-head modal__dialog-head_padding-block-75 modal__dialog-head_border-bottom-none">
+          <p class="modal__dialog-title">Сложно определиться с выбором цвета?</p>
+          <p class="modal__dialog-text"><span>Закажите образцы</span> и уже завтра мы их доставим вам</p>
         </div>
-        <div class="modal__dialog-body" action="#">
-          <a class="modal__dialog-button button-primary" href="#"><span>Заказать образцы</span></a>
+        <div class="modal__dialog-body modal__dialog-body_padding-block-75">
+          <a class="modal__dialog-button modal__dialog-button_max-width-400 button-primary" href="#">
+            <span>Заказать образцы</span>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="modal-bunner modal-bunner-competition">
-      <div class="modal-bunner__dialog">
-        <button class="modal-bunner__dialog-button-close" data-modal-action="close">
+    <div class="modal modal_md-position-left-bottom modal-competition" data-modal-timeout="120">
+      <div class="modal__dialog modal__dialog_max-width-800 modal__dialog_padding-right-250">
+        <button class="modal__dialog-button-close" data-modal-action="close">
           <span></span>
           <span></span>
         </button>
-        <div class="modal-bunner__dialog-head">
-          <div class="modal-bunner__dialog-title">Заполните контакты и участвуйте в конкурсе!</div>
-          <div class="modal-bunner__dialog-text">11 числа каждого месяца мы разыгрываем по 3 панели</div>
+        <img class="modal__dialog-content-img" src="./images/modal/modal-competition.png" alt="" />
+        <div class="modal__dialog-head modal__dialog-head_border-bottom-none">
+          <p class="modal__dialog-title modal__dialog-title_align-left">Заполните контакты и участвуйте в конкурсе!</p>
+          <p class="modal__dialog-text modal__dialog-text_align-left">
+            11 числа каждого месяца мы разыгрываем по 3 панели
+          </p>
         </div>
-        <img class="modal-bunner__img" src="./images/modal/modal-bunner-competition.png" alt="" />
-        <form class="modal-bunner__dialog-form" action="#">
-          <input class="modal-bunner__dialog-input" type="text" name="name" placeholder="Введите имя" required />
-          <input class="modal-bunner__dialog-input" type="tel" name="surname" placeholder="Введите телефон" required />
-          <button class="modal-bunner__dialog-button button-primary" type="submit">
+        <div class="modal__dialog-body">
+          <input class="modal__dialog-input" type="text" name="name" placeholder="Введите имя" required />
+          <input class="modal__dialog-input" type="tel" name="phone" placeholder="Введите телефон" required />
+          <button class="modal__dialog-button button-primary" type="submit">
             <span>Учавствовать в розыгрыше</span>
           </button>
-          <p class="modal-bunner__dialog-text modal-bunner__dialog-text_color-gray">
-            Отправляя данную форму, Вы соглашаетесь с
-            <a href="#">Политикой конфиденциальности</a>
+          <p class="modal__dialog-text modal__dialog-text_small modal__dialog-text_align-left">
+            Отправляя данную форму, Вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
           </p>
-          <p class="modal-bunner__dialog-text">Розыгрыш проходит в вк, победителю уведомление приходит на почту!</p>
-        </form>
+          <p class="modal__dialog-text modal__dialog-text_fw-500 modal__dialog-text_align-left">
+            Розыгрыш проходит в вк, победителю уведомление приходит на почту!
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Connection Libs Scripts -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.8/simplebar.min.js"></script>

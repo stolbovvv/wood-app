@@ -10204,3 +10204,7 @@ body::-webkit-scrollbar {
     color: #787d46;
     text-decoration: underline;
 }
+
+.modal-accaunt {
+    z-index: 2200;
+}

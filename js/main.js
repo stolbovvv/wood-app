@@ -827,10 +827,11 @@ window.addEventListener('DOMContentLoaded', function() {
   var modalOrderSamples = document.querySelector('.modal-order-samples');
 
   function showModal(modal) {
+    var lockBody = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
     var dialogs = modal.querySelectorAll('.modal__dialog');
     modal.classList.add('--active');
     dialogs[0].classList.add('--active');
-    document.body.classList.add('--lock');
+    if (lockBody) document.body.classList.add('--lock');
   }
 
   function hideModal(modal) {
@@ -861,6 +862,7 @@ window.addEventListener('DOMContentLoaded', function() {
       if (target && target.getAttribute('data-modal-action') === 'close') hideModal(modal); // change dialogs
 
       if (target && target.getAttribute('data-change-dialog-to')) {
+        e.preventDefault();
         chageDialog(modal, target.getAttribute('data-change-dialog-to'));
       }
     });
@@ -873,10 +875,10 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   var modalCompetitionID = setTimeout(function() {
-    if (modalCompetition) showModal(modalCompetition);
+    if (modalCompetition) showModal(modalCompetition, false);
   }, setTimeoutForModal(modalCompetition));
   var modalOrderSamplesID = setTimeout(function() {
-    if (modalOrderSamples) showModal(modalOrderSamples);
+    if (modalOrderSamples) showModal(modalOrderSamples, false);
   }, setTimeoutForModal(modalOrderSamples));
   if (accauntButton) accauntButton.addEventListener('click', function() {
     return showModal(modalAccaunt);

@@ -397,14 +397,29 @@
 
 .modal-buttons {
   position: fixed;
-  left: 32px;
-  bottom: 32px;
+  left: 15px;
+  bottom: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  z-index: 100;
 
   > * + * {
-    margin: 24px 0 0 0;
+    margin: 16px 0 0 0;
+  }
+
+  @include for-min-size("lg") {
+    left: 11px;
+    bottom: 11px;
+
+    > * + * {
+      margin: 24px 0 0 0;
+    }
+  }
+
+  @include for-min-size("xl") {
+    left: 36px;
+    bottom: 36px;
   }
 }
 
@@ -416,14 +431,24 @@
   background-color: $clr-primary;
   border: none;
   border-radius: 50%;
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 
+  @include for-min-size("md") {
+    width: 58px;
+    height: 58px;
+  }
+
   &__icon {
-    font-size: 28px;
+    font-size: 24px;
     color: $clr-white;
+    pointer-events: none;
+
+    @include for-min-size("md") {
+      font-size: 28px;
+    }
   }
 }
 
@@ -435,12 +460,17 @@
   height: 100%;
   background-color: rgba($color: #000, $alpha: 0.5);
   z-index: 2000;
+  padding: 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   transition: all 0.25s ease 0s;
   visibility: hidden;
   opacity: 0;
+
+  @include for-min-size("md") {
+    align-items: center;
+  }
 
   &.--active {
     visibility: visible;
@@ -454,6 +484,7 @@
       bottom: 15px;
       width: auto;
       height: auto;
+      padding: 0px;
       border-radius: 4px;
       box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
       visibility: visible;
@@ -463,12 +494,19 @@
       &.--active {
         transform: translateY(0%);
       }
+
+      & > .modal__dialog {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 
   // .modal__dialog
   &__dialog {
     position: relative;
+    width: 100%;
+    max-width: calc(100vw - 30px);
     max-height: calc(100vh - 30px);
     border-radius: 4px;
     background: $clr-white;
@@ -484,23 +522,32 @@
 
     &_position-absolute {
       position: absolute;
-      top: 50%;
+      top: 0;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 15px);
+
+      @include for-min-size("md") {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
-    &_max-width-500 {
-      width: 100%;
-      max-width: 500px;
+    &_md-max-width-500 {
+      @include for-min-size("md") {
+        max-width: 500px;
+      }
     }
 
-    &_max-width-800 {
-      width: 100%;
-      max-width: 800px;
+    &_md-max-width-738 {
+      @include for-min-size("md") {
+        max-width: 738px;
+      }
     }
 
-    &_padding-right-250 {
-      padding-right: 250px;
+    &_md-padding-right-250 {
+      @include for-min-size("md") {
+        padding-right: 250px;
+      }
     }
 
     .modal-order-samples > & {
@@ -566,12 +613,18 @@
 
   // .modal__dialog-head
   &__dialog-head {
-    padding: 24px 24px 24px 24px;
+    padding: 24px 24px 12px 24px;
     border-bottom: 1px solid rgba($color: $clr-gray-700, $alpha: 0.5);
 
-    &_padding-block-75 {
-      padding-top: 75px;
-      padding-bottom: 75px;
+    @include for-min-size("md") {
+      padding: 24px 24px 24px 24px;
+    }
+
+    &_md-padding-block-75 {
+      @include for-min-size("md") {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
     }
 
     &_border-bottom-none {
@@ -639,15 +692,25 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 32px 24px 32px 24px;
+    padding: 12px 24px 24px 24px;
 
     > * + * {
-      margin-top: 24px;
+      margin-top: 16px;
     }
 
-    &_padding-block-75 {
-      padding-top: 75px;
-      padding-bottom: 75px;
+    @include for-min-size("md") {
+      padding: 32px 24px 32px 24px;
+
+      > * + * {
+        margin-top: 24px;
+      }
+    }
+
+    &_md-padding-block-75 {
+      @include for-min-size("md") {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
     }
   }
 

@@ -81,6 +81,26 @@
   }
 }
 
+.phone-link {
+  display: flex;
+  align-items: center;
+
+  > * + * {
+    margin: 0 0 0 6px;
+  }
+
+  // .phone-link__icon
+  &__icon {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+
+  // .phone-link__nember
+  &__nember {
+    font-size: inherit;
+  }
+}
+
 .accaunt-button {
   color: inherit;
   border: none;
@@ -127,4 +147,3 @@
     text-decoration: none;
   }
 }
-

@@ -796,9 +796,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // MODALS
   const accauntButton = document.querySelector('.accaunt-button');
+  const goodsSummaryButtons = document.querySelectorAll('.goods__summary-button');
   const modalAccaunt = document.querySelector('.modal-accaunt');
+  const modalAddToCart = document.querySelector('.modal-add-to-cart');
   const modalCompetition = document.querySelector('.modal-competition');
   const modalOrderSamples = document.querySelector('.modal-order-samples');
+  const modalButtons = document.querySelectorAll('.modal-button');
 
   function showModal(modal, lockBody = true) {
     const dialogs = modal.querySelectorAll('.modal__dialog');
@@ -840,15 +843,16 @@ window.addEventListener('DOMContentLoaded', () => {
       // change dialogs
       if (target && target.getAttribute('data-change-dialog-to')) {
         e.preventDefault();
-
         chageDialog(modal, target.getAttribute('data-change-dialog-to'));
       }
     });
   }
 
   function setTimeoutForModal(modal) {
-    if (modal.getAttribute('data-modal-timeout') && modal.getAttribute('data-modal-timeout') > 0) {
+    if (modal && modal.getAttribute('data-modal-timeout') && modal.getAttribute('data-modal-timeout') > 0) {
       return modal.getAttribute('data-modal-timeout') * 1000;
+    } else {
+      return 0;
     }
   }
 
@@ -862,7 +866,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (accauntButton) accauntButton.addEventListener('click', () => showModal(modalAccaunt));
 
+  if (goodsSummaryButtons.length > 0) {
+    goodsSummaryButtons.forEach((button) => button.addEventListener('click', () => showModal(modalAddToCart)));
+  }
+
+  if (modalButtons.length > 0) {
+    modalButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        const target = e.target;
+
+        if (target && target.getAttribute('data-show-modal') === 'modal-competition') {
+          clearTimeout(modalCompetitionID);
+          showModal(modalCompetition, false);
+        }
+
+        if (target && target.getAttribute('data-show-modal') === 'modal-order-samples') {
+          clearTimeout(modalOrderSamplesID);
+          showModal(modalOrderSamples, false);
+        }
+      });
+    });
+  }
+
   if (modalAccaunt) addEventListenerForModal(modalAccaunt);
+  if (modalAddToCart) addEventListenerForModal(modalAddToCart);
   if (modalCompetition) addEventListenerForModal(modalCompetition);
   if (modalOrderSamples) addEventListenerForModal(modalOrderSamples);
 });

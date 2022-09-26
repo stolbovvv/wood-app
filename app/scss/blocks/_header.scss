@@ -81,11 +81,34 @@
 
   // .header__contacts
   &__contacts {
-    display: none;
+    margin: 0 0 0 auto;
+
+    .phone-link__nember {
+      display: none;
+    }
 
     @include for-min-size("md") {
-      display: block;
       margin: 0 0 0 32px;
+
+      .phone-link__nember {
+        display: block;
+      }
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 0 0 16px;
+
+      .phone-link__icon {
+        display: none;
+      }
+    }
+
+    @include for-min-size("xl") {
+      margin: 0 0 0 32px;
+
+      .phone-link__icon {
+        display: block;
+      }
     }
   }
 
@@ -95,13 +118,21 @@
 
   // .header__accaunt-end-shopping-card
   &__accaunt-end-shopping-card {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 12px;
 
     > * + * {
-      margin: 0 0 0 18px;
+      margin: 0 0 0 12px;
     }
 
     @include for-min-size("md") {
+      margin: 0 0 0 32px;
+    }
+
+    @include for-min-size("lg") {
+      margin: 0 0 0 22px;
+    }
+
+    @include for-min-size("xl") {
       margin: 0 0 0 32px;
     }
   }

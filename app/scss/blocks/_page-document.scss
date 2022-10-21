@@ -1,0 +1,33 @@
+@use "../helper" as *;
+
+/* Block "page-document" */
+.page-document {
+  h2 {
+    margin: 32px 0 0 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $clr-primary;
+
+    @include for-min-size("md") {
+      text-align: left;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  p {
+    margin: 24px 0 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $clr-gray-700;
+
+    @include for-min-size("md") {
+      text-align: left;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

@@ -892,4 +892,46 @@ window.addEventListener('DOMContentLoaded', () => {
   if (modalAddToCart) addEventListenerForModal(modalAddToCart);
   if (modalCompetition) addEventListenerForModal(modalCompetition);
   if (modalOrderSamples) addEventListenerForModal(modalOrderSamples);
+
+  // MODAL SAMPLES
+  const modalSamples = document.querySelector('.modal-samples');
+
+  if (modalSamples) {
+    const modalOpen = document.querySelector(`[data-open-modal="${modalSamples.id}"]`);
+    const modalClose = modalSamples.querySelector(`[data-modal-action="close"]`);
+    const samplesList = modalSamples.querySelectorAll('.samples-card__input');
+    const previewWrapper = modalSamples.querySelector('.modal-samples__preview-wrapper-img');
+
+    const samples = {};
+
+    samplesList.forEach((sample, index) => {
+      const preview = document.createElement('img');
+
+      preview.setAttribute('src', sample.dataset.samplePreview);
+
+      samples[sample.id] = preview;
+
+      previewWrapper.append(preview);
+
+      if (index === 0) {
+        sample.checked = true;
+        samples[sample.id].style.opacity = 1;
+      }
+    });
+
+    modalOpen.addEventListener('click', () => modalSamples.classList.add('modal-samples_open'));
+    modalClose.addEventListener('click', () => modalSamples.classList.remove('modal-samples_open'));
+
+    modalSamples.addEventListener('click', (e) => {
+      for (const key in samples) {
+        if (e.target && e.target.classList.contains('samples-card__input') && key === e.target.id) {
+          samples[key].style.opacity = 1;
+        } else {
+          samples[key].style.opacity = 0;
+        }
+      }
+    });
+  } else {
+    console.warn('Warning: Modal "modal-samples" window not found on page');
+  }
 });

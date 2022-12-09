@@ -902,6 +902,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const modalImgContainer = modalSamples.querySelector('.modal-samples__preview-wrapper-img');
     const modalListSamples = modalSamples.querySelectorAll('.samples-card__input');
 
+    modalSamples.style.height = window.innerHeight;
+
     window.addEventListener('resize', () => {
       modalSamples.style.height = window.innerHeight;
     });

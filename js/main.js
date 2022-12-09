@@ -955,10 +955,12 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     modalOpen.addEventListener('click', function() {
-      return modalSamples.classList.add('modal-samples_open');
+      document.body.style.overflow = 'hidden';
+      modalSamples.classList.add('modal-samples_open');
     });
     modalClose.addEventListener('click', function() {
-      return modalSamples.classList.remove('modal-samples_open');
+      document.body.style.overflow = 'auto';
+      modalSamples.classList.remove('modal-samples_open');
     });
   } else {
     console.warn('Warning: Modal "modal-samples" window not found on page');

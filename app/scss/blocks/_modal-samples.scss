@@ -5,12 +5,16 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background: #ffffff;
   transform: translateY(-100%);
   transition: all 0.25s ease 0s;
   z-index: 2000;
   overflow: hidden;
+
+  @include for-min-size("md") {
+    height: 100vh - 60px;
+  }
 
   &_open {
     transform: translateY(0);

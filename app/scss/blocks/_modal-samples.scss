@@ -13,7 +13,7 @@
   overflow: hidden;
 
   @include for-min-size("md") {
-    height: 100vh - 60px;
+    height: 100vh;
   }
 
   &_open {

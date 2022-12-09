@@ -932,8 +932,14 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    modalOpen.addEventListener('click', () => modalSamples.classList.add('modal-samples_open'));
-    modalClose.addEventListener('click', () => modalSamples.classList.remove('modal-samples_open'));
+    modalOpen.addEventListener('click', () => {
+      document.body.style.overflow = 'hidden';
+      modalSamples.classList.add('modal-samples_open');
+    });
+    modalClose.addEventListener('click', () => {
+      document.body.style.overflow = 'auto';
+      modalSamples.classList.remove('modal-samples_open');
+    });
   } else {
     console.warn('Warning: Modal "modal-samples" window not found on page');
   }

@@ -925,34 +925,43 @@ window.addEventListener('DOMContentLoaded', function() {
   if (modalSamples) {
     var modalOpen = document.querySelector("[data-open-modal=\"".concat(modalSamples.id, "\"]"));
     var modalClose = modalSamples.querySelector("[data-modal-action=\"close\"]");
-    var samplesList = modalSamples.querySelectorAll('.samples-card__input');
-    var previewWrapper = modalSamples.querySelector('.modal-samples__preview-wrapper-img');
-    var samples = {};
-    samplesList.forEach(function(sample, index) {
-      var preview = document.createElement('img');
-      preview.setAttribute('src', sample.dataset.samplePreview);
-      samples[sample.id] = preview;
-      previewWrapper.append(preview);
-
-      if (index === 0) {
-        sample.checked = true;
-        samples[sample.id].style.opacity = 1;
-      }
+    var modalImgContainer = modalSamples.querySelector('.modal-samples__preview-wrapper-img');
+    var modalListSamples = modalSamples.querySelectorAll('.samples-card__input');
+    window.addEventListener('resize', function() {
+      modalSamples.style.height = '100vh';
     });
+
+    if (modalListSamples.length > 0) {
+      var samples = {};
+      modalListSamples.forEach(function(sample, index) {
+        var previewImg = document.createElement('img');
+        var previewSrc = sample.getAttribute('data-sample-preview');
+        previewImg.src = previewSrc;
+        samples[sample.id] = previewImg;
+        modalImgContainer.append(previewImg);
+
+        if (index === 0) {
+          sample.checked = true;
+          samples[sample.id].style.opacity = 1;
+        }
+
+        sample.addEventListener('change', function(e) {
+          for (var key in samples) {
+            if (key === e.target.id) {
+              samples[key].style.opacity = 1;
+            } else {
+              samples[key].style.opacity = 0;
+            }
+          }
+        });
+      });
+    }
+
     modalOpen.addEventListener('click', function() {
       return modalSamples.classList.add('modal-samples_open');
     });
     modalClose.addEventListener('click', function() {
       return modalSamples.classList.remove('modal-samples_open');
-    });
-    modalSamples.addEventListener('click', function(e) {
-      for (var key in samples) {
-        if (e.target && e.target.classList.contains('samples-card__input') && key === e.target.id) {
-          samples[key].style.opacity = 1;
-        } else {
-          samples[key].style.opacity = 0;
-        }
-      }
     });
   } else {
     console.warn('Warning: Modal "modal-samples" window not found on page');

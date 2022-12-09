@@ -10500,7 +10500,7 @@ body::-webkit-scrollbar {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 60px);
     background: #ffffff;
     -webkit-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
@@ -10510,6 +10510,12 @@ body::-webkit-scrollbar {
     transition: all 0.25s ease 0s;
     z-index: 2000;
     overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .modal-samples {
+        height: 100vh;
+    }
 }
 
 .modal-samples_open {

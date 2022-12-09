@@ -927,10 +927,6 @@ window.addEventListener('DOMContentLoaded', function() {
     var modalClose = modalSamples.querySelector("[data-modal-action=\"close\"]");
     var modalImgContainer = modalSamples.querySelector('.modal-samples__preview-wrapper-img');
     var modalListSamples = modalSamples.querySelectorAll('.samples-card__input');
-    modalSamples.style.height = window.innerHeight;
-    window.addEventListener('resize', function() {
-      modalSamples.style.height = window.innerHeight;
-    });
 
     if (modalListSamples.length > 0) {
       var samples = {};

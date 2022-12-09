@@ -903,7 +903,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const modalListSamples = modalSamples.querySelectorAll('.samples-card__input');
 
     window.addEventListener('resize', () => {
-      modalSamples.style.height = '100vh';
+      modalSamples.style.height = window.innerHeight;
     });
 
     if (modalListSamples.length > 0) {
